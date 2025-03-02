@@ -9,6 +9,15 @@ import bar from "../assets/bar.svg";
 import gaurd from "../assets/gaurd.svg";
 import invesment from "../assets/invesment.png";
 import slidebar from "../assets/slidebar.png";
+// My imported Images 
+import Adv1 from "../assets/adv1.png";
+import Adv2 from "../assets/adv2.png";
+import Adv3 from "../assets/adv3.png";
+import Adv4 from "../assets/adv4.png";
+import Adv5 from "../assets/adv5.png";
+import Adv6 from "../assets/adv6.png";
+import factory from "../assets/factory.png";
+// ---------------------------------------
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -327,6 +336,821 @@ export default function Home() {
         </div>
         <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
       </section>
+
+      {/* MY CHANGES ARE HERE  */}
+      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
+        <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
+          The Voltra Advantage
+        </h1>
+
+        <div className="flex flex-row w-full justify-around p-4 gap-4">
+          <div className="flex flex-col gap-4 w-[584px]">
+            <img src={Adv1} width={584} height={336} />
+            {/* <div className="flex flex-col p-4 gap-4 w-[584px]">
+              <div>
+                <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                  VOLT-1000
+                </h1>
+                <div className="text-black text-[14px]">
+                  The all-in-one air-cooled ESS cabinet integrates a long-life
+                  battery, efficient balancing BMS, high-performance PCS, active
+                  safety system, smart distribution, and HVAC into one cabinet,
+                  enabling long-term operation with safety, stability, and
+                  reliability.
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Know More <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div> */}
+          </div>
+          <div className="flex flex-col gap-4 p-4 w-[584px]">
+            
+            <img src={Adv2} height={336} />
+            {/* <div className="flex flex-col p-4">
+              <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                VOLT-1000
+              </h1>
+              <div className="text-black text-[14px]">
+                The all-in-one air-cooled ESS cabinet integrates a long-life
+                battery, efficient balancing BMS, high-performance PCS, active
+                safety system, smart distribution, and HVAC into one cabinet,
+                enabling long-term operation with safety, stability, and
+                reliability.
+              </div>
+            </div>
+            <div className="flex flex-row justify-around w-full gap-4">
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={light} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Energy Saving and Fast
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    1P fast charge/discharge rate, energy storing & releasing
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={bar} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Economical and Efficient
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Conversion efficiency over 90%, DoD over 96%
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={cloud} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Smart O&M
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Diversified monitoring by HMI (local), app/web (remote)
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={gaurd} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Safe and Reliable
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    IP55, thermal management, cell difference ≤6°C
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link
+              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+              to={"/products"}
+            >
+              Know More <ArrowUpRight width={24} height={24} />
+            </Link> */}
+
+          </div>
+
+          {/* Some other changes are here */}
+          
+        </div>
+
+        {/* Here i add the same structure */}
+        <div className="flex flex-row w-full justify-around p-4 gap-4">
+          <div className="flex flex-col gap-4 w-[584px]">
+            <img src={Adv3} width={584} height={336} />
+            {/* <div className="flex flex-col p-4 gap-4 w-[584px]">
+              <div>
+                <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                  VOLT-1000
+                </h1>
+                <div className="text-black text-[14px]">
+                  The all-in-one air-cooled ESS cabinet integrates a long-life
+                  battery, efficient balancing BMS, high-performance PCS, active
+                  safety system, smart distribution, and HVAC into one cabinet,
+                  enabling long-term operation with safety, stability, and
+                  reliability.
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Know More <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div> */}
+          </div>
+          <div className="flex flex-col gap-4 p-4 w-[584px]">
+            <img src={Adv4} height={336} />
+            {/* <div className="flex flex-col p-4">
+              <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                VOLT-1000
+              </h1>
+              <div className="text-black text-[14px]">
+                The all-in-one air-cooled ESS cabinet integrates a long-life
+                battery, efficient balancing BMS, high-performance PCS, active
+                safety system, smart distribution, and HVAC into one cabinet,
+                enabling long-term operation with safety, stability, and
+                reliability.
+              </div>
+            </div>
+            <div className="flex flex-row justify-around w-full gap-4">
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={light} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Energy Saving and Fast
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    1P fast charge/discharge rate, energy storing & releasing
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={bar} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Economical and Efficient
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Conversion efficiency over 90%, DoD over 96%
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={cloud} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Smart O&M
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Diversified monitoring by HMI (local), app/web (remote)
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={gaurd} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Safe and Reliable
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    IP55, thermal management, cell difference ≤6°C
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link
+              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+              to={"/products"}
+            >
+              Know More <ArrowUpRight width={24} height={24} />
+            </Link> */}
+          </div>
+
+          {/* Some other changes are here */}
+          
+        </div>
+
+        {/* Same structure i add here  */}
+        <div className="flex flex-row w-full justify-around p-4 gap-4">
+          <div className="flex flex-col gap-4 w-[584px]">
+            <img src={Adv5} width={584} height={336} />
+            {/* <div className="flex flex-col p-4 gap-4 w-[584px]">
+              <div>
+                <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                  VOLT-1000
+                </h1>
+                <div className="text-black text-[14px]">
+                  The all-in-one air-cooled ESS cabinet integrates a long-life
+                  battery, efficient balancing BMS, high-performance PCS, active
+                  safety system, smart distribution, and HVAC into one cabinet,
+                  enabling long-term operation with safety, stability, and
+                  reliability.
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Know More <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div> */}
+          </div>
+          <div className="flex flex-col gap-4 p-4 w-[584px]">
+            
+            <img src={Adv6} height={336} />
+            {/* <div className="flex flex-col p-4">
+              <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                VOLT-1000
+              </h1>
+              <div className="text-black text-[14px]">
+                The all-in-one air-cooled ESS cabinet integrates a long-life
+                battery, efficient balancing BMS, high-performance PCS, active
+                safety system, smart distribution, and HVAC into one cabinet,
+                enabling long-term operation with safety, stability, and
+                reliability.
+              </div>
+            </div> */}
+            {/* <div className="flex flex-row justify-around w-full gap-4">
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={light} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Energy Saving and Fast
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    1P fast charge/discharge rate, energy storing & releasing
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={bar} width={36} height={36} />
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Economical and Efficient
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Conversion efficiency over 90%, DoD over 96%
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={cloud} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Smart O&M
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    Diversified monitoring by HMI (local), app/web (remote)
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img src={gaurd} width={36} height={36} />
+
+                <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-black font-bold text-[10px]">
+                    Safe and Reliable
+                  </h1>
+                  <div className="text-[8px] font-medium text-center">
+                    IP55, thermal management, cell difference ≤6°C
+                  </div>
+                </div>
+              </div>
+            </div> */}
+            {/* <Link
+              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+              to={"/products"}
+            >
+              Know More <ArrowUpRight width={24} height={24} />
+            </Link> */}
+
+          </div>
+
+          {/* Some other changes are here */}
+          
+        </div>
+        
+        {/* <div className="flex flex-row w-full justify-center gap-4">
+          <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+            VIEW ALL PRODUCTS
+          </button>
+          <button className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+            DOWNLOAD BROCHURE
+          </button>
+        </div> */}
+      </section>
+      
+      {/* Another section Added here  */}
+      <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
+        {/* <div className="flex flex-row p-4 gap-5 w-full justify-start">
+          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
+              FOUNDED
+            </button>
+            <div className="font-semibold text-[108px]">2024</div>
+            <div className="text-black w-3/4">
+              Developed by IIT alumni - Voltra boasts a diverse,
+              inter-disciplinary team of talent.
+            </div>
+          </div>
+          <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
+            <button className="border-[#00C069] border-2 rounded-md p-2 px-4">
+              REDUCED FOOTPRINT
+            </button>
+            <div className="font-semibold text-[108px]">90%</div>
+            <div className="text-black w-3/4">
+              less CO2 compared to cells made using coal power by 2030.
+            </div>
+          </div>
+          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
+              CAPACITY
+            </button>
+            <div className="font-semibold text-[108px]">
+              150<span className="text-[64px] font-normal">GWh</span>
+            </div>
+            <div className="text-black w-3/4">
+              Voltra’s target for lithium-ion cell installed capacity by 2030.
+            </div>
+          </div>
+        </div> */}
+        <div className="flex flex-row w-full h-auto justify-around items-center">
+          <img width={943} height={584} src={factory} />
+
+          {/* <div className="font-[Akshar] w-[509px] h-[351px]">
+            <div className="w-full h-full flex flex-col gap-4">
+              <div className="w-full h-full">
+                <h1 className="text-[#0C33F2] font-medium text-[40px]">
+                  Revolutionizing the Battery Storage Landscape of India
+                </h1>
+                <div className="font-regular text-[14px]">
+                  Voltra Energy is revolutionizing India's energy future with
+                  advanced Battery Energy Storage Systems (BESS) utilizing
+                  cutting-edge technology and world-class infrastructure.
+                  Focused on indigenizing BESS solutions for renewable energy
+                  integration, grid stabilization, and enhanced energy
+                  reliability, the company serves residential, commercial, and
+                  industrial sectors. With a gigafactory under development and a
+                  strong emphasis on top-tier R&D, Voltra is driving innovation
+                  in energy storage, supporting sustainable practices, and
+                  contributing to the global shift toward cleaner, more
+                  efficient energy.
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                View our products <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div>
+          </div> */}
+
+          {/* Another Copy paster */}
+          <div className="flex flex-col p-4 gap-4 w-[584px] ">
+              <div>
+
+                <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                 The Voltra GigaFactory 
+                </h1>
+                <div className="text-black text-[14px] mt-5">
+                An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance. 
+                  
+
+                </div>
+                <div className="text-black text-[14px] mt-5" >
+                Voltra’s commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
+              </Link>
+
+            </div>
+        </div>
+      </section>
+
+      {/* ANOTHER 2 SECTION ADDED  */}
+      <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar]  ">
+        {/* <div className="flex flex-row p-4 gap-5 w-full justify-start">
+          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
+              FOUNDED
+            </button>
+            <div className="font-semibold text-[108px]">2024</div>
+            <div className="text-black w-3/4">
+              Developed by IIT alumni - Voltra boasts a diverse,
+              inter-disciplinary team of talent.
+            </div>
+          </div>
+          <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
+            <button className="border-[#00C069] border-2 rounded-md p-2 px-4">
+              REDUCED FOOTPRINT
+            </button>
+            <div className="font-semibold text-[108px]">90%</div>
+            <div className="text-black w-3/4">
+              less CO2 compared to cells made using coal power by 2030.
+            </div>
+          </div>
+          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
+              CAPACITY
+            </button>
+            <div className="font-semibold text-[108px]">
+              150<span className="text-[64px] font-normal">GWh</span>
+            </div>
+            <div className="text-black w-3/4">
+              Voltra’s target for lithium-ion cell installed capacity by 2030.
+            </div>
+          </div>
+        </div> */}
+        <div className="flex flex-row w-full h-auto justify-around items-center ">
+          {/* <img width={943} height={584} src={factory} /> */}
+
+          {/* <div className="font-[Akshar] w-[509px] h-[351px]">
+            <div className="w-full h-full flex flex-col gap-4">
+              <div className="w-full h-full">
+                <h1 className="text-[#0C33F2] font-medium text-[40px]">
+                  Revolutionizing the Battery Storage Landscape of India
+                </h1>
+                <div className="font-regular text-[14px]">
+                  Voltra Energy is revolutionizing India's energy future with
+                  advanced Battery Energy Storage Systems (BESS) utilizing
+                  cutting-edge technology and world-class infrastructure.
+                  Focused on indigenizing BESS solutions for renewable energy
+                  integration, grid stabilization, and enhanced energy
+                  reliability, the company serves residential, commercial, and
+                  industrial sectors. With a gigafactory under development and a
+                  strong emphasis on top-tier R&D, Voltra is driving innovation
+                  in energy storage, supporting sustainable practices, and
+                  contributing to the global shift toward cleaner, more
+                  efficient energy.
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                View our products <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div>
+          </div> */}
+          {/* ANOTHER COPY PASTER */}
+          <div className="flex flex-col p-4 gap-4 w-[584px] ">
+          <div >
+          <h1 className="text-[#0C33F2] text-[40px] font-medium">
+               KNOW ABOUT BEES
+                </h1>
+            <p className="mb-6">Have any more queries?</p>
+            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+              CONTACT US
+            </button>
+          </div>
+
+              {/* <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+              {/* <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
+              </Link> */}
+
+            </div>
+          {/* Another COPY PASTER */}
+          <div className="flex flex-col p-4 gap-4 w-[584px] ">
+              <div>
+
+                <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                 The Voltra GigaFactory 
+                </h1>
+                <div className="text-black text-[14px] mt-5">
+                An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance. 
+                  
+
+                </div>
+                <div className="text-black text-[14px] mt-5" >
+                Voltra’s commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={light} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Energy Saving and Fast
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      1P fast charge/discharge rate, energy storing & releasing
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={bar} width={36} height={36} />
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Economical and Efficient
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Conversion efficiency over 90%, DoD over 96%
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={cloud} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Smart O&M
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      Diversified monitoring by HMI (local), app/web (remote)
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img src={gaurd} width={36} height={36} />
+
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <h1 className="text-black font-bold text-[10px]">
+                      Safe and Reliable
+                    </h1>
+                    <div className="text-[8px] font-medium text-center">
+                      IP55, thermal management, cell difference ≤6°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                to={"/products"}
+              >
+                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
+              </Link>
+
+            </div>
+        </div>
+      </section>
+    
     </main>
   );
 }
