@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import power from "../assets/power.png";
 import product1 from "../assets/product1.png";
@@ -17,12 +17,43 @@ import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
 import factory from "../assets/factory.png";
+import { ChevronDown, ChevronUp } from 'lucide-react';
 // ---------------------------------------
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-export default function Home() {
+
+
+const Home= () => {
+
+  const [openItem, setOpenItem] = useState(0);
+
+  const faqItems = [
+    {
+      title: "What is a Battery Energy Storage System (BESS)?",
+      content: "A Battery Energy Storage System (BESS) is a technology that stores energy for later use. It allows energy to be captured during times of low demand or when renewable energy sources like solar or wind are abundant, and then released during peak demand or when renewable energy production is low."
+    },
+    {
+      title: "How does a BESS work?",
+      content: "A BESS works by converting electrical energy to chemical energy for storage in batteries. When electricity is needed, the chemical energy is converted back to electrical energy. The system includes batteries, a power conversion system (inverter), and controls to manage charging and discharging cycles efficiently."
+    },
+    {
+      title: "What are the benefits of using a BESS?",
+      content: "Benefits include energy cost savings, backup power during outages, grid stability support, peak demand reduction, integration of renewable energy sources, reduced carbon footprint, and potential revenue through energy arbitrage or grid services."
+    },
+    {
+      title: "What types of batteries are used in a BESS?",
+      content: "Common battery technologies include lithium-ion (most popular for commercial BESS), lead-acid, flow batteries, sodium-sulfur, and emerging technologies like solid-state batteries. Each type has different characteristics in terms of energy density, cycle life, and cost."
+    }
+  ];
+
+  const toggleItem = (index) => {
+    setOpenItem(openItem === index ? null : index);
+  }
+
+  
   return (
+    
     <main className="flex flex-col w-full gap-4">
       <section className="w-full h-screen flex flex-col justify-center items-center bg-[url(/home_cover.png)] bg-cover ">
         <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 ">
@@ -1008,6 +1039,7 @@ export default function Home() {
             </div>
           </div> */}
           {/* ANOTHER COPY PASTER */}
+          
           <div className="flex flex-col p-4 gap-4 w-[584px] ">
           <div >
           <h1 className="text-[#0C33F2] text-[40px] font-medium">
@@ -1018,65 +1050,14 @@ export default function Home() {
               CONTACT US
             </button>
           </div>
+          </div>
+              
 
-              {/* <div className="flex flex-row justify-around w-full gap-4">
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={light} width={36} height={36} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Energy Saving and Fast
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      1P fast charge/discharge rate, energy storing & releasing
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={bar} width={36} height={36} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Economical and Efficient
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Conversion efficiency over 90%, DoD over 96%
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={cloud} width={36} height={36} />
+            
 
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Smart O&M
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Diversified monitoring by HMI (local), app/web (remote)
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={gaurd} width={36} height={36} />
-
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Safe and Reliable
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      IP55, thermal management, cell difference ≤6°C
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <Link
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                to={"/products"}
-              >
-                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
-              </Link> */}
-
-            </div>
           {/* Another COPY PASTER */}
-          <div className="flex flex-col p-4 gap-4 w-[584px] ">
+
+          {/* <div className="flex flex-col p-4 gap-4 w-[584px] ">
               <div>
 
                 <h1 className="text-[#0C33F2] text-[40px] font-medium">
@@ -1147,10 +1128,45 @@ export default function Home() {
                 Explore the GigaFactory <ArrowUpRight width={24} height={24} />
               </Link>
 
-            </div>
+            </div> */}
+             <div className="md:col-span-3 bg-gray-50 rounded-lg shadow-md p-6 h-auto">
+                         {faqItems.map((item, index) => (
+                           <article key={index} className="border-b border-gray-200 py-4">
+                             <header>
+                               <button
+                                 className="flex w-full justify-between items-center text-left focus:outline-none"
+                                 onClick={() => toggleItem(index)}
+                                 aria-expanded={openItem === index}
+                                 aria-controls={`faq-content-${index}`}
+                               >
+                                 <h3 className="text-md font-medium text-gray-900">{item.title}</h3>
+                                 {openItem === index ? (
+                                   <ChevronUp className="h-5 w-5 text-gray-500" />
+                                 ) : (
+                                   <ChevronDown className="h-5 w-5 text-gray-500" />
+                                 )}
+                               </button>
+                             </header>
+                             <div 
+                               id={`faq-content-${index}`}
+                               className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                 openItem === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                               }`}
+                             >
+                               <div className="mt-2 text-sm text-gray-600 py-2">
+                                 <p>{item.content}</p>
+                               </div>
+                             </div>
+                           </article>
+                         ))}
+                       </div>
+
+            
         </div>
       </section>
     
     </main>
   );
 }
+
+export default Home;
