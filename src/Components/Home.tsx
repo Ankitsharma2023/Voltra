@@ -18,6 +18,7 @@ import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
 import factory from "../assets/factory.png";
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Footer from "./Footer";
 // ---------------------------------------
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
@@ -1164,7 +1165,11 @@ const Home= () => {
             
         </div>
       </section>
-    
+
+
+    <section>
+      <Footer/>
+      </section>    
     </main>
   );
 }
