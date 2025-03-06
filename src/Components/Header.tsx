@@ -23,9 +23,11 @@ export function Header() {
           <Link to="/solutions">SOLUTIONS</Link>
           <Link to="/about">ABOUT US</Link>
           <Link to="/technology">TECHNOLOGY</Link>
+          <Link to = '/contact'>
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             CONTACT US
           </button>
+          </Link>
         </div>
       </div>
     </nav>
