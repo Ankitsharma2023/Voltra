@@ -9,6 +9,9 @@ import About from "./Components/About";
 import Solutions from "./Components/Solutions";
 import Contact from "./Components/Contact";
 import Technology from "./Components/Technology";
+import IslandModeSection from "./Components/IslandMode";
+import HybridModeSection from "./Components/HybridMode";
+import MicrogridModeSection from "./Components/MicrogridMode";
 function App() {
   return (
     <>
@@ -22,6 +25,9 @@ function App() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/technology" element={<Technology />} />
+        <Route path="/island-mode" element={<IslandModeSection />} />
+        <Route path="/hybrid-mode" element={<HybridModeSection />} />
+        <Route path="/microgrid-mode" element={<MicrogridModeSection />} />
       </Routes>
       <Footer />
     </>

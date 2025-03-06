@@ -333,7 +333,7 @@ const Home = () => {
             </p>
             <Link
               className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+              to={"/island-mode"}
             >
               Know More <ArrowUpRight width={24} height={24} />
             </Link>
@@ -345,7 +345,7 @@ const Home = () => {
 
             <Link
               className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+              to={"/hybrid-mode"}
             >
               Know More <ArrowUpRight width={24} height={24} />
             </Link>
@@ -357,7 +357,7 @@ const Home = () => {
 
             <Link
               className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+              to={"/microgrid-mode"}
             >
               Know More <ArrowUpRight width={24} height={24} />
             </Link>
