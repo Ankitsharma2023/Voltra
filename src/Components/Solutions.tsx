@@ -21,6 +21,8 @@ import waveGraphic from "../assets/wave.png";
 import solution from "../assets/solution.png";
 import future from "../assets/future.png";
 import Flip from "../assets/Flip.png";
+import TechnicalSpecification from "./Technical";
+
 
 export default function Solutions() {
   return (
@@ -60,6 +62,9 @@ export default function Solutions() {
 
 </section>
 
+<section>
+  <TechnicalSpecification />
+</section>
 
         <section className="flex justify-center items-center w-full h-full p-4 relative overflow-hidden">
   

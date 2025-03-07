@@ -23,6 +23,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
+  const [hoveredSection, setHoveredSection] = useState(null);
 
   const faqItems = [
     {
@@ -46,6 +47,31 @@ const Home = () => {
         "Common battery technologies include lithium-ion (most popular for commercial BESS), lead-acid, flow batteries, sodium-sulfur, and emerging technologies like solid-state batteries. Each type has different characteristics in terms of energy density, cycle life, and cost.",
     },
   ];
+
+  const sections = [
+    {
+      id: 'island',
+      width: '35%',
+      title: 'ISLAND',
+      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: '/island-mode'
+    },
+    {
+      id: 'hybrid',
+      width: '30%',
+      title: 'HYBRID',
+      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: '/hybrid-mode'
+    },
+    {
+      id: 'microgrid',
+      width: '30%',
+      title: 'MICROGRID',
+      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: '/microgrid-mode'
+    }
+  ];
+
 
   const toggleItem = (index) => {
     setOpenItem(openItem === index ? null : index);
@@ -282,7 +308,7 @@ const Home = () => {
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             VIEW ALL PRODUCTS
           </button>
-          <button className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+          <button className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 text-#0C33F2 font-[Akshar] font-normal ">
             DOWNLOAD BROCHURE
           </button>
         </div>
@@ -320,7 +346,8 @@ const Home = () => {
           Know More <ArrowUpRight width={24} height={24} />
         </Link>
       </section>
-      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
+      
+      {/* <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
         <div className="flex flex-col w-[35%] border-r border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
           <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
             <h1 className="text-[40px]">ISLAND</h1>
@@ -342,6 +369,13 @@ const Home = () => {
         <div className="flex flex-col w-[30%] border-r border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
           <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
             <h1 className="text-[40px]">Hybrid</h1>
+            <p className="text-[14px]">
+              Voltra's Battery Energy Storage Systems are super efficient in
+              island mode, which ensures a reliable stand-alone power solution
+              that works even during disconnection from the grid. Discover how
+              homes and businesses stay powered up when the grid goes down.
+              unlock the secrets of Island Mode.
+            </p>
 
             <Link
               className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
@@ -354,7 +388,13 @@ const Home = () => {
         <div className="flex flex-col w-[30%] border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
           <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
             <h1 className="text-[40px]">MICROGRID</h1>
-
+            <p className="text-[14px]">
+              Voltra's Battery Energy Storage Systems are super efficient in
+              island mode, which ensures a reliable stand-alone power solution
+              that works even during disconnection from the grid. Discover how
+              homes and businesses stay powered up when the grid goes down.
+              unlock the secrets of Island Mode.
+            </p>
             <Link
               className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
               to={"/microgrid-mode"}
@@ -364,7 +404,35 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
-      </section>
+      </section> */}
+
+<section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
+      {sections.map((section, index) => (
+        <div 
+          key={section.id}
+          className={`flex flex-col ${section.width} border-r ${index < sections.length - 1 ? 'border-white' : ''} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
+          onMouseEnter={() => setHoveredSection(section.id)}
+          onMouseLeave={() => setHoveredSection(null)}
+        >
+          <div 
+            className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? 'transform -translate-y-8' : ''}`}
+          >
+            <h1 className="text-[40px]">{section.title}</h1>
+            <p className={`text-[14px] transition-opacity duration-300 ${hoveredSection === section.id ? 'opacity-100' : 'opacity-80'}`}>
+              {section.description}
+            </p>
+            <Link
+              className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? 'opacity-100' : 'opacity-70'}`}
+              to={section.link}
+            >
+              Know More <ArrowUpRight width={24} height={24} />
+            </Link>
+          </div>
+        </div>
+      ))}
+      <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
+    </section>
+
 
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
@@ -472,7 +540,7 @@ const Home = () => {
               </div>
             </div>
             <Link
-              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] "
               to={"/products"}
             >
               Explore the GigaFactory <ArrowUpRight width={24} height={24} />

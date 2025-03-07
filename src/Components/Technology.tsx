@@ -17,6 +17,8 @@ import {Link,   Outlet} from "react-router-dom";
  import Adv6 from "../assets/adv6.png"; 
  import Tech2 from "../assets/Tech2.png"; 
 
+ 
+
 const Technology = () => {
     return(
         <>

@@ -10,8 +10,10 @@ import Solutions from "./Components/Solutions";
 import Contact from "./Components/Contact";
 import Technology from "./Components/Technology";
 import IslandModeSection from "./Components/IslandMode";
-import HybridModeSection from "./Components/HybridMode";
+// import HybridModeSection from "./Components/HybridMode";
+// import MicrogridModeSection from "./Components/HybridMode";
 import MicrogridModeSection from "./Components/MicrogridMode";
+import HybridModeSection from "./Components/HybridMode";
 function App() {
   return (
     <>

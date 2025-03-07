@@ -1,8 +1,8 @@
 import React from "react";
 import islandModeImage from "../assets/island-mode.png";
-import batteryIcon from "../assets/battery.svg";
-import savingsIcon from "../assets/savings.svg";
-import settingsIcon from "../assets/settings.svg";
+import energyIcon from "../assets/energy.svg";
+import windmillIcon from "../assets/windmill.svg";
+import handIcon from "../assets/hand.svg";
 import solutionImage from "../assets/solutions.png";
 import island2 from "../assets/island_2.png";
 import hybridImage from "../assets/hybrid.png";
@@ -11,17 +11,18 @@ import waveGraphic from "../assets/wave.png";
 
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-
+// MicrogridModeSection  MicrogridMode
 export default function MicrogridModeSection() {
   return (
     <main className="flex flex-col w-screen gap-4">
       <section className="flex w-full flex-col md:flex-row items-center justify-between bg-white gap-4 text-[Akshar]">
         <div className="md:w-1/2 space-y-6 p-24">
-          <h2 className="text-4xl font-bold text-blue-600">Hybrid Mode</h2>
+          <h2 className="text-4xl font-bold text-blue-600">Microgrid Mode</h2>
           <p className="text-gray-700">
-            Hybrid Mode integrates multiple energy sources like Grid, Solar PV,
-            Generators, etc., and helps in enhancing the overall efficiency and
-            reliability of the system.
+            Microgrids serve as vital solutions for areas lacking reliable
+            access to traditional grid power. Offering localized control, these
+            self-sufficient energy grids operate independently of the larger
+            grid.
           </p>
           <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             CONTACT US
@@ -30,8 +31,8 @@ export default function MicrogridModeSection() {
 
         <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
           <img
-            src={hybridImage}
-            alt="Island Mode BESS"
+            src={microgridImage}
+            alt="Microgrid Mode"
             className="w-full h-auto rounded"
           />
         </div>
@@ -40,41 +41,43 @@ export default function MicrogridModeSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-4">
             <img
-              src={batteryIcon}
+              src={energyIcon}
               alt="Reliability Boost"
               className="mx-auto w-16 h-16"
             />
             <h3 className="text-xl font-bold text-blue-600">
-              Maximized Redundancy
+              Energy Independence
             </h3>
             <p className="text-[12px] font-medium">
-              Minimizes the risk of power disruptions by switching sources.
+              Ensuring Self-Sufficiency with Renewable Energy Resources.
             </p>
           </div>
 
           <div className="space-y-4">
             <img
-              src={settingsIcon}
+              src={windmillIcon}
               alt="Enhanced Resilience"
               className="mx-auto w-16 h-16"
             />
             <h3 className="text-xl font-bold text-blue-600">
-              Increased Efficiency
+              Reliable in Remote Areas
             </h3>
             <p className="text-[12px] font-medium">
-              Battery for Solar Inverter: Storing Energy for Peak Efficiency
+              Crucial for areas with unreliable grid access
             </p>
           </div>
 
           <div className="space-y-4">
             <img
-              src={savingsIcon}
+              src={handIcon}
               alt="Improved Stability"
               className="mx-auto w-16 h-16"
             />
-            <h3 className="text-xl font-bold text-blue-600">Cost-Savings</h3>
+            <h3 className="text-xl font-bold text-blue-600">
+              Versatile Operations
+            </h3>
             <p className="text-[12px] font-medium">
-              Reduces energy costs and enhances financial performance.
+              Flexibility to connect or disconnect from the main grid.
             </p>
           </div>
         </div>
@@ -90,30 +93,26 @@ export default function MicrogridModeSection() {
 
           <div className="md:w-1/2 space-y-4">
             <h2 className="text-3xl font-bold text-blue-600">
-              Your Smart Energy Partner
+              A Self-sufficient Mode
             </h2>
             <p className="text-[12px]">
-              Imagine you’re at a construction site, where work never stops. A
-              lot is going on, and the need for electricity changes all the
-              time—more in the morning, less at night.
+              The use of microgrids is widespread, but they come with
+              limitations such as intermittency of renewable energy and power
+              factor mismatches.
             </p>
             <p className="text-[14px] font-bold">
-              With a setup called ‘hybrid working,’ energy sources like
-              generators can be used in combination with Battery Energy Storage
-              System, which stores energy in lean hours and provides energy in
-              peak hours.
+              To overcome these challenges and unlock the full potential of
+              microgrids, owners turn to Battery Energy Storage Systems. BESS
+              enhances micro-grid operations in several ways:
             </p>
             <p className="text-[12px]">
-              Hybrid working not only reduces the cost of energy but also makes
-              it more reliable and sustainable.
-            </p>
-            <p className="text-[12px]">
-              Here’s how it works: When there’s a lot of demand for power, like
-              in the morning when everyone’s starting their day, the ESS kicks
-              in. It saves extra electricity to use later, so we don’t have to
-              rely too much on expensive power from the grid. Then, when it’s
-              quieter at night and we don’t need as much energy, the stored
-              power gets used efficiently.
+              <ul className="list-disc">
+                <li>Improving grid reliability</li>
+                <li>Reducing dependency on fuel and carbon footprint</li>{" "}
+                <li>Enhancing solar penetration</li>{" "}
+                <li>Optimizing owner profits</li>
+                <li>Managing power grid frequency</li>
+              </ul>
             </p>
 
             <Link
@@ -159,17 +158,15 @@ export default function MicrogridModeSection() {
 
           <div className="relative h-64 rounded overflow-hidden group">
             <img
-              src={microgridImage}
-              alt="Microgrid"
+              src={hybridImage}
+              alt="hybrid"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4">
-              <h3 className="text-white text-2xl font-semibold mb-2">
-                MICROGRID
-              </h3>
+              <h3 className="text-white text-2xl font-semibold mb-2">Hybrid</h3>
               <Link
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                to={"/microgrid-mode"}
+                to={"/hybrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
               </Link>
