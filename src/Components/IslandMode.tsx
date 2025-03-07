@@ -4,7 +4,7 @@ import reliabilityIcon from "../assets/reliability.svg";
 import resilienceIcon from "../assets/resilience.svg";
 import stabilityIcon from "../assets/stability.svg";
 import solutionImage from "../assets/solutions.png";
-import island2 from "../assets/island_2.png";
+import islandVideo from "../assets/island.mp4";
 import hybridImage from "../assets/hybrid.png";
 import microgridImage from "../assets/microgrid.png";
 import waveGraphic from "../assets/wave.png";
@@ -128,7 +128,7 @@ export default function IslandModeSection() {
         </div>
       </section>
       <section className="flex flex-col w-full h-full justify-center items-center">
-        <img src={island2} width={"100%"} height={"100%"} />
+        <video src={islandVideo} autoPlay={true} controls={false} muted loop />
       </section>
       <section className="flex flex-col md:flex-row items-center px-8 py-16 bg-white gap-8">
         <div className="md:w-1/3 space-y-4">
@@ -150,12 +150,12 @@ export default function IslandModeSection() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-start justify-end p-4">
               <h3 className="text-white text-2xl font-semibold mb-2">HYBRID</h3>
-              <Link
+              <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                to={"/hybrid-mode"}
+                href={"/hybrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -169,12 +169,12 @@ export default function IslandModeSection() {
               <h3 className="text-white text-2xl font-semibold mb-2">
                 MICROGRID
               </h3>
-              <Link
+              <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                to={"/microgrid-mode"}
+                href={"/microgrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

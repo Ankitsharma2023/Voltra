@@ -20,10 +20,11 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import Graph from "./Graph";
 
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
-  const [hoveredSection, setHoveredSection] = useState(null);
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
   const faqItems = [
     {
@@ -50,32 +51,35 @@ const Home = () => {
 
   const sections = [
     {
-      id: 'island',
-      width: '35%',
-      title: 'ISLAND',
-      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: '/island-mode'
+      id: "island",
+      width: "35%",
+      title: "ISLAND",
+      description:
+        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: "/island-mode",
     },
     {
-      id: 'hybrid',
-      width: '30%',
-      title: 'HYBRID',
-      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: '/hybrid-mode'
+      id: "hybrid",
+      width: "30%",
+      title: "HYBRID",
+      description:
+        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: "/hybrid-mode",
     },
     {
-      id: 'microgrid',
-      width: '30%',
-      title: 'MICROGRID',
-      description: "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: '/microgrid-mode'
-    }
+      id: "microgrid",
+      width: "30%",
+      title: "MICROGRID",
+      description:
+        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      link: "/microgrid-mode",
+    },
   ];
-
 
   const toggleItem = (index) => {
     setOpenItem(openItem === index ? null : index);
   };
+  const [runningCostPercentage, setRunningCostPercentage] = useState(40);
 
   return (
     <main className="flex flex-col w-full gap-4">
@@ -147,6 +151,7 @@ const Home = () => {
                 </div>
               </div>
               <Link
+                reloadDocument
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
                 to={"/products"}
               >
@@ -227,6 +232,7 @@ const Home = () => {
                 </div>
               </div>
               <Link
+                reloadDocument
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
                 to={"/products"}
               >
@@ -297,6 +303,7 @@ const Home = () => {
               </div>
             </div>
             <Link
+              reloadDocument
               className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
               to={"/products"}
             >
@@ -314,14 +321,29 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
-        <div className="flex flex-row p-4 justify-around items-center gap-2">
+        <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
             <h1 className="text-[#0C33F2] font-medium text-[40px]">
               INVESTING IN VOLTRA BESS IS MONEY{" "}
               <span className="text-[#00C069]"> IN THE BANK</span>
             </h1>
             <p>Calculate your savings and battery life.</p>
-            <img src={slidebar} width={584} height={62} />
+            <div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={runningCostPercentage}
+                onChange={(e) =>
+                  setRunningCostPercentage(parseInt(e.target.value))
+                }
+                className="w-full bg-gray-200 rounded-lg h-2 [&::-moz-range-track]:h-[24px] [&::-webkit-slider-runnable-track]:h-[24px] [&::-ms-track]:h-[24px] cursor-pointer accent-[#0C33F2]"
+              />
+              <div className="flex flex-row w-full justify-between items-center">
+                <p>1 month</p>
+                <p>8-10 years</p>
+              </div>
+            </div>
             <div className="flex flex-row gap-4 justify-around">
               <div className=" flex flex-col ">
                 <div className="text-[36px] text-[#00C069] font-semibold">
@@ -337,102 +359,47 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <img src={invesment} width={540} height={386} />
+          <div>
+            <Graph runningCost={runningCostPercentage} />
+          </div>
         </div>
         <Link
+          reloadDocument
           className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
           to={"/products"}
         >
           Know More <ArrowUpRight width={24} height={24} />
         </Link>
       </section>
-      
-      {/* <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
-        <div className="flex flex-col w-[35%] border-r border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
-          <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
-            <h1 className="text-[40px]">ISLAND</h1>
-            <p className="text-[14px]">
-              Voltra's Battery Energy Storage Systems are super efficient in
-              island mode, which ensures a reliable stand-alone power solution
-              that works even during disconnection from the grid. Discover how
-              homes and businesses stay powered up when the grid goes down.
-              unlock the secrets of Island Mode.
-            </p>
-            <Link
-              className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/island-mode"}
-            >
-              Know More <ArrowUpRight width={24} height={24} />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col w-[30%] border-r border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
-          <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
-            <h1 className="text-[40px]">Hybrid</h1>
-            <p className="text-[14px]">
-              Voltra's Battery Energy Storage Systems are super efficient in
-              island mode, which ensures a reliable stand-alone power solution
-              that works even during disconnection from the grid. Discover how
-              homes and businesses stay powered up when the grid goes down.
-              unlock the secrets of Island Mode.
-            </p>
 
-            <Link
-              className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/hybrid-mode"}
-            >
-              Know More <ArrowUpRight width={24} height={24} />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col w-[30%] border-white h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4">
-          <div className="flex flex-col text-white w-3/4 justify-center p-4 gap-2">
-            <h1 className="text-[40px]">MICROGRID</h1>
-            <p className="text-[14px]">
-              Voltra's Battery Energy Storage Systems are super efficient in
-              island mode, which ensures a reliable stand-alone power solution
-              that works even during disconnection from the grid. Discover how
-              homes and businesses stay powered up when the grid goes down.
-              unlock the secrets of Island Mode.
-            </p>
-            <Link
-              className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-              to={"/microgrid-mode"}
-            >
-              Know More <ArrowUpRight width={24} height={24} />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
-      </section> */}
-
-<section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
-      {sections.map((section, index) => (
-        <div 
-          key={section.id}
-          className={`flex flex-col ${section.width} border-r ${index < sections.length - 1 ? 'border-white' : ''} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
-          onMouseEnter={() => setHoveredSection(section.id)}
-          onMouseLeave={() => setHoveredSection(null)}
-        >
-          <div 
-            className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? 'transform -translate-y-8' : ''}`}
+      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
+        {sections.map((section, index) => (
+          <div
+            key={section.id}
+            className={`flex flex-col ${section.width} border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
+            onMouseEnter={() => setHoveredSection(section.id)}
+            onMouseLeave={() => setHoveredSection(null)}
           >
-            <h1 className="text-[40px]">{section.title}</h1>
-            <p className={`text-[14px] transition-opacity duration-300 ${hoveredSection === section.id ? 'opacity-100' : 'opacity-80'}`}>
-              {section.description}
-            </p>
-            <Link
-              className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? 'opacity-100' : 'opacity-70'}`}
-              to={section.link}
+            <div
+              className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? "transform -translate-y-8" : ""}`}
             >
-              Know More <ArrowUpRight width={24} height={24} />
-            </Link>
+              <h1 className="text-[40px]">{section.title}</h1>
+              <p
+                className={`text-[14px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
+              >
+                {section.description}
+              </p>
+              <Link
+                className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
+                to={section.link}
+              >
+                Know More <ArrowUpRight width={24} height={24} />
+              </Link>
+            </div>
           </div>
-        </div>
-      ))}
-      <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
-    </section>
-
+        ))}
+        <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
+      </section>
 
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
