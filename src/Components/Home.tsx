@@ -79,7 +79,7 @@ const Home = () => {
   const toggleItem = (index) => {
     setOpenItem(openItem === index ? null : index);
   };
-  const [runningCostPercentage, setRunningCostPercentage] = useState(40);
+  const [year, setYear] = useState(4);
 
   return (
     <main className="flex flex-col w-full gap-4">
@@ -332,11 +332,9 @@ const Home = () => {
               <input
                 type="range"
                 min="0"
-                max="100"
-                value={runningCostPercentage}
-                onChange={(e) =>
-                  setRunningCostPercentage(parseInt(e.target.value))
-                }
+                max="12"
+                value={year}
+                onChange={(e) => setYear(parseInt(e.target.value) - 1)}
                 className="w-full bg-gray-200 rounded-lg h-2 [&::-moz-range-track]:h-[24px] [&::-webkit-slider-runnable-track]:h-[24px] [&::-ms-track]:h-[24px] cursor-pointer accent-[#0C33F2]"
               />
               <div className="flex flex-row w-full justify-between items-center">
@@ -360,7 +358,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <Graph runningCost={runningCostPercentage} />
+            <Graph year={year} />
           </div>
         </div>
         <Link
