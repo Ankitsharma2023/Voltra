@@ -27,9 +27,9 @@ function App() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/technology" element={<Technology />} />
-        <Route path="/island-mode" element={<IslandModeSection />} />
-        <Route path="/hybrid-mode" element={<HybridModeSection />} />
-        <Route path="/microgrid-mode" element={<MicrogridModeSection />} />
+        <Route path="solutions/island-mode" element={<IslandModeSection />} />
+        <Route path="solutions/hybrid-mode" element={<HybridModeSection />} />
+        <Route path="solutions/microgrid-mode" element={<MicrogridModeSection />} />
       </Routes>
       <Footer />
     </>

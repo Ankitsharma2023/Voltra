@@ -14,7 +14,7 @@ import { ArrowUpRight } from "lucide-react";
 // MicrogridModeSection  MicrogridMode
 export default function MicrogridModeSection() {
   return (
-    <main className="flex flex-col w-screen gap-4">
+    <main className="flex flex-col w-screen gap-4 font-[Akshar]">
       <section className="flex w-full flex-col md:flex-row items-center justify-between bg-white gap-4 text-[Akshar]">
         <div className="md:w-1/2 space-y-6 p-24">
           <h2 className="text-4xl font-bold text-blue-600">Microgrid Mode</h2>

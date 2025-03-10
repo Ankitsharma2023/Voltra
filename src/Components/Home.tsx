@@ -56,7 +56,7 @@ const Home = () => {
       title: "ISLAND",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/island-mode",
+      link: "solutions/island-mode",
     },
     {
       id: "hybrid",
@@ -64,7 +64,7 @@ const Home = () => {
       title: "HYBRID",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/hybrid-mode",
+      link: "solutions/hybrid-mode",
     },
     {
       id: "microgrid",
@@ -72,7 +72,7 @@ const Home = () => {
       title: "MICROGRID",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/microgrid-mode",
+      link: "solutions/microgrid-mode",
     },
   ];
 
@@ -89,9 +89,11 @@ const Home = () => {
           <h1 className="text-white text-[64px] font-[Akshar] font-medium gap-5">
             The Future of Energy
           </h1>
+          <a href ="/contact">
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             BOOK A CALL
           </button>
+          </a>
         </div>
       </section>
       <section className="w-full h-screen flex flex-col justify-start items-center bg-white font-[Akshar] ">
@@ -136,7 +138,7 @@ const Home = () => {
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
                   Revolutionizing the Battery Storage Landscape of India
                 </h1>
-                <div className="font-regular text-[14px]">
+                <div className="font-regular text-[16px]">
                   Voltra Energy is revolutionizing India's energy future with
                   advanced Battery Energy Storage Systems (BESS) utilizing
                   cutting-edge technology and world-class infrastructure.
@@ -152,7 +154,7 @@ const Home = () => {
               </div>
               <Link
                 reloadDocument
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                 to={"/products"}
               >
                 View our products <ArrowUpRight width={24} height={24} />
@@ -312,9 +314,11 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-row w-full justify-center gap-4">
+          <a href="/products">
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             VIEW ALL PRODUCTS
           </button>
+          </a>
           <button className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 text-#0C33F2 font-[Akshar] font-normal ">
             DOWNLOAD BROCHURE
           </button>
@@ -363,13 +367,13 @@ const Home = () => {
             <Graph runningCost={runningCostPercentage} />
           </div>
         </div>
-        <Link
+        <a
           reloadDocument
           className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-          to={"/products"}
+          href={"/products"}
         >
           Know More <ArrowUpRight width={24} height={24} />
-        </Link>
+        </a>
       </section>
 
       <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
@@ -385,16 +389,16 @@ const Home = () => {
             >
               <h1 className="text-[40px]">{section.title}</h1>
               <p
-                className={`text-[14px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
+                className={`text-[16px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
               >
                 {section.description}
               </p>
-              <Link
+              <a
                 className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
-                to={section.link}
+                href={section.link}
               >
                 Know More <ArrowUpRight width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
         ))}
@@ -443,7 +447,7 @@ const Home = () => {
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 The Voltra GigaFactory
               </h1>
-              <div className="text-black text-[14px] mt-5">
+              <div className="text-black text-[16px] mt-5">
                 An advanced manufacturing facility focused on producing
                 cutting-edge electric vehicle (EV) batteries and energy storage
                 solutions. Located in a strategic area to support sustainable
@@ -451,7 +455,7 @@ const Home = () => {
                 significantly reduce the cost of battery production while
                 increasing efficiency and performance.
               </div>
-              <div className="text-black text-[14px] mt-5">
+              <div className="text-black text-[16px] mt-5">
                 Voltra’s commitment to green energy solutions makes it a key
                 player in the shift toward a more sustainable, carbon-neutral
                 future.
@@ -465,7 +469,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Energy Saving and Fast
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     1P fast charge/discharge rate, energy storing & releasing
                   </div>
                 </div>
@@ -476,7 +480,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Economical and Efficient
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     Conversion efficiency over 90%, DoD over 96%
                   </div>
                 </div>
@@ -488,7 +492,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Smart O&M
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     Diversified monitoring by HMI (local), app/web (remote)
                   </div>
                 </div>
@@ -500,7 +504,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Safe and Reliable
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     IP55, thermal management, cell difference ≤6°C
                   </div>
                 </div>

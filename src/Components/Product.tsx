@@ -37,7 +37,7 @@ export default function ProductsCatalog() {
     setActiveCategory(key);
   };
   return (
-    <main className="flex flex-col w-full gap-4">
+    <main className="flex flex-col w-full gap-4 font-[Akshar]">
       <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold text-blue-600">Products Catalogue </h2>
