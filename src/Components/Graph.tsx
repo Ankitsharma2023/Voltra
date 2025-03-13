@@ -148,19 +148,19 @@ function Graph({ year }: { year: number }) {
               ))}
             </div>
 
-            {/* Bar columns */}
+            {/* Bar columns with transitions */}
 
             <div key={year} className="relative h-full w-24">
               {/* Initial Cost (Black) */}
               <div
-                className="absolute bottom-0 left-0 right-0 bg-black"
+                className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
                 }}
               />
               {/* Maintenance Cost (Light Blue) */}
               <div
-                className="absolute left-0 right-0 bg-blue-200"
+                className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].dgSet.maintenanceCost / (scale[year] * 5)) * 100}%`,
                   bottom: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
@@ -168,7 +168,7 @@ function Graph({ year }: { year: number }) {
               />
               {/* Running Cost (Blue) */}
               <div
-                className="absolute left-0 right-0 bg-blue-600"
+                className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].dgSet.runningCost / (scale[year] * 5)) * 100}%`,
                   bottom: `${((chartData[year].dgSet.initialCost + chartData[year].dgSet.maintenanceCost) / (scale[year] * 5)) * 100}%`,
@@ -179,14 +179,14 @@ function Graph({ year }: { year: number }) {
             <div className="relative h-full w-24">
               {/* Initial Cost (Black) */}
               <div
-                className="absolute bottom-0 left-0 right-0 bg-black"
+                className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
                 }}
               />
               {/* Maintenance Cost (Light Blue) */}
               <div
-                className="absolute left-0 right-0 bg-blue-200"
+                className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].voltraBESS.maintenanceCost / (scale[year] * 5)) * 100}%`,
                   bottom: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
@@ -194,7 +194,7 @@ function Graph({ year }: { year: number }) {
               />
               {/* Running Cost (Blue) */}
               <div
-                className="absolute left-0 right-0 bg-blue-600"
+                className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
                 style={{
                   height: `${(chartData[year].voltraBESS.runningCost / (scale[year] * 5)) * 100}%`,
                   bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost) / (scale[year] * 5)) * 100}%`,
@@ -203,7 +203,7 @@ function Graph({ year }: { year: number }) {
               {/* Savings (Green) */}
               {chartData[year].voltraBESS.savings > 0 && (
                 <div
-                  className="absolute left-0 right-0 bg-green-500"
+                  className="absolute left-0 right-0 bg-green-500 transition-all duration-300 ease-in-out"
                   style={{
                     height: `${(chartData[year].voltraBESS.savings / (scale[year] * 5)) * 100}%`,
                     bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost + chartData[year].voltraBESS.runningCost) / (scale[year] * 5)) * 100}%`,

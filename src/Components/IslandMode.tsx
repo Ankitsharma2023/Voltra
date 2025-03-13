@@ -24,9 +24,11 @@ export default function IslandModeSection() {
             micro grids connected with BESS often serve as backup or standby
             generators to provide electricity during grid failures.
           </p>
+          <a href='/contact'>
           <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             CONTACT US
           </button>
+          </a>
         </div>
 
         <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
@@ -118,12 +120,12 @@ export default function IslandModeSection() {
               producing.
             </p>
 
-            <Link
+            <a
               className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+              href={"/products"}
             >
               View our Products <ArrowUpRight width={24} height={24} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -152,7 +154,7 @@ export default function IslandModeSection() {
               <h3 className="text-white text-2xl font-semibold mb-2">HYBRID</h3>
               <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                href={"/hybrid-mode"}
+                href={"/solutions/hybrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
               </a>
@@ -171,7 +173,7 @@ export default function IslandModeSection() {
               </h3>
               <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                href={"/microgrid-mode"}
+                href={"/solutions/microgrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
               </a>
@@ -187,10 +189,12 @@ export default function IslandModeSection() {
               <br />
               Share your requirements with us.
             </h2>
-
+            <br/>
+            <a href='/contact'>
             <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
               GET IN TOUCH
             </button>
+            </a>
           </div>
         </div>
         <div className="md:flex relative w-3/4 h-full">

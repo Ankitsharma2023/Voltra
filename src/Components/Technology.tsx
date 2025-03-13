@@ -44,9 +44,12 @@ const Technology = () => {
               our Gigafactory and production processes to the rigorous testing
               methods we use to ensure quality and reliability.
             </p>
+            <br />
+            < a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US
             </button>
+            </a>
           </div>
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
             <div className="w-full h-64 flex items-center justify-center p-20">
@@ -127,12 +130,7 @@ const Technology = () => {
                   </div>
                 </div>
               </div>
-              <Link
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                to={"/products"}
-              >
-                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
-              </Link>
+              
             </div>
           </div>
         </section>
@@ -269,10 +267,12 @@ const Technology = () => {
                 <br />
                 Share your requirements with us.
               </h2>
-
+              <br/>
+            < a href="/contact">
               <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
                 GET IN TOUCH
               </button>
+              </a>
             </div>
           </div>
           <div className="md:flex relative w-3/4 h-full">

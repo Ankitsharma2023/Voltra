@@ -30,6 +30,7 @@ function App() {
         <Route path="solutions/island-mode" element={<IslandModeSection />} />
         <Route path="solutions/hybrid-mode" element={<HybridModeSection />} />
         <Route path="solutions/microgrid-mode" element={<MicrogridModeSection />} />
+       
       </Routes>
       <Footer />
     </>

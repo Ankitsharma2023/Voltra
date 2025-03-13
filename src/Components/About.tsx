@@ -11,6 +11,7 @@ import Benefit2 from "../assets/Benefit2.png";
 import Benefit3 from "../assets/Benefit3.png";
 import Benefit4 from "../assets/Benefit4.png";
 import Benefit5 from "../assets/Benefit5.png";
+import cover1 from "../assets/cover1.png";
 
 export default function About() {
   return (
@@ -36,15 +37,16 @@ export default function About() {
           </div>
 
           <div className="flex justify-center items-center mt-8 md:mt-0">
-            <div className="w-[584px] h-[411.2px] rounded-lg flex items-center justify-center shadow-md overflow-hidden">
-              <iframe
+            <div className="w-[584px] h-[411.2px] rounded-lg flex items-center justify-center ">
+              {/* <iframe
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/wP8twoG_GNo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              ></iframe> */}
+              <img src={cover1}/>
             </div>
           </div>
         </section>
@@ -127,14 +129,14 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col w-full h-full">
+        <section className="flex flex-col w-full h-full font-semibold">
           <div className="flex flex-row justify-start items-center gap-4">
             <img src={Benefit1} width={499} height={379} />
 
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
                 <h2 className="text-[40px] text-[#0C33F2]">Innovation</h2>
-                <p className="text-[12px]">
+                <p className="text-[16px]">
                   We are committed to fostering an environment of continuous
                   innovation, with a focus on improving energy storage solutions
                   and reducing their environmental impact.
@@ -145,11 +147,9 @@ export default function About() {
           <div className="flex flex-row justify-end items-center gap-4">
             <div className="flex flex-row justify-end">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2]">Innovation</h2>
-                <p className="text-[12px]">
-                  We are committed to fostering an environment of continuous
-                  innovation, with a focus on improving energy storage solutions
-                  and reducing their environmental impact.
+                <h2 className="text-[40px] text-[#0C33F2]">Sustainability</h2>
+                <p className="text-[16px]">
+                We prioritize the long-term health of the planet by employing environmentally-friendly technologies and promoting renewable energy solutions.
                 </p>
               </div>
             </div>
@@ -159,11 +159,9 @@ export default function About() {
             <img src={Benefit3} width={499} height={379} />
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2]">Innovation</h2>
-                <p className="text-[12px]">
-                  We are committed to fostering an environment of continuous
-                  innovation, with a focus on improving energy storage solutions
-                  and reducing their environmental impact.
+                <h2 className="text-[40px] text-[#0C33F2]">Integrity</h2>
+                <p className="text-[16px]">
+                Every product we create is a testament to our commitment to excellence, from design to production to customer service.
                 </p>
               </div>
             </div>
@@ -172,11 +170,9 @@ export default function About() {
           <div className="flex flex-row justify-end items-center gap-4">
             <div className="flex flex-row justify-end">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2]">Innovation</h2>
-                <p className="text-[12px]">
-                  We are committed to fostering an environment of continuous
-                  innovation, with a focus on improving energy storage solutions
-                  and reducing their environmental impact.
+                <h2 className="text-[40px] text-[#0C33F2]">Social Impact </h2>
+                <p className="text-[16px]">
+                We are dedicated to making a meaningful difference by expanding access to clean energy, supporting development, and empowering communities with innovative solutions.
                 </p>
               </div>
             </div>
@@ -186,11 +182,9 @@ export default function About() {
             <img src={Benefit5} width={499} height={379} />
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2]">Innovation</h2>
-                <p className="text-[12px]">
-                  We are committed to fostering an environment of continuous
-                  innovation, with a focus on improving energy storage solutions
-                  and reducing their environmental impact.
+                <h2 className="text-[40px] text-[#0C33F2]">Seurity</h2>
+                <p className="text-[16px]">
+                We prioritize the safety and resilience of our energy solutions by implementing advanced protective technologies, rigorous testing, and industry-leading standards.
                 </p>
               </div>
             </div>
@@ -275,10 +269,12 @@ export default function About() {
                 <br />
                 Share your requirements with us.
               </h2>
-
+              <br />
+            <a href="/contact">
               <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
                 GET IN TOUCH
               </button>
+              </a>
             </div>
           </div>
           <div className="md:flex relative w-3/4 h-full">
