@@ -19,7 +19,6 @@ import bar from "../assets/bar.svg";
 import gaurd from "../assets/gaurd.svg";
 import waveGraphic from "../assets/wave.png";
 
-
 export default function ProductsCatalog() {
   const categories = [
     { key: "all", label: "ALL" },
@@ -40,7 +39,9 @@ export default function ProductsCatalog() {
     <main className="flex flex-col w-full gap-4">
       <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
         <div className="md:w-1/2 space-y-6">
-          <h2 className="text-4xl font-bold text-blue-600">Products Catalogue </h2>
+          <h2 className="text-4xl font-bold text-blue-600">
+            Products Catalogue{" "}
+          </h2>
           <p className="text-gray-700">
             Voltra's Battery Energy Storage Systems (BESS) provide reliable,
             scalable solutions designed to optimize energy management for both
@@ -150,7 +151,7 @@ export default function ProductsCatalog() {
                   </div>
                 </div>
                 <a
-                  href="#"
+                  href={`/solutions?id=${index + 1}`}
                   className="text-green-600 font-semibold mt-4 inline-block"
                 >
                   Know more →

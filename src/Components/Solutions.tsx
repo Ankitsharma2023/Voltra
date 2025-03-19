@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Cloud,
   Home,
@@ -9,6 +9,7 @@ import {
   Link as LucideLink,
   Shield,
 } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 import product_main from "../assets/product_main.png";
 import product1 from "../assets/product1.png";
 import product2 from "../assets/product2.png";
@@ -35,6 +36,16 @@ const flipedCard = () => {
 export default function Solutions() {
   const [hoverIndex, setHoverIndex] = useState(-1);
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [productId, setProductId] = useState(1);
+
+  useEffect(() => {
+    const id = searchParams.get("id");
+    if (id) {
+      setProductId(parseInt(id));
+    }
+  }, []);
+
   return (
     <>
       <main className="flex flex-col w-full gap-4 font-[Akshar]">
@@ -54,7 +65,11 @@ export default function Solutions() {
           </div>
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
             <div className="w-full h-64 flex items-center justify-center ml-20 p-10">
-              <img src={solution} alt="Product" className="w-full h-auto" />
+              <img
+                src={productId % 2 == 0 ? product2 : product1}
+                alt="Product"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </section>
@@ -62,7 +77,11 @@ export default function Solutions() {
         <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
           <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
             <div className="flex flex-col gap-4 w-[584px] justify-start">
-              <img src={solution} width={584} height={336} />
+              <img
+                src={productId % 2 == 0 ? product2 : product1}
+                width={584}
+                height={336}
+              />
             </div>
             <div className="grid grid-cols-3 gap-4 p-4 w-[584px]">
               <div
