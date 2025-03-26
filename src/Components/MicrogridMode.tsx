@@ -14,7 +14,7 @@ import { ArrowUpRight } from "lucide-react";
 // MicrogridModeSection  MicrogridMode
 export default function MicrogridModeSection() {
   return (
-    <main className="flex flex-col w-screen gap-4">
+    <main className="flex flex-col w-screen gap-4 font-[Akshar]">
       <section className="flex w-full flex-col md:flex-row items-center justify-between bg-white gap-4 text-[Akshar]">
         <div className="md:w-1/2 space-y-6 p-24">
           <h2 className="text-4xl font-bold text-blue-600">Microgrid Mode</h2>
@@ -24,9 +24,11 @@ export default function MicrogridModeSection() {
             self-sufficient energy grids operate independently of the larger
             grid.
           </p>
+          < a href  = '/contact'>
           <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             CONTACT US
           </button>
+          </a>
         </div>
 
         <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
@@ -115,12 +117,12 @@ export default function MicrogridModeSection() {
               </ul>
             </p>
 
-            <Link
+            <a
               className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+              href={"/products"}
             >
               View our Products <ArrowUpRight width={24} height={24} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -149,7 +151,7 @@ export default function MicrogridModeSection() {
               <h3 className="text-white text-2xl font-semibold mb-2">Island</h3>
               <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                href={"/island-mode"}
+                href={"/solutions/island-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
               </a>
@@ -166,7 +168,7 @@ export default function MicrogridModeSection() {
               <h3 className="text-white text-2xl font-semibold mb-2">Hybrid</h3>
               <a
                 className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] font-bold"
-                href={"/hybrid-mode"}
+                href={"/solutions/hybrid-mode"}
               >
                 Know more <ArrowUpRight width={24} height={24} />
               </a>
@@ -182,10 +184,12 @@ export default function MicrogridModeSection() {
               <br />
               Share your requirements with us.
             </h2>
-
+            <br/>
+            <a href="/contact">
             <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
               GET IN TOUCH
             </button>
+            </a>
           </div>
         </div>
         <div className="md:flex relative w-3/4 h-full">

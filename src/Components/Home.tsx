@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import power from "../assets/power.png";
-import product1 from "../assets/product1.png";
-import product2 from "../assets/product2.png";
+
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
 import bar from "../assets/bar.svg";
@@ -21,6 +20,12 @@ import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Graph from "./Graph";
+import VOLT_100 from "../assets/VOLT_100.png";
+import VOLT_215 from "../assets/VOLT_215.png";
+import VOLT_HVC from "../assets/VOLT_HVC.png";
+import VOLT_HVD from "../assets/VOLT_HVD.png";
+import VOLT_LVS from "../assets/VOLT_LVS.png";
+import VOLT_LVW from "../assets/VOLT_LVW.png";
 
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
@@ -56,7 +61,7 @@ const Home = () => {
       title: "ISLAND",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/island-mode",
+      link: "solutions/island-mode",
     },
     {
       id: "hybrid",
@@ -64,7 +69,7 @@ const Home = () => {
       title: "HYBRID",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/hybrid-mode",
+      link: "solutions/hybrid-mode",
     },
     {
       id: "microgrid",
@@ -72,7 +77,7 @@ const Home = () => {
       title: "MICROGRID",
       description:
         "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
-      link: "/microgrid-mode",
+      link: "solutions/microgrid-mode",
     },
   ];
 
@@ -89,9 +94,11 @@ const Home = () => {
           <h1 className="text-white text-[64px] font-[Akshar] font-medium gap-5">
             The Future of Energy
           </h1>
+          <a href ="/contact">
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             BOOK A CALL
           </button>
+          </a>
         </div>
       </section>
       <section className="w-full h-screen flex flex-col justify-start items-center bg-white font-[Akshar] ">
@@ -136,7 +143,7 @@ const Home = () => {
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
                   Revolutionizing the Battery Storage Landscape of India
                 </h1>
-                <div className="font-regular text-[14px]">
+                <div className="font-regular text-[16px]">
                   Voltra Energy is revolutionizing India's energy future with
                   advanced Battery Energy Storage Systems (BESS) utilizing
                   cutting-edge technology and world-class infrastructure.
@@ -152,7 +159,7 @@ const Home = () => {
               </div>
               <Link
                 reloadDocument
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                 to={"/products"}
               >
                 View our products <ArrowUpRight width={24} height={24} />
@@ -168,11 +175,11 @@ const Home = () => {
 
         <div className="flex flex-row w-full justify-around p-4 gap-4">
           <div className="flex flex-col gap-4 w-[584px]">
-            <img src={product1} width={584} height={336} />
+            <img src={VOLT_100} width={584} height={336} />
             <div className="flex flex-col p-4 gap-4 w-[584px]">
               <div>
                 <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                  VOLT-1000
+                  VOLT-100
                 </h1>
                 <div className="text-black text-[14px]">
                   The all-in-one air-cooled ESS cabinet integrates a long-life
@@ -241,10 +248,10 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img src={product2} height={336} />
+            <img src={VOLT_HVC} height={336} />
             <div className="flex flex-col p-4">
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                VOLT-1000
+                VOLT-HVC
               </h1>
               <div className="text-black text-[14px]">
                 The all-in-one air-cooled ESS cabinet integrates a long-life
@@ -311,15 +318,28 @@ const Home = () => {
             </Link>
           </div>
         </div>
+
+        
+
+
         <div className="flex flex-row w-full justify-center gap-4">
+          <a href="/products">
           <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
             VIEW ALL PRODUCTS
           </button>
-          <button className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 text-#0C33F2 font-[Akshar] font-normal ">
-            DOWNLOAD BROCHURE
-          </button>
+          </a>
+          <a
+  href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
+>
+  DOWNLOAD BROCHURE
+</a>
+
         </div>
       </section>
+
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
         <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
@@ -329,19 +349,25 @@ const Home = () => {
             </h1>
             <p>Calculate your savings and battery life.</p>
             <div>
-              <input
-                type="range"
-                min="0"
-                max="12"
-                value={year}
-                onChange={(e) => setYear(parseInt(e.target.value) - 1)}
-                className="w-full bg-gray-200 rounded-lg h-2 [&::-moz-range-track]:h-[24px] [&::-webkit-slider-runnable-track]:h-[24px] [&::-ms-track]:h-[24px] cursor-pointer accent-[#0C33F2]"
-              />
-              <div className="flex flex-row w-full justify-between items-center">
-                <p>1 month</p>
-                <p>8-10 years</p>
-              </div>
-            </div>
+  <input
+    type="range"
+    min="0"
+    max="11"
+    value={year}
+    onChange={(e) => setYear(parseInt(e.target.value))}
+    className="w-full appearance-none h-3 bg-gray-200 rounded-lg cursor-pointer accent-[#0C33F2]"
+    style={{
+      WebkitAppearance: "none",
+      background: `linear-gradient(to right, #0C33F2 0%, #0C33F2 ${(year/11)*100}%, #e5e7eb ${(year/11)*100}%, #e5e7eb 100%)`,
+      transition: "all 0.3s ease"
+    }}
+  />
+  <div className="flex flex-row w-full justify-between items-center mt-2">
+    <p>1 year </p>
+    <div className="text-[#0C33F2] font-medium">Year {year + 1}</div>
+    <p>12 years</p>
+  </div>
+</div>
             <div className="flex flex-row gap-4 justify-around">
               <div className=" flex flex-col ">
                 <div className="text-[36px] text-[#00C069] font-semibold">
@@ -361,13 +387,7 @@ const Home = () => {
             <Graph year={year} />
           </div>
         </div>
-        <Link
-          reloadDocument
-          className="flex flex-row items-start gap-2 text-[14px] text-[#00C069]"
-          to={"/products"}
-        >
-          Know More <ArrowUpRight width={24} height={24} />
-        </Link>
+       
       </section>
 
       <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
@@ -383,23 +403,23 @@ const Home = () => {
             >
               <h1 className="text-[40px]">{section.title}</h1>
               <p
-                className={`text-[14px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
+                className={`text-[16px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
               >
                 {section.description}
               </p>
-              <Link
+              <a
                 className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
-                to={section.link}
+                href={section.link}
               >
                 Know More <ArrowUpRight width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
         ))}
         <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
       </section>
 
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
+      {/* <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
           The Voltra Advantage
         </h1>
@@ -430,7 +450,95 @@ const Home = () => {
             <img src={Adv6} height={336} />
           </div>
         </div>
-      </section>
+      </section> */}
+
+<section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar]">
+      <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">The Voltra Advantage</h2>
+      
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 max-w-6xl mx-auto">
+        {/* Card 1: Modular BESS */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Modular BESS</h3>
+            <p className="text-sm mb-2">
+              Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
+            </p>
+            <p className="text-sm">
+              These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv1} 
+              alt="Modular BESS system" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Card 2: Thermal Management */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Thermal Management</h3>
+            <p className="text-sm mb-2">
+              Our Technology is designed for the Indian climate, both for air and liquid cooling systems.
+            </p>
+            <p className="text-sm">
+              Our uniform heat dissipation Technology ensures efficient performance and prolonging battery life.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv2} 
+              alt="Thermal management system" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Card 3: Intelligent Communication */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Intelligent Communication</h3>
+            <p className="text-sm mb-2">
+              We have implemented intelligent communication between the DC and AC using AI technology.
+            </p>
+            <p className="text-sm">
+              This helps in enhancing system robustness and reliability and enables fault detection.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv3} 
+              alt="Intelligent communication system" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Card 4: Long Service Life */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Long Service Life</h3>
+            <p className="text-sm mb-2">
+              We have benchmarked battery cells based on components like cathode, anodes, electrolytes.
+            </p>
+            <p className="text-sm">
+              This help us in achieving lower degradation rates and extended battery life.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv4} 
+              alt="Long service life battery" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
       <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
         <div className="flex flex-row w-full h-auto justify-around items-center">
@@ -441,7 +549,7 @@ const Home = () => {
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 The Voltra GigaFactory
               </h1>
-              <div className="text-black text-[14px] mt-5">
+              <div className="text-black text-[16px] mt-5">
                 An advanced manufacturing facility focused on producing
                 cutting-edge electric vehicle (EV) batteries and energy storage
                 solutions. Located in a strategic area to support sustainable
@@ -449,7 +557,7 @@ const Home = () => {
                 significantly reduce the cost of battery production while
                 increasing efficiency and performance.
               </div>
-              <div className="text-black text-[14px] mt-5">
+              <div className="text-black text-[16px] mt-5">
                 Voltra’s commitment to green energy solutions makes it a key
                 player in the shift toward a more sustainable, carbon-neutral
                 future.
@@ -463,7 +571,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Energy Saving and Fast
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     1P fast charge/discharge rate, energy storing & releasing
                   </div>
                 </div>
@@ -474,7 +582,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Economical and Efficient
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     Conversion efficiency over 90%, DoD over 96%
                   </div>
                 </div>
@@ -486,7 +594,7 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Smart O&M
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     Diversified monitoring by HMI (local), app/web (remote)
                   </div>
                 </div>
@@ -498,18 +606,18 @@ const Home = () => {
                   <h1 className="text-black font-bold text-[10px]">
                     Safe and Reliable
                   </h1>
-                  <div className="text-[8px] font-medium text-center">
+                  <div className="text-[10px] font-medium text-center">
                     IP55, thermal management, cell difference ≤6°C
                   </div>
                 </div>
               </div>
             </div>
-            <Link
+            <a
               className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] "
-              to={"/products"}
+              href={"/technology"}
             >
               Explore the GigaFactory <ArrowUpRight width={24} height={24} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

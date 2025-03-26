@@ -18,6 +18,13 @@ import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
 import Tech2 from "../assets/Tech2.png";
+import Test_2 from "../assets/Test_2.png";
+import Test_3 from "../assets/Test_3.png";
+import Test_4 from "../assets/Test_4.png";
+import Test_5 from "../assets/Test_5.png";
+import Test_6 from "../assets/Test_6.png";
+import Test_7 from "../assets/Test_7.png";
+
 
 const Technology = () => {
   return (
@@ -37,9 +44,12 @@ const Technology = () => {
               our Gigafactory and production processes to the rigorous testing
               methods we use to ensure quality and reliability.
             </p>
+            <br />
+            < a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US
             </button>
+            </a>
           </div>
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
             <div className="w-full h-64 flex items-center justify-center p-20">
@@ -120,12 +130,7 @@ const Technology = () => {
                   </div>
                 </div>
               </div>
-              <Link
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                to={"/products"}
-              >
-                Explore the GigaFactory <ArrowUpRight width={24} height={24} />
-              </Link>
+              
             </div>
           </div>
         </section>
@@ -143,83 +148,77 @@ const Technology = () => {
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
                     Cell Grading
                   </h2>
-                  <p className="text-[12px]">
+                  <p className="text-[16px]">
                     Combined with the cell failure mechanism model, it monitors
                     all cells with charge and discharge in real-time. 
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_2} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                    Container Testing 
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  Multiple cycles are tested to comply with safety standards and monitoring communication & control systems for all the components.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_3} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                    BMS Testing
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  Each BMS is tested with detailed parameters like voltage, temperature accuracy, balancing, over-under voltage, voltage interlock, insulation, shunt accuracy etc.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_4} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                    Insulation Test
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  To verify the integrity of the insulation in the battery pack and its components, to ensure no electrical leakage paths that could pose safety risks.
                   </p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row justify-center items-center p-4 gap-4 ">
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_5} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                  Pack Grading 
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  Each battery pack is rigorously tested with EU standards to check capacity, voltage, charge-discharge, safety, cut-off parameters, etc.  
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_6} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                    Environmental Testing 
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  Exposes the battery under different environmental conditions, such as temperature extremes, humidity, pressure, vibration, and other external factors.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+                <img src={Test_7} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
+                   Pressure Leak Test 
                   </h2>
-                  <p className="text-[12px]">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
+                  <p className="text-[16px]">
+                  The test verifies that the liquid cooling system is sealed and free of leaks, preventing coolant loss, which could lead to overheating or thermal management failures.
                   </p>
                 </div>
               </div>
@@ -268,10 +267,12 @@ const Technology = () => {
                 <br />
                 Share your requirements with us.
               </h2>
-
+              <br/>
+            < a href="/contact">
               <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
                 GET IN TOUCH
               </button>
+              </a>
             </div>
           </div>
           <div className="md:flex relative w-3/4 h-full">
