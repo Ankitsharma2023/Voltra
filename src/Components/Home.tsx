@@ -173,7 +173,7 @@ const Home = () => {
           Our Products
         </h1>
 
-        <div className="flex flex-row w-full justify-around p-4 gap-4">
+        <div className="flex flex-row w-full justify-center p-4 gap-4">
           <div className="flex flex-col gap-4 w-[584px]">
             <img src={VOLT_100} width={584} />
             <div className="flex flex-col p-4 gap-4 w-[584px]">
@@ -336,7 +336,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
+      <section className="w-full h-[626px] flex flex-col justify-around items-center bg-white font-[Akshar] gap-8">
         <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
             <h1 className="text-[#0C33F2] font-medium text-[40px]">
