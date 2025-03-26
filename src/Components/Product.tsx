@@ -453,12 +453,12 @@ export default function ProductsCatalog() {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="rounded-lg shadow-md p-5 bg-gray-100"
+              className="rounded-lg w-[584px] shadow-md p-5 bg-gray-100"
             >
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full max-h-60 object-contain rounded bg-gray-100 p-2"
+                className="w-full h-[336px] object-contain rounded bg-gray-100 p-2"
               />
 
               <div className="mt-8">
@@ -483,13 +483,6 @@ export default function ProductsCatalog() {
                         <div className="text-[8px] font-medium text-center">
                           {feature.desc}
                         </div>
-
-                        <a
-                          href={`/solutions?id=${idx + 1}`}
-                          className="text-green-600 font-semibold mt-4 inline-block"
-                        >
-                          Know more →
-                        </a>
                       </div>
                     </div>
                   ))}

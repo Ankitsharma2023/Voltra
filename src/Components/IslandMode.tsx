@@ -24,10 +24,10 @@ export default function IslandModeSection() {
             micro grids connected with BESS often serve as backup or standby
             generators to provide electricity during grid failures.
           </p>
-          <a href='/contact'>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-            CONTACT US
-          </button>
+          <a href="/contact">
+            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+              CONTACT US
+            </button>
           </a>
         </div>
 
@@ -144,7 +144,7 @@ export default function IslandModeSection() {
         </div>
 
         <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative h-64 rounded overflow-hidden group">
+          <div className="relative h-64 rounded  group">
             <img
               src={hybridImage}
               alt="Hybrid"
@@ -161,7 +161,7 @@ export default function IslandModeSection() {
             </div>
           </div>
 
-          <div className="relative h-64 rounded overflow-hidden group">
+          <div className="relative h-64 rounded  group">
             <img
               src={microgridImage}
               alt="Microgrid"
@@ -189,11 +189,11 @@ export default function IslandModeSection() {
               <br />
               Share your requirements with us.
             </h2>
-            <br/>
-            <a href='/contact'>
-            <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-              GET IN TOUCH
-            </button>
+            <br />
+            <a href="/contact">
+              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+                GET IN TOUCH
+              </button>
             </a>
           </div>
         </div>

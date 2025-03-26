@@ -25,7 +25,6 @@ import Test_5 from "../assets/Test_5.png";
 import Test_6 from "../assets/Test_6.png";
 import Test_7 from "../assets/Test_7.png";
 
-
 const Technology = () => {
   return (
     <>
@@ -45,10 +44,10 @@ const Technology = () => {
               methods we use to ensure quality and reliability.
             </p>
             <br />
-            < a href="/contact">
-            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-              CONTACT US
-            </button>
+            <a href="/contact">
+              <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+                CONTACT US
+              </button>
             </a>
           </div>
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
@@ -130,7 +129,6 @@ const Technology = () => {
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
@@ -158,10 +156,12 @@ const Technology = () => {
                 <img src={Test_2} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Container Testing 
+                    Container Testing
                   </h2>
                   <p className="text-[16px]">
-                  Multiple cycles are tested to comply with safety standards and monitoring communication & control systems for all the components.
+                    Multiple cycles are tested to comply with safety standards
+                    and monitoring communication & control systems for all the
+                    components.
                   </p>
                 </div>
               </div>
@@ -172,7 +172,9 @@ const Technology = () => {
                     BMS Testing
                   </h2>
                   <p className="text-[16px]">
-                  Each BMS is tested with detailed parameters like voltage, temperature accuracy, balancing, over-under voltage, voltage interlock, insulation, shunt accuracy etc.
+                    Each BMS is tested with detailed parameters like voltage,
+                    temperature accuracy, balancing, over-under voltage, voltage
+                    interlock, insulation, shunt accuracy etc.
                   </p>
                 </div>
               </div>
@@ -183,7 +185,9 @@ const Technology = () => {
                     Insulation Test
                   </h2>
                   <p className="text-[16px]">
-                  To verify the integrity of the insulation in the battery pack and its components, to ensure no electrical leakage paths that could pose safety risks.
+                    To verify the integrity of the insulation in the battery
+                    pack and its components, to ensure no electrical leakage
+                    paths that could pose safety risks.
                   </p>
                 </div>
               </div>
@@ -193,10 +197,12 @@ const Technology = () => {
                 <img src={Test_5} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                  Pack Grading 
+                    Pack Grading
                   </h2>
                   <p className="text-[16px]">
-                  Each battery pack is rigorously tested with EU standards to check capacity, voltage, charge-discharge, safety, cut-off parameters, etc.  
+                    Each battery pack is rigorously tested with EU standards to
+                    check capacity, voltage, charge-discharge, safety, cut-off
+                    parameters, etc.  
                   </p>
                 </div>
               </div>
@@ -204,10 +210,12 @@ const Technology = () => {
                 <img src={Test_6} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Environmental Testing 
+                    Environmental Testing
                   </h2>
                   <p className="text-[16px]">
-                  Exposes the battery under different environmental conditions, such as temperature extremes, humidity, pressure, vibration, and other external factors.
+                    Exposes the battery under different environmental
+                    conditions, such as temperature extremes, humidity,
+                    pressure, vibration, and other external factors.
                   </p>
                 </div>
               </div>
@@ -215,10 +223,12 @@ const Technology = () => {
                 <img src={Test_7} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                   Pressure Leak Test 
+                    Pressure Leak Test
                   </h2>
                   <p className="text-[16px]">
-                  The test verifies that the liquid cooling system is sealed and free of leaks, preventing coolant loss, which could lead to overheating or thermal management failures.
+                    The test verifies that the liquid cooling system is sealed
+                    and free of leaks, preventing coolant loss, which could lead
+                    to overheating or thermal management failures.
                   </p>
                 </div>
               </div>
@@ -235,17 +245,46 @@ const Technology = () => {
             <div className="flex flex-col gap-4 w-[584px]">
               <img src={Adv1} width={584} height={336} />
             </div>
-            <div className="flex flex-col gap-4 p-4 w-[584px]">
-              <img src={Adv2} height={336} />
+            <div className="flex flex-row gap-4 p-4 w-[584px]">
+              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
+                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
+                  VOLTRA EMS
+                </h3>
+                <p className="text-sm mb-2">India’s first AI-powered BESS!</p>
+                <p className="text-sm">
+                  The Voltra EMS series products are integrated EMS designed for
+                  ESS scenarios
+                </p>
+                <a
+                  className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300`}
+                  href="#"
+                >
+                  Know More <ArrowUpRight width={24} height={24} />
+                </a>
+              </div>
+              <img src={Adv2} width={276} height={336} />
             </div>
           </div>
 
           <div className="flex flex-row w-full justify-around p-4 gap-4">
-            <div className="flex flex-col gap-4 w-[584px]">
-              <img src={Adv3} width={584} height={336} />
+            <div className="flex flex-row gap-4 w-[584px]">
+              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
+                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
+                  Modular BESS
+                </h3>
+                <p className="text-sm mb-2">
+                  Voltra's Modular Cabinet configurations enable seamless
+                  scaling from kWh to MWh systems.
+                </p>
+                <p className="text-sm">
+                  These solutions offer superior efficiency and reliability,
+                  easy maintenance, & longer battery life.
+                </p>
+              </div>
+              <img src={Adv3} width={276} height={336} />
             </div>
             <div className="flex flex-col gap-4 p-4 w-[584px]">
-              <img src={Adv4} height={336} />
+              <img src={Adv4} width={584} height={336} />
             </div>
           </div>
 
@@ -253,8 +292,21 @@ const Technology = () => {
             <div className="flex flex-col gap-4 w-[584px]">
               <img src={Adv5} width={584} height={336} />
             </div>
-            <div className="flex flex-col gap-4 p-4 w-[584px]">
-              <img src={Adv6} height={336} />
+            <div className="flex flex-row gap-4 w-[584px]">
+              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
+                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
+                  Liquid Cooling
+                </h3>
+                <p className="text-sm mb-2">
+                  Voltra's Modular Cabinet configurations enable seamless
+                  scaling from kWh to MWh systems.
+                </p>
+                <p className="text-sm">
+                  These solutions offer superior efficiency and reliability,
+                  easy maintenance, & longer battery life.
+                </p>
+              </div>
+              <img src={Adv3} width={276} height={336} />
             </div>
           </div>
         </section>
@@ -267,11 +319,11 @@ const Technology = () => {
                 <br />
                 Share your requirements with us.
               </h2>
-              <br/>
-            < a href="/contact">
-              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-                GET IN TOUCH
-              </button>
+              <br />
+              <a href="/contact">
+                <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+                  GET IN TOUCH
+                </button>
               </a>
             </div>
           </div>

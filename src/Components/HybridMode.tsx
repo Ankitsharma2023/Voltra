@@ -14,7 +14,7 @@ import { ArrowUpRight } from "lucide-react";
 // HybridModeSection  HybridMode
 export default function HybridModeSection() {
   return (
-    <main className="flex flex-col w-screen gap-4 font-[Akshar]">
+    <main className="flex flex-col w-screen md:gap-4 font-[Akshar]">
       <section className="flex w-full flex-col md:flex-row items-center justify-between bg-white gap-4 text-[Akshar]">
         <div className="md:w-1/2 space-y-6 p-24">
           <h2 className="text-4xl font-bold text-blue-600">Hybrid Mode</h2>
@@ -23,10 +23,10 @@ export default function HybridModeSection() {
             Generators, etc., and helps in enhancing the overall efficiency and
             reliability of the system.
           </p>
-          < a href='/contact'>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-            CONTACT US
-          </button>
+          <a href="/contact">
+            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+              CONTACT US
+            </button>
           </a>
         </div>
 
@@ -130,7 +130,7 @@ export default function HybridModeSection() {
       <section className="flex flex-col w-full h-full justify-center items-center">
         <video src={hybridVideo} autoPlay={true} controls={false} muted loop />
       </section>
-      <section className="flex flex-col md:flex-row items-center px-8 py-16 bg-white gap-8">
+      <section className="flex flex-col md:flex-row items-center px-4 md:px-8 py-16 bg-white gap-8">
         <div className="md:w-1/3 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
             Multiple Applications, One-Stop Solution
@@ -141,8 +141,8 @@ export default function HybridModeSection() {
           </p>
         </div>
 
-        <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative h-64 rounded overflow-hidden group">
+        <div className="md:w-2/3 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="relative h-64 rounded  group">
             <img
               src={islandModeImage}
               alt="island"
@@ -179,19 +179,19 @@ export default function HybridModeSection() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden">
-        <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
+      <section className="flex flex-col justify-center items-center w-full h-full p-4 overflow-hidden">
+        <div className="bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
           <div className="md:w-2/3 space-y-4 z-10">
             <h2 className="text-2xl md:text-3xl font-semibold">
               We offer tailored customization to meet your needs.
               <br />
               Share your requirements with us.
             </h2>
-            <br/>
-            < a href="/contact">
-            <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-              GET IN TOUCH
-            </button>
+            <br />
+            <a href="/contact">
+              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+                GET IN TOUCH
+              </button>
             </a>
           </div>
         </div>

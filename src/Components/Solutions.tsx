@@ -11,8 +11,6 @@ import {
 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import product_main from "../assets/product_main.png";
-import product1 from "../assets/product1.png";
-import product2 from "../assets/product2.png";
 import power from "../assets/power.png";
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
@@ -45,7 +43,167 @@ export default function Solutions() {
       setProductId(parseInt(id));
     }
   }, []);
-
+  const tabledatas = [
+    {
+      ac: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+      ],
+      dc: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Voltage", value: 3.2 },
+          general: { label: "Capacity", value: 280 },
+        },
+        {
+          acSide: { label: "Resistance", value: 0.15 },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Energy", value: 896 },
+        },
+        {
+          acSide: { label: "Current", value: 50 },
+          dcSide: { label: "Power", value: 160 },
+          general: { label: "Efficiency", value: 92.5 },
+        },
+      ],
+      general: [
+        {
+          acSide: { label: "Voltage", value: 3.7 },
+          dcSide: { label: "Capacity", value: 300 },
+          general: { label: "Energy", value: 1110 },
+        },
+        {
+          acSide: { label: "Power", value: 200 },
+          dcSide: { label: "Resistance", value: 0.12 },
+          general: { label: "Current", value: 55 },
+        },
+        {
+          acSide: { label: "Efficiency", value: 95 },
+          dcSide: { label: "Voltage", value: 3.3 },
+          general: { label: "Capacity", value: 275 },
+        },
+      ],
+    },
+    {
+      ac: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+      ],
+      dc: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Voltage", value: 3.2 },
+          general: { label: "Capacity", value: 280 },
+        },
+        {
+          acSide: { label: "Resistance", value: 0.15 },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Energy", value: 896 },
+        },
+        {
+          acSide: { label: "Current", value: 50 },
+          dcSide: { label: "Power", value: 160 },
+          general: { label: "Efficiency", value: 92.5 },
+        },
+      ],
+      general: [
+        {
+          acSide: { label: "Voltage", value: 3.7 },
+          dcSide: { label: "Capacity", value: 300 },
+          general: { label: "Energy", value: 1110 },
+        },
+        {
+          acSide: { label: "Power", value: 200 },
+          dcSide: { label: "Resistance", value: 0.12 },
+          general: { label: "Current", value: 55 },
+        },
+        {
+          acSide: { label: "Efficiency", value: 95 },
+          dcSide: { label: "Voltage", value: 3.3 },
+          general: { label: "Capacity", value: 275 },
+        },
+      ],
+    },
+    {
+      ac: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Cell Type", value: "LFP 280Ah" },
+        },
+      ],
+      dc: [
+        {
+          acSide: { label: "Cell Type", value: "LFP 280Ah" },
+          dcSide: { label: "Voltage", value: 3.2 },
+          general: { label: "Capacity", value: 280 },
+        },
+        {
+          acSide: { label: "Resistance", value: 0.15 },
+          dcSide: { label: "Cell Type", value: "LFP 280Ah" },
+          general: { label: "Energy", value: 896 },
+        },
+        {
+          acSide: { label: "Current", value: 50 },
+          dcSide: { label: "Power", value: 160 },
+          general: { label: "Efficiency", value: 92.5 },
+        },
+      ],
+      general: [
+        {
+          acSide: { label: "Voltage", value: 3.7 },
+          dcSide: { label: "Capacity", value: 300 },
+          general: { label: "Energy", value: 1110 },
+        },
+        {
+          acSide: { label: "Power", value: 200 },
+          dcSide: { label: "Resistance", value: 0.12 },
+          general: { label: "Current", value: 55 },
+        },
+        {
+          acSide: { label: "Efficiency", value: 95 },
+          dcSide: { label: "Voltage", value: 3.3 },
+          general: { label: "Capacity", value: 275 },
+        },
+      ],
+    },
+  ];
   return (
     <>
       <main className="flex flex-col w-full gap-4 font-[Akshar]">
@@ -66,7 +224,7 @@ export default function Solutions() {
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
             <div className="w-full h-64 flex items-center justify-center ml-20 p-10">
               <img
-                src={productId % 2 == 0 ? product2 : product1}
+                src={productId % 2 == 0 ? product_main : product_main}
                 alt="Product"
                 className="w-full h-auto"
               />
@@ -78,7 +236,7 @@ export default function Solutions() {
           <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
             <div className="flex flex-col gap-4 w-[584px] justify-start">
               <img
-                src={productId % 2 == 0 ? product2 : product1}
+                src={productId % 2 == 0 ? product_main : product_main}
                 width={584}
                 height={336}
               />
@@ -142,7 +300,7 @@ export default function Solutions() {
         </section>
 
         <section>
-          <TechnicalSpecification />
+          <TechnicalSpecification tableData={tabledatas[productId % 2]} />
         </section>
 
         <section className="flex justify-center items-center w-full h-full p-4 relative overflow-hidden">
