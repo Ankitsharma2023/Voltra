@@ -231,7 +231,7 @@ export default function Solutions() {
             </div>
           </div>
         </section>
-
+      {/* i will see this  */}
         <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
           <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
             <div className="flex flex-col gap-4 w-[584px] justify-start">

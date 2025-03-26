@@ -26,10 +26,6 @@ import VOLT_HVC from "../assets/VOLT_HVC.png";
 import VOLT_HVD from "../assets/VOLT_HVD.png";
 import VOLT_LVS from "../assets/VOLT_LVS.png";
 import VOLT_LVW from "../assets/VOLT_LVW.png";
-import Adva1 from "../assets/Adva1.png";
-import Adva2 from "../assets/Adva2.png";
-import Adva3 from "../assets/Adva3.png";
-import Adva4 from "../assets/Adva4.png";
 
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
@@ -98,10 +94,10 @@ const Home = () => {
           <h1 className="text-white text-[64px] font-[Akshar] font-medium gap-5">
             The Future of Energy
           </h1>
-          <a href="/contact">
-            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
-              BOOK A CALL
-            </button>
+          <a href ="/contact">
+          <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+            BOOK A CALL
+          </button>
           </a>
         </div>
       </section>
@@ -177,9 +173,9 @@ const Home = () => {
           Our Products
         </h1>
 
-        <div className="flex flex-row w-full justify-center p-4 gap-4">
+        <div className="flex flex-row w-full justify-around p-4 gap-4">
           <div className="flex flex-col gap-4 w-[584px]">
-            <img src={VOLT_100} width={584} />
+            <img src={VOLT_100} width={584} height={336} />
             <div className="flex flex-col p-4 gap-4 w-[584px]">
               <div>
                 <h1 className="text-[#0C33F2] text-[40px] font-medium">
@@ -323,24 +319,28 @@ const Home = () => {
           </div>
         </div>
 
+        
+
+
         <div className="flex flex-row w-full justify-center gap-4">
           <a href="/products">
-            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
-              VIEW ALL PRODUCTS
-            </button>
+          <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+            VIEW ALL PRODUCTS
+          </button>
           </a>
           <a
-            href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
-          >
-            DOWNLOAD BROCHURE
-          </a>
+  href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
+>
+  DOWNLOAD BROCHURE
+</a>
+
         </div>
       </section>
 
-      <section className="w-full h-[626px] flex flex-col justify-around items-center bg-white font-[Akshar] gap-8">
+      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
         <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
             <h1 className="text-[#0C33F2] font-medium text-[40px]">
@@ -349,27 +349,25 @@ const Home = () => {
             </h1>
             <p>Calculate your savings and battery life.</p>
             <div>
-              <input
-                type="range"
-                min="0"
-                max="11"
-                value={year}
-                onChange={(e) => setYear(parseInt(e.target.value))}
-                className="w-full appearance-none h-3 bg-gray-200 rounded-lg cursor-pointer accent-[#0C33F2]"
-                style={{
-                  WebkitAppearance: "none",
-                  background: `linear-gradient(to right, #0C33F2 0%, #0C33F2 ${(year / 11) * 100}%, #e5e7eb ${(year / 11) * 100}%, #e5e7eb 100%)`,
-                  transition: "all 0.3s ease",
-                }}
-              />
-              <div className="flex flex-row w-full justify-between items-center mt-2">
-                <p>1 year </p>
-                <div className="text-[#0C33F2] font-medium">
-                  Year {year + 1}
-                </div>
-                <p>12 years</p>
-              </div>
-            </div>
+  <input
+    type="range"
+    min="0"
+    max="11"
+    value={year}
+    onChange={(e) => setYear(parseInt(e.target.value))}
+    className="w-full appearance-none h-3 bg-gray-200 rounded-lg cursor-pointer accent-[#0C33F2]"
+    style={{
+      WebkitAppearance: "none",
+      background: `linear-gradient(to right, #0C33F2 0%, #0C33F2 ${(year/11)*100}%, #e5e7eb ${(year/11)*100}%, #e5e7eb 100%)`,
+      transition: "all 0.3s ease"
+    }}
+  />
+  <div className="flex flex-row w-full justify-between items-center mt-2">
+    <p>1 year </p>
+    <div className="text-[#0C33F2] font-medium">Year {year + 1}</div>
+    <p>12 years</p>
+  </div>
+</div>
             <div className="flex flex-row gap-4 justify-around">
               <div className=" flex flex-col ">
                 <div className="text-[36px] text-[#00C069] font-semibold">
@@ -389,6 +387,7 @@ const Home = () => {
             <Graph year={year} />
           </div>
         </div>
+       
       </section>
 
       <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
@@ -453,108 +452,93 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar]">
-        <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">
-          The Voltra Advantage
-        </h2>
-
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center max-w-6xl">
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Modular BESS
-              </h3>
-              <p className="text-sm mb-2">
-                Voltra's Modular Cabinet configurations enable seamless scaling
-                from kWh to MWh systems.
-              </p>
-              <p className="text-sm">
-                These solutions offer superior efficiency and reliability, easy
-                maintenance, and longer battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2 h-[336px]">
-              <img
-                src={Adva1}
-                alt="Modular BESS system"
-                className="w-full h-auto"
-              />
-            </div>
+<section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar]">
+      <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">The Voltra Advantage</h2>
+      
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 max-w-6xl mx-auto">
+        {/* Card 1: Modular BESS */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Modular BESS</h3>
+            <p className="text-sm mb-2">
+              Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
+            </p>
+            <p className="text-sm">
+              These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.
+            </p>
           </div>
-
-          {/* Card 2: Thermal Management */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Thermal Management
-              </h3>
-              <p className="text-sm mb-2">
-                Our Technology is designed for the Indian climate, both for air
-                and liquid cooling systems.
-              </p>
-              <p className="text-sm">
-                Our uniform heat dissipation Technology ensures efficient
-                performance and prolonging battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva2}
-                alt="Thermal management system"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Card 3: Intelligent Communication */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Intelligent Communication
-              </h3>
-              <p className="text-sm mb-2">
-                We have implemented intelligent communication between the DC and
-                AC using AI technology.
-              </p>
-              <p className="text-sm">
-                This helps in enhancing system robustness and reliability and
-                enables fault detection.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva3}
-                alt="Intelligent communication system"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Card 4: Long Service Life */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Long Service Life
-              </h3>
-              <p className="text-sm mb-2">
-                We have benchmarked battery cells based on components like
-                cathode, anodes, electrolytes.
-              </p>
-              <p className="text-sm">
-                This help us in achieving lower degradation rates and extended
-                battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva4}
-                alt="Long service life battery"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv1} 
+              alt="Modular BESS system" 
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
-      </section>
+
+        {/* Card 2: Thermal Management */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Thermal Management</h3>
+            <p className="text-sm mb-2">
+              Our Technology is designed for the Indian climate, both for air and liquid cooling systems.
+            </p>
+            <p className="text-sm">
+              Our uniform heat dissipation Technology ensures efficient performance and prolonging battery life.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv2} 
+              alt="Thermal management system" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Card 3: Intelligent Communication */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Intelligent Communication</h3>
+            <p className="text-sm mb-2">
+              We have implemented intelligent communication between the DC and AC using AI technology.
+            </p>
+            <p className="text-sm">
+              This helps in enhancing system robustness and reliability and enables fault detection.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv3} 
+              alt="Intelligent communication system" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Card 4: Long Service Life */}
+        <div className="flex flex-col md:flex-row gap-4 p-2">
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-3">Long Service Life</h3>
+            <p className="text-sm mb-2">
+              We have benchmarked battery cells based on components like cathode, anodes, electrolytes.
+            </p>
+            <p className="text-sm">
+              This help us in achieving lower degradation rates and extended battery life.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={Adv4} 
+              alt="Long service life battery" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
       <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
         <div className="flex flex-row w-full h-auto justify-around items-center">
@@ -638,9 +622,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-[462px] flex flex-col justify-start items-center bg-white font-[Akshar] p-8  ">
-        <div className="flex flex-row w-full h-auto justify-center items-center ">
-          <div className="flex flex-col p-4 gap-4 w-[584px] h-[362px] ">
+      <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar]  ">
+        <div className="flex flex-row w-full h-auto justify-around items-center ">
+          <div className="flex flex-col p-4 gap-4 w-[584px] ">
             <div>
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 KNOW ABOUT BEES
@@ -651,7 +635,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justfy-evenly shadow-md p-6 h-[362px]">
+          <div className="md:col-span-3 bg-gray-50 rounded-lg shadow-md p-6 h-auto">
             {faqItems.map((item, index) => (
               <article key={index} className="border-b border-gray-200 py-4">
                 <header>
