@@ -176,179 +176,197 @@ const Home = () => {
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
           Our Products
         </h1>
-
-        <div className="flex flex-row w-full justify-center p-4 gap-4">
-          <div className="flex flex-col gap-4 w-[584px]">
-            <img
-              src={VOLT_100}
-              alt="VOLT-100 ESS Cabinet"
-              width={584}
-              className="object-cover"
-              style={{ height: "50%", objectPosition: "top" }} // Crop from the bottom
-            />
-
-            <div className="flex flex-col p-4 gap-4 w-[584px]">
-              <div>
-                <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                  VOLT-100
-                </h1>
-                <div className="text-black text-[14px]">
-                  The all-in-one air-cooled ESS cabinet integrates a long-life
-                  battery, efficient balancing BMS, high-performance PCS, active
-                  safety system, smart distribution, and HVAC into one cabinet,
-                  enabling long-term operation with safety, stability, and
-                  reliability.
-                </div>
-              </div>
-
-              <div className="flex flex-row justify-around w-full gap-4">
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={light} width={36} height={36} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Energy Saving and Fast
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      1P fast charge/discharge rate, energy storing & releasing
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={bar} width={36} height={36} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Economical and Efficient
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Conversion efficiency over 90%, DoD over 96%
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={cloud} width={36} height={36} />
-
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Smart O&M
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Diversified monitoring by HMI (local), app/web (remote)
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={gaurd} width={36} height={36} />
-
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Safe and Reliable
-                    </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      IP55, thermal management, cell difference ≤6°C
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <Link
-                reloadDocument
-                className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                to={"/products"}
+        <div className="flex flex-col w-full gap-8">
+          <div className="flex flex-row w-full justify-center gap-4">
+            <div className="flex flex-col w-[584px]">
+              <div
+                className="w-full bg-gray-300 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
+                style={{ height: "500px" }}
               >
-                Know More <ArrowUpRight width={24} height={24} />
-              </Link>
+                <img
+                  src={VOLT_100}
+                  alt="VOLT-100 ESS Cabinet"
+                  width={584}
+                  className="object-cover"
+                  style={{ height: "100%", objectPosition: "top" }} // Object cover with crop from the bottom
+                />
+              </div>
+
+              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-100">
+                <div>
+                  <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                    VOLT-100
+                  </h1>
+                  <div className="text-black text-[14px]">
+                    The all-in-one air-cooled ESS cabinet integrates a long-life
+                    battery, efficient balancing BMS, high-performance PCS,
+                    active safety system, smart distribution, and HVAC into one
+                    cabinet, enabling long-term operation with safety,
+                    stability, and reliability.
+                  </div>
+                </div>
+
+                <div className="flex flex-row justify-around w-full gap-4">
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={light} width={36} height={36} />
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Energy Saving and Fast
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        1P fast charge/discharge rate, energy storing &
+                        releasing
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={bar} width={36} height={36} />
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Economical and Efficient
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        Conversion efficiency over 90%, DoD over 96%
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={cloud} width={36} height={36} />
+
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Smart O&M
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        Diversified monitoring by HMI (local), app/web (remote)
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={gaurd} width={36} height={36} />
+
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Safe and Reliable
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        IP55, thermal management, cell difference ≤6°C
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  reloadDocument
+                  className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                  to={"/products"}
+                >
+                  Know More <ArrowUpRight width={24} height={24} />
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col w-[584px]">
+              <div
+                className="w-full bg-gray-300 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
+                style={{ height: "500px" }}
+              >
+                <img
+                  src={VOLT_HVC}
+                  alt="VOLT-100 ESS Cabinet"
+                  width={584}
+                  className="object-cover"
+                  style={{ height: "100%", objectPosition: "top" }} // Object cover with crop from the bottom
+                />
+              </div>
+
+              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-100">
+                <div>
+                  <h1 className="text-[#0C33F2] text-[40px] font-medium">
+                    VOLT-HVC
+                  </h1>
+                  <div className="text-black text-[14px]">
+                    The all-in-one air-cooled ESS cabinet integrates a long-life
+                    battery, efficient balancing BMS, high-performance PCS,
+                    active safety system, smart distribution, and HVAC into one
+                    cabinet, enabling long-term operation with safety,
+                    stability, and reliability.
+                  </div>
+                </div>
+
+                <div className="flex flex-row justify-around w-full gap-4">
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={light} width={36} height={36} />
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Energy Saving and Fast
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        1P fast charge/discharge rate, energy storing &
+                        releasing
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={bar} width={36} height={36} />
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Economical and Efficient
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        Conversion efficiency over 90%, DoD over 96%
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={cloud} width={36} height={36} />
+
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Smart O&M
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        Diversified monitoring by HMI (local), app/web (remote)
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-4">
+                    <img src={gaurd} width={36} height={36} />
+
+                    <div className="flex flex-col justify-center items-center w-full">
+                      <h1 className="text-black font-bold text-[10px]">
+                        Safe and Reliable
+                      </h1>
+                      <div className="text-[8px] font-medium text-center">
+                        IP55, thermal management, cell difference ≤6°C
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  reloadDocument
+                  className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                  to={"/products"}
+                >
+                  Know More <ArrowUpRight width={24} height={24} />
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img
-              src={VOLT_HVC}
-              width={584}
-              className="object-cover"
-              style={{ height: "50%", objectPosition: "top" }}
-            />
-            <div className="flex flex-col p-4">
-              <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                VOLT-HVC
-              </h1>
-              <div className="text-black text-[14px]">
-                The all-in-one air-cooled ESS cabinet integrates a long-life
-                battery, efficient balancing BMS, high-performance PCS, active
-                safety system, smart distribution, and HVAC into one cabinet,
-                enabling long-term operation with safety, stability, and
-                reliability.
-              </div>
-            </div>
-            <div className="flex flex-row justify-around w-full gap-4">
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={light} width={36} height={36} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Energy Saving and Fast
-                  </h1>
-                  <div className="text-[8px] font-medium text-center">
-                    1P fast charge/discharge rate, energy storing & releasing
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={bar} width={36} height={36} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Economical and Efficient
-                  </h1>
-                  <div className="text-[8px] font-medium text-center">
-                    Conversion efficiency over 90%, DoD over 96%
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={cloud} width={36} height={36} />
 
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Smart O&M
-                  </h1>
-                  <div className="text-[8px] font-medium text-center">
-                    Diversified monitoring by HMI (local), app/web (remote)
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={gaurd} width={36} height={36} />
-
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Safe and Reliable
-                  </h1>
-                  <div className="text-[8px] font-medium text-center">
-                    IP55, thermal management, cell difference ≤6°C
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Link
-              reloadDocument
-              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-              to={"/products"}
+          <div className="flex flex-row w-full justify-center gap-4">
+            <a href="/products">
+              <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+                VIEW ALL PRODUCTS
+              </button>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
             >
-              Know More <ArrowUpRight width={24} height={24} />
-            </Link>
+              DOWNLOAD BROCHURE
+            </a>
           </div>
-        </div>
-
-        <div className="flex flex-row w-full justify-center gap-4">
-          <a href="/products">
-            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
-              VIEW ALL PRODUCTS
-            </button>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
-          >
-            DOWNLOAD BROCHURE
-          </a>
         </div>
       </section>
 
