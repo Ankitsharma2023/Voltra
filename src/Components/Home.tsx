@@ -168,14 +168,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
+      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-4 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
           Our Products
         </h1>
 
         <div className="flex flex-row w-full justify-center p-4 gap-4">
           <div className="flex flex-col gap-4 w-[584px]">
-            <img src={VOLT_100} width={584} />
+            <img
+              src={VOLT_100}
+              alt="VOLT-100 ESS Cabinet"
+              width={584}
+              className="object-cover"
+              style={{ height: "50%", objectPosition: "top" }} // Crop from the bottom
+            />
+
             <div className="flex flex-col p-4 gap-4 w-[584px]">
               <div>
                 <h1 className="text-[#0C33F2] text-[40px] font-medium">
@@ -248,7 +255,12 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img src={VOLT_HVC} height={336} />
+            <img
+              src={VOLT_HVC}
+              width={584}
+              className="object-cover"
+              style={{ height: "50%", objectPosition: "top" }}
+            />
             <div className="flex flex-col p-4">
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 VOLT-HVC
