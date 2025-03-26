@@ -634,9 +634,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar]  ">
-        <div className="flex flex-row w-full h-auto justify-around items-center ">
-          <div className="flex flex-col p-4 gap-4 w-[584px] ">
+      <section className="w-full h-[462px] flex flex-col justify-start items-center bg-white font-[Akshar] p-8  ">
+        <div className="flex flex-row w-full h-auto justify-center items-center ">
+          <div className="flex flex-col p-4 gap-4 w-[584px] h-[362px] ">
             <div>
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 KNOW ABOUT BEES
@@ -647,7 +647,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="md:col-span-3 bg-gray-50 rounded-lg shadow-md p-6 h-auto">
+          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justfy-evenly shadow-md p-6 h-[362px]">
             {faqItems.map((item, index) => (
               <article key={index} className="border-b border-gray-200 py-4">
                 <header>
