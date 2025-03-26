@@ -489,7 +489,7 @@ export default function ProductsCatalog() {
                 </div>
 
                 <a
-                  href="#"
+                  href={`/solutions?id=${product.id}`}
                   className="text-green-600 font-semibold mt-3 inline-block text-sm"
                 >
                   Know more →

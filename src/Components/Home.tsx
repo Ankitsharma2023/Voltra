@@ -454,10 +454,9 @@ const Home = () => {
           The Voltra Advantage
         </h2>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 max-w-6xl mx-auto">
-          {/* Card 1: Modular BESS */}
-          <div className="flex flex-col md:flex-row gap-4 p-2">
-            <div className="md:w-1/2 flex flex-col justify-center">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center max-w-6xl">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]">
+            <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Modular BESS
               </h3>
@@ -470,18 +469,18 @@ const Home = () => {
                 maintenance, and longer battery life.
               </p>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 h-[336px]">
               <img
                 src={Adv1}
                 alt="Modular BESS system"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
               />
             </div>
           </div>
 
           {/* Card 2: Thermal Management */}
-          <div className="flex flex-col md:flex-row gap-4 p-2">
-            <div className="md:w-1/2 flex flex-col justify-center">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+            <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Thermal Management
               </h3>
@@ -504,8 +503,8 @@ const Home = () => {
           </div>
 
           {/* Card 3: Intelligent Communication */}
-          <div className="flex flex-col md:flex-row gap-4 p-2">
-            <div className="md:w-1/2 flex flex-col justify-center">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+            <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Intelligent Communication
               </h3>
@@ -528,8 +527,8 @@ const Home = () => {
           </div>
 
           {/* Card 4: Long Service Life */}
-          <div className="flex flex-col md:flex-row gap-4 p-2">
-            <div className="md:w-1/2 flex flex-col justify-center">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+            <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Long Service Life
               </h3>
