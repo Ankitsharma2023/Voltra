@@ -180,7 +180,7 @@ const Home = () => {
           <div className="flex flex-row w-full justify-center gap-4">
             <div className="flex flex-col w-[584px]">
               <div
-                className="w-full bg-gray-300 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
+                className="w-full bg-gray-100 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
                 style={{ height: "500px" }}
               >
                 <img
@@ -266,7 +266,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col w-[584px]">
               <div
-                className="w-full bg-gray-300 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
+                className="w-full bg-gray-100 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
                 style={{ height: "500px" }}
               >
                 <img

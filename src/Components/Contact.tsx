@@ -23,10 +23,37 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+  
+    const formDataToSend = {
+      name: formData.name,
+      contact: formData.contact,
+      email: formData.email,
+      query: formData.query,
+    };
+  
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyfXvSMRcdoqJ_uQ7tXowghdiui8n9pvTGfQ0wJGj-KwV_QwKiHSLh2GQ6DsVQR5uecFQ/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDataToSend),
+      });
+  
+      const data = await response.json();
+      console.log("Response:", data);
+      alert(data.message);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Submission failed. Please try again.");
+    }
   };
+  
+  
+  
+  
 
   return (
     <div className="max-w-7xl mx-auto p-8">
