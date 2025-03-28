@@ -23,6 +23,7 @@ export default function HybridModeSection() {
             Generators, etc., and helps in enhancing the overall efficiency and
             reliability of the system.
           </p>
+          <br/>
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US

@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
   
 
   return (
-    <div className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl mx-auto p-8 font-[Akshar]">
       <div className="flex flex-col md:flex-row justify-between gap-8">
         {/* Form Section */}
         <div className="md:w-3/5">
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
-                className="w-full p-4 bg-gray-100 rounded-lg text-lg"
+                className="w-full p-4 bg-gray-200 rounded-lg text-lg"
                 required
               />
             </div>
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                 value={formData.contact}
                 onChange={handleChange}
                 placeholder="Contact"
-                className="w-full p-4 bg-gray-100 rounded-lg text-lg"
+                className="w-full p-4 bg-gray-200 rounded-lg text-lg"
                 required
               />
             </div>
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-4 bg-gray-100 rounded-lg text-lg"
+                className="w-full p-4 bg-gray-200 rounded-lg text-lg"
                 required
               />
             </div>
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
                 value={formData.query}
                 onChange={handleChange}
                 placeholder="Query"
-                className="w-full p-4 bg-gray-100 rounded-lg text-lg h-36 resize-none"
+                className="w-full p-4 bg-gray-200 rounded-lg text-lg h-36 resize-none"
                 required
               />
             </div>

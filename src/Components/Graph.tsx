@@ -140,11 +140,11 @@ function Graph({ year }: { year: number }) {
           </div>
 
           {/* Bars */}
-          <div className="flex-1 flex justify-around h-64 relative">
+          <div className="flex-1 flex justify-around h-64 relative ">
             {/* Grid lines */}
-            <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
+            <div className="absolute inset-0 flex flex-col justify-between pointer-events-none ">
               {[...Array(6)].map((_, i) => (
-                <div key={i} className="border-t border-gray-200 w-full h-12" />
+                <div key={i} className="border-t border-gray-500 w-full h-12" />
               ))}
             </div>
 

@@ -28,7 +28,7 @@ import Test_7 from "../assets/Test_7.png";
 const Technology = () => {
   return (
     <>
-      <main className="flex flex-col w-full gap-4">
+      <main className="flex flex-col w-full gap-4 font-[Akshar]">
         <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
           <div className="md:w-1/2 space-y-6">
             <h2 className="text-4xl font-bold text-blue-600">VOLTRA TECH </h2>
@@ -67,17 +67,11 @@ const Technology = () => {
                   The Voltra GigaFactory
                 </h1>
                 <div className="text-black text-[14px] mt-5">
-                  An advanced manufacturing facility focused on producing
-                  cutting-edge electric vehicle (EV) batteries and energy
-                  storage solutions. Located in a strategic area to support
-                  sustainable energy and transportation innovations, the factory
-                  aims to significantly reduce the cost of battery production
-                  while increasing efficiency and performance.
+                Voltra BESS is proud to operate a cutting-edge gigafactory dedicated to the production of state-of-the-art Battery Energy Storage Systems (BESS). Our facility, located in a prime industrial zone, incorporates the latest automation, efficiency, and sustainability standards. It is designed to meet the increasing demand for high-performance energy storage solutions in renewable energy applications.
+
                 </div>
                 <div className="text-black text-[14px] mt-5">
-                  Voltra’s commitment to green energy solutions makes it a key
-                  player in the shift toward a more sustainable, carbon-neutral
-                  future.
+                Voltra’s gigafactory is central to the global shift towards sustainable energy, utilizing scalable production methods and green energy. With advanced robotics and AI-driven processes, we ensure efficient production while minimizing environmental impact.
                 </div>
               </div>
 

@@ -144,7 +144,7 @@ const productData = {
       ],
     },
     {
-      id: 4,
+      id: 5,
       image: VOLT_LVS,
       title: "VOLT-LVS",
       description:
@@ -173,7 +173,7 @@ const productData = {
       ],
     },
     {
-      id: 4,
+      id: 6,
       image: VOLT_LVW,
       title: "VOLT-LVW",
       description:
@@ -204,9 +204,9 @@ const productData = {
   ],
   residential: [
     {
-      id: 1,
+      id: 7,
       image: VOLT_LVW,
-      title: "VOLT-MINI",
+      title: "VOLT-LVW",
       description:
         "Compact residential energy storage solution designed for home use with seamless solar integration.",
       features: [
@@ -233,9 +233,9 @@ const productData = {
       ],
     },
     {
-      id: 2,
-      image: VOLT_HVC,
-      title: "VOLT-HOME",
+      id: 8,
+      image: VOLT_LVS,
+      title: "VOLT-LVS",
       description:
         "All-in-one home energy solution with backup power capability and intelligent energy management system.",
       features: [
@@ -264,7 +264,7 @@ const productData = {
   ],
   ci: [
     {
-      id: 1,
+      id: 9,
       image: VOLT_HVD,
       title: "VOLT-1000",
       description:
@@ -293,7 +293,7 @@ const productData = {
       ],
     },
     {
-      id: 2,
+      id: 10,
       image: VOLT_LVS,
       title: "VOLT-2000",
       description:
@@ -324,7 +324,7 @@ const productData = {
   ],
   utility: [
     {
-      id: 1,
+      id: 11,
       image: VOLT_HVC,
       title: "VOLT-3000",
       description:
@@ -353,7 +353,7 @@ const productData = {
       ],
     },
     {
-      id: 2,
+      id: 12,
       image: VOLT_LVW,
       title: "VOLT-GRID",
       description:

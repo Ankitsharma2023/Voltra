@@ -24,6 +24,7 @@ export default function IslandModeSection() {
             micro grids connected with BESS often serve as backup or standby
             generators to provide electricity during grid failures.
           </p>
+          <br/>
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US

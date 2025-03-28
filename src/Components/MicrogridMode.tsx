@@ -24,6 +24,7 @@ export default function MicrogridModeSection() {
             self-sufficient energy grids operate independently of the larger
             grid.
           </p>
+          <br/>
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US

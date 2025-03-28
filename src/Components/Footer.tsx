@@ -72,8 +72,8 @@ const Footer: React.FC = () => {
         <div className="min-w-32 mb-5">
           <h3 className="text-white text-base font-bold mb-5 uppercase">Home</h3>
           <ul className="list-none">
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">About Voltra</a></li>
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Our Products</a></li>
+            <li className="mb-3"><a href="/about" className="text-gray-400 text-sm hover:text-white transition-colors">About Voltra</a></li>
+            <li className="mb-3"><a href="/products" className="text-gray-400 text-sm hover:text-white transition-colors">Our Products</a></li>
             <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">The Voltra Edge</a></li>
             <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Common Queries</a></li>
           </ul>
@@ -83,22 +83,25 @@ const Footer: React.FC = () => {
           <h3 className="text-white text-base font-bold mb-5 uppercase">Products</h3>
           <ul className="list-none">
             <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Residential ESS</a></li>
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Residential BESS</a></li>
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Utilities, C&I</a></li>
+            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Utilities</a></li>
+            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors"> C&I</a></li>
           </ul>
         </div>
 
         <div className="min-w-32 mb-5">
           <h3 className="text-white text-base font-bold mb-5 uppercase">Solutions</h3>
           <ul className="list-none">
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Island</a></li>
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Hybrid</a></li>
-            <li className="mb-3"><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Microgrid</a></li>
+            <li className="mb-3"><a href="/solutions/island-mode" className="text-gray-400 text-sm hover:text-white transition-colors">Island</a></li>
+            <li className="mb-3"><a href="/solutions/hybrid-mode" className="text-gray-400 text-sm hover:text-white transition-colors">Hybrid</a></li>
+            <li className="mb-3"><a href="/solutions/microgrid-mode" className="text-gray-400 text-sm hover:text-white transition-colors">Microgrid</a></li>
           </ul>
         </div>
 
         <div className="min-w-32 mb-5">
           <h3 className="text-white text-base font-bold mb-5 uppercase">Technology</h3>
+          <ul className="list-none">
+         <li classname ="mb-3"><a href="/technology" className = "text-gray-400 text-sm hover:text-white transition-colors">Technology</a></li>
+          </ul>
         </div>
       </div>
 

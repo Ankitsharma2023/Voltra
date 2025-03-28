@@ -91,7 +91,7 @@ const Home = () => {
   const [year, setYear] = useState(4);
 
   return (
-    <main className="flex flex-col w-full gap-4">
+    <main className="flex flex-col w-full ">
       <section className="w-full h-screen flex flex-col justify-center items-center bg-[url(/home_cover.png)] bg-cover ">
         <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 ">
           <img width={216} height={96} src={logo} />
@@ -106,7 +106,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full h-screen flex flex-col justify-start items-center bg-white font-[Akshar] ">
-        <div className="flex flex-row p-4 gap-5 w-full justify-start">
+        <div className="flex flex-row p-4 gap-5 w-full justify-start bg-gray-100">
           <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
             <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
               FOUNDED
@@ -138,11 +138,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row w-full h-auto justify-around">
+        <div className="flex flex-row w-full h-auto justify-around mt-20">
           <img width={590} height={340} src={power} />
 
-          <div className="font-[Akshar] w-[509px] h-[351px]">
-            <div className="w-full h-full flex flex-col gap-4">
+          <div className="font-[Akshar] w-[509px] h-[351px] ">
+            <div className="w-full h-full flex flex-col ">
               <div className="w-full h-full">
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
                   Revolutionizing the Battery Storage Landscape of India
@@ -161,18 +161,18 @@ const Home = () => {
                   efficient energy.
                 </div>
               </div>
-              <Link
+              <a
                 reloadDocument
                 className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
-                to={"/products"}
+                href={"/products"}
               >
                 View our products <ArrowUpRight width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-4 ">
+      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10 gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
           Our Products
         </h1>
@@ -192,7 +192,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-100">
+              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-50">
                 <div>
                   <h1 className="text-[#0C33F2] text-[40px] font-medium">
                     VOLT-100
@@ -255,13 +255,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <Link
-                  reloadDocument
+                <a
+                  
                   className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                  to={"/products"}
+                  href={"/products"}
                 >
                   Know More <ArrowUpRight width={24} height={24} />
-                </Link>
+                </a>
               </div>
             </div>
             <div className="flex flex-col w-[584px]">
@@ -278,7 +278,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-100">
+              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-50">
                 <div>
                   <h1 className="text-[#0C33F2] text-[40px] font-medium">
                     VOLT-HVC
@@ -341,18 +341,18 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <Link
+                <a
                   reloadDocument
                   className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
-                  to={"/products"}
+                  href={"/products"}
                 >
                   Know More <ArrowUpRight width={24} height={24} />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-row w-full justify-center gap-4">
+          <div className="flex flex-row w-full justify-center gap-4 mt-8">
             <a href="/products">
               <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
                 VIEW ALL PRODUCTS
@@ -370,7 +370,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-[626px] flex flex-col justify-around items-center bg-white font-[Akshar] gap-8">
+      <section className="w-full h-[626px] flex flex-col justify-around items-center bg-gray-100 font-[Akshar] gap-8 mt-10">
         <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
             <h1 className="text-[#0C33F2] font-medium text-[40px]">
@@ -392,7 +392,7 @@ const Home = () => {
                   transition: "all 0.3s ease",
                 }}
               />
-              <div className="flex flex-row w-full justify-between items-center mt-2">
+              <div className="flex flex-row w-full justify-between items-center mt-2 ">
                 <p>1 year </p>
                 <div className="text-[#0C33F2] font-medium">
                   Year {year + 1}
@@ -421,7 +421,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
+      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover ">
         {sections.map((section, index) => (
           <div
             key={section.id}
@@ -483,13 +483,13 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar]">
-        <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">
+      <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
+        <h2 className="text-3xl font-bold text-blue-600 my-8 text-center ">
           The Voltra Advantage
         </h2>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center max-w-6xl">
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px] bg-gray-100">
             <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Modular BESS
@@ -513,7 +513,7 @@ const Home = () => {
           </div>
 
           {/* Card 2: Thermal Management */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
             <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Thermal Management
@@ -537,7 +537,7 @@ const Home = () => {
           </div>
 
           {/* Card 3: Intelligent Communication */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
             <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Intelligent Communication
@@ -561,7 +561,7 @@ const Home = () => {
           </div>
 
           {/* Card 4: Long Service Life */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px]">
+          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
             <div className="md:w-1/2 flex flex-col justify-around">
               <h3 className="text-2xl font-bold text-blue-600 mb-3">
                 Long Service Life

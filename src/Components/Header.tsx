@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import logo_blue from "../assets/logo_blue.png";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import HybridMode from "./HybridMode";
 import MicrogridMode from "./MicrogridMode";
 import IslandMode from "./IslandMode";
@@ -27,7 +27,7 @@ export function Header() {
       <div className="w-full flex flex-row justify-between p-4 px-8 bg-transparent">
         <div>
           {/* Made logo clickable with Link component */}
-          <Link to="/">
+          <a href="/">
             <img 
               width={108} 
               height={48} 
@@ -35,14 +35,14 @@ export function Header() {
               alt="Logo" 
               className="cursor-pointer" 
             />
-          </Link>
+          </a>
         </div>
 
         <div
           className={`flex flex-row gap-4 items-center ${isHome ? "text-white" : "text-black"} font-[Akshar]`}
         >
-          <Link to="/">HOME</Link>
-          <Link to="/products">PRODUCTS</Link>
+          <a href="/">HOME</a>
+          <a href="/products">PRODUCTS</a>
           
           {/* Solutions with dropdown */}
           <div className="relative">
@@ -60,35 +60,35 @@ export function Header() {
                 className="absolute top-full left-0 mt-1 bg-white shadow-md rounded py-2 min-w-40 z-10"
                 onMouseLeave={closeDropdown}
               >
-                <Link 
-                  to="/solutions/island-mode" 
+                <a 
+                  href="/solutions/island-mode" 
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   Island Mode
-                </Link>
-                <Link 
-                  to="/solutions/hybrid-mode" 
+                </a>
+                <a 
+                  href="/solutions/hybrid-mode" 
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   Hybrid Mode
-                </Link>
-                <Link 
-                  to="/solutions/microgrid-mode" 
+                </a>
+                <a 
+                  href="/solutions/microgrid-mode" 
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   MicroGrid Mode
-                </Link>
+                </a>
               </div>
             )}
           </div>
           
-          <Link to="/about">ABOUT US</Link>
-          <Link to="/technology">TECHNOLOGY</Link>
-          <Link to="/contact">
+          <a href="/about">ABOUT US</a>
+          <a href="/technology">TECHNOLOGY</a>
+          <a href="/contact">
             <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal">
               CONTACT US
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
