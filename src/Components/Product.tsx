@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Cloud,
   Home,
@@ -23,6 +23,7 @@ import VOLT_HVC from "../assets/VOLT_HVC.png";
 import VOLT_HVD from "../assets/VOLT_HVD.png";
 import VOLT_LVS from "../assets/VOLT_LVS.png";
 import VOLT_LVW from "../assets/VOLT_LVW.png";
+import { useSearchParams } from "react-router-dom";
 
 // Define product data by category
 const productData = {
@@ -392,8 +393,14 @@ export default function ProductsCatalog() {
     { key: "utility", label: "UTILITY BESS" },
   ];
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("all");
-
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat) {
+      setActiveCategory(cat);
+    }
+  }, []);
   // Get the filtered products based on active category
   const filteredProducts = productData[activeCategory];
 
