@@ -413,7 +413,7 @@ export default function ProductsCatalog() {
       <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold text-blue-600">
-            Products Catalogue{" "}
+            Products Catalogue
           </h2>
           <p className="text-gray-700">
             Voltra's Battery Energy Storage Systems (BESS) provide reliable,
@@ -429,9 +429,9 @@ export default function ProductsCatalog() {
             DOWNLOAD BROCHURE
           </button>
         </div>
-        <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+        <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-8">
           <div className="w-full h-64 flex items-center justify-center">
-            <img src={product_main} alt="Product" className="w-full h-auto" />
+            <img src={product_main} alt="Product" className="w-full" />
           </div>
         </div>
       </section>
