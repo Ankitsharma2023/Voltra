@@ -310,9 +310,10 @@ export default function Solutions() {
                 Explore if the VOLT-1000 is the ideal <br />
                 solution for your needs.
               </h2>
-              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+              <br/>
+              <a  href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view" className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
                 DOWNLOAD BROCHURE
-              </button>
+              </a>
             </div>
 
             <div className="md:w-1/3 flex justify-end">

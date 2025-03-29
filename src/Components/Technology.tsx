@@ -3,7 +3,7 @@ import product_main from "../assets/product_main.png";
 import tech1 from "../assets/tech1.svg";
 import tech2 from "../assets/tech2.svg";
 import Tech from "../assets/Tech.png";
-import factory from "../assets/factory.png";
+import factory from "../assets/Factory.png";
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
 import bar from "../assets/bar.svg";
