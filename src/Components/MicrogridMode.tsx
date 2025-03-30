@@ -24,7 +24,7 @@ export default function MicrogridModeSection() {
             self-sufficient energy grids operate independently of the larger
             grid.
           </p>
-          <br/>
+          <br />
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US
@@ -94,21 +94,21 @@ export default function MicrogridModeSection() {
             />
           </div>
 
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-3xl font-bold text-blue-600">
+          <div className="md:w-[505px] space-y-4 leading-[150%]">
+            <h2 className="text-[40px] font-bold text-blue-600">
               A Self-sufficient Mode
             </h2>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               The use of microgrids is widespread, but they come with
               limitations such as intermittency of renewable energy and power
               factor mismatches.
             </p>
-            <p className="text-[14px] font-bold">
+            <p className="text-[16px] font-bold">
               To overcome these challenges and unlock the full potential of
               microgrids, owners turn to Battery Energy Storage Systems. BESS
               enhances micro-grid operations in several ways:
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               <ul className="list-disc">
                 <li>Improving grid reliability</li>
                 <li>Reducing dependency on fuel and carbon footprint</li>{" "}

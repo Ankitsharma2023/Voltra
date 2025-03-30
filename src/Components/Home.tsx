@@ -5,6 +5,10 @@ import power from "../assets/power.png";
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
 import bar from "../assets/bar.svg";
+import rd from "../assets/rd.svg";
+import intl from "../assets/intelligent.svg";
+import robust from "../assets/robust.svg";
+import data from "../assets/data.svg";
 import gaurd from "../assets/gaurd.svg";
 import invesment from "../assets/invesment.png";
 import slidebar from "../assets/slidebar.png";
@@ -109,12 +113,14 @@ const Home = () => {
         <div className="flex flex-row p-4 gap-5 w-full justify-start bg-gray-100">
           <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
             <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
-              FOUNDED
+              Reliability
             </button>
-            <div className="font-semibold text-[108px]">2024</div>
+            <div className="font-semibold text-[108px]">
+              20+ <span className="text-[64px] font-normal">year</span>
+            </div>
             <div className="text-black w-3/4">
-              Developed by IIT alumni - Voltra boasts a diverse,
-              inter-disciplinary team of talent.
+              Technology that last longer with higher reliability and less
+              maintenance.
             </div>
           </div>
           <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
@@ -131,7 +137,7 @@ const Home = () => {
               CAPACITY
             </button>
             <div className="font-semibold text-[108px]">
-              150<span className="text-[64px] font-normal">GWh</span>
+              10<span className="text-[64px] font-normal">GWh</span>
             </div>
             <div className="text-black w-3/4">
               Voltra’s target for lithium-ion cell installed capacity by 2030.
@@ -256,8 +262,7 @@ const Home = () => {
                   </div>
                 </div>
                 <a
-                  
-                  className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                  className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                   href={"/products"}
                 >
                   Know More <ArrowUpRight width={24} height={24} />
@@ -343,7 +348,7 @@ const Home = () => {
                 </div>
                 <a
                   reloadDocument
-                  className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+                  className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                   href={"/products"}
                 >
                   Know More <ArrowUpRight width={24} height={24} />
@@ -385,7 +390,7 @@ const Home = () => {
                 max="11"
                 value={year}
                 onChange={(e) => setYear(parseInt(e.target.value))}
-                className="w-full appearance-none h-3 bg-gray-200 rounded-lg cursor-pointer accent-[#0C33F2]"
+                className="w-full appearance-none h-[36px] bg-gray-200 rounded-lg cursor-pointer accent-[#0C33F2]"
                 style={{
                   WebkitAppearance: "none",
                   background: `linear-gradient(to right, #0C33F2 0%, #0C33F2 ${(year / 11) * 100}%, #e5e7eb ${(year / 11) * 100}%, #e5e7eb 100%)`,
@@ -400,6 +405,44 @@ const Home = () => {
                 <p>12 years</p>
               </div>
             </div>
+            <style jsx>{`
+              input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: url("/icon.svg") no-repeat center;
+                background-size: 26.4px;
+                cursor: pointer;
+                background-color: white;
+
+                transition: background 0.3s ease;
+              }
+
+              input[type="range"]:focus::-webkit-slider-thumb {
+                background: url("/icon.svg") no-repeat center;
+                background-size: 26.4px;
+                background-color: white;
+              }
+
+              /* Firefox */
+              input[type="range"]::-moz-range-thumb {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: url("/icon.svg") no-repeat center;
+                background-size: 26.4px;
+                background-color: white;
+                cursor: pointer;
+                transition: background 0.3s ease;
+              }
+
+              input[type="range"]:focus::-moz-range-thumb {
+                background: url("/icon.svg") no-repeat center;
+                background-size: 26.4px;
+              }
+            `}</style>
             <div className="flex flex-row gap-4 justify-around">
               <div className=" flex flex-col ">
                 <div className="text-[36px] text-[#00C069] font-semibold">
@@ -439,7 +482,7 @@ const Home = () => {
                 {section.description}
               </p>
               <a
-                className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
+                className={`flex flex-row items-start gap-2 text-[16px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
                 href={section.link}
               >
                 Know More <ArrowUpRight width={24} height={24} />
@@ -611,50 +654,36 @@ const Home = () => {
             </div>
 
             <div className="flex flex-row justify-around w-full gap-4">
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={light} width={36} height={36} />
+              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                <img src={robust} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Energy Saving and Fast
+                  <h1 className="text-black font-bold text-[20px]">
+                    Robust Testing
                   </h1>
-                  <div className="text-[10px] font-medium text-center">
-                    1P fast charge/discharge rate, energy storing & releasing
-                  </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={bar} width={36} height={36} />
+              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                <img src={data} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Economical and Efficient
+                  <h1 className="text-black font-bold text-[20px]">
+                    Data Integration
                   </h1>
-                  <div className="text-[10px] font-medium text-center">
-                    Conversion efficiency over 90%, DoD over 96%
-                  </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={cloud} width={36} height={36} />
-
+            </div>
+            <div className="flex flex-row justify-around w-full gap-4">
+              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                <img src={intl} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Smart O&M
+                  <h1 className="text-black font-bold text-[20px]">
+                    Intelligent Production
                   </h1>
-                  <div className="text-[10px] font-medium text-center">
-                    Diversified monitoring by HMI (local), app/web (remote)
-                  </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img src={gaurd} width={36} height={36} />
-
+              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                <img src={rd} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[10px]">
-                    Safe and Reliable
-                  </h1>
-                  <div className="text-[10px] font-medium text-center">
-                    IP55, thermal management, cell difference ≤6°C
-                  </div>
+                  <h1 className="text-black font-bold text-[20px]">R&D Lab</h1>
                 </div>
               </div>
             </div>

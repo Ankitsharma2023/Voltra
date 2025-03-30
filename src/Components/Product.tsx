@@ -497,7 +497,7 @@ export default function ProductsCatalog() {
 
                 <a
                   href={`/solutions?id=${product.id}`}
-                  className="text-green-600 font-semibold mt-3 inline-block text-sm"
+                  className="text-green-600 font-semibold mt-3 inline-block text-[16px]"
                 >
                   Know more →
                 </a>

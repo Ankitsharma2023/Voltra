@@ -24,7 +24,7 @@ export default function IslandModeSection() {
             micro grids connected with BESS often serve as backup or standby
             generators to provide electricity during grid failures.
           </p>
-          <br/>
+          <br />
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US
@@ -95,26 +95,26 @@ export default function IslandModeSection() {
             />
           </div>
 
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-3xl font-bold text-blue-600">
+          <div className="md:w-[505px] space-y-4 leading-[150%]">
+            <h2 className="text-[40px] font-bold text-blue-600">
               A Reliable Power Solution
             </h2>
-            <p className="text-[14px] font-bold">
+            <p className="text-[16px] font-bold">
               As the name suggests, Island Mode allows you to generate and use
               energy independently. Although it also has the flexibility to stay
               connected with the grid for benefits like net metering.
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Energy Storage System-connected Island Mode energy stations are
               more reliable as Excess energy can be stored in BESS and used
               anytime and anywhere.
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Despite its name, islanding doesn’t disconnect your home from the
               grid entirely. Instead, it allows you to stay connected for
               benefits like net metering.
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Even with solar and storage installed, your home maintains this
               connection, ensuring you can still draw power from the grid when
               needed, such as during the night when solar panels aren’t

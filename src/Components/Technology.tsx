@@ -1,13 +1,10 @@
 import React from "react";
-import product_main from "../assets/product_main.png";
-import tech1 from "../assets/tech1.svg";
-import tech2 from "../assets/tech2.svg";
 import Tech from "../assets/Tech.png";
 import factory from "../assets/factory.png";
-import light from "../assets/light.svg";
-import cloud from "../assets/cloud.png";
-import bar from "../assets/bar.svg";
-import gaurd from "../assets/gaurd.svg";
+import rd from "../assets/rd.svg";
+import intl from "../assets/intelligent.svg";
+import robust from "../assets/robust.svg";
+import data from "../assets/data.svg";
 import waveGraphic from "../assets/wave.png";
 import { Link, Outlet } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -18,13 +15,17 @@ import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
 import Tech2 from "../assets/Tech2.png";
+import Test_1 from "../assets/Test_1.png";
 import Test_2 from "../assets/Test_2.png";
 import Test_3 from "../assets/Test_3.png";
 import Test_4 from "../assets/Test_4.png";
 import Test_5 from "../assets/Test_5.png";
 import Test_6 from "../assets/Test_6.png";
 import Test_7 from "../assets/Test_7.png";
-
+import Adva1 from "../assets/Adva1.png";
+import Adva2 from "../assets/Adva2.png";
+import Adva3 from "../assets/Adva3.png";
+import Adva4 from "../assets/Adva4.png";
 const Technology = () => {
   return (
     <>
@@ -67,59 +68,56 @@ const Technology = () => {
                   The Voltra GigaFactory
                 </h1>
                 <div className="text-black text-[14px] mt-5">
-                Voltra BESS is proud to operate a cutting-edge gigafactory dedicated to the production of state-of-the-art Battery Energy Storage Systems (BESS). Our facility, located in a prime industrial zone, incorporates the latest automation, efficiency, and sustainability standards. It is designed to meet the increasing demand for high-performance energy storage solutions in renewable energy applications.
-
+                  Voltra BESS is proud to operate a cutting-edge gigafactory
+                  dedicated to the production of state-of-the-art Battery Energy
+                  Storage Systems (BESS). Our facility, located in a prime
+                  industrial zone, incorporates the latest automation,
+                  efficiency, and sustainability standards. It is designed to
+                  meet the increasing demand for high-performance energy storage
+                  solutions in renewable energy applications.
                 </div>
                 <div className="text-black text-[14px] mt-5">
-                Voltra’s gigafactory is central to the global shift towards sustainable energy, utilizing scalable production methods and green energy. With advanced robotics and AI-driven processes, we ensure efficient production while minimizing environmental impact.
+                  Voltra’s gigafactory is central to the global shift towards
+                  sustainable energy, utilizing scalable production methods and
+                  green energy. With advanced robotics and AI-driven processes,
+                  we ensure efficient production while minimizing environmental
+                  impact.
                 </div>
               </div>
 
               <div className="flex flex-row justify-around w-full gap-4">
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={light} width={36} height={36} />
+                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                  <img src={robust} width={40} height={40} />
                   <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Energy Saving and Fast
+                    <h1 className="text-black font-bold text-[20px]">
+                      Robust Testing
                     </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      1P fast charge/discharge rate, energy storing & releasing
-                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={bar} width={36} height={36} />
+                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                  <img src={data} width={40} height={40} />
                   <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Economical and Efficient
+                    <h1 className="text-black font-bold text-[20px]">
+                      Data Integration
                     </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Conversion efficiency over 90%, DoD over 96%
-                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={cloud} width={36} height={36} />
-
+              </div>
+              <div className="flex flex-row justify-around w-full gap-4">
+                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                  <img src={intl} width={40} height={40} />
                   <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Smart O&M
+                    <h1 className="text-black font-bold text-[20px]">
+                      Intelligent Production
                     </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      Diversified monitoring by HMI (local), app/web (remote)
-                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center gap-4">
-                  <img src={gaurd} width={36} height={36} />
-
+                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
+                  <img src={rd} width={40} height={40} />
                   <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[10px]">
-                      Safe and Reliable
+                    <h1 className="text-black font-bold text-[20px]">
+                      R&D Lab
                     </h1>
-                    <div className="text-[8px] font-medium text-center">
-                      IP55, thermal management, cell difference ≤6°C
-                    </div>
                   </div>
                 </div>
               </div>
@@ -134,8 +132,8 @@ const Technology = () => {
 
           <div className="flex flex-col w-full justify-center items-center p-4 gap-4">
             <div className="flex flex-row justify-center items-center p-4 gap-4 ">
-              <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={tech1} />
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
+                <img src={Test_1} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
                     Cell Grading
@@ -146,7 +144,7 @@ const Technology = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-[276px]">
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
                 <img src={Test_2} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
@@ -159,7 +157,7 @@ const Technology = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-[276px]">
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
                 <img src={Test_3} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
@@ -172,7 +170,7 @@ const Technology = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-[276px]">
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
                 <img src={Test_4} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
@@ -187,7 +185,7 @@ const Technology = () => {
               </div>
             </div>
             <div className="flex flex-row justify-center items-center p-4 gap-4 ">
-              <div className="flex flex-col justify-center items-center w-[276px]">
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
                 <img src={Test_5} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
@@ -200,7 +198,7 @@ const Technology = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-[276px]">
+              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
                 <img src={Test_6} />
                 <div className="flex flex-col w-full items-start">
                   <h2 className="text-[#0C33F2] text-[24px] font-medium">
@@ -230,40 +228,15 @@ const Technology = () => {
           </div>
         </section>
 
-        <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
-          <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
+        <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
+          <h2 className="text-3xl font-bold text-blue-600 my-8 text-center ">
             The Voltra Advantage
-          </h1>
+          </h2>
 
-          <div className="flex flex-row w-full justify-around p-4 gap-4">
-            <div className="flex flex-col gap-4 w-[584px]">
-              <img src={Adv1} width={584} height={336} />
-            </div>
-            <div className="flex flex-row gap-4 p-4 w-[584px]">
-              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
-                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
-                  VOLTRA EMS
-                </h3>
-                <p className="text-sm mb-2">India’s first AI-powered BESS!</p>
-                <p className="text-sm">
-                  The Voltra EMS series products are integrated EMS designed for
-                  ESS scenarios
-                </p>
-                <a
-                  className={`flex flex-row items-start gap-2 text-[14px] text-[#00C069] transition-opacity duration-300`}
-                  href="#"
-                >
-                  Know More <ArrowUpRight width={24} height={24} />
-                </a>
-              </div>
-              <img src={Adv2} width={276} height={336} />
-            </div>
-          </div>
-
-          <div className="flex flex-row w-full justify-around p-4 gap-4">
-            <div className="flex flex-row gap-4 w-[584px]">
-              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
-                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center max-w-6xl">
+            <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px] bg-gray-100">
+              <div className="md:w-1/2 flex flex-col justify-around">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">
                   Modular BESS
                 </h3>
                 <p className="text-sm mb-2">
@@ -272,35 +245,88 @@ const Technology = () => {
                 </p>
                 <p className="text-sm">
                   These solutions offer superior efficiency and reliability,
-                  easy maintenance, & longer battery life.
+                  easy maintenance, and longer battery life.
                 </p>
               </div>
-              <img src={Adv3} width={276} height={336} />
+              <div className="md:w-1/2 h-[336px]">
+                <img
+                  src={Adva1}
+                  alt="Modular BESS system"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
-            <div className="flex flex-col gap-4 p-4 w-[584px]">
-              <img src={Adv4} width={584} height={336} />
-            </div>
-          </div>
 
-          <div className="flex flex-row w-full justify-around p-4 gap-4">
-            <div className="flex flex-col gap-4 w-[584px]">
-              <img src={Adv5} width={584} height={336} />
-            </div>
-            <div className="flex flex-row gap-4 w-[584px]">
-              <div className="md:w-[276] h-[336] flex flex-col justify-around p-4 gap-8">
-                <h3 className="text-[40px] font-bold text-blue-600 mb-3">
-                  Liquid Cooling
+            {/* Card 2: Thermal Management */}
+            <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
+              <div className="md:w-1/2 flex flex-col justify-around">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">
+                  Thermal Management
                 </h3>
                 <p className="text-sm mb-2">
-                  Voltra's Modular Cabinet configurations enable seamless
-                  scaling from kWh to MWh systems.
+                  Our Technology is designed for the Indian climate, both for
+                  air and liquid cooling systems.
                 </p>
                 <p className="text-sm">
-                  These solutions offer superior efficiency and reliability,
-                  easy maintenance, & longer battery life.
+                  Our uniform heat dissipation Technology ensures efficient
+                  performance and prolonging battery life.
                 </p>
               </div>
-              <img src={Adv3} width={276} height={336} />
+              <div className="md:w-1/2">
+                <img
+                  src={Adva2}
+                  alt="Thermal management system"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 3: Intelligent Communication */}
+            <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
+              <div className="md:w-1/2 flex flex-col justify-around">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">
+                  Intelligent Communication
+                </h3>
+                <p className="text-sm mb-2">
+                  We have implemented intelligent communication between the DC
+                  and AC using AI technology.
+                </p>
+                <p className="text-sm">
+                  This helps in enhancing system robustness and reliability and
+                  enables fault detection.
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <img
+                  src={Adva3}
+                  alt="Intelligent communication system"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 4: Long Service Life */}
+            <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
+              <div className="md:w-1/2 flex flex-col justify-around">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">
+                  Long Service Life
+                </h3>
+                <p className="text-sm mb-2">
+                  We have benchmarked battery cells based on components like
+                  cathode, anodes, electrolytes.
+                </p>
+                <p className="text-sm">
+                  This help us in achieving lower degradation rates and extended
+                  battery life.
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <img
+                  src={Adva4}
+                  alt="Long service life battery"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

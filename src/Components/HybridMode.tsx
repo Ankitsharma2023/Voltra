@@ -23,7 +23,7 @@ export default function HybridModeSection() {
             Generators, etc., and helps in enhancing the overall efficiency and
             reliability of the system.
           </p>
-          <br/>
+          <br />
           <a href="/contact">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               CONTACT US
@@ -91,26 +91,26 @@ export default function HybridModeSection() {
             />
           </div>
 
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-3xl font-bold text-blue-600">
+          <div className="md:w-[505px] space-y-4 leading-[150%]">
+            <h2 className="text-[40px] mb-4 font-bold text-blue-600">
               Your Smart Energy Partner
             </h2>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Imagine you’re at a construction site, where work never stops. A
               lot is going on, and the need for electricity changes all the
               time—more in the morning, less at night.
             </p>
-            <p className="text-[14px] font-bold">
+            <p className="text-[16px] font-bold">
               With a setup called ‘hybrid working,’ energy sources like
               generators can be used in combination with Battery Energy Storage
               System, which stores energy in lean hours and provides energy in
               peak hours.
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Hybrid working not only reduces the cost of energy but also makes
               it more reliable and sustainable.
             </p>
-            <p className="text-[12px]">
+            <p className="text-[14px]">
               Here’s how it works: When there’s a lot of demand for power, like
               in the morning when everyone’s starting their day, the ESS kicks
               in. It saves extra electricity to use later, so we don’t have to
