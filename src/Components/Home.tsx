@@ -464,20 +464,21 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover ">
+      <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
         {sections.map((section, index) => (
           <div
             key={section.id}
-            className={`flex flex-col ${section.width} border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
+            className={`flex flex-col border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
             onMouseEnter={() => setHoveredSection(section.id)}
             onMouseLeave={() => setHoveredSection(null)}
+            style={{ width: section.width }}
           >
             <div
               className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? "transform -translate-y-8" : ""}`}
             >
               <h1 className="text-[40px]">{section.title}</h1>
               <p
-                className={`text-[16px] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-80"}`}
+                className={`text-[16px] transition-all duration-500 ease-in-out ${hoveredSection === section.id ? "top-1/2 opacity-100 translate-y-0" : "top-0 opacity-0 translate-y-4 hidden"}`}
               >
                 {section.description}
               </p>

@@ -24,56 +24,56 @@ export function Header() {
 
   return (
     <nav className={`w-full ${isHome ? "absolute top-0 left-0" : null}`}>
-      <div className="w-full flex flex-row justify-between p-4 px-8 bg-transparent">
+      <div className="w-full flex flex-row justify-between p-4 px-20 bg-transparent">
         <div>
           {/* Made logo clickable with Link component */}
           <a href="/">
-            <img 
-              width={108} 
-              height={48} 
-              src={isHome ? logo : logo_blue} 
-              alt="Logo" 
-              className="cursor-pointer" 
+            <img
+              width={108}
+              height={48}
+              src={isHome ? logo : logo_blue}
+              alt="Logo"
+              className="cursor-pointer"
             />
           </a>
         </div>
 
         <div
-          className={`flex flex-row gap-4 items-center ${isHome ? "text-white" : "text-black"} font-[Akshar]`}
+          className={`flex flex-row gap-10 items-center ${isHome ? "text-white" : "text-black"} font-[Akshar]`}
         >
           <a href="/">HOME</a>
           <a href="/products">PRODUCTS</a>
-          
+
           {/* Solutions with dropdown */}
           <div className="relative">
-            <div 
+            <div
               className="cursor-pointer"
               onMouseEnter={() => setShowSolutionsDropdown(true)}
               onClick={toggleSolutionsDropdown}
             >
               SOLUTIONS
             </div>
-            
+
             {/* Dropdown menu */}
             {showSolutionsDropdown && (
-              <div 
+              <div
                 className="absolute top-full left-0 mt-1 bg-white shadow-md rounded py-2 min-w-40 z-10"
                 onMouseLeave={closeDropdown}
               >
-                <a 
-                  href="/solutions/island-mode" 
+                <a
+                  href="/solutions/island-mode"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   Island Mode
                 </a>
-                <a 
-                  href="/solutions/hybrid-mode" 
+                <a
+                  href="/solutions/hybrid-mode"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   Hybrid Mode
                 </a>
-                <a 
-                  href="/solutions/microgrid-mode" 
+                <a
+                  href="/solutions/microgrid-mode"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
                   MicroGrid Mode
@@ -81,7 +81,7 @@ export function Header() {
               </div>
             )}
           </div>
-          
+
           <a href="/about">ABOUT US</a>
           <a href="/technology">TECHNOLOGY</a>
           <a href="/contact">
