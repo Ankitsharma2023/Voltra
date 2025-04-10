@@ -85,7 +85,7 @@ export function Header() {
           <a href="/about">ABOUT US</a>
           <a href="/technology">TECHNOLOGY</a>
           <a href="/contact">
-            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal">
+            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
               CONTACT US
             </button>
           </a>
