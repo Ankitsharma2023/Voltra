@@ -205,7 +205,7 @@ const productData = {
   ],
   residential: [
     {
-      id: 7,
+      id: 6,
       image: VOLT_LVW,
       title: "VOLT-LVW",
       description:
@@ -234,7 +234,7 @@ const productData = {
       ],
     },
     {
-      id: 8,
+      id: 5,
       image: VOLT_LVS,
       title: "VOLT-LVS",
       description:
@@ -265,7 +265,7 @@ const productData = {
   ],
   ci: [
     {
-      id: 9,
+      id: 4,
       image: VOLT_HVD,
       title: "VOLT-1000",
       description:
@@ -294,7 +294,7 @@ const productData = {
       ],
     },
     {
-      id: 10,
+      id: 5,
       image: VOLT_LVS,
       title: "VOLT-2000",
       description:
@@ -325,7 +325,7 @@ const productData = {
   ],
   utility: [
     {
-      id: 11,
+      id: 3,
       image: VOLT_HVC,
       title: "VOLT-3000",
       description:
@@ -354,7 +354,7 @@ const productData = {
       ],
     },
     {
-      id: 12,
+      id: 6,
       image: VOLT_LVW,
       title: "VOLT-GRID",
       description:
