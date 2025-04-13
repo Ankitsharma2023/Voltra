@@ -218,13 +218,13 @@ function Graph({ year }: { year: number }) {
         <div className="flex mt-4">
           <div className="w-20" />
           <div className="flex-1 flex justify-around">
-            <div className="w-24 text-center font-medium">DG Set</div>
-            <div className="w-24 text-center font-medium">Voltra BESS</div>
+            <div className="w-24 text-center font-gilroy">DG Set</div>
+            <div className="w-24 text-center font-gilroy">Voltra BESS</div>
           </div>
         </div>
 
         {/* Legend */}
-        <div className="mt-8 flex justify-center gap-6">
+        <div className="mt-8 flex justify-center gap-6 font-gilroy">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-black" />
             <span className="text-sm">Initial Cost</span>

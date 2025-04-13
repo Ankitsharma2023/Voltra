@@ -35,6 +35,8 @@ import Adva2 from "../assets/Adva2.png";
 import Adva3 from "../assets/Adva3.png";
 import Adva4 from "../assets/Adva4.png";
 
+
+
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
@@ -99,38 +101,43 @@ const Home = () => {
       <section className="w-full h-screen flex flex-col justify-center items-center bg-[url(/home_cover.png)] bg-cover ">
         <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 ">
           <img width={216} height={96} src={logo} />
-          <h1 className="text-white text-[64px] font-[Akshar] font-medium gap-5">
+          <h1 className="text-white text-[64px] font-[Akshar] font-medium gap-5 ">
             The Future of Energy
           </h1>
           <a href="/contact">
-            <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
-              BOOK A CALL
-            </button>
+          <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal rounded-md transform transition-transform duration-300 hover:scale-105">
+  BOOK A CALL
+</button>
+
+
           </a>
         </div>
       </section>
+      
       <section className="w-full h-screen flex flex-col justify-start items-center bg-white font-[Akshar] ">
         <div className="flex flex-row p-4 gap-5 w-full justify-start bg-gray-100">
           <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
-            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
+            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4 ">
               Reliability
             </button>
             <div className="font-semibold text-[108px]">
               20+ <span className="text-[64px] font-normal">year</span>
             </div>
-            <div className="text-black w-3/4">
+            <div className="text-black w-3/4 font-gilroy">
               Technology that last longer with higher reliability and less
               maintenance.
             </div>
           </div>
           <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
-            <button className="border-[#00C069] border-2 rounded-md p-2 px-4">
+            <button className="border-[#00C069] border-2 rounded-md p-2 px-4 ">
               REDUCED FOOTPRINT
             </button>
             <div className="font-semibold text-[108px]">90%</div>
-            <div className="text-black w-3/4">
-              less CO2 compared to cells made using coal power by 2030.
-            </div>
+            <div className="text-black w-3/4 font-gilroy">
+  less CO₂ compared to cells made using coal power by 2030.
+</div>
+
+
           </div>
           <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
             <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4">
@@ -139,7 +146,7 @@ const Home = () => {
             <div className="font-semibold text-[108px]">
               10<span className="text-[64px] font-normal">GWh</span>
             </div>
-            <div className="text-black w-3/4">
+            <div className="text-black w-3/4 font-gilroy">
               Voltra’s target for lithium-ion cell installed capacity by 2030.
             </div>
           </div>
@@ -153,31 +160,33 @@ const Home = () => {
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
                   Revolutionizing the Battery Storage Landscape of India
                 </h1>
-                <div className="font-regular text-[16px]">
+                <div className="font-gilroy text-[16px]">
                   Voltra Energy is revolutionizing India's energy future with
                   advanced Battery Energy Storage Systems (BESS) utilizing
                   cutting-edge technology and world-class infrastructure.
                   Focused on indigenizing BESS solutions for renewable energy
                   integration, grid stabilization, and enhanced energy
                   reliability, the company serves residential, commercial, and
-                  industrial sectors. With a gigafactory under development and a
-                  strong emphasis on top-tier R&D, Voltra is driving innovation
-                  in energy storage, supporting sustainable practices, and
-                  contributing to the global shift toward cleaner, more
-                  efficient energy.
+                  industrial sectors. 
                 </div>
               </div>
               <a
-                reloadDocument
-                className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
-                href={"/products"}
-              >
-                View our products <ArrowUpRight width={24} height={24} />
-              </a>
+  reloadDocument
+  className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
+  href="/products"
+>
+  <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
+    View our products
+  </span>
+  <ArrowUpRight width={24} height={24} />
+</a>
+
             </div>
           </div>
         </div>
       </section>
+
+
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10 gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
           Our Products
@@ -265,7 +274,11 @@ const Home = () => {
                   className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                   href={"/products"}
                 >
-                  Know More <ArrowUpRight width={24} height={24} />
+                  <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+    Know more
+  </span>
+                  
+                   <ArrowUpRight width={24} height={24} />
                 </a>
               </div>
             </div>
@@ -351,27 +364,32 @@ const Home = () => {
                   className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
                   href={"/products"}
                 >
-                  Know More <ArrowUpRight width={24} height={24} />
+                  <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+    Know more
+  </span>
+                  
+                  <ArrowUpRight width={24} height={24} />
                 </a>
               </div>
             </div>
           </div>
 
           <div className="flex flex-row w-full justify-center gap-4 mt-8">
-            <a href="/products">
-              <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
-                VIEW ALL PRODUCTS
-              </button>
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-[#0C33F2] border-2 text-[#0C33F2] p-2 px-4 font-[Akshar] font-normal"
-            >
-              DOWNLOAD BROCHURE
-            </a>
-          </div>
+  <a href="/products">
+    <button className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white p-2 px-4 rounded-lg font-[Akshar] font-normal transition duration-300">
+      VIEW ALL PRODUCTS
+    </button>
+  </a>
+  <a
+    href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white p-2 px-4 rounded-lg font-[Akshar] font-normal transition duration-300"
+  >
+    DOWNLOAD BROCHURE
+  </a>
+</div>
+
         </div>
       </section>
 
@@ -382,7 +400,7 @@ const Home = () => {
               INVESTING IN VOLTRA BESS IS MONEY{" "}
               <span className="text-[#00C069]"> IN THE BANK</span>
             </h1>
-            <p>Calculate your savings and battery life.</p>
+            <p className="font-gilroy">Calculate your savings and battery life.</p>
             <div>
               <input
                 type="range"
@@ -397,7 +415,7 @@ const Home = () => {
                   transition: "all 0.3s ease",
                 }}
               />
-              <div className="flex flex-row w-full justify-between items-center mt-2 ">
+              <div className="flex flex-row w-full justify-between items-center mt-2 font-gilroy ">
                 <p>1 year </p>
                 <div className="text-[#0C33F2] font-medium">
                   Year {year + 1}
@@ -448,13 +466,13 @@ const Home = () => {
                 <div className="text-[36px] text-[#00C069] font-semibold">
                   90%
                 </div>
-                <div className="text-[14px] font-medium">Annual savings</div>
+                <div className="text-[14px] font-gilroy">Annual savings</div>
               </div>
               <div className=" flex flex-col">
                 <div className="text-[36px] text-[#00C069] font-semibold">
                   2024
                 </div>
-                <div className="text-[14px] font-medium">Monthly savings</div>
+                <div className="text-[14px] font-gilroy">Monthly savings</div>
               </div>
             </div>
           </div>
@@ -463,172 +481,149 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
       <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
-        {sections.map((section, index) => (
-          <div
-            key={section.id}
-            className={`flex flex-col border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
-            onMouseEnter={() => setHoveredSection(section.id)}
-            onMouseLeave={() => setHoveredSection(null)}
-            style={{ width: section.width }}
-          >
-            <div
-              className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? "transform -translate-y-8" : ""}`}
-            >
-              <h1 className="text-[40px]">{section.title}</h1>
-              <p
-                className={`text-[16px] transition-all duration-500 ease-in-out ${hoveredSection === section.id ? "top-1/2 opacity-100 translate-y-0" : "top-0 opacity-0 translate-y-4 hidden"}`}
-              >
-                {section.description}
-              </p>
-              <a
-                className={`flex flex-row items-start gap-2 text-[16px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
-                href={section.link}
-              >
-                Know More <ArrowUpRight width={24} height={24} />
-              </a>
-            </div>
-          </div>
-        ))}
-        <div className="flex flex-col w-[5%] h-full bg-black/50"></div>
-      </section>
+  {sections.map((section, index) => (
+    <div
+      key={section.id}
+      className={`w-1/3 flex flex-col border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
+      onMouseEnter={() => setHoveredSection(section.id)}
+      onMouseLeave={() => setHoveredSection(null)}
+    >
+      <div
+        className={`flex flex-col text-white w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? "transform -translate-y-8" : ""}`}
+      >
+        <h1 className="text-[40px]">{section.title}</h1>
+        <p
+          className={`text-[16px] font-gilroy transition-all duration-500 ease-in-out ${hoveredSection === section.id ? "top-1/2 opacity-100 translate-y-0" : "top-0 opacity-0 translate-y-4 hidden"}`}
+        >
+          {section.description}
+        </p>
+        <a
+          className={`flex flex-row items-start gap-2 text-[16px] text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
+          href={section.link}
+        >
+          <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200 text-16px">
+    Know more
+  </span>
+          
+          
+          <ArrowUpRight width={24} height={24} />
+        </a>
+      </div>
+    </div>
+  ))}
+</section>
 
-      {/* <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
-        <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
-          The Voltra Advantage
-        </h1>
 
-        <div className="flex flex-row w-full justify-around p-4 gap-4">
-          <div className="flex flex-col gap-4 w-[584px]">
-            <img src={Adv1} width={584} height={336} />
-          </div>
-          <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img src={Adv2} height={336} />
-          </div>
+      
+<section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
+  <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">
+    The Voltra Advantage
+  </h2>
+
+  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-2 max-w-7xl mx-auto">
+    {/* Card 1: Modular BESS */}
+    <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
+      <div className="md:w-1/2 flex flex-col justify-center">
+        <div className="leading-tight mb-4">
+          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+            Modular
+          </h3>
+          <h3 className="text-4xl font-semibold text-blue-600 m-0 p-0">
+            BESS
+          </h3>
         </div>
+        <p className="text-base mb-3 font-gilroy">
+          Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
+        </p>
+        <p className="text-base font-gilroy">
+          These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.
+        </p>
+      </div>
+      <div className="md:w-1/2">
+        <img
+          src={Adva1}
+          alt="Modular BESS system"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-        <div className="flex flex-row w-full justify-around p-4 gap-4">
-          <div className="flex flex-col gap-4 w-[584px]">
-            <img src={Adv3} width={584} height={336} />
-          </div>
-          <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img src={Adv4} height={336} />
-          </div>
-        </div>
+    {/* Card 2: Thermal Management */}
+    <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
+      <div className="md:w-1/2 flex flex-col justify-center">
+      <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+            Thermal
+          </h3>
+          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+            Management
+          </h3>
+        <p className="text-base mb-3 font-gilroy">
+          Our technology is designed for the Indian climate, both for air and liquid cooling systems.
+        </p>
+        <p className="text-base font-gilroy">
+          Our uniform heat dissipation technology ensures efficient performance and prolongs battery life.
+        </p>
+      </div>
+      <div className="md:w-1/2">
+        <img
+          src={Adva2}
+          alt="Thermal management system"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-        <div className="flex flex-row w-full justify-around p-4 gap-4">
-          <div className="flex flex-col gap-4 w-[584px]">
-            <img src={Adv5} width={584} height={336} />
-          </div>
-          <div className="flex flex-col gap-4 p-4 w-[584px]">
-            <img src={Adv6} height={336} />
-          </div>
-        </div>
-      </section> */}
+    {/* Card 3: Intelligent Communication */}
+    <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
+      <div className="md:w-1/2 flex flex-col justify-center">
+        <h3 className="text-3xl font-semibold text-blue-600 mb-4">
+          Intelligent Communication
+        </h3>
+        <p className="text-base mb-3 font-gilroy">
+          We have implemented intelligent communication between the DC and AC using AI technology.
+        </p>
+        <p className="text-base font-gilroy">
+          This helps in enhancing system robustness and reliability and enables fault detection.
+        </p>
+      </div>
+      <div className="md:w-1/2">
+        <img
+          src={Adva3}
+          alt="Intelligent communication system"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-      <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
-        <h2 className="text-3xl font-bold text-blue-600 my-8 text-center ">
-          The Voltra Advantage
-        </h2>
+    {/* Card 4: Long Service Life */}
+    <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
+      <div className="md:w-1/2 flex flex-col justify-center">
+      <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+            Long
+          </h3>
+          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+            Service Life
+          </h3>
+        <p className="text-base mb-3 font-gilroy">
+          We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
+        </p>
+        <p className="text-base font-gilroy">
+          This helps us in achieving lower degradation rates and extended battery life.
+        </p>
+      </div>
+      <div className="md:w-1/2">
+        <img
+          src={Adva4}
+          alt="Long service life battery"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center max-w-6xl">
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px] bg-gray-100">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Modular BESS
-              </h3>
-              <p className="text-sm mb-2">
-                Voltra's Modular Cabinet configurations enable seamless scaling
-                from kWh to MWh systems.
-              </p>
-              <p className="text-sm">
-                These solutions offer superior efficiency and reliability, easy
-                maintenance, and longer battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2 h-[336px]">
-              <img
-                src={Adva1}
-                alt="Modular BESS system"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-
-          {/* Card 2: Thermal Management */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Thermal Management
-              </h3>
-              <p className="text-sm mb-2">
-                Our Technology is designed for the Indian climate, both for air
-                and liquid cooling systems.
-              </p>
-              <p className="text-sm">
-                Our uniform heat dissipation Technology ensures efficient
-                performance and prolonging battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva2}
-                alt="Thermal management system"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Card 3: Intelligent Communication */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Intelligent Communication
-              </h3>
-              <p className="text-sm mb-2">
-                We have implemented intelligent communication between the DC and
-                AC using AI technology.
-              </p>
-              <p className="text-sm">
-                This helps in enhancing system robustness and reliability and
-                enables fault detection.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva3}
-                alt="Intelligent communication system"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Card 4: Long Service Life */}
-          <div className="flex flex-col md:flex-row gap-4 p-2 w-[584px]  h-[336px] bg-gray-100">
-            <div className="md:w-1/2 flex flex-col justify-around">
-              <h3 className="text-2xl font-bold text-blue-600 mb-3">
-                Long Service Life
-              </h3>
-              <p className="text-sm mb-2">
-                We have benchmarked battery cells based on components like
-                cathode, anodes, electrolytes.
-              </p>
-              <p className="text-sm">
-                This help us in achieving lower degradation rates and extended
-                battery life.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={Adva4}
-                alt="Long service life battery"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
         <div className="flex flex-row w-full h-auto justify-around items-center">
@@ -639,7 +634,7 @@ const Home = () => {
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
                 The Voltra GigaFactory
               </h1>
-              <div className="text-black text-[16px] mt-5">
+              <div className="text-black text-[16px] mt-5 font-gilroy">
                 An advanced manufacturing facility focused on producing
                 cutting-edge electric vehicle (EV) batteries and energy storage
                 solutions. Located in a strategic area to support sustainable
@@ -647,7 +642,7 @@ const Home = () => {
                 significantly reduce the cost of battery production while
                 increasing efficiency and performance.
               </div>
-              <div className="text-black text-[16px] mt-5">
+              <div className="text-black text-[16px] mt-5 font-gilroy">
                 Voltra’s commitment to green energy solutions makes it a key
                 player in the shift toward a more sustainable, carbon-neutral
                 future.
@@ -658,7 +653,7 @@ const Home = () => {
               <div className="flex flex-col w-[286px] justify-center items-center gap-4">
                 <img src={robust} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[20px]">
+                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
                     Robust Testing
                   </h1>
                 </div>
@@ -666,7 +661,7 @@ const Home = () => {
               <div className="flex flex-col w-[286px] justify-center items-center gap-4">
                 <img src={data} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[20px]">
+                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
                     Data Integration
                   </h1>
                 </div>
@@ -676,7 +671,7 @@ const Home = () => {
               <div className="flex flex-col w-[286px] justify-center items-center gap-4">
                 <img src={intl} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[20px]">
+                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
                     Intelligent Production
                   </h1>
                 </div>
@@ -684,7 +679,7 @@ const Home = () => {
               <div className="flex flex-col w-[286px] justify-center items-center gap-4">
                 <img src={rd} width={40} height={40} />
                 <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-bold text-[20px]">R&D Lab</h1>
+                  <h1 className="text-black font-semibold text-[20px] font-gilroy">R&D Lab</h1>
                 </div>
               </div>
             </div>
@@ -692,7 +687,12 @@ const Home = () => {
               className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] "
               href={"/technology"}
             >
-              Explore the GigaFactory <ArrowUpRight width={24} height={24} />
+               <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+
+                Explore the GigaFactory
+               </span>
+              
+              <ArrowUpRight width={24} height={24} />
             </a>
           </div>
         </div>
@@ -706,12 +706,12 @@ const Home = () => {
                 KNOW ABOUT BEES
               </h1>
               <p className="mb-6">Have any more queries?</p>
-              <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal ">
+              <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal rounded-lg ">
                 CONTACT US
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justfy-evenly shadow-md p-6 h-[362px]">
+          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justfy-evenly shadow-md p-6 h-[362px] font-gilroy ">
             {faqItems.map((item, index) => (
               <article key={index} className="border-b border-gray-200 py-4">
                 <header>

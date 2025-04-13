@@ -24,7 +24,7 @@ const SpecModal: React.FC<SpecModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center font-gilroy">
       <div className="relative bg-white w-full max-w-5xl rounded-xl shadow-lg p-8 overflow-auto max-h-[90vh]">
         <button
           onClick={onClose}
@@ -39,7 +39,7 @@ const SpecModal: React.FC<SpecModalProps> = ({
               <div className="text-blue-600 font-semibold text-lg mb-2">
                 {data[0].title}
               </div>
-              <div className="space-y-1 w-full">
+              <div className="space-y-1 w-full font-gilroy">
                 {data[0].items.map((item, itemIndex) => (
                   <div
                     key={itemIndex}

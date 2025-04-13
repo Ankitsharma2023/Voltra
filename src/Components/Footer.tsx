@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="flex flex-wrap p-10 bg-[#070a17] text-white">
+    <footer className="flex flex-wrap p-10 bg-[#070a17] text-white font-gilroy">
       {/* Company Info */}
       <div className="flex-1 min-w-64 mb-5">
         <img src={logo} alt="Voltra Logo" className="w-32 h-auto mb-3" />
