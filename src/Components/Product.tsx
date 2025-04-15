@@ -7,7 +7,7 @@ import cloud from "../assets/cloud.png";
 import bar from "../assets/bar.svg";
 import gaurd from "../assets/gaurd.svg";
 import waveGraphic from "../assets/wave.png";
-import Puzzle from "../assets/puzzle.png";
+import Puzzle from "../assets/Puzzle.png";
 import Battery from "../assets/battery.png";
 import Hand from "../assets/hand.png";
 import Cube from "../assets/cube.png";
