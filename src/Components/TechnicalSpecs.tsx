@@ -64,7 +64,8 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
           </div>
         </div>
       </div>
-      <SpecModal
+      
+      <SpecModal 
         isOpen={openModal}
         onClose={() => setModalOpen(false)}
         data={data}

@@ -19,7 +19,7 @@ import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
 import factory from "../assets/factory.png";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import {  ChevronDown, ChevronUp } from "lucide-react";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -34,7 +34,7 @@ import Adva1 from "../assets/Adva1.png";
 import Adva2 from "../assets/Adva2.png";
 import Adva3 from "../assets/Adva3.png";
 import Adva4 from "../assets/Adva4.png";
-
+import Battery from "../assets/battery.png";
 
 
 const Home = () => {
@@ -192,205 +192,146 @@ const Home = () => {
           Our Products
         </h1>
         <div className="flex flex-col w-full gap-8">
-          <div className="flex flex-row w-full justify-center gap-4">
-            <div className="flex flex-col w-[584px]">
-              <div
-                className="w-full bg-gray-100 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
-                style={{ height: "500px" }}
-              >
-                <img
-                  src={VOLT_100}
-                  alt="VOLT-100 ESS Cabinet"
-                  width={584}
-                  className="object-cover"
-                  style={{ height: "100%", objectPosition: "top" }} // Object cover with crop from the bottom
-                />
-              </div>
+  {/* Product Cards Row */}
+  <div className="flex flex-row w-full justify-center gap-4">
+    {/* VOLT-100 Card */}
+    <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
+      <div className="w-full bg-[#EDEDED] h-[400px]">
+        <img
+          src={VOLT_100}
+          alt="VOLT-100 ESS Cabinet"
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
 
-              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-50">
-                <div>
-                  <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                    VOLT-100
-                  </h1>
-                  <div className="text-black text-[14px]">
-                    The all-in-one air-cooled ESS cabinet integrates a long-life
-                    battery, efficient balancing BMS, high-performance PCS,
-                    active safety system, smart distribution, and HVAC into one
-                    cabinet, enabling long-term operation with safety,
-                    stability, and reliability.
-                  </div>
-                </div>
+      <div className="flex flex-col p-6 bg-[#FAFAFA]">
+        <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
+          VOLT-100
+        </h1>
+        <p className="text-black text-sm mb-6">
+          The all-in-one air-cooled ESS cabinet integrates a long-life
+          battery, efficient balancing BMS, high-performance PCS,
+          active safety system, smart distribution, and HVAC into one
+          cabinet, enabling long-term operation with safety, stability, and reliability.
+        </p>
 
-                <div className="flex flex-row justify-around w-full gap-4">
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={light} width={36} height={36} />
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Energy Saving and Fast
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        1P fast charge/discharge rate, energy storing &
-                        releasing
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={bar} width={36} height={36} />
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Economical and Efficient
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        Conversion efficiency over 90%, DoD over 96%
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={cloud} width={36} height={36} />
-
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Smart O&M
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        Diversified monitoring by HMI (local), app/web (remote)
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={gaurd} width={36} height={36} />
-
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Safe and Reliable
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        IP55, thermal management, cell difference ≤6°C
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
-                  href={"/products"}
-                >
-                  <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-    Know more
-  </span>
-                  
-                   <ArrowUpRight width={24} height={24} />
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col w-[584px]">
-              <div
-                className="w-full bg-gray-100 rounded-tl-[4px] rounded-tr-[4px] rounded-bl-none rounded-br-none"
-                style={{ height: "500px" }}
-              >
-                <img
-                  src={VOLT_HVC}
-                  alt="VOLT-100 ESS Cabinet"
-                  width={584}
-                  className="object-cover"
-                  style={{ height: "100%", objectPosition: "top" }} // Object cover with crop from the bottom
-                />
-              </div>
-
-              <div className="flex flex-col p-4 gap-4 w-[584px] bg-gray-50">
-                <div>
-                  <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                    VOLT-HVC
-                  </h1>
-                  <div className="text-black text-[14px]">
-                    The all-in-one air-cooled ESS cabinet integrates a long-life
-                    battery, efficient balancing BMS, high-performance PCS,
-                    active safety system, smart distribution, and HVAC into one
-                    cabinet, enabling long-term operation with safety,
-                    stability, and reliability.
-                  </div>
-                </div>
-
-                <div className="flex flex-row justify-around w-full gap-4">
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={light} width={36} height={36} />
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Energy Saving and Fast
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        1P fast charge/discharge rate, energy storing &
-                        releasing
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={bar} width={36} height={36} />
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Economical and Efficient
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        Conversion efficiency over 90%, DoD over 96%
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={cloud} width={36} height={36} />
-
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Smart O&M
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        Diversified monitoring by HMI (local), app/web (remote)
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center gap-4">
-                    <img src={gaurd} width={36} height={36} />
-
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <h1 className="text-black font-bold text-[10px]">
-                        Safe and Reliable
-                      </h1>
-                      <div className="text-[8px] font-medium text-center">
-                        IP55, thermal management, cell difference ≤6°C
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  reloadDocument
-                  className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
-                  href={"/products"}
-                >
-                  <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-    Know more
-  </span>
-                  
-                  <ArrowUpRight width={24} height={24} />
-                </a>
-              </div>
-            </div>
+        <div className="grid grid-cols-4 gap-2 mb-6">
+          <div className="flex flex-col items-center">
+            <img src={light} width={36} height={36} alt="Energy Saving" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Energy Saving and Fast
+            </p>
           </div>
-
-          <div className="flex flex-row w-full justify-center gap-4 mt-8">
-  <a href="/products">
-    <button className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white p-2 px-4 rounded-lg font-[Akshar] font-normal transition duration-300">
-      VIEW ALL PRODUCTS
-    </button>
-  </a>
-  <a
-    href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white p-2 px-4 rounded-lg font-[Akshar] font-normal transition duration-300"
-  >
-    DOWNLOAD BROCHURE
-  </a>
-</div>
-
+          <div className="flex flex-col items-center">
+            <img src={bar} width={36} height={36} alt="Economic" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Economical and Efficient
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={cloud} width={36} height={36} alt="Smart" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Smart O&M
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={gaurd} width={36} height={36} alt="Safe" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Safe and Reliable
+            </p>
+          </div>
         </div>
+        
+        <a
+          href="/solutions?id=1"
+          className="inline-flex items-center text-[#00C069] text-sm font-medium"
+        >
+          <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+          Know more
+          </span>
+          <ArrowUpRight className="ml-1" width={16} height={16} />
+        </a>
+      </div>
+    </div>
+
+    {/* VOLT-HVC Card */}
+    <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
+    <div className="w-full bg-[#EDEDED] h-[400px]">
+        <img
+          src={VOLT_HVC}
+          alt="VOLT-HVC ESS Cabinet"
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
+      <div className="flex flex-col p-6 bg-[#FAFAFA]">
+        <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
+          VOLT-HVC
+        </h1>
+        <p className="text-black text-sm mb-6">
+          Voltra high voltage series uses a 3U standard modular design, with multi-module in
+          series and support multi-cluster in parallel. It's suitable for various application scenarios
+          such as villas, farms, and small C&I power supplies, and provides a complete set of
+          green, low-carbon, and reliable energy solutions.
+        </p>
+
+        <div className="grid grid-cols-4 gap-2 mb-6">
+          <div className="flex flex-col items-center">
+            <img src={Battery} width={36} height={36} alt="Ultra-Long Life" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Ultra-Long Life
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={bar} width={36} height={36} alt="Economic" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Economical and Efficient
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={cloud} width={36} height={36} alt="Intelligent" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Intelligent Management
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={gaurd} width={36} height={36} alt="Flexible" className="mb-2" />
+            <p className="text-black text-xs font-medium text-center">
+              Flexible Configuration
+            </p>
+          </div>
+        </div>
+        
+        <a
+          href="/solutions?id=2"
+          className="inline-flex items-center text-[#00C069] text-sm font-medium"
+        >
+           <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+          Know more
+          </span>
+          <ArrowUpRight className="ml-1" width={16} height={16} />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Buttons Row */}
+  <div className="flex flex-row w-full justify-center gap-4 mt-6">
+    <a href="/products">
+      <button className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white py-2 px-4 rounded-md font-medium transition duration-300">
+        VIEW ALL PRODUCTS
+      </button>
+    </a>
+    <a
+      href="https://drive.google.com/file/d/1kWX9pZ0KSg7l7vk-1HQHthldLIXiVu3U/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border-2 border-[#0C33F2] bg-white text-[#0C33F2] hover:bg-[#0C33F2] hover:text-white py-2 px-4 rounded-md font-medium transition duration-300"
+    >
+      DOWNLOAD BROCHURE
+    </a>
+  </div>
+</div>
       </section>
 
       <section className="w-full h-[626px] flex flex-col justify-around items-center bg-gray-100 font-[Akshar] gap-8 mt-10">

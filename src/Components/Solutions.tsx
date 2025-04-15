@@ -816,6 +816,8 @@ const pdfProductData: ProductData[] = [
   
 ];
 
+
+
 export default function Solutions() {
   const [hoverIndex, setHoverIndex] = useState(-1);
   const [searchParams] = useSearchParams();
@@ -837,6 +839,7 @@ export default function Solutions() {
     <main className="flex flex-col w-full gap-4 font-[Akshar] pt-12 overflow-clip">
       {/* Product Header */}
       <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
+        {/* Existing code for product header */}
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold text-blue-600">
             {selectedProduct.title}
@@ -859,6 +862,7 @@ export default function Solutions() {
 
       {/* Product Showcase with Icons */}
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
+        {/* Existing code for product showcase */}
         <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
           <div className="flex flex-col w-[336px] justify-start">
             <img
@@ -880,10 +884,10 @@ export default function Solutions() {
                 onMouseLeave={() => setHoverIndex(-1)}
               >
                 {hoverIndex === index ? (
-                  <FlippedCard text={item.desc} />
+                  <FlippedCard text={item.desc || ''} />
                 ) : (
                   <>
-                    <img src={item.icon} alt={item.icon} />
+                    <img src={item.icon} alt={item.title} />
                     <h2 className="text-[14px] font-bold">{item.title}</h2>
                   </>
                 )}
@@ -893,14 +897,17 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
+      {/* Technical Specifications - Pass productId as a prop */}
       <TechnicalSpecs
         specs={selectedProduct.specs}
         data={selectedProduct.data}
         title={selectedProduct.title}
+        productId={productId} // Pass productId to the component
       />
+      
       {/* Brochure Section */}
       <section className="flex justify-center items-center w-full h-full p-4 relative overflow-hidden">
+        {/* Existing code for brochure section */}
         <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white flex flex-row items-center justify-between md:px-24 w-[1200px] h-[323px]">
           <div className="md:w-2/3 space-y-4 z-10">
             <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
