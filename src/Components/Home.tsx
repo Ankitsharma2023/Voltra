@@ -18,7 +18,7 @@ import Adv3 from "../assets/adv3.png";
 import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
-import factory from "../assets/factory.png";
+import factory from "../assets/Factory.png";
 import {  ChevronDown, ChevronUp } from "lucide-react";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
