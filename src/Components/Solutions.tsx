@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import future from "../assets/future.png";
 import power from "../assets/power.png";
 import cellType from "../assets/cellType.svg";
-import batterySystem from "../assets/BatterySystem.svg";
+import batterySystem from "../assets/batterySystem.svg";
 import cycleLife from "../assets/cycleLife.svg";
 import dod from "../assets/dod.svg";
 import ratedPower from "../assets/ratedPower.svg";
