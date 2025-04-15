@@ -31,7 +31,7 @@ import TechnicalSpecs from "./TechnicalSpecs";
 
 
 
-import Puzzle from "../assets/Ppuzzle.png";
+import Puzzle from "../assets/Puzzle.png";
 import Battery from "../assets/Battery.png";
 import Hand from "../assets/Hand.png";
 import Cube from "../assets/Cube.png";
