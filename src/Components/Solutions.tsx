@@ -8,7 +8,7 @@ import cycleLife from "../assets/cycleLife.svg";
 import dod from "../assets/dod.svg";
 import ratedPower from "../assets/ratedPower.svg";
 import ratedVoltage from "../assets/ratedVoltage.svg";
-import readme from "../assets/readme.svg";
+import readme from "../assets/readMe.svg";
 import effieciency from "../assets/effieciency.svg";
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
