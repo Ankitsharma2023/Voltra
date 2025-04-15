@@ -34,7 +34,7 @@ import Adva1 from "../assets/Adva1.png";
 import Adva2 from "../assets/Adva2.png";
 import Adva3 from "../assets/Adva3.png";
 import Adva4 from "../assets/Adva4.png";
-import Battery from "../assets/battery.png";
+import Battery from "../assets/Battery.png";
 
 
 const Home = () => {
