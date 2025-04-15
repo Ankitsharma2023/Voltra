@@ -1,6 +1,6 @@
 import React from "react";
 import Tech from "../assets/Tech.png";
-import factory from "../assets/factory.png";
+import factory from "../assets/Factory.png";
 import rd from "../assets/rd.svg";
 import intl from "../assets/intelligent.svg";
 import robust from "../assets/robust.svg";
