@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import future from "../assets/future.png";
 import power from "../assets/power.png";
 import cellType from "../assets/cellType.svg";
-import batterySystem from "../assets/batterySystem.svg";
+import batterySystem from "../assets/BatterySystem.svg";
 import cycleLife from "../assets/cycleLife.svg";
 import dod from "../assets/dod.svg";
 import ratedPower from "../assets/ratedPower.svg";
@@ -31,11 +31,11 @@ import TechnicalSpecs from "./TechnicalSpecs";
 
 
 
-import Puzzle from "../assets/puzzle.png";
-import Battery from "../assets/battery.png";
-import Hand from "../assets/hand.png";
-import Cube from "../assets/cube.png";
-import Temp from "../assets/temp.png";
+import Puzzle from "../assets/Ppuzzle.png";
+import Battery from "../assets/Battery.png";
+import Hand from "../assets/Hand.png";
+import Cube from "../assets/Cube.png";
+import Temp from "../assets/Temp.png";
 // Updated flip card component using the PDF text
 const FlippedCard = ({ text }) => {
   return (
