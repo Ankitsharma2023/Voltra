@@ -8,10 +8,10 @@ import bar from "../assets/bar.svg";
 import gaurd from "../assets/gaurd.svg";
 import waveGraphic from "../assets/wave.png";
 import Puzzle from "../assets/Puzzle.png";
-import Battery from "../assets/battery.png";
-import Hand from "../assets/hand.png";
-import Cube from "../assets/cube.png";
-import Temp from "../assets/temp.png";
+import Battery from "../assets/Battery.png";
+import Hand from "../assets/Hand.png";
+import Cube from "../assets/Cube.png";
+import Temp from "../assets/Temp.png";
 
 import VOLT_100 from "../assets/VOLT_100.png";
 import VOLT_MAX from "../assets/VOLT_MAX.png";
