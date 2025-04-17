@@ -36,7 +36,7 @@ const SpecModal: React.FC<SpecModalProps> = ({
         <div className="flex flex-row gap-8 text-sm text-gray-800 ">
           <div className="flex flex-col w-1/2">
             <div className="px-4">
-              <div className="text-blue-600 font-semibold text-lg mb-2">
+              <div className="text-blue-600  font-semibold text-lg mb-2">
                 {data[0].title}
               </div>
               <div className="space-y-1 w-full font-gilroy">

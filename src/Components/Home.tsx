@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import power from "../assets/power.png";
-
+import Cube from "../assets/Cube.png";
 import light from "../assets/light.svg";
-import cloud from "../assets/cloud.png";
 import bar from "../assets/bar.svg";
 import rd from "../assets/rd.svg";
 import intl from "../assets/intelligent.svg";
@@ -35,8 +34,11 @@ import Adva2 from "../assets/Adva2.png";
 import Adva3 from "../assets/Adva3.png";
 import Adva4 from "../assets/Adva4.png";
 import Battery from "../assets/Battery.png";
-
-
+import VOLT_MAX from "../assets/VOLT_MAX.png";
+import VOLT_LINK from "../assets/VOLT_LINK.png";
+import cloud from "../assets/cloud.png";
+import Temp from "../assets/Temp.png";
+import Hand from "../assets/Hand.png";
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
@@ -97,7 +99,9 @@ const Home = () => {
   const [year, setYear] = useState(4);
 
   return (
-    <main className="flex flex-col w-full ">
+    <main className="flex flex-col w-full overflow-x-hidden">
+
+
       <section className="w-full h-screen flex flex-col justify-center items-center bg-[url(/home_cover.png)] bg-cover ">
         <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 ">
           <img width={216} height={96} src={logo} />
@@ -154,7 +158,7 @@ const Home = () => {
         <div className="flex flex-row w-full h-auto justify-around mt-20">
           <img width={590} height={340} src={power} />
 
-          <div className="font-[Akshar] w-[509px] h-[351px] ">
+          <div className=" w-[509px] h-[351px] ">
             <div className="w-full h-full flex flex-col ">
               <div className="w-full h-full">
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
@@ -187,63 +191,61 @@ const Home = () => {
       </section>
 
 
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10 gap-8 ">
+      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-20 gap-8 ">
         <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
           Our Products
         </h1>
         <div className="flex flex-col w-full gap-8">
   {/* Product Cards Row */}
-  <div className="flex flex-row w-full justify-center gap-4">
-    {/* VOLT-100 Card */}
+  <div className="flex flex-col md:flex-row w-full justify-center gap-4 px-4">
+
+{/* VOLT-100 Card */}
     <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
-      <div className="w-full bg-[#EDEDED] h-[400px]">
+      <div className="w-full bg-[#EDEDED] h-[400px] p-8">
         <img
-          src={VOLT_100}
-          alt="VOLT-100 ESS Cabinet"
+          src={VOLT_MAX}
+          alt="VOLT-MAX ESS Cabinet"
           className="w-full h-full object-cover object-top"
         />
       </div>
 
       <div className="flex flex-col p-6 bg-[#FAFAFA]">
         <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
-          VOLT-100
+          VOLT-MAX
         </h1>
         <p className="text-black text-sm mb-6">
-          The all-in-one air-cooled ESS cabinet integrates a long-life
-          battery, efficient balancing BMS, high-performance PCS,
-          active safety system, smart distribution, and HVAC into one
-          cabinet, enabling long-term operation with safety, stability, and reliability.
+        The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.
         </p>
 
         <div className="grid grid-cols-4 gap-2 mb-6">
           <div className="flex flex-col items-center">
-            <img src={light} width={36} height={36} alt="Energy Saving" className="mb-2" />
+            <img src={Temp} width={36} height={36} alt="Energy Saving" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Energy Saving and Fast
+            Better Temperature Control
             </p>
           </div>
           <div className="flex flex-col items-center">
             <img src={bar} width={36} height={36} alt="Economic" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Economical and Efficient
+            Lower Local Power Consumption
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={cloud} width={36} height={36} alt="Smart" className="mb-2" />
+            <img src={Cube} width={36} height={36} alt="Smart" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Smart O&M
+            Higher Energy Density
             </p>
           </div>
           <div className="flex flex-col items-center">
             <img src={gaurd} width={36} height={36} alt="Safe" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Safe and Reliable
+            High Protection
             </p>
           </div>
         </div>
         
         <a
-          href="/solutions?id=1"
+          href="/solutions?id=7"
           className="inline-flex items-center text-[#00C069] text-sm font-medium"
         >
           <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
@@ -256,9 +258,9 @@ const Home = () => {
 
     {/* VOLT-HVC Card */}
     <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
-    <div className="w-full bg-[#EDEDED] h-[400px]">
+    <div className="w-full bg-[#EDEDED] h-[400px] p-8">
         <img
-          src={VOLT_HVC}
+          src={VOLT_LINK}
           alt="VOLT-HVC ESS Cabinet"
           className="w-full h-full object-cover object-top"
         />
@@ -266,44 +268,42 @@ const Home = () => {
 
       <div className="flex flex-col p-6 bg-[#FAFAFA]">
         <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
-          VOLT-HVC
+          VOLT-LINK
         </h1>
         <p className="text-black text-sm mb-6">
-          Voltra high voltage series uses a 3U standard modular design, with multi-module in
-          series and support multi-cluster in parallel. It's suitable for various application scenarios
-          such as villas, farms, and small C&I power supplies, and provides a complete set of
-          green, low-carbon, and reliable energy solutions.
+        The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.
         </p>
 
         <div className="grid grid-cols-4 gap-2 mb-6">
           <div className="flex flex-col items-center">
-            <img src={Battery} width={36} height={36} alt="Ultra-Long Life" className="mb-2" />
+            <img src={Hand} width={36} height={36} alt="Ultra-Long Life" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Ultra-Long Life
+            High Integration 
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={bar} width={36} height={36} alt="Economic" className="mb-2" />
+            <img src={Temp} width={36} height={36} alt="Economic" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Economical and Efficient
+              Efficient Cooling 
+
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={cloud} width={36} height={36} alt="Intelligent" className="mb-2" />
+            <img src={Cube} width={36} height={36} alt="Intelligent" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Intelligent Management
+              Compact and Modular  
             </p>
           </div>
           <div className="flex flex-col items-center">
             <img src={gaurd} width={36} height={36} alt="Flexible" className="mb-2" />
             <p className="text-black text-xs font-medium text-center">
-              Flexible Configuration
+              Safe and Reliable 
             </p>
           </div>
         </div>
         
         <a
-          href="/solutions?id=2"
+          href="/solutions?id="
           className="inline-flex items-center text-[#00C069] text-sm font-medium"
         >
            <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
@@ -335,7 +335,7 @@ const Home = () => {
       </section>
 
       <section className="w-full h-[626px] flex flex-col justify-around items-center bg-gray-100 font-[Akshar] gap-8 mt-10">
-        <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
+      <div className="flex flex-row p-4 justify-around w-full items-center gap-8">
           <div className="flex flex-col w-[540px] gap-2">
             <h1 className="text-[#0C33F2] font-medium text-[40px]">
               INVESTING IN VOLTRA BESS IS MONEY{" "}
@@ -424,10 +424,11 @@ const Home = () => {
       </section>
       
       <section className="w-full h-screen flex flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
-  {sections.map((section, index) => (
+
+{sections.map((section, index) => (
     <div
       key={section.id}
-      className={`w-1/3 flex flex-col border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative overflow-hidden`}
+      className={`w-1/3 flex flex-col border-r ${index < sections.length - 1 ? "border-white" : ""} h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out relative -hidden`}
       onMouseEnter={() => setHoveredSection(section.id)}
       onMouseLeave={() => setHoveredSection(null)}
     >
@@ -566,81 +567,78 @@ const Home = () => {
 </section>
 
 
-      <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
-        <div className="flex flex-row w-full h-auto justify-around items-center">
-          <img width={943} height={584} src={factory} />
 
-          <div className="flex flex-col p-4 gap-4 w-[584px] ">
-            <div>
-              <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                The Voltra GigaFactory
-              </h1>
-              <div className="text-black text-[16px] mt-5 font-gilroy">
-                An advanced manufacturing facility focused on producing
-                cutting-edge electric vehicle (EV) batteries and energy storage
-                solutions. Located in a strategic area to support sustainable
-                energy and transportation innovations, the factory aims to
-                significantly reduce the cost of battery production while
-                increasing efficiency and performance.
-              </div>
-              <div className="text-black text-[16px] mt-5 font-gilroy">
-                Voltra’s commitment to green energy solutions makes it a key
-                player in the shift toward a more sustainable, carbon-neutral
-                future.
-              </div>
-            </div>
+  <section className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center bg-white font-[Akshar] my-20 px-4">
+    <div className="flex flex-col lg:flex-row w-full h-auto justify-between items-center gap-8">
+      
+      {/* Left image */}
+      <img
+        className="w-full lg:w-1/2 object-cover"
+        src={factory}
+        alt="Voltra GigaFactory"
+      />
 
-            <div className="flex flex-row justify-around w-full gap-4">
-              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                <img src={robust} width={40} height={40} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
-                    Robust Testing
-                  </h1>
-                </div>
-              </div>
-              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                <img src={data} width={40} height={40} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
-                    Data Integration
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row justify-around w-full gap-4">
-              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                <img src={intl} width={40} height={40} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-semibold text-[20px] font-gilroy">
-                    Intelligent Production
-                  </h1>
-                </div>
-              </div>
-              <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                <img src={rd} width={40} height={40} />
-                <div className="flex flex-col justify-center items-center w-full">
-                  <h1 className="text-black font-semibold text-[20px] font-gilroy">R&D Lab</h1>
-                </div>
-              </div>
-            </div>
-            <a
-              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069] "
-              href={"/technology"}
-            >
-               <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-
-                Explore the GigaFactory
-               </span>
-              
-              <ArrowUpRight width={24} height={24} />
-            </a>
+      {/* Right content */}
+      <div className="flex flex-col gap-4 w-full lg:w-1/2">
+        <div>
+          <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
+            The Voltra GigaFactory
+          </h1>
+          <div className="text-black text-base mt-5 font-gilroy">
+            An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
+          </div>
+          <div className="text-black text-base mt-5 font-gilroy">
+            Voltra’s commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
           </div>
         </div>
-      </section>
 
-      <section className="w-full h-[462px] flex flex-col justify-start items-center bg-white font-[Akshar] p-8  ">
-        <div className="flex flex-row w-full h-auto justify-center items-center ">
+        {/* Row 1 */}
+        <div className="flex flex-col sm:flex-row justify-around w-full gap-4">
+          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+            <img src={robust} width={40} height={40} />
+            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
+              Robust Testing
+            </h1>
+          </div>
+          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+            <img src={data} width={40} height={40} />
+            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
+              Data Integration
+            </h1>
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="flex flex-col sm:flex-row justify-around w-full gap-4">
+          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+            <img src={intl} width={40} height={40} />
+            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
+              Intelligent Production
+            </h1>
+          </div>
+          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+            <img src={rd} width={40} height={40} />
+            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
+              R&D Lab
+            </h1>
+          </div>
+        </div>
+
+        {/* Link */}
+        <a
+          className="flex flex-row items-center gap-2 text-sm text-[#00C069]"
+          href={"/technology"}
+        >
+          <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+            Explore the GigaFactory
+          </span>
+          <ArrowUpRight width={24} height={24} />
+        </a>
+      </div>
+    </div>
+  </section>
+
+      <section className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center bg-white font-[Akshar] py-16 px-4">        <div className="flex flex-row w-full h-auto justify-center items-center ">
           <div className="flex flex-col p-4 gap-4 w-[584px] h-[362px] ">
             <div>
               <h1 className="text-[#0C33F2] text-[40px] font-medium">
@@ -648,12 +646,16 @@ const Home = () => {
               </h1>
               <p className="mb-6">Have any more queries?</p>
               <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal rounded-lg ">
-                CONTACT US
+                <a href="/contact">
+               Contact Us
+                </a>
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justfy-evenly shadow-md p-6 h-[362px] font-gilroy ">
-            {faqItems.map((item, index) => (
+          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justify-evenly shadow-md p-6 max-h-[500px] overflow-y-auto w-full md:w-1/2 font-gilroy">
+
+
+{faqItems.map((item, index) => (
               <article key={index} className="border-b border-gray-200 py-4">
                 <header>
                   <button

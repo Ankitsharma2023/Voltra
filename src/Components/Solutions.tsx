@@ -844,7 +844,7 @@ export default function Solutions() {
           <h2 className="text-4xl font-bold text-blue-600">
             {selectedProduct.title}
           </h2>
-          <p className="text-gray-700">{selectedProduct.description}</p>
+          <p className="text-gray-700 font-gilroy">{selectedProduct.description}</p>
           <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             ORDER NOW
           </button>
