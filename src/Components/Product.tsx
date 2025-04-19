@@ -660,8 +660,8 @@ export default function ProductsCatalog() {
     </ul>
   </nav>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8">
-    {filteredProducts.map((product) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 max-w-6xl mx-auto">
+        {filteredProducts.map((product) => (
       <div
       key={product.id}
       className="rounded-lg w-full shadow-md overflow-hidden h-full flex flex-col"
