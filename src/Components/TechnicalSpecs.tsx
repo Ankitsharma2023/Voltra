@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import SpecModal from "./Technical";
-
+import VOLT_HVC_Props from "../assets/VOLT_HVC_Props.png";
+import VOLT_HVD_Props from "../assets/VOLT_HVD_Props.png";
+import VOLT_LVS_Props from "../assets/VOLT_LVS_Props.png";
+import VOLT_LVW_Props from "../assets/VOLT_LVW_Props.png";
 type SpecItem = {
   title: string;
   value: string;
@@ -11,7 +14,9 @@ type TechnicalSpecsProps = {
   specs: SpecItem[];
   data: SpecGroup[];
   title: string;
+  productId: number; // Add productId prop
 };
+
 type SpecGroup = {
   title: string;
   items: {
@@ -19,13 +24,36 @@ type SpecGroup = {
     value: string;
   }[];
 };
+
+// Sample image URLs for specific product IDs
+const productImages = {
+  2: VOLT_HVC_Props,
+  3: VOLT_HVD_Props,
+  4: VOLT_LVS_Props,
+  5: VOLT_LVW_Props, 
+};
+
 const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
   specs,
   data,
   title,
+  productId,
 }) => {
   const [openModal, setModalOpen] = useState(false);
-  console.log(data);
+  const [openImagePopup, setImagePopupOpen] = useState(false);
+  
+  // Check if this product should show an image popup
+  const shouldShowImagePopup = [2, 3, 4, 5].includes(productId);
+  
+  // Handle the click on the "Read More" button
+  const handleReadMoreClick = () => {
+    if (shouldShowImagePopup) {
+      setImagePopupOpen(true);
+    } else {
+      setModalOpen(true);
+    }
+  };
+
   return (
     <div className="px-24">
       <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
@@ -33,7 +61,7 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {specs.map((spec, index) =>
-          index != specs.length - 1 ? (
+          index !== specs.length - 1 ? (
             <div
               key={index}
               className="bg-[#FAFAFA] rounded-sm p-2 py-4 flex flex-col space-y-2 max-w-[280px]"
@@ -46,11 +74,11 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
                 </div>
               </div>
             </div>
-          ) : null,
+          ) : null
         )}
         <div
-          className="bg-[#FAFAFA] rounded-sm p-4 flex flex-col space-y-2 max-w-[280px]"
-          onClick={() => setModalOpen(true)}
+          className="bg-[#FAFAFA] rounded-sm p-4 flex flex-col space-y-2 max-w-[280px] cursor-pointer hover:bg-gray-100"
+          onClick={handleReadMoreClick}
         >
           <div className="flex flex-row w-full justify-start items-center gap-4 text-blue-600 w-full h-full">
             <div className="text-lg font-medium text-gray-700 flex flex-col items-start justify-center">
@@ -65,19 +93,69 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
         </div>
       </div>
       
+      {/* Regular specs modal for non-image products */}
       <SpecModal 
         isOpen={openModal}
         onClose={() => setModalOpen(false)}
         data={data}
         title={title}
       />
+      
+      {/* Image popup for specific products */}
+      {shouldShowImagePopup && (
+        <ImageSpecModal 
+          isOpen={openImagePopup}
+          onClose={() => setImagePopupOpen(false)}
+          imageUrl={productImages[productId as keyof typeof productImages]}
+          title={title}
+        />
+      )}
+      
       <div className="mt-6 flex justify-center gap-4">
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-sm">
-          GET VOLT-MAX
+          GET {title}
         </button>
         <button className="border border-blue-600 text-blue-600 hover:bg-blue-100 font-semibold py-2 px-6 rounded-sm">
           DOWNLOAD BROCHURE
         </button>
+      </div>
+    </div>
+  );
+};
+
+// New component for image-based spec popups
+interface ImageSpecModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  imageUrl: string;
+  title: string;
+}
+
+const ImageSpecModal: React.FC<ImageSpecModalProps> = ({
+  isOpen,
+  onClose,
+  imageUrl,
+  title,
+}) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center font-gilroy">
+      <div className="relative bg-white w-full max-w-5xl rounded-xl shadow-lg p-4 overflow-auto max-h-[90vh]">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          ✕
+        </button>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 font-gilroy">{title} </h2>
+        <div className="flex justify-center items-center">
+          <img 
+            src={imageUrl} 
+            alt={`${title} Technical Specifications`} 
+            className="max-w-full max-h-[70vh]" 
+          />
+        </div>
       </div>
     </div>
   );

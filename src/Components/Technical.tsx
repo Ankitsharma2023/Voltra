@@ -39,21 +39,14 @@ const SpecModal: React.FC<SpecModalProps> = ({
               <div className="text-blue-600  font-semibold text-lg mb-2">
                 {data[0].title}
               </div>
-              <div className="space-y-1 w-full font-gilroy">
-                {data[0].items.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="flex justify-center gap-2 w-full"
-                  >
-                    <span className="w-1/2 underline underline-offset-4">
-                      {item.label}
-                    </span>
-                    <span className="w-1/2 underline underline-offset-4">
-                      {item.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <div className="space-y-1">
+  {data[0].items.map((item, itemIndex) => (
+    <div key={itemIndex} className="flex justify-between">
+      <span>{item.label}</span>
+      <span>{item.value}</span>
+    </div>
+  ))}
+</div>
             </div>
             <div className="px-4">
               <div className="text-blue-600 font-semibold text-lg mb-2">

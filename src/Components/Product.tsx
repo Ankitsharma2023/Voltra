@@ -613,31 +613,31 @@ export default function ProductsCatalog() {
 
   return (
     <main className="flex flex-col w-full gap-4 font-[Akshar]">
-<section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-16 bg-white gap-4 max-w-7xl mx-auto">
-<div className="md:w-1/2 space-y-6">
-          <h2 className="text-4xl font-bold text-blue-600">
-            Products Catalogue
-          </h2>
-          <p className="text-gray-700 font-gilroy text-[16px]">
-            Voltra's Battery Energy Storage Systems (BESS) provide reliable,
-            scalable solutions designed to optimize energy management for both
-            commercial and residential applications. With advanced technology
-            and high-performance batteries, Voltra's BESS helps improve grid
-            stability, enhance energy efficiency, and support the integration of
-            renewable energy sources. Our products are engineered for durability
-            and long-term savings, making them an essential component in the
-            transition to a cleaner, more sustainable energy future.
-          </p>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-            DOWNLOAD BROCHURE
-          </button>
-        </div>
-        <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-8">
-          <div className="w-full h-64 flex items-center justify-center">
-            <img src={product_main} alt="Product" className="w-full" />
-          </div>
-        </div>
-      </section>
+<section className="w-full bg-white py-16">
+  <div className="container mx-auto flex flex-col md:flex-row items-center">
+    <div className="w-full md:w-1/2 md:pr-12 px-6 md:px-12">
+      <h2 className="text-4xl font-bold text-blue-600 mb-6">
+        Products Catalogue
+      </h2>
+      <p className="text-gray-700 font-gilroy text-[16px] mb-6">
+        Voltra's Battery Energy Storage Systems (BESS) provide reliable,
+        scalable solutions designed to optimize energy management for both
+        commercial and residential applications. With advanced technology
+        and high-performance batteries, Voltra's BESS helps improve grid
+        stability, enhance energy efficiency, and support the integration of
+        renewable energy sources. Our products are engineered for durability
+        and long-term savings, making them an essential component in the
+        transition to a cleaner, more sustainable energy future.
+      </p>
+      <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+        DOWNLOAD BROCHURE
+      </button>
+    </div>
+    <div className="w-full md:w-1/2 mt-8 md:mt-0 px-6 md:px-12">
+      <img src={product_main} alt="Product" className="w-full object-contain" />
+    </div>
+  </div>
+</section>
 
       
       <section className="px-8 py-16">
