@@ -60,8 +60,7 @@ const Contact: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between gap-8">
         {/* Form Section */}
         <div className="md:w-3/5">
-          <h2 className="text-5xl font-bold text-blue-600 mb-10">Get In Touch</h2>
-          
+          <h2 className="text-5xl font-medium  font-[Akshar] text-[#0C33F2] mb-10">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <input
@@ -77,13 +76,15 @@ const Contact: React.FC = () => {
             
             <div>
               <input
+              
                 type="tel"
                 name="contact"
                 value={formData.contact}
                 onChange={handleChange}
-                placeholder="Contact"
+                placeholder="Contact "
                 className="w-full p-4 bg-gray-200 rounded-lg text-lg"
                 required
+           
               />
             </div>
             
@@ -113,7 +114,7 @@ const Contact: React.FC = () => {
             <div>
               <button
                 type="submit"
-                className="bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 uppercase"
+                className="bg-blue-600 font-[Akshar] text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 uppercase"
               >
                 Submit
               </button>
@@ -129,7 +130,7 @@ const Contact: React.FC = () => {
                 <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
               </svg>
             </div>
-            <span className="text-gray-800 text-lg">info@voltra.in</span>
+            <span className="text-gray-800 text-lg font-gilroy">info@voltra.in</span>
           </div>
           
           <div className="flex items-center gap-6">
@@ -138,7 +139,7 @@ const Contact: React.FC = () => {
                 <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.1 14.8 15.7 14.9 15.5 15.1L13.2 17.4C10.4 15.9 8 13.6 6.6 10.8L8.9 8.5C9.1 8.3 9.2 7.9 9.1 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5Z"/>
               </svg>
             </div>
-            <span className="text-gray-800 text-lg">+91 99929 29203</span>
+            <span className="text-gray-800 text-lg font-gilroy">+91 99929 29203</span>
           </div>
           
           <div className="flex items-center gap-6">
@@ -147,7 +148,7 @@ const Contact: React.FC = () => {
                 <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
               </svg>
             </div>
-            <div className="text-gray-800 text-lg">
+            <div className="text-gray-800 text-lg font-gilroy">
               <p>3rd Floor, Orchid Center</p>
               <p>Golf Course Road, Sector-53</p>
               <p>Gurugram, India</p>

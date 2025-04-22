@@ -8,6 +8,7 @@ import hybridVideo from "../assets/hybrid.mp4";
 import hybridImage from "../assets/hybrid.png";
 import microgridImage from "../assets/microgrid.png";
 import waveGraphic from "../assets/wave.png";
+import Solutions1 from "../assets/Solutions1.jpg";
 
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -17,8 +18,8 @@ export default function HybridModeSection() {
     <main className="flex flex-col w-screen gap-4 font-[Akshar]">
       <section className="flex w-full flex-col md:flex-row items-center justify-between bg-white gap-4 text-[Akshar]">
         <div className="md:w-1/2 space-y-6 p-24">
-          <h2 className="text-4xl font-bold text-blue-600">Hybrid Mode</h2>
-          <p className="text-gray-700 font-gilroy text-[16px]">
+          <h2 className="text-[64px] font-medium text-[#0C33F2]">Hybrid Mode</h2>
+          <p className="font-gilroy text-[16px]">
             Hybrid Mode integrates multiple energy sources like Grid, Solar PV,
             Generators, etc., and helps in enhancing the overall efficiency and
             reliability of the system.
@@ -82,29 +83,35 @@ export default function HybridModeSection() {
           </div>
         </div>
 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
         <div className="flex flex-col md:flex-row items-center gap-8 mt-16">
           <div className="md:w-1/2">
             <img
-              src={solutionImage}
+              src={Solutions1}
               alt="A Reliable Power Solution"
               className="w-full h-auto rounded"
             />
           </div>
 
           <div className="md:w-[505px] space-y-4 leading-[150%]">
-            <h2 className="text-[40px] font-bold text-blue-600">
+            <h2 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar]">
               Your Smart Energy Partner
             </h2>
-            <p className="text-[16px] font-gilroy">
-              Imagine you're at a construction site, where work never stops. A
-              lot is going on, and the need for electricity changes all the
-              time—more in the morning, less at night.
-            </p>
+            <br/>
             <p className="text-[16px] font-gilroy font-bold">
               With a setup called 'hybrid working,' energy sources like
               generators can be used in combination with Battery Energy Storage
               System, which stores energy in lean hours and provides energy in
               peak hours.
+            </p>
+            <p className="text-[16px] font-gilroy">
+              Imagine you're at a construction site, where work never stops. A
+              lot is going on, and the need for electricity changes all the
+              time—more in the morning, less at night.
             </p>
             <p className="text-[16px] font-gilroy">
               Hybrid working not only reduces the cost of energy but also makes
@@ -120,10 +127,10 @@ export default function HybridModeSection() {
             </p>
 
             <a
-              className="flex flex-row items-center gap-2 text-[14px] text-[#00C069]"
+              className="flex flex-row items-center gap-2 text-[16px] text-[#00C069] font-bold"
               href={"/products"}
             >
-              <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+              <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-bold transition-all duration-200">
                 View our Products
               </span>
               <ArrowUpRight width={24} height={24} />
@@ -136,10 +143,10 @@ export default function HybridModeSection() {
       </section>
       <section className="flex flex-col md:flex-row items-start bg-white font-[Akshar]">
         <div className="md:w-2/5 space-y-4 px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-[Akshar] font-bold text-[#0C33F2]">
+          <h2 className="text-[40px] font-[Akshar] font-medium text-[#0C33F2] ml-40">
             Multiple Applications,<br />One-Stop Solution
           </h2>
-          <p className="text-gray-700 font-gilroy">
+          <p className="font-gilroy ml-40">
             Voltra's battery energy storage system is<br />modular, allowing you to
             scale to your needs, and<br />keeping CAPEX low.
           </p>
@@ -189,19 +196,20 @@ export default function HybridModeSection() {
       </section>
       <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden">
         <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
-          <div className="md:w-2/3 space-y-4 z-10">
-            <h2 className="text-2xl md:text-3xl font-semibold">
-              We offer tailored customization to meet your needs.
-              <br />
-              Share your requirements with us.
-            </h2>
-            <br />
-            <a href="/contact">
-              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-                GET IN TOUCH
-              </button>
-            </a>
-          </div>
+        <div className="md:w-2/3 space-y-4 z-10">
+  <h2 className="text-2xl md:text-3xl font-semibold whitespace-nowrap font-[Akshar]">
+    We offer tailored customization to meet your needs.
+  </h2>
+  <h2 className="text-2xl md:text-3xl font-semibold font-[Akshar]">
+    Share your requirements with us.
+  </h2>
+  <br />
+  <a href="/contact">
+    <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+      GET IN TOUCH
+    </button>
+  </a>
+</div>
         </div>
         <div className="md:flex relative w-3/4 h-full">
           <img

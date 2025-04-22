@@ -64,13 +64,13 @@ const Footer: React.FC = () => {
               ></path>
             </svg>
             <span>
-              3rd Floor, Hudel Center
+              3rd Floor, Orchid Center
               <br />
               Golf Course Road
               <br />
               Sector-53
               <br />
-              Gurugram, India
+              Gurugram - 122002, Haryana
             </span>
           </div>
 
@@ -122,33 +122,37 @@ const Footer: React.FC = () => {
             <li className="mb-3">
               <a
                 href="/about"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 About Voltra
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="/products"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Our Products
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="#"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 The Voltra Edge
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="#"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Common Queries
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>
@@ -162,26 +166,29 @@ const Footer: React.FC = () => {
             <li className="mb-3">
               <a
                 href="/products?category=residential"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Residential ESS
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="/products?category=utility"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Utilities
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="/products?category=ci"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 {" "}
                 C&I
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>
@@ -195,25 +202,28 @@ const Footer: React.FC = () => {
             <li className="mb-3">
               <a
                 href="/solutions/island-mode"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Island
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="/solutions/hybrid-mode"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Hybrid
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li className="mb-3">
               <a
                 href="/solutions/microgrid-mode"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Microgrid
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>
@@ -224,12 +234,13 @@ const Footer: React.FC = () => {
             Technology
           </h3>
           <ul className="list-none">
-            <li classname="mb-3">
+            <li className="mb-3">
               <a
                 href="/technology"
-                className="text-gray-400 text-sm hover:text-white transition-colors"
+                className="text-gray-400 text-sm hover:text-white transition-colors relative group inline-block"
               >
                 Technology
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>

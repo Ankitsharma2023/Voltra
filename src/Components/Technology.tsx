@@ -32,8 +32,8 @@ const Technology = () => {
       <main className="flex flex-col w-full gap-4 font-[Akshar]">
         <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
           <div className="md:w-1/2 space-y-6">
-            <h2 className="text-4xl font-bold text-blue-600 ">VOLTRA TECH </h2>
-            <p className="text-gray-700 text-lg font-gilroy">
+            <h2 className="text-[64px] font-medium text-[#0C33F2] font-[Akshar] ">VOLTRA TECH </h2>
+            <p className=" text-lg font-gilroy">
               At Voltra BESS, we are committed to advancing the future of energy
               storage with cutting-edge technology and innovative solutions. Our
               state-of-the-art manufacturing processes, commitment to
@@ -58,173 +58,188 @@ const Technology = () => {
           </div>
         </section>
 
-        <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white  mt-40 ">
-          <div className="flex flex-row w-full h-auto justify-around items-center">
-            <img width={943} height={584} src={factory} />
-
-            <div className="flex flex-col p-4 gap-4 w-[584px] ">
-              <div>
-                <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                  The Voltra GigaFactory
-                </h1>
-                <div className="text-black text-[16px] mt-5 font-gilroy">
-                  Voltra BESS is proud to operate a cutting-edge gigafactory
-                  dedicated to the production of state-of-the-art Battery Energy
-                  Storage Systems (BESS). Our facility, located in a prime
-                  industrial zone, incorporates the latest automation,
-                  efficiency, and sustainability standards. It is designed to
-                  meet the increasing demand for high-performance energy storage
-                  solutions in renewable energy applications.
+         <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
+                <div className="flex flex-row w-full h-auto justify-around items-center">
+                  <img width={943} height={584} src={factory} />
+        
+                  <div className="flex flex-col gap-4 w-full lg:w-1/2">
+                <div>
+                  <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
+                    The Voltra GigaFactory
+                  </h1>
+                  <div className="text-black text-base mt-5 font-gilroy">
+                    An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
+                  </div>
+                  <div className="text-black text-base mt-5 font-gilroy">
+                    Voltra’s commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
+                  </div>
                 </div>
-           
-              </div>
-
-              <div className="flex flex-row justify-around w-full gap-4">
-                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                  <img src={robust} width={40} height={40} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[20px]">
+        
+                {/* Row 1 */}
+                <div className="flex flex-col sm:flex-row justify-around w-full gap-4">
+                  <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+                    <img src={robust} width={40} height={40} />
+                    <h1 className="text-black font-semibold text-lg font-gilroy text-center">
                       Robust Testing
                     </h1>
                   </div>
-                </div>
-                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                  <img src={data} width={40} height={40} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[20px]">
+                  <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+                    <img src={data} width={40} height={40} />
+                    <h1 className="text-black font-semibold text-lg font-gilroy text-center">
                       Data Integration
                     </h1>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-row justify-around w-full gap-4">
-                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                  <img src={intl} width={40} height={40} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[20px]">
+        
+                {/* Row 2 */}
+                <div className="flex flex-col sm:flex-row justify-around w-full gap-4">
+                  <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+                    <img src={intl} width={40} height={40} />
+                    <h1 className="text-black font-semibold text-lg font-gilroy text-center">
                       Intelligent Production
                     </h1>
                   </div>
-                </div>
-                <div className="flex flex-col w-[286px] justify-center items-center gap-4">
-                  <img src={rd} width={40} height={40} />
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <h1 className="text-black font-bold text-[20px]">
+                  <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
+                    <img src={rd} width={40} height={40} />
+                    <h1 className="text-black font-semibold text-lg font-gilroy text-center">
                       R&D Lab
                     </h1>
                   </div>
                 </div>
+        
+                {/* Link */}
+                <span className="mt-4">
+               
+               </span>
               </div>
-            </div>
-          </div>
-        </section>
+        
+        
+                </div>
+              </section>
 
-        <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 ">
-          <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
-            Testing & Analysis
-          </h1>
+              <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
+  <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2] mt-20">
+    Testing & Analysis
+  </h1>
 
-          <div className="flex flex-col w-full justify-center items-center p-4 gap-4">
-            <div className="flex flex-row justify-center items-center p-4 gap-4 ">
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_1} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Cell Grading
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    Combined with the cell failure mechanism model, it monitors
-                    all cells with charge and discharge in real-time. 
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_2} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Container Testing
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    Multiple cycles are tested to comply with safety standards
-                    and monitoring communication & control systems for all the
-                    components.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_3} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    BMS Testing
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    Each BMS is tested with detailed parameters like voltage,
-                    temperature accuracy, balancing, over-under voltage, voltage
-                    interlock, insulation, shunt accuracy etc.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_4} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Insulation Test
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    To verify the integrity of the insulation in the battery
-                    pack and its components, to ensure no electrical leakage
-                    paths that could pose safety risks.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row justify-center items-center p-4 gap-4 ">
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_5} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Pack Grading
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    Each battery pack is rigorously tested with EU standards to
-                    check capacity, voltage, charge-discharge, safety, cut-off
-                    parameters, etc.  
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[276px] h-[300px]">
-                <img src={Test_6} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Environmental Testing
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    Exposes the battery under different environmental
-                    conditions, such as temperature extremes, humidity,
-                    pressure, vibration, and other external factors.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[276px]">
-                <img src={Test_7} />
-                <div className="flex flex-col w-full items-start">
-                  <h2 className="text-[#0C33F2] text-[24px] font-medium">
-                    Pressure Leak Test
-                  </h2>
-                  <p className="text-[16px] font-gilroy">
-                    The test verifies that the liquid cooling system is sealed
-                    and free of leaks, preventing coolant loss, which could lead
-                    to overheating or thermal management failures.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="flex flex-col w-full justify-center items-center p-4 gap-4">
+    {/* First row of cards */}
+    <div className="flex flex-row justify-center items-start p-4 gap-4">
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_1} alt="Cell Grading" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Cell Grading
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            Combined with the cell failure mechanism model, it monitors
+            all cells with charge and discharge in real-time. 
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_2} alt="Container Testing" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Container Testing
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            Multiple cycles are tested to comply with safety standards
+            and monitoring communication & control systems for all the
+            components.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_3} alt="BMS Testing" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            BMS Testing
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            Each BMS is tested with detailed parameters like voltage,
+            temperature accuracy, balancing, over-under voltage, voltage
+            interlock, insulation, shunt accuracy etc.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_4} alt="Insulation Test" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Insulation Test
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            To verify the integrity of the insulation in the battery
+            pack and its components, to ensure no electrical leakage
+            paths that could pose safety risks.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    {/* Second row of cards - centered with 3 cards */}
+    <div className="flex flex-row justify-center items-start p-4 gap-4">
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_5} alt="Pack Grading" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Pack Grading
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            Each battery pack is rigorously tested with EU standards to
+            check capacity, voltage, charge-discharge, safety, cut-off
+            parameters, etc.  
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_6} alt="Environmental Testing" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Environmental Testing
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            Exposes the battery under different environmental
+            conditions, such as temperature extremes, humidity,
+            pressure, vibration, and other external factors.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-center w-[276px] h-[300px]">
+        <div className="flex-shrink-0">
+          <img src={Test_7} alt="Pressure Leak Test" />
+        </div>
+        <div className="flex flex-col w-full items-start">
+          <h2 className="text-[#0C33F2] text-[24px] font-medium">
+            Pressure Leak Test
+          </h2>
+          <p className="text-[12px] font-gilroy">
+            The test verifies that the liquid cooling system is sealed
+            and free of leaks, preventing coolant loss, which could lead
+            to overheating or thermal management failures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
            
      <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
-       <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">
+       <h2 className="text-[40px] font-medium text-[#0C33F2] my-8 text-center font-[Akshar]  ">
          The Voltra Advantage
        </h2>
      
@@ -233,12 +248,13 @@ const Technology = () => {
          <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
            <div className="md:w-1/2 flex flex-col justify-center">
              <div className="leading-tight mb-4">
-               <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+               <h3 className="text-[40px] font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
                  Modular
                </h3>
-               <h3 className="text-4xl font-semibold text-blue-600 m-0 p-0">
-                 BESS
-               </h3>
+               <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] mt-2 p-0">
+       BESS
+     </h3>
+     
              </div>
              <p className="text-base mb-3 font-gilroy">
                Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
@@ -259,12 +275,13 @@ const Technology = () => {
          {/* Card 2: Thermal Management */}
          <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
            <div className="md:w-1/2 flex flex-col justify-center">
-           <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+           <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
                  Thermal
                </h3>
-               <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+               <h3 className="text-[40px] font-medium text-[#0C33F2] Font-[Akshar] m-0 p-0">
                  Management
                </h3>
+               <br/>
              <p className="text-base mb-3 font-gilroy">
                Our technology is designed for the Indian climate, both for air and liquid cooling systems.
              </p>
@@ -284,7 +301,7 @@ const Technology = () => {
          {/* Card 3: Intelligent Communication */}
          <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
            <div className="md:w-1/2 flex flex-col justify-center">
-             <h3 className="text-3xl font-semibold text-blue-600 mb-4">
+             <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] mb-4">
                Intelligent Communication
              </h3>
              <p className="text-base mb-3 font-gilroy">
@@ -306,12 +323,13 @@ const Technology = () => {
          {/* Card 4: Long Service Life */}
          <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
            <div className="md:w-1/2 flex flex-col justify-center">
-           <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+           <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
                  Long
                </h3>
-               <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+               <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
                  Service Life
                </h3>
+               <br/>
              <p className="text-base mb-3 font-gilroy">
                We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
              </p>
@@ -333,19 +351,20 @@ const Technology = () => {
 
         <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden">
           <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
-            <div className="md:w-2/3 space-y-4 z-10">
-              <h2 className="text-2xl md:text-3xl font-semibold">
-                We offer tailored customization to meet your needs.
-                <br />
-                Share your requirements with us.
-              </h2>
-              <br />
-              <a href="/contact">
-                <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-                  GET IN TOUCH
-                </button>
-              </a>
-            </div>
+          <div className="md:w-2/3 space-y-4 z-10">
+  <h2 className="text-2xl md:text-3xl font-semibold whitespace-nowrap">
+    We offer tailored customization to meet your needs.
+  </h2>
+  <h2 className="text-2xl md:text-3xl font-semibold">
+    Share your requirements with us.
+  </h2>
+  <br />
+  <a href="/contact">
+    <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+      GET IN TOUCH
+    </button>
+  </a>
+</div>
           </div>
           <div className="md:flex relative w-3/4 h-full">
             <img

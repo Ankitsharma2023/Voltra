@@ -23,9 +23,10 @@ import VOLT_HVD from "../assets/VOLT_HVD.png";
 import VOLT_LVS from "../assets/VOLT_LVS.png";
 import VOLT_LVW from "../assets/VOLT_LVW.png";
 import VOLT_LINK from "../assets/VOLT_LINK.png";
-import VOLT_MAX from "../assets/VOLT_MAX.png";
+import VOLT_MAX_EDIT from "../assets/VOLT_MAX_EDIT.png";
 import VOLT_MAX_AIR from "../assets/VOLT_MAX_AIR.png";
 import VOLT_LINK_AIR from "../assets/VOLT_LINK_AIR.png";
+import VOLT_LINK_EDIT from "../assets/VOLT_LINK_EDIT.png";
 
 import TechnicalSpecs from "./TechnicalSpecs";
 
@@ -493,7 +494,7 @@ const pdfProductData: ProductData[] = [
   },
   {
     id: 6,
-    image: VOLT_LINK,
+    image: VOLT_LINK_EDIT,
     title: "VOLT-LINK",
     description:
     "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
@@ -574,7 +575,7 @@ const pdfProductData: ProductData[] = [
 
   {
     id: 7,
-    image: VOLT_MAX,
+    image: VOLT_MAX_EDIT,
     title: "VOLT-MAX",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
@@ -849,15 +850,19 @@ export default function Solutions() {
             ORDER NOW
           </button>
         </div>
-        <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-          <div className="w-full h-64 flex items-center justify-center ml-20 p-10">
-            <img
-              src={selectedProduct.image}
-              alt="Product"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
+  
+  
+  
+<div className="md:w-1/2 flex justify-center items-center mt- md:mt-0">
+  <div className="w-full max-w-md h-64 flex items-center justify-center p-2">
+    <img
+      src={selectedProduct.image}
+      alt="Product"
+      className="w-full h-auto"
+    />
+  </div>
+</div>
+
       </section>
 
       {/* Product Showcase with Icons */}
@@ -868,7 +873,7 @@ export default function Solutions() {
             <img
               src={selectedProduct.image}
               alt="Product Showcase"
-              className="w-full h-auto"
+              className="w-full h-auto "
             />
           </div>
           <div className="grid grid-cols-3 gap-4 p-4 w-[584px]">

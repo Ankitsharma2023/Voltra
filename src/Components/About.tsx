@@ -19,21 +19,20 @@ export default function About() {
       <main className="flex flex-col w-full gap-4">
         <section className="flex flex-col md:flex-row items-center justify-between  p-16 px-24 bg-white gap-4 font-[Akshar]">
           <div className="md:w-1/2 space-y-6">
-            <h2 className="text-4xl font-bold text-blue-600">About VOLTRA</h2>
-            <p className="text-gray-700  font-gilroy">
-              Voltra BESS is a global leader in the design and production of
-              Battery Energy Storage Systems (BESS) that enable the transition
-              to a clean, sustainable energy era. With a strong team of industry
-              experts and a clear vision for the future, we are focused on
-              delivering efficient, reliable, and scalable energy storage
-              solutions to meet the growing demands of the modern energy
-              landscape. Learn more about our mission, values, team, and the
-              innovation driving our efforts to create a sustainable energy
-              future.
-            </p>
+            <h2 className="text-[64px] font-medium font-[Akshar] text-[#0C33F2]">About VOLTRA</h2>
+            <p className=" font-gilroy text-[16px]">
+  Voltra BESS is a global leader in the design and production of Battery 
+  Energy Storage Systems (BESS) that enable the transition to a clean,
+  sustainable energy era. With a strong team of industry experts and a clear 
+  vision for the future, we are focused on delivering efficient, reliable, and 
+  scalable energy storage solutions to meet the growing demands of the
+  modern energy landscape. Learn more about our mission, values, team, and
+  the innovation driving our efforts to create a sustainable energy future.
+</p>
+
             
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-  <span className="font-akshar">
+  <span className="font-[Akshar] text-[16px]">
     ORDER NOW
   </span>
 </button>
@@ -55,7 +54,8 @@ export default function About() {
           </div>
         </section>
 
-        <section className="w-full py-16 bg-white font-[Akshar]">
+        <section className="w-full py-8 bg-white font-[Akshar]">
+
   <div className="relative container mx-auto px-4 w-full">
     <img
       src={waveGraphicBlue}
@@ -68,8 +68,8 @@ export default function About() {
       className="absolute top-0 left-0 w-64 [transform:scale(-1,-1)]"
     />
     
-    <div className="flex justify-center items-center mx-auto max-w-3xl px-4 py-12">
-      <h3 className="text-center text-gray-700 text-SM font-gilroy leading-relaxed">
+    <div className="flex justify-center items-center mx-auto max-w-3xl px-4 py-12 ">
+      <h3 className="text-center  text-SM font-gilroy leading-relaxed">
         We specialize in creating high-performance, scalable energy storage solutions for a wide range of applications, 
         including renewable energy integration, grid stabilization, and backup power.
         <br /><br />
@@ -160,7 +160,7 @@ export default function About() {
 
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2] font-semibold">Innovation</h2>
+                <h2 className="text-[40px] text-[#0C33F2] font-medium font-[Akshar]">Innovation</h2>
                 <p className=" font-gilroy">
                   We are committed to fostering an environment of continuous
                   innovation, with a focus on improving energy storage solutions
@@ -172,7 +172,7 @@ export default function About() {
           <div className="flex flex-row justify-end items-center gap-4">
             <div className="flex flex-row justify-end">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2] font-semibold">Sustainability</h2>
+                <h2 className="text-[40px] text-[#0C33F2] font-medium font-[Akshar]">Sustainability</h2>
                 <p className="text-[16px] font-gilroy">
                 We prioritize the long-term health of the planet by employing environmentally-friendly technologies and promoting renewable energy solutions.
                 </p>
@@ -184,7 +184,7 @@ export default function About() {
             <img src={Benefit3} width={499} height={379} />
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2] font-semibold">Integrity</h2>
+                <h2 className="text-[40px] text-[#0C33F2] font-medium font-[Akshar]">Integrity</h2>
                 <p className="text-[16px] font-gilroy">
                 Every product we create is a testament to our commitment to excellence, from design to production to customer service.
                 </p>
@@ -195,7 +195,7 @@ export default function About() {
           <div className="flex flex-row justify-end items-center gap-4">
             <div className="flex flex-row justify-end">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2] font-semibold">Social Impact </h2>
+                <h2 className="text-[40px] text-[#0C33F2] font-medium font-[Akshar]">Social Impact </h2>
                 <p className="text-[16px] font-gilroy">
                 We are dedicated to making a meaningful difference by expanding access to clean energy, supporting development, and empowering communities with innovative solutions.
                 </p>
@@ -207,7 +207,7 @@ export default function About() {
             <img src={Benefit5} width={499} height={379} />
             <div className="flex flex-row justify-start">
               <div className="w-1/2">
-                <h2 className="text-[40px] text-[#0C33F2] font-semibold">Seurity</h2>
+                <h2 className="text-[40px] text-[#0C33F2] font-medium font-[Akshar]">Security</h2>
                 <p className="text-[16px] font-gilroy">
                 We prioritize the safety and resilience of our energy solutions by implementing advanced protective technologies, rigorous testing, and industry-leading standards.
                 </p>
@@ -218,30 +218,31 @@ export default function About() {
 
       
 
-        <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden mt-16">
-          <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
-            <div className="md:w-2/3 space-y-4 z-10">
-              <h2 className="text-2xl md:text-3xl font-semibold">
-                We offer tailored customization to meet your needs.
-                <br />
-                Share your requirements with us.
-              </h2>
-              <br />
-            <a href="/contact">
-              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-                GET IN TOUCH
-              </button>
-              </a>
-            </div>
-          </div>
-          <div className="md:flex relative w-3/4 h-full">
-            <img
-              src={waveGraphic}
-              alt="Wave Graphic"
-              className="absolute bottom-[-100px] right-[-40px] w-64"
-            />
-          </div>
-        </section>
+      <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden">
+             <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
+             <div className="md:w-2/3 space-y-4 z-10">
+       <h2 className="text-2xl md:text-3xl font-semibold whitespace-nowrap">
+         We offer tailored customization to meet your needs.
+       </h2>
+       <h2 className="text-2xl md:text-3xl font-semibold">
+         Share your requirements with us.
+       </h2>
+       <br />
+       <a href="/contact">
+         <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+           GET IN TOUCH
+         </button>
+       </a>
+     </div>
+             </div>
+             <div className="md:flex relative w-3/4 h-full">
+               <img
+                 src={waveGraphic}
+                 alt="Wave Graphic"
+                 className="absolute bottom-[-100px] right-[-40px] w-64"
+               />
+             </div>
+           </section>
       </main>
     </>
   );

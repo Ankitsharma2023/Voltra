@@ -34,8 +34,8 @@ import Adva2 from "../assets/Adva2.png";
 import Adva3 from "../assets/Adva3.png";
 import Adva4 from "../assets/Adva4.png";
 import Battery from "../assets/Battery.png";
-import VOLT_MAX from "../assets/VOLT_MAX.png";
-import VOLT_LINK from "../assets/VOLT_LINK.png";
+import VOLT_MAX_EDIT from "../assets/VOLT_MAX_EDIT.png";
+import VOLT_LINK_EDIT from "../assets/VOLT_LINK_EDIT.png";
 import cloud from "../assets/cloud.png";
 import Temp from "../assets/Temp.png";
 import Hand from "../assets/Hand.png";
@@ -72,7 +72,7 @@ const Home = () => {
       width: "35%",
       title: "ISLAND",
       description:
-        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+        "In Island Mode our BESS can supply power independently, without any connection to the utility grid. Commonly found in remote areas such as rural towns and mine sites often serve as backup or standby generators to provide electricity during grid failures.",
       link: "solutions/island-mode",
     },
     {
@@ -80,7 +80,7 @@ const Home = () => {
       width: "30%",
       title: "HYBRID",
       description:
-        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      "Hybrid Mode refers to BESS operating in coordination with both the grid and other energy sources, such as solar PV or wind. Our Energy Storage Systems pair seamlessly with diesel generators for intelligent load management, making it ideal for factories and different challenging environments.",
       link: "solutions/hybrid-mode",
     },
     {
@@ -88,7 +88,7 @@ const Home = () => {
       width: "30%",
       title: "MICROGRID",
       description:
-        "Voltra's Battery Energy Storage Systems are super efficient in island mode, which ensures a reliable stand-alone power solution that works even during disconnection from the grid. Discover how homes and businesses stay powered up when the grid goes down. unlock the secrets of Island Mode.",
+      "In Microgrid Mode, the BESS operates as part of a controlled, self-contained power system that can connect to or disconnect from the main grid. Microgrids serve as vital solutions for areas lacking reliable access to traditional grid power. Offering localized control, these self-sufficient energy grids operate independently of the larger grid.",
       link: "solutions/microgrid-mode",
     },
   ];
@@ -164,6 +164,7 @@ const Home = () => {
                 <h1 className="text-[#0C33F2] font-medium text-[40px]">
                   Revolutionizing the Battery Storage Landscape of India
                 </h1>
+                <br/>
                 <div className="font-gilroy text-[16px]">
                   Voltra Energy is revolutionizing India's energy future with
                   advanced Battery Energy Storage Systems (BESS) utilizing
@@ -179,7 +180,7 @@ const Home = () => {
   className="flex flex-row items-center gap-2 text-[16px] text-[#00C069]"
   href="/products"
 >
-  <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
+  <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200 text-40px">
     View our products
   </span>
   <ArrowUpRight width={24} height={24} />
@@ -192,7 +193,7 @@ const Home = () => {
 
 
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-20 gap-8 ">
-        <h1 className="flex flex-row w-full justify-center text-[40px] font-medium text-[#0C33F2]">
+        <h1 className="text-[40px] flex flex-row w-full justify-center font-medium text-[#0C33F2]">
           Our Products
         </h1>
         <div className="flex flex-col w-full gap-8">
@@ -203,19 +204,19 @@ const Home = () => {
     <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
       <div className="w-full bg-[#EDEDED] h-[400px] p-8">
         <img
-          src={VOLT_MAX}
+          src={VOLT_MAX_EDIT}
           alt="VOLT-MAX ESS Cabinet"
           className="w-full h-full object-cover object-top"
         />
       </div>
 
       <div className="flex flex-col p-6 bg-[#FAFAFA]">
-        <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
+      <h1 className="text-[#0C33F2] text-[40px] font-medium mb-2">
           VOLT-MAX
         </h1>
-        <p className="text-black text-sm mb-6">
-        The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.
-        </p>
+        <p className="text-black text-sm mb-6 font-gilroy">
+        The 20-ft liquid-cooled ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. The liquid cooling empowers the ESS product with higher power density and ensures the cell temperature difference less than 3°C, which effectively extends battery service life and improves energy efficiency.
+               </p>
 
         <div className="grid grid-cols-4 gap-2 mb-6">
           <div className="flex flex-col items-center">
@@ -256,63 +257,59 @@ const Home = () => {
       </div>
     </div>
 
-    {/* VOLT-HVC Card */}
+    {/* VOLT-LINK Card */}
     <div className="flex flex-col w-[584px] bg-white shadow-sm rounded-md overflow-hidden">
-    <div className="w-full bg-[#EDEDED] h-[400px] p-8">
-        <img
-          src={VOLT_LINK}
-          alt="VOLT-HVC ESS Cabinet"
-          className="w-full h-full object-cover object-top"
-        />
+  <div className="w-full bg-[#EDEDED] h-[400px] p-10 flex items-center justify-center">
+    <img
+      src={VOLT_LINK_EDIT}
+      alt="VOLT-HVC ESS Cabinet"
+      className="max-h-[340px] w-auto object-contain"
+    />
+  </div>
+
+  <div className="flex flex-col p-6 bg-[#FAFAFA]">
+  <h1 className="text-[#0C33F2] text-[40px] font-medium mb-2">
+  VOLT-LINK
+</h1>
+
+    <p className="text-black text-sm mb-6 font-gilroy">
+   The liquid-cooled battery cabinet adopts advanced liquid cooling and temperature balancing. The modular design makes the parallel solution flexible and can be combined with centralized PCS to form an ESS with higher energy density,  improving the economy, safety, and construction convenience of ESS projects.
+    </p>
+    <div className="grid grid-cols-4 gap-2 mb-6">
+      <div className="flex flex-col items-center">
+        <img src={Hand} width={36} height={36} alt="Ultra-Long Life" className="mb-2" />
+        <p className="text-black text-xs font-medium text-center">High Integration</p>
       </div>
-
-      <div className="flex flex-col p-6 bg-[#FAFAFA]">
-        <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
-          VOLT-LINK
-        </h1>
-        <p className="text-black text-sm mb-6">
-        The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.
-        </p>
-
-        <div className="grid grid-cols-4 gap-2 mb-6">
-          <div className="flex flex-col items-center">
-            <img src={Hand} width={36} height={36} alt="Ultra-Long Life" className="mb-2" />
-            <p className="text-black text-xs font-medium text-center">
-            High Integration 
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={Temp} width={36} height={36} alt="Economic" className="mb-2" />
-            <p className="text-black text-xs font-medium text-center">
-              Efficient Cooling 
-
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={Cube} width={36} height={36} alt="Intelligent" className="mb-2" />
-            <p className="text-black text-xs font-medium text-center">
-              Compact and Modular  
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={gaurd} width={36} height={36} alt="Flexible" className="mb-2" />
-            <p className="text-black text-xs font-medium text-center">
-              Safe and Reliable 
-            </p>
-          </div>
-        </div>
-        
-        <a
-          href="/solutions?id="
-          className="inline-flex items-center text-[#00C069] text-sm font-medium"
-        >
-           <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-          Know more
-          </span>
-          <ArrowUpRight className="ml-1" width={16} height={16} />
-        </a>
+      <div className="flex flex-col items-center">
+        <img src={Temp} width={36} height={36} alt="Economic" className="mb-2" />
+        <p className="text-black text-xs font-medium text-center">Efficient Cooling</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src={Cube} width={36} height={36} alt="Intelligent" className="mb-2" />
+        <p className="text-black text-xs font-medium text-center">Compact and Modular</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src={gaurd} width={36} height={36} alt="Flexible" className="mb-2" />
+        <p className="text-black text-xs font-medium text-center">Safe and Reliable</p>
       </div>
     </div>
+
+    <a
+      href="/solutions?id="
+      className="inline-flex items-center text-[#00C069] text-sm font-medium"
+    >
+      <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+        Know more
+      </span>
+      <ArrowUpRight className="ml-1" width={16} height={16} />
+    </a>
+  </div>
+</div>
+
+
+
+
+
   </div>
 
   {/* Buttons Row */}
@@ -411,9 +408,9 @@ const Home = () => {
               </div>
               <div className=" flex flex-col">
                 <div className="text-[36px] text-[#00C069] font-semibold">
-                  2024
+                  20+ years
                 </div>
-                <div className="text-[14px] font-gilroy">Monthly savings</div>
+                <div className="text-[14px] font-gilroy">Life Span</div>
               </div>
             </div>
           </div>
@@ -460,7 +457,7 @@ const Home = () => {
 
       
 <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10">
-  <h2 className="text-3xl font-bold text-blue-600 my-8 text-center">
+  <h2 className="text-[40px] font-medium text-[#0C33F2] my-8 text-center font-[Akshar]  ">
     The Voltra Advantage
   </h2>
 
@@ -469,12 +466,13 @@ const Home = () => {
     <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="leading-tight mb-4">
-          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+          <h3 className="text-[40px] font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
             Modular
           </h3>
-          <h3 className="text-4xl font-semibold text-blue-600 m-0 p-0">
-            BESS
-          </h3>
+          <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] mt-2 p-0">
+  BESS
+</h3>
+
         </div>
         <p className="text-base mb-3 font-gilroy">
           Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
@@ -495,12 +493,13 @@ const Home = () => {
     {/* Card 2: Thermal Management */}
     <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
       <div className="md:w-1/2 flex flex-col justify-center">
-      <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+      <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
             Thermal
           </h3>
-          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+          <h3 className="text-[40px] font-medium text-[#0C33F2] Font-[Akshar] m-0 p-0">
             Management
           </h3>
+          <br/>
         <p className="text-base mb-3 font-gilroy">
           Our technology is designed for the Indian climate, both for air and liquid cooling systems.
         </p>
@@ -520,7 +519,7 @@ const Home = () => {
     {/* Card 3: Intelligent Communication */}
     <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
       <div className="md:w-1/2 flex flex-col justify-center">
-        <h3 className="text-3xl font-semibold text-blue-600 mb-4">
+        <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] mb-4">
           Intelligent Communication
         </h3>
         <p className="text-base mb-3 font-gilroy">
@@ -542,12 +541,13 @@ const Home = () => {
     {/* Card 4: Long Service Life */}
     <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
       <div className="md:w-1/2 flex flex-col justify-center">
-      <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+      <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
             Long
           </h3>
-          <h3 className="text-3xl font-semibold text-blue-600 m-0 p-0">
+          <h3 className="text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
             Service Life
           </h3>
+          <br/>
         <p className="text-base mb-3 font-gilroy">
           We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
         </p>
@@ -568,18 +568,11 @@ const Home = () => {
 
 
 
-  <section className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center bg-white font-[Akshar] my-20 px-4">
-    <div className="flex flex-col lg:flex-row w-full h-auto justify-between items-center gap-8">
-      
-      {/* Left image */}
-      <img
-        className="w-full lg:w-1/2 object-cover"
-        src={factory}
-        alt="Voltra GigaFactory"
-      />
+ <section className="w-[1440px] h-[629px] flex flex-col justify-start items-center bg-white font-[Akshar] mt-40 ">
+        <div className="flex flex-row w-full h-auto justify-around items-center">
+          <img width={943} height={584} src={factory} />
 
-      {/* Right content */}
-      <div className="flex flex-col gap-4 w-full lg:w-1/2">
+          <div className="flex flex-col gap-4 w-full lg:w-1/2">
         <div>
           <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
             The Voltra GigaFactory
@@ -625,72 +618,79 @@ const Home = () => {
         </div>
 
         {/* Link */}
+        <span className="mt-4">
         <a
           className="flex flex-row items-center gap-2 text-sm text-[#00C069]"
           href={"/technology"}
         >
-          <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+          
+          <span className=" text-[18px]  border-b-2 font-bold  border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200 ">
             Explore the GigaFactory
           </span>
           <ArrowUpRight width={24} height={24} />
+     
+        
         </a>
+       </span>
       </div>
-    </div>
-  </section>
-
-      <section className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center bg-white font-[Akshar] py-16 px-4">        <div className="flex flex-row w-full h-auto justify-center items-center ">
-          <div className="flex flex-col p-4 gap-4 w-[584px] h-[362px] ">
-            <div>
-              <h1 className="text-[#0C33F2] text-[40px] font-medium">
-                KNOW ABOUT BEES
-              </h1>
-              <p className="mb-6">Have any more queries?</p>
-              <button className="bg-[#0C33F2] p-2 px-4 text-white font-[Akshar] font-normal rounded-lg ">
-                <a href="/contact">
-               Contact Us
-                </a>
-              </button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 bg-gray-50 rounded-lg justify-evenly shadow-md p-6 max-h-[500px] overflow-y-auto w-full md:w-1/2 font-gilroy">
 
 
-{faqItems.map((item, index) => (
-              <article key={index} className="border-b border-gray-200 py-4">
-                <header>
-                  <button
-                    className="flex w-full justify-between items-center text-left focus:outline-none"
-                    onClick={() => toggleItem(index)}
-                    aria-expanded={openItem === index}
-                    aria-controls={`faq-content-${index}`}
-                  >
-                    <h3 className="text-md font-medium text-gray-900">
-                      {item.title}
-                    </h3>
-                    {openItem === index ? (
-                      <ChevronUp className="h-5 w-5 text-gray-500" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-500" />
-                    )}
-                  </button>
-                </header>
-                <div
-                  id={`faq-content-${index}`}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openItem === index
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="mt-2 text-sm text-gray-600 py-2">
-                    <p>{item.content}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
+
+      <section className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center bg-white font-[Akshar] py-16 px-4"> 
+  <div className="flex flex-col-reverse lg:flex-row w-full h-auto justify-between items-center gap-8"> 
+ 
+    {/* Left Text Section - reduced width */} 
+    <div className="flex flex-col p-4 gap-4 w-full lg:w-2/5"> 
+      <h1 className="text-[#0C33F2] text-[40px] font-medium"> 
+        KNOW ABOUT BEES 
+      </h1> 
+      <p className="mb-4 text-gray-700 font-bold ">Have any more queries?</p> 
+      <a href="/contact"> 
+        <button className="bg-[#0C33F2] p-2 px-4 text-white font-normal rounded-lg"> 
+          Contact Us 
+        </button> 
+      </a> 
+    </div> 
+ 
+    {/* Right FAQ Section - increased width */} 
+    <div className="bg-gray-50 rounded-lg shadow-md p-6 w-full lg:w-3/5 max-h-[500px] overflow-y-auto font-gilroy"> 
+      {faqItems.map((item, index) => ( 
+        <article key={index} className="border-b border-gray-200 py-4"> 
+          <header> 
+            <button 
+              className="flex w-full justify-between items-center text-left focus:outline-none" 
+              onClick={() => toggleItem(index)} 
+              aria-expanded={openItem === index} 
+              aria-controls={`faq-content-${index}`} 
+            > 
+              <h3 className="text-md font-medium text-gray-900"> 
+                {item.title} 
+              </h3> 
+              {openItem === index ? ( 
+                <ChevronUp className="h-5 w-5 text-gray-500" /> 
+              ) : ( 
+                <ChevronDown className="h-5 w-5 text-gray-500" /> 
+              )} 
+            </button> 
+          </header> 
+          <div 
+            id={`faq-content-${index}`} 
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${ 
+              openItem === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0" 
+            }`} 
+          > 
+            <div className="mt-2 text-sm text-gray-600 py-2"> 
+              <p>{item.content}</p> 
+            </div> 
+          </div> 
+        </article> 
+      ))} 
+    </div> 
+  </div> 
+</section> 
+
     </main>
   );
 };

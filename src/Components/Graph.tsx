@@ -242,6 +242,9 @@ function Graph({ year }: { year: number }) {
             <span className="text-sm">Savings</span>
           </div>
         </div>
+        <div className="text-center text-sm text-gray-600 mt-2">*values in INR Lakhs</div>
+        <div className="text-center text-sm text-gray-600 mt-2">*estimate for a 120 KV Load</div>
+
       </div>
     </div>
   );

@@ -24,10 +24,113 @@ import VOLT_LINK_AIR from "../assets/VOLT_LINK_AIR.png";
 import VOLT_MAX_AIR from "../assets/VOLT_MAX_AIR.png";
 import VOLT_HVC from "../assets/VOLT_HVC.png";
 import { useSearchParams } from "react-router-dom";
+import VOLT_MAX_EDIT from "../assets/VOLT_MAX_EDIT.png";
 
 // Define product data by category
 const productData = {
   all: [
+    {
+      id: 7,
+      image: VOLT_MAX_EDIT,
+      title: "VOLT-MAX",
+      description:
+        "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
+      features: [
+        {
+          icon: Temp,
+          title: "Better Temperature Control",
+        },
+        {
+          icon: bar,
+          title: "Lower Local Power Consumption",
+        },
+        {
+          icon: Cube,
+          title: "Higher Energy Density",
+          
+        },
+        {
+          icon: gaurd,
+          title: "High Protection",
+        },
+      ],
+    },
+    {
+      id: 8,
+      image: VOLT_MAX_AIR,
+      title: "VOLT-MAX-AIR",
+      description:
+        "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container.It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
+      features: [
+        {
+          icon: Temp,
+          title: "Better Temperature Control",
+        },
+        {
+          icon: bar,
+          title: "Lower Local Power Consumption",
+        },
+        {
+          icon: Cube,
+          title: "Higher Energy Density",
+        },
+        {
+          icon: gaurd,
+          title: "Higher Protection",
+        },
+      ],
+    },
+    {
+      id: 6,
+      image: VOLT_LINK,
+      title: "VOLT-LINK",
+      description:
+      "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
+      features: [
+        {
+          icon: Hand,
+          title: "High Integration",
+          desc: "1P fast charge/discharge rate, energy storing & releasing",
+        },
+        {
+          icon: Temp,
+          title: "Efficient Cooling",
+        },
+        {
+          icon: Cube,
+          title: "Compact and Modular",
+        },
+        {
+          icon: gaurd,
+          title: "Safe and Reliable",
+        },
+      ],
+    },,
+    {
+      id: 9,
+      image: VOLT_LINK_AIR,
+      title: "VOLT-LINK-AIR",
+      description:
+        "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
+      features: [
+        {
+          icon: Cube,
+          title: "Compact and Modular",
+        },
+        {
+          icon: bar,
+          title: "Economical and Efficient",
+        },
+        {
+          icon: cloud,
+          title: "Smart O&M",
+        },
+        {
+          icon: gaurd,
+          title: "Safe and Reliable",
+        },
+      ],
+    },
     {
       id: 1,
       image: VOLT_100,
@@ -53,6 +156,7 @@ const productData = {
         },
       ],
     },
+    // 
     {
       id: 2,
       image: VOLT_HVC,
@@ -157,108 +261,7 @@ const productData = {
         },
       ],
     },
-    {
-      id: 6,
-      image: VOLT_LINK,
-      title: "VOLT-LINK",
-      description:
-      "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
-      features: [
-        {
-          icon: Hand,
-          title: "High Integration",
-          desc: "1P fast charge/discharge rate, energy storing & releasing",
-        },
-        {
-          icon: Temp,
-          title: "Efficient Cooling",
-        },
-        {
-          icon: Cube,
-          title: "Compact and Modular",
-        },
-        {
-          icon: gaurd,
-          title: "Safe and Reliable",
-        },
-      ],
-    },
-    {
-      id: 7,
-      image: VOLT_MAX,
-      title: "VOLT-MAX",
-      description:
-        "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
-      features: [
-        {
-          icon: Temp,
-          title: "Better Temperature Control",
-        },
-        {
-          icon: bar,
-          title: "Lower Local Power Consumption",
-        },
-        {
-          icon: Cube,
-          title: "Higher Energy Density",
-          
-        },
-        {
-          icon: gaurd,
-          title: "High Protection",
-        },
-      ],
-    },
-    {
-      id: 8,
-      image: VOLT_MAX_AIR,
-      title: "VOLT-MAX-AIR",
-      description:
-        "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container.It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
-      features: [
-        {
-          icon: Temp,
-          title: "Better Temperature Control",
-        },
-        {
-          icon: bar,
-          title: "Lower Local Power Consumption",
-        },
-        {
-          icon: Cube,
-          title: "Higher Energy Density",
-        },
-        {
-          icon: gaurd,
-          title: "Higher Protection",
-        },
-      ],
-    },
-    {
-      id: 9,
-      image: VOLT_LINK_AIR,
-      title: "VOLT-LINK-AIR",
-      description:
-        "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
-      features: [
-        {
-          icon: Cube,
-          title: "Compact and Modular",
-        },
-        {
-          icon: bar,
-          title: "Economical and Efficient",
-        },
-        {
-          icon: cloud,
-          title: "Smart O&M",
-        },
-        {
-          icon: gaurd,
-          title: "Safe and Reliable",
-        },
-      ],
-    },
+  
 
 
 
@@ -613,34 +616,37 @@ export default function ProductsCatalog() {
 
   return (
     <main className="flex flex-col w-full gap-4 font-[Akshar]">
-<section className="w-full bg-white py-16">
-  <div className="container mx-auto flex flex-col md:flex-row items-center">
-    <div className="w-full md:w-1/2 md:pr-12 px-6 md:px-12">
-      <h2 className="text-4xl font-bold text-blue-600 mb-6">
-        Products Catalogue
-      </h2>
-      <p className="text-gray-700 font-gilroy text-[16px] mb-6">
-        Voltra's Battery Energy Storage Systems (BESS) provide reliable,
-        scalable solutions designed to optimize energy management for both
-        commercial and residential applications. With advanced technology
-        and high-performance batteries, Voltra's BESS helps improve grid
-        stability, enhance energy efficiency, and support the integration of
-        renewable energy sources. Our products are engineered for durability
-        and long-term savings, making them an essential component in the
-        transition to a cleaner, more sustainable energy future.
-      </p>
-      <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-        DOWNLOAD BROCHURE
-      </button>
-    </div>
-    <div className="w-full md:w-1/2 mt-8 md:mt-0 px-6 md:px-12">
-      <img src={product_main} alt="Product" className="w-full object-contain" />
-    </div>
-  </div>
-</section>
+      {/* Hero section */}
+      <section className="w-full bg-white py-16">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 md:pr-12 px-6 md:px-12">
+            <h2 className="text-4xl font-bold text-blue-600 mb-6">
+              <span className="border-b-2 border-transparent transition-all duration-200">
+                Product Catalogue
+              </span>
+            </h2>
+            <p className="text-gray-700 font-gilroy text-[16px] mb-6">
+              Voltra's Battery Energy Storage Systems (BESS) provide reliable,
+              scalable solutions designed to optimize energy management for both
+              commercial and residential applications. With advanced technology
+              and high-performance batteries, Voltra's BESS helps improve grid
+              stability, enhance energy efficiency, and support the integration of
+              renewable energy sources. Our products are engineered for durability
+              and long-term savings, making them an essential component in the
+              transition to a cleaner, more sustainable energy future.
+            </p>
+            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+              DOWNLOAD BROCHURE
+            </button>
+          </div>
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 px-6 md:px-12">
+            <img src={product_main} alt="Product" className="w-full object-contain" />
+          </div>
+        </div>
+      </section>
 
-      
-      <section className="px-8 py-16">
+      {/* Category navigation */}
+      <section className="px-8 py-8">
   <nav className="w-full flex justify-center py-4 border-b mb-8">
     <ul className="flex space-x-6 text-gray-700 font-semibold">
       {categories.map(({ key, label }) => (
@@ -660,94 +666,94 @@ export default function ProductsCatalog() {
     </ul>
   </nav>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 max-w-6xl mx-auto">
-        {filteredProducts.map((product) => (
-      <div
-      key={product.id}
-      className="rounded-lg w-full shadow-md overflow-hidden h-full flex flex-col"
-    >
-      {/* Top Image Section */}
-      <div className="w-full h-[336px] bg-[#EDEDED] flex items-center justify-center">
-        <img
-          src={product.image}
-          alt={product.title}
-          className="object-contain max-h-full"
-        />
-      </div>
-    
-      {/* Bottom Text Section */}
-      <div className="bg-[#FAFAFA] p-5 flex flex-col justify-between flex-grow">
-        <div>
-          <h3 className="text-xl font-bold text-blue-600">{product.title}</h3>
-          <p className="text-gray-700 mt-2 text-sm font-gilroy">
-            {product.description}
-          </p>
-    
-          <div className="flex flex-row justify-around w-full gap-3 mt-3">
-            {product.features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center text-center w-1/4"
-              >
-                <div className="mb-2">
-                  <img
-                    src={feature.icon}
-                    width={36}
-                    height={36}
-                    alt={feature.title}
+  {/* Product grid with exactly matching dimensions */}
+  <div className="max-w-[1200px] mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      {filteredProducts.map((product) => (
+        <div
+          key={product.id}
+          onClick={() => window.location.href = `/solutions?id=${product.id}`}
+          className="flex flex-col w-[584px] bg-white shadow-sm hover:shadow-md rounded-md overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+        >
+          {/* Product Image - matched height and padding */}
+          <div className="h-[400px] bg-[#EDEDED] p-8 flex items-center justify-center">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="max-h-full object-contain"
+            />
+          </div>
+
+          {/* Product Info - matched padding and background */}
+          <div className="flex flex-col p-6 bg-[#FAFAFA]">
+            <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
+              {product.title}
+            </h1>
+            <p className="text-black text-sm mb-6">
+              {product.description}
+            </p>
+
+            {/* Features - matched grid and spacing */}
+            <div className="grid grid-cols-4 gap-2 mb-6">
+              {product.features.map((feature, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <img 
+                    src={feature.icon} 
+                    alt={feature.title} 
+                    className="mb-2" 
+                    width={36} 
+                    height={36} 
                   />
+                  <p className="text-black text-xs font-medium text-center">
+                    {feature.title}
+                  </p>
                 </div>
-                <h1 className="text-black font-bold text-[14px] font-gilroy">
-                  {feature.title}
-                </h1>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Know More Link - visual indicator only since entire card is clickable */}
+            <div className="inline-flex items-center text-[#00C069] text-sm font-medium">
+              <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+                Know more
+              </span>
+              <svg className="ml-1" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
           </div>
         </div>
-    
-        <a
-          href={`/solutions?id=${product.id}`}
-          className="text-green-600 font-semibold mt-4 inline-block text-[16px]"
-        >
-          <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200 hover:font-bold hover:text-[18px]">
-            Know more →
-          </span>
-        </a>
-      </div>
+      ))}
     </div>
-    ))}
   </div>
 </section>
 
-
-
-
-
-
-<section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden">
-  <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
-    <div className="md:w-2/3 space-y-4 z-10">
-      <h2 className="text-2xl md:text-3xl font-semibold">
-        We offer tailored customization to meet your needs.
-        <br />
-        Share your requirements with us.
-      </h2>
-      <br />
-      <a href="/contact">
-        <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-          GET IN TOUCH
-        </button>
-      </a>
-    </div>
-  </div>
-  <div className="md:flex relative w-3/4 h-full">
-    <img
-      src={waveGraphic}
-      alt="Wave Graphic"
-      className="absolute bottom-[-100px] right-[-40px] w-64"
-    />
-  </div>
-</section>
+      {/* CTA section */}
+      <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden mb-12">
+        <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
+          <div className="md:w-2/3 space-y-4 z-10">
+            <h2 className="text-2xl md:text-3xl font-semibold whitespace-nowrap">
+              We offer tailored customization to meet your needs.
+            </h2>
+            <h2 className="text-2xl md:text-3xl font-semibold">
+              Share your requirements with us.
+            </h2>
+            <br />
+            <a href="/contact">
+              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+                GET IN TOUCH
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="md:flex relative w-3/4 h-full">
+          <img
+            src={waveGraphic}
+            alt="Wave Graphic"
+            className="absolute bottom-[-100px] right-[-40px] w-64"
+          />
+        </div>
+      </section>
     </main>
   );
 }
