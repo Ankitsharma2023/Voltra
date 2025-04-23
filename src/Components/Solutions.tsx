@@ -29,7 +29,15 @@ import VOLT_LINK_AIR from "../assets/VOLT_LINK_AIR.png";
 import VOLT_LINK_EDIT from "../assets/VOLT_LINK_EDIT.png";
 
 import TechnicalSpecs from "./TechnicalSpecs";
-
+import VOLT_MAX_REAL from "../assets/VOLT_MAX_REAL.jpg";
+import VOLT_100_REAL from "../assets/VOLT_100_REAL.png";
+import VOLT_HVC_REAL from "../assets/VOLT_HVC_REAL.png";
+import VOLT_HVD_REAL from "../assets/VOLT_HVD_REAL.png";
+import VOLT_LVS_REAL from "../assets/VOLT_LVS_REAL.png";
+import VOLT_LVW_REAL from "../assets/VOLT_LVW_REAL.png";
+import VOLT_LINK_REAL from "../assets/VOLT_LINK_REAL.png";
+import VOLT_MAX_AIR_REAL from "../assets/VOLT_MAX_AIR_REAL.png";
+import VOLT_LINK_AIR_REAL from "../assets/VOLT_LINK_AIR_REAL.png";
 
 
 import Puzzle from "../assets/Puzzle.png";
@@ -37,6 +45,14 @@ import Battery from "../assets/Battery.png";
 import Hand from "../assets/Hand.png";
 import Cube from "../assets/Cube.png";
 import Temp from "../assets/Temp.png";
+import Clock from "../assets/Clock.png";
+import spark from "../assets/spark.png";
+import small_spark from "../assets/small_spark.png";
+import leaf from "../assets/leaf.png";
+import hand1 from "../assets/hand1.png";
+import hand2 from "../assets/hand2.png";
+import home  from "../assets/home.png";
+import leaf1 from "../assets/leaf1.png";
 // Updated flip card component using the PDF text
 const FlippedCard = ({ text }) => {
   return (
@@ -76,6 +92,7 @@ const pdfProductData: ProductData[] = [
   {
     id: 1,
     image: VOLT_100,
+    real:VOLT_100_REAL,
     title: "VOLT-100",
     description:
      "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. It’s suitable for various application scenarios such as Industry, Warehouses, Schools, Commercial Malls, Construction sites etc.",
@@ -106,7 +123,7 @@ const pdfProductData: ProductData[] = [
         desc: "IP55, thermal management, cell difference ≤6°C",
       },
       {
-        icon: cloud,
+        icon: spark,
         title: "Safe and Reliable",
         desc: "IP55, thermal management, cell difference ≤6°C",
       },
@@ -115,53 +132,50 @@ const pdfProductData: ProductData[] = [
       {
         title: "DC Side",
         items: [
-          { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
-          { label: "Voltage Range", value: "1165 – 1498 Vdc" },
-          { label: "Rated Voltage", value: "1331.2 Vdc" },
+          { label: "Cell Type", value: "LFP 280Ah" },
+          { label: "Battery System", value: "1P112S" },
+          { label: "Rated Energy", value: "100.3 kWh" },
+          { label: "Voltage Range", value: "313.6V - 408.8V" },
+          { label: "Rated Voltage", value: "358.4V" },
         ],
       },
       {
         title: "AC Side",
         items: [
-          { label: "Rated Power", value: "2.5 MW" },
-          { label: "Max. Power", value: "2.5 MVA" },
+          { label: "Rated Power", value: "50 kW" },
           { label: "THDi", value: "≤ 3%" },
           { label: "DC Ratio", value: "0.5%Ipn" },
-          { label: "Nominal Voltage", value: "690 VaC" },
-          { label: "Power Factor", value: "-1 lagging ~ +1 leading" },
+          { label: "Nominal Voltage", value: "400 Vac/3P+N+PE" },
+          { label: "Power Factor", value: "-1 lagging -1 leading" },
           { label: "Nominal Frequency", value: "50 Hz/60 Hz" },
         ],
       },
       {
         title: "General",
         items: [
-          { label: "Efficiency", value: "≥ 94%" },
-          { label: "Charge/Discharge Rate", value: "0.5 P" },
+          { label: "Efficiency", value: "≥ 88%" },
+          { label: "Charge/Discharge Rate", value: "1P" },
           { label: "DoD", value: "95% (25±2°C)" },
           { label: "Cycle Life", value: "≥ 8,000 times" },
-          { label: "Switching Time", value: "100ms" },
           { label: "Connectivity", value: "Ethernet/RS485" },
           { label: "Ingress Rating", value: "IP55" },
-          { label: "Cooling", value: "Chiller + liquid cooling" },
-          { label: "Operating Temp.", value: "-25°C to 55°C" },
-          { label: "Humidity", value: "0–95% RH, non-condensing" },
-          { label: "Noise", value: "80 dB" },
-          { label: "Altitude", value: "≤ 2,000m (derating above)" },
-          { label: "Fire Safety", value: "NOVEC1230 / Aerosol + water" },
-          { label: "Dimensions (W*D*H)", value: "6,058*2,550*2,896 mm" },
-          { label: "Weight", value: "~40,000 kg" },
+          { label: "Cooling", value: "Forced air cooling" },
+          { label: "Operating Temperature", value: "-25°C-55°C" },
+          { label: "Humidity", value: "0-95%RH, non-condensing" },
+          { label: "Altitude", value: "≤ 2,000m (derating above 2,000m)" },
+          { label: "Fire Safety", value: "Aerosol" },
+          { label: "Dimensions (W*D*H)", value: "900*1,270*2,300 (mm)" },
+          { label: "Weight", value: "~1,600 kg" },
         ],
       },
     ],
     specs: [
-      { title: "Cell Type", value: "LFP 314Ah Prismatic", icon: cellType },
-      { title: "Battery System", value: "5015 kWh", icon: batterySystem },
-      { title: "Rated Voltage", value: "1331.2 Vdc", icon: ratedVoltage },
-      { title: "Rated Power", value: "2.5 MW", icon: ratedPower },
-      { title: "Efficiency", value: "≥ 94%", icon: effieciency },
-      { title: "DoD", value: "95% (25±2°C)", icon: dod },
+      { title: "Cell Type", value: " LFP 280Ah", icon: cellType },
+      { title: "Battery System", value: "1P112S", icon: batterySystem },
+      { title: "Rated Voltage", value: "358.4 V", icon: ratedVoltage },
+      { title: "Rated Power", value: "50 KW", icon: ratedPower },
+      { title: "Efficiency", value: "≥ 88%", icon: effieciency },
+      { title: "DoD", value: "95% (25±2°C)", icon: Clock },
       { title: "Cycle Life", value: "≥ 8,000 times", icon: cycleLife },
       { title: "Read More", value: "", icon: readme },
     ],
@@ -169,6 +183,7 @@ const pdfProductData: ProductData[] = [
   {
     id: 2,
     image: VOLT_HVC,
+    real :VOLT_HVC_REAL,
     title: "VOLT-HVC",
     description:
     "Voltra high voltage series uses a 3U standard modular design, with multi-module in series and support multi-cluster in parallel. It's suitable for various application scenarios such as villas, farms, and small C&I power supplies, and provides a complete set of green, low-carbon, and reliable energy solutions.",
@@ -190,6 +205,14 @@ const pdfProductData: ProductData[] = [
              icon: light,
              title: "Flexible Configuration",
            },
+           {
+            icon: small_spark,
+            title: "High Voltage",
+          },
+          {
+            icon: leaf,
+            title: "Low-Carbon Use",
+          },
     ],
     specs: [
       { title: "Cell Type", value: "100Ah LFP Prismatic ", icon: cellType },
@@ -249,6 +272,8 @@ const pdfProductData: ProductData[] = [
   {
     id: 3,
     image: VOLT_HVD,
+    real:VOLT_HVD_REAL,
+
     title: "VOLT-HVD",
     description:
     "Through modular design and flexible configuration, it covers the DC voltage range of 204v ~ 512v and the standby power demand of 10 ~ 60 minutes. It can be used as a backup power supply in communication core machine room, UPS host room, Internet Data Center (IDC), edge data center, data information port, DC remote power supply, traffic dispatching center, intelligent manufacturing, and other fields.",
@@ -271,6 +296,16 @@ const pdfProductData: ProductData[] = [
       {
         icon: gaurd,
         title: "Safe and Reliable",
+        desc: "IP55, thermal management, cell difference ≤6°C",
+      },
+      {
+        icon: hand1,
+        title: "Backup Power Supply",
+        desc: "IP55, thermal management, cell difference ≤6°C",
+      },
+      {
+        icon: hand2,
+        title: "Multiple-Use Cases",
         desc: "IP55, thermal management, cell difference ≤6°C",
       },
     ],
@@ -332,6 +367,7 @@ const pdfProductData: ProductData[] = [
   {
     id: 4,
     image: VOLT_LVS,
+    real:VOLT_LVS_REAL,
     title: "VOLT-LVS",
     description:
     "It adopts an industrial aesthetic and N+1 stackable design. The system is composed of 100Ah modules, supports a maximum of 20 parallel groups, and the capacity can be expanded to 102kWh. Matched with mainstream brands of inverters, the system can be applied to gridconnected, off-grid, photovoltaic, and all kinds of green and low-carbon applications of household ESS.",
@@ -352,6 +388,14 @@ const pdfProductData: ProductData[] = [
               {
                 icon: gaurd,
                 title: "High Security",
+              },
+              {
+                icon: home,
+                title: "Various HouseHold Uses",
+              },
+              {
+                icon: leaf1,
+                title: "light Weight",
               },
     ],
     data: [
@@ -412,6 +456,7 @@ const pdfProductData: ProductData[] = [
   {
     id: 5,
     image: VOLT_LVW,
+    real:VOLT_LVW_REAL,
     title: "VOLT-LVW",
     description:
     "This wall-mounted system is a compact, efficient, and space-saving solution for storing electrical energy, typically used in residential or small commercial applications. These systems are installed on a wall, either inside or outside a building, and are designed to optimize energy usage, improve power reliability, and allow integration with renewable energy sources such as solar panels. Can support a maximum of up to 8 batteries in parallel and the capacity can be expanded to 41 kWh.",
@@ -434,6 +479,16 @@ const pdfProductData: ProductData[] = [
               {
                 icon: Temp ,
                 title: "Environmental Adaptability",
+               
+              },
+              {
+                icon: bar ,
+                title: "Economical and Efficient",
+               
+              },
+              {
+                icon: gaurd ,
+                title: "Safe and Reliable",
                
               },
     ],
@@ -495,6 +550,7 @@ const pdfProductData: ProductData[] = [
   {
     id: 6,
     image: VOLT_LINK_EDIT,
+    real:VOLT_LINK_REAL,
     title: "VOLT-LINK",
     description:
     "The all-in-one air-cooled ESS cabinet integrates a long-life battery, efficient balancing BMS,high-performance PCS, active safety system, smart distribution, and HVAC into one cabinet,enabling long-term operation with safety, stability, and reliability. Through AC side parallel connection, it achieves flexible capacity expansion up to MWH.",
@@ -515,6 +571,14 @@ const pdfProductData: ProductData[] = [
               {
                 icon: gaurd,
                 title: "Safe and Reliable",
+              },
+              {
+                icon:light ,
+                title: "Fast Charging",
+              },
+              {
+                icon: bar,
+                title: "Economical and Efficient ",
               },
     ],
     data: [
@@ -572,21 +636,21 @@ const pdfProductData: ProductData[] = [
       { title: "Read More", value: "", icon: readme },
     ],
   },
-
   {
     id: 7,
     image: VOLT_MAX_EDIT,
+    real: VOLT_MAX_REAL,
     title: "VOLT-MAX",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
     features: [
       {
                icon: Temp,
-               title: "Better Temperature Control",
+               title: "Faster Cooling",
              },
              {
                icon: bar,
-               title: "Lower  Power Consumption",
+               title: "Economical and Efficient ",
              },
              {
                icon: Cube,
@@ -597,6 +661,14 @@ const pdfProductData: ProductData[] = [
                icon: gaurd,
                title: "High Protection",
              },
+             {
+              icon: cloud,
+              title: "Smart O&M",
+            },
+            {
+              icon:light ,
+              title: "Fast Charging",
+            },
     ],
     data: [
       {
@@ -648,7 +720,7 @@ const pdfProductData: ProductData[] = [
       { title: "Rated Voltage", value: "1331.2 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "2.5 MW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 94%", icon: effieciency },
-      { title: "DoD", value: "95% (25±2°C)", icon: dod },
+      { title: "DoD", value: "95% (25±2°C)", icon: Clock },
       { title: "Cycle Life", value: "≥ 8,000 times", icon: cycleLife },
       { title: "Read More", value: "", icon: readme },
     ],
@@ -657,26 +729,36 @@ const pdfProductData: ProductData[] = [
   {
     id: 8,
     image: VOLT_MAX_AIR,
+    real: VOLT_MAX_AIR_REAL,
     title: "VOLT-MAX AIR",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
     features: [
       {
                icon: Temp,
-               title: "Better Temperature Control",
+               title: "Faster Cooling",
              },
              {
                icon: bar,
-               title: "Lower  Power Consumption",
+               title: "Economical and Efficient ",
              },
              {
                icon: Cube,
                title: "Higher Energy Density",
+               
              },
              {
                icon: gaurd,
-               title: "Higher Protection",
+               title: "High Protection",
              },
+             {
+              icon: cloud,
+              title: "Smart O&M",
+            },
+            {
+              icon:light ,
+              title: "Fast Charging",
+            },
     ],
     data: [
       {
@@ -737,27 +819,37 @@ const pdfProductData: ProductData[] = [
   {
     id: 9,
     image: VOLT_LINK_AIR,
+    real: VOLT_LINK_AIR_REAL,
     title: "VOLT-LINK AIR",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
     features: [
       {
-               icon: Temp,
-               title: "Better Temperature Control",
+               icon: Hand,
+               title: "High Integration",
+               desc: "1P fast charge/discharge rate, energy storing & releasing",
              },
              {
-               icon: bar,
-               title: "Lower  Power Consumption",
+               icon: Temp,
+               title: "Efficient Cooling",
              },
              {
                icon: Cube,
-               title: "Higher Energy Density",
+               title: "Compact and Modular",
              },
              {
                icon: gaurd,
-               title: "Higher Protection",
+               title: "Safe and Reliable",
              },
-    ],
+             {
+               icon:light ,
+               title: "Fast Charging",
+             },
+             {
+               icon: bar,
+               title: "Economical and Efficient ",
+             },
+   ],
     data: [
       {
         title: "DC Side",
@@ -808,7 +900,7 @@ const pdfProductData: ProductData[] = [
       { title: "Rated Voltage", value: "768 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "100 KW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 90%", icon: effieciency },
-      { title: "DoD", value: "95% (25±2°C)", icon: dod },
+      { title: "DoD", value: "95% (25±2°C)", icon: Clock },
       { title: "Cycle Life", value: "≥ 8,000 times", icon: cycleLife },
       { title: "Read More", value: "", icon: readme },
     ],
@@ -840,67 +932,90 @@ export default function Solutions() {
     <main className="flex flex-col w-full gap-4 font-[Akshar] pt-12 overflow-clip">
       {/* Product Header */}
       <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
-        {/* Existing code for product header */}
-        <div className="md:w-1/2 space-y-6">
-          <h2 className="text-4xl font-bold text-blue-600">
-            {selectedProduct.title}
-          </h2>
-          <p className="text-gray-700 font-gilroy">{selectedProduct.description}</p>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-            ORDER NOW
-          </button>
-        </div>
-  
-  
-  
-<div className="md:w-1/2 flex justify-center items-center mt- md:mt-0">
-  <div className="w-full max-w-md h-64 flex items-center justify-center p-2">
-    <img
-      src={selectedProduct.image}
-      alt="Product"
-      className="w-full h-auto"
-    />
-  </div>
-</div>
+  {/* Existing code for product header */}
+  <div className="md:w-1/2 space-y-6">
+    <h2 className="text-[64px] font-medium text-[#0C33F2] ">
+      {selectedProduct.title}
+    </h2>
+    <p className="font-gilroy text-justify">{selectedProduct.description}</p>
 
-      </section>
+    <button className="px-6 py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+      <a href="/contact">
+        ORDER NOW
+      </a>
+    </button>
+  </div>
+  
+  <div className="md:w-1/2 flex justify-center items-center mt-4 md:mt-0">
+  <div className="w-full max-w-md h-64 flex items-center justify-center p-2">
+  <img
+    src={selectedProduct.image}
+    alt="Product"
+    className={`${
+      selectedProduct.id === 6 || selectedProduct.id === 9 
+        ? "w-1/2 h-auto" 
+        : "w-full h-auto"
+    }`}
+  />
+</div>
+  </div>
+</section>
 
       {/* Product Showcase with Icons */}
       <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
-        {/* Existing code for product showcase */}
-        <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
-          <div className="flex flex-col w-[336px] justify-start">
-            <img
-              src={selectedProduct.image}
-              alt="Product Showcase"
-              className="w-full h-auto "
-            />
+  {/* Existing code for product showcase */}
+  <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
+    <div className="flex flex-col h-[400px] w-[600px] justify-start">
+      <img
+        src={selectedProduct.real}
+        alt="Product Showcase"
+        className="w-full h-auto rounded-xl"
+      />
+    </div>
+
+    <div className="grid grid-cols-3 gap-4 p-4 w-[584px]">
+      {selectedProduct.features.map((item, index) => (
+        <div
+          key={index}
+          className="relative w-[176px] h-[124px] overflow-hidden"
+          onMouseEnter={() => setHoverIndex(index)}
+          onMouseLeave={() => setHoverIndex(-1)}
+        >
+          {/* Default card (white) */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#FAFAFA] gap-2 transition-transform duration-300"
+            style={{
+              transform: hoverIndex === index ? 'translateY(-100%)' : 'translateY(0)'
+            }}
+          >
+            <div className="flex justify-center items-center w-[54px] h-[54px]">
+              <img 
+                src={item.icon} 
+                alt={item.title}
+                className="w-[54px] h-[54px] object-contain" 
+              />
+            </div>
+            <div className="w-full overflow-hidden">
+              <h2 className="text-[14px] font-gilroy font-bold text-center break-words px-2">
+                {item.title}
+              </h2>
+            </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-4 w-[584px]">
-            {selectedProduct.features.map((item, index) => (
-              <div
-                key={index}
-                className={`flex flex-col w-[173px] h-[137px] justify-center items-center ${
-                  hoverIndex === index ? "bg-[#0C33F2]" : "bg-[#FAFAFA]"
-                } gap-4 transition duration-1000 ${
-                  hoverIndex === index && "hover:[transform:rotateX(180deg)]"
-                }`}
-                onMouseEnter={() => setHoverIndex(index)}
-                onMouseLeave={() => setHoverIndex(-1)}
-              >
-                {hoverIndex === index ? (
-                  <FlippedCard text={item.desc || ''} />
-                ) : (
-                  <>
-                    <img src={item.icon} alt={item.title} />
-                    <h2 className="text-[14px] font-bold">{item.title}</h2>
-                  </>
-                )}
-              </div>
-            ))}
+          
+          {/* Description card (blue) */}
+          <div className="absolute inset-0 flex justify-center font-gilroy items-center bg-[#0C33F2] text-white p-3 transition-transform duration-300"
+            style={{
+              transform: hoverIndex === index ? 'translateY(0)' : 'translateY(100%)'
+            }}
+          >
+            <p className="text-sm text-center">
+              {item.desc || ''}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Technical Specifications - Pass productId as a prop */}
       <TechnicalSpecs

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import product_main from "../assets/product_main.png";
+import product_main from "../assets/product_main.jpg";
 
 import light from "../assets/light.svg";
 import cloud from "../assets/cloud.png";
@@ -14,8 +14,8 @@ import Cube from "../assets/Cube.png";
 import Temp from "../assets/Temp.png";
 
 import VOLT_100 from "../assets/VOLT_100.png";
-import VOLT_MAX from "../assets/VOLT_MAX.png";
-import VOLT_215 from "../assets/VOLT_215.png";
+import VOLT_MAX from "../assets/VOLT_MAX.jpg";
+// import VOLT_215 from "../assets/VOLT_215.png";
 import VOLT_HVD from "../assets/VOLT_HVD.png";
 import VOLT_LVS from "../assets/VOLT_LVS.png";
 import VOLT_LVW from "../assets/VOLT_LVW.png";
@@ -26,12 +26,13 @@ import VOLT_HVC from "../assets/VOLT_HVC.png";
 import { useSearchParams } from "react-router-dom";
 import VOLT_MAX_EDIT from "../assets/VOLT_MAX_EDIT.png";
 
+
 // Define product data by category
 const productData = {
   all: [
     {
       id: 7,
-      image: VOLT_MAX_EDIT,
+      image: VOLT_MAX,
       title: "VOLT-MAX",
       description:
         "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
@@ -620,12 +621,12 @@ export default function ProductsCatalog() {
       <section className="w-full bg-white py-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 md:pr-12 px-6 md:px-12">
-            <h2 className="text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-[64px] font-medium text-[#0C33F2] mb-6">
               <span className="border-b-2 border-transparent transition-all duration-200">
-                Product Catalogue
+                Product Catalog
               </span>
             </h2>
-            <p className="text-gray-700 font-gilroy text-[16px] mb-6">
+            <p className="text- font-gilroy text-[16px] mb-6">
               Voltra's Battery Energy Storage Systems (BESS) provide reliable,
               scalable solutions designed to optimize energy management for both
               commercial and residential applications. With advanced technology
@@ -635,7 +636,7 @@ export default function ProductsCatalog() {
               and long-term savings, making them an essential component in the
               transition to a cleaner, more sustainable energy future.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+            <button className="px-6 py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               DOWNLOAD BROCHURE
             </button>
           </div>
@@ -713,7 +714,7 @@ export default function ProductsCatalog() {
 
             {/* Know More Link - visual indicator only since entire card is clickable */}
             <div className="inline-flex items-center text-[#00C069] text-sm font-medium">
-              <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+              <span className=" font-bold border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
                 Know more
               </span>
               <svg className="ml-1" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

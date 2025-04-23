@@ -56,39 +56,47 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
 
   return (
     <div className="px-24">
-      <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+      <br/>
+      <br/>
+      <br/>
+
+      <h2 className="text-[40px] font-medium text-center text-[#0C33F2] mb-6">
         Technical Specifications
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <br/>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {specs.map((spec, index) =>
           index !== specs.length - 1 ? (
             <div
               key={index}
-              className="bg-[#FAFAFA] rounded-sm p-2 py-4 flex flex-col space-y-2 max-w-[280px]"
+              className="bg-[#FAFAFA] rounded-sm p-6 flex items-center h-24"
             >
-              <div className="flex flex-row w-full justify-start items-center gap-4 text-blue-600 w-full h-full">
-                <img src={spec.icon} alt={spec.title} className="" />
-                <div className="text-lg font-medium text-gray-700 flex flex-col items-start justify-center">
+              <div className="flex items-center gap-4 w-full">
+                <div className="flex-shrink-0 w-12 flex justify-center">
+                  <img src={spec.icon} alt={spec.title} />
+                </div>
+                <div className="text-[#000000] font-gilroy font-bold flex flex-col">
                   {spec.title}
-                  <div className="text-sm text-gray-500 ">{spec.value}</div>
+                  <div className="text-[16px] font-gilroy  font-medium text-[#808080]">{spec.value}</div>
                 </div>
               </div>
             </div>
           ) : null
         )}
         <div
-          className="bg-[#FAFAFA] rounded-sm p-4 flex flex-col space-y-2 max-w-[280px] cursor-pointer hover:bg-gray-100"
+          className="bg-[#FAFAFA] rounded-sm p-6 flex items-center h-24 cursor-pointer hover:bg-gray-100"
           onClick={handleReadMoreClick}
         >
-          <div className="flex flex-row w-full justify-start items-center gap-4 text-blue-600 w-full h-full">
-            <div className="text-lg font-medium text-gray-700 flex flex-col items-start justify-center">
+          <div className="flex items-center justify-between w-full">
+            <div className="text-lg font-medium text-gray-700">
               {specs[specs.length - 1].title}
             </div>
-            <img
-              src={specs[specs.length - 1].icon}
-              alt={specs[specs.length - 1].title}
-              className=""
-            />
+            <div className="flex-shrink-0">
+              <img
+                src={specs[specs.length - 1].icon}
+                alt={specs[specs.length - 1].title}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -111,7 +119,7 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
         />
       )}
       
-      <div className="mt-6 flex justify-center gap-4">
+      <div className="mt-12 flex justify-center gap-4">
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-sm">
           GET {title}
         </button>

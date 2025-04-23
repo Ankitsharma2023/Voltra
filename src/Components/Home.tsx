@@ -577,7 +577,7 @@ const Home = () => {
           <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
             The Voltra GigaFactory
           </h1>
-          <div className="text-black text-base mt-5 font-gilroy">
+          <div className="text-black text-base mt-5 font-gilroy text-justify">
             An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
           </div>
           <div className="text-black text-base mt-5 font-gilroy">
