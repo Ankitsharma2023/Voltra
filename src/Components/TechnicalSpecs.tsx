@@ -116,7 +116,9 @@ const TechnicalSpecs: React.FC<TechnicalSpecsProps> = ({
         
         <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded-sm text-sm sm:text-base">
+          <a href="/contact">
             GET {title}
+          </a>
           </button>
           <a
               href="https://drive.google.com/file/d/15n9o4lLDUk-KtmwMyIQeSbhqbAulmTsX/view?usp=sharing"
