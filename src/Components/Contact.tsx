@@ -14,6 +14,12 @@ const Contact: React.FC = () => {
     email: '',
     query: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success?: boolean;
+    message?: string;
+  }>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,30 +31,57 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-  
-    const formDataToSend = {
-      name: formData.name,
-      contact: formData.contact,
-      email: formData.email,
-      query: formData.query,
-    };
-  
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyfXvSMRcdoqJ_uQ7tXowghdiui8n9pvTGfQ0wJGj-KwV_QwKiHSLh2GQ6DsVQR5uecFQ/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDataToSend),
-      });
-  
-      const data = await response.json();
-      console.log("Response:", data);
-      alert(data.message);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Submission failed. Please try again.");
+    setIsSubmitting(true);
+    setSubmitStatus({});
+
+    // Create a hidden iframe for form submission
+    const iframeId = 'hidden-form-iframe';
+    let iframe = document.getElementById(iframeId) as HTMLIFrameElement;
+    
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = iframeId;
+      iframe.name = iframeId;
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
     }
+
+    // Create form element
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://script.google.com/macros/s/AKfycbz6K1XoONkeCa7eMFUIb42hQ8xwx9zzbMORm1lVWCC78oMR0f-RggG3A0ERclzGCOL5/exec';
+    form.target = iframeId; // Submit to the hidden iframe
+
+    // Add form fields
+    Object.entries(formData).forEach(([key, value]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
+    });
+
+    // Append form to document, submit it, then remove it
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+
+    // Show success message after a delay
+    setTimeout(() => {
+      setSubmitStatus({
+        success: true,
+        message: "Form submitted successfully!"
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        contact: '',
+        email: '',
+        query: ''
+      });
+      setIsSubmitting(false);
+    }, 2000);
   };
 
   return (
@@ -57,6 +90,13 @@ const Contact: React.FC = () => {
         {/* Form Section */}
         <div className="w-full lg:w-3/5">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#0C33F2] mb-6 md:mb-10">Get In Touch</h2>
+          
+          {submitStatus.message && (
+            <div className={`mb-4 p-3 rounded-lg ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              {submitStatus.message}
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             <div>
               <input
@@ -109,8 +149,9 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 className="bg-blue-600 text-white py-2 md:py-3 px-6 md:px-8 rounded-lg text-base md:text-lg font-semibold hover:bg-blue-700 transition duration-300 uppercase"
+                disabled={isSubmitting}
               >
-                Submit
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>
             </div>
           </form>
