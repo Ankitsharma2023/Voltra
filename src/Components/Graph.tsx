@@ -126,127 +126,125 @@ function Graph({ year }: { year: number }) {
   ];
 
   return (
-    <div className="bg-white p-4 flex flex-col items-center">
-      {/* Chart Container */}
-      <div className="w-full max-w-2xl">
-        {/* Y-axis labels and grid lines */}
-        <div className="flex">
-          <div className="w-20 flex flex-col justify-between h-64 text-sm text-gray-600 pr-2">
+    <div className="bg-white p-2 sm:p-4 flex flex-col items-center">
+    {/* Chart Container */}
+    <div className="w-full max-w-2xl">
+      {/* Y-axis labels and grid lines */}
+      <div className="flex">
+        <div className="w-12 sm:w-20 flex flex-col justify-between h-48 sm:h-64 text-xs sm:text-sm text-gray-600 pr-1 sm:pr-2">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="flex items-center justify-end h-8 sm:h-12">
+              {(5 - i) * scale[year]}
+            </div>
+          ))}
+        </div>
+  
+        {/* Bars */}
+        <div className="flex-1 flex justify-around h-48 sm:h-64 relative">
+          {/* Grid lines */}
+          <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="flex items-center justify-end h-12">
-                {(5 - i) * scale[year]}
-              </div>
+              <div key={i} className="border-t border-gray-500 w-full h-8 sm:h-12" />
             ))}
           </div>
-
-          {/* Bars */}
-          <div className="flex-1 flex justify-around h-64 relative ">
-            {/* Grid lines */}
-            <div className="absolute inset-0 flex flex-col justify-between pointer-events-none ">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="border-t border-gray-500 w-full h-12" />
-              ))}
-            </div>
-
-            {/* Bar columns with transitions */}
-
-            <div key={year} className="relative h-full w-24">
-              {/* Initial Cost (Black) */}
+  
+          {/* Bar columns with transitions */}
+          <div key={year} className="relative h-full w-16 sm:w-24">
+            {/* Initial Cost (Black) */}
+            <div
+              className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Maintenance Cost (Light Blue) */}
+            <div
+              className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].dgSet.maintenanceCost / (scale[year] * 5)) * 100}%`,
+                bottom: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Running Cost (Blue) */}
+            <div
+              className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].dgSet.runningCost / (scale[year] * 5)) * 100}%`,
+                bottom: `${((chartData[year].dgSet.initialCost + chartData[year].dgSet.maintenanceCost) / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Savings (Green) */}
+          </div>
+          <div className="relative h-full w-16 sm:w-24">
+            {/* Initial Cost (Black) */}
+            <div
+              className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Maintenance Cost (Light Blue) */}
+            <div
+              className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].voltraBESS.maintenanceCost / (scale[year] * 5)) * 100}%`,
+                bottom: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Running Cost (Blue) */}
+            <div
+              className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
+              style={{
+                height: `${(chartData[year].voltraBESS.runningCost / (scale[year] * 5)) * 100}%`,
+                bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost) / (scale[year] * 5)) * 100}%`,
+              }}
+            />
+            {/* Savings (Green) */}
+            {chartData[year].voltraBESS.savings > 0 && (
               <div
-                className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
+                className="absolute left-0 right-0 bg-green-500 transition-all duration-300 ease-in-out"
                 style={{
-                  height: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
+                  height: `${(chartData[year].voltraBESS.savings / (scale[year] * 5)) * 100}%`,
+                  bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost + chartData[year].voltraBESS.runningCost) / (scale[year] * 5)) * 100}%`,
                 }}
               />
-              {/* Maintenance Cost (Light Blue) */}
-              <div
-                className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
-                style={{
-                  height: `${(chartData[year].dgSet.maintenanceCost / (scale[year] * 5)) * 100}%`,
-                  bottom: `${(chartData[year].dgSet.initialCost / (scale[year] * 5)) * 100}%`,
-                }}
-              />
-              {/* Running Cost (Blue) */}
-              <div
-                className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
-                style={{
-                  height: `${(chartData[year].dgSet.runningCost / (scale[year] * 5)) * 100}%`,
-                  bottom: `${((chartData[year].dgSet.initialCost + chartData[year].dgSet.maintenanceCost) / (scale[year] * 5)) * 100}%`,
-                }}
-              />
-              {/* Savings (Green) */}
-            </div>
-            <div className="relative h-full w-24">
-              {/* Initial Cost (Black) */}
-              <div
-                className="absolute bottom-0 left-0 right-0 bg-black transition-all duration-300 ease-in-out"
-                style={{
-                  height: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
-                }}
-              />
-              {/* Maintenance Cost (Light Blue) */}
-              <div
-                className="absolute left-0 right-0 bg-blue-200 transition-all duration-300 ease-in-out"
-                style={{
-                  height: `${(chartData[year].voltraBESS.maintenanceCost / (scale[year] * 5)) * 100}%`,
-                  bottom: `${(chartData[year].voltraBESS.initialCost / (scale[year] * 5)) * 100}%`,
-                }}
-              />
-              {/* Running Cost (Blue) */}
-              <div
-                className="absolute left-0 right-0 bg-blue-600 transition-all duration-300 ease-in-out"
-                style={{
-                  height: `${(chartData[year].voltraBESS.runningCost / (scale[year] * 5)) * 100}%`,
-                  bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost) / (scale[year] * 5)) * 100}%`,
-                }}
-              />
-              {/* Savings (Green) */}
-              {chartData[year].voltraBESS.savings > 0 && (
-                <div
-                  className="absolute left-0 right-0 bg-green-500 transition-all duration-300 ease-in-out"
-                  style={{
-                    height: `${(chartData[year].voltraBESS.savings / (scale[year] * 5)) * 100}%`,
-                    bottom: `${((chartData[year].voltraBESS.initialCost + chartData[year].voltraBESS.maintenanceCost + chartData[year].voltraBESS.runningCost) / (scale[year] * 5)) * 100}%`,
-                  }}
-                />
-              )}
-            </div>
+            )}
           </div>
         </div>
-
-        {/* X-axis labels */}
-        <div className="flex mt-4">
-          <div className="w-20" />
-          <div className="flex-1 flex justify-around">
-            <div className="w-24 text-center font-gilroy">DG Set</div>
-            <div className="w-24 text-center font-gilroy">Voltra BESS</div>
-          </div>
-        </div>
-
-        {/* Legend */}
-        <div className="mt-8 flex justify-center gap-6 font-gilroy">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-black" />
-            <span className="text-sm">Initial Cost</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-blue-200" />
-            <span className="text-sm">Maintenance Cost</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-blue-600" />
-            <span className="text-sm">Running Cost</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-green-500" />
-            <span className="text-sm">Savings</span>
-          </div>
-        </div>
-        <div className="text-center text-sm text-gray-600 mt-2">*values in INR Lakhs</div>
-        <div className="text-center text-sm text-gray-600 mt-2">*estimate for a 120 KV Load</div>
-
       </div>
+  
+      {/* X-axis labels */}
+      <div className="flex mt-2 sm:mt-4">
+        <div className="w-12 sm:w-20" />
+        <div className="flex-1 flex justify-around">
+          <div className="w-16 sm:w-24 text-center text-xs sm:text-base font-gilroy">DG Set</div>
+          <div className="w-16 sm:w-24 text-center text-xs sm:text-base font-gilroy">Voltra BESS</div>
+        </div>
+      </div>
+  
+      {/* Legend */}
+      <div className="mt-4 sm:mt-8 flex flex-wrap justify-center gap-2 sm:gap-6 font-gilroy">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-black" />
+          <span className="text-xs sm:text-sm">Initial Cost</span>
+        </div>
+        <div className="flex items-center gap-1 sm:gap-2">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-200" />
+          <span className="text-xs sm:text-sm">Maintenance Cost</span>
+        </div>
+        <div className="flex items-center gap-1 sm:gap-2">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-600" />
+          <span className="text-xs sm:text-sm">Running Cost</span>
+        </div>
+        <div className="flex items-center gap-1 sm:gap-2">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-500" />
+          <span className="text-xs sm:text-sm">Savings</span>
+        </div>
+      </div>
+      <div className="text-center text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">*values in INR Lakhs</div>
+      <div className="text-center text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">*estimate for a 120 KV Load</div>
     </div>
+  </div>
   );
 }
 
