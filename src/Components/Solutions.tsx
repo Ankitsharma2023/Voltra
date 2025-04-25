@@ -99,7 +99,7 @@ const pdfProductData: ProductData[] = [
     features: [
       {
         icon: light,
-        title: "Energy Saving and Fast",
+        title: " Fast Charging",
         desc: "1P fast charge/discharge rate, energy storing & releasing",
       },
       {
@@ -124,7 +124,7 @@ const pdfProductData: ProductData[] = [
       },
       {
         icon: spark,
-        title: "Safe and Reliable",
+        title: "High-Performance PCS", 
         desc: "IP55, thermal management, cell difference ≤6°C",
       },
     ],
