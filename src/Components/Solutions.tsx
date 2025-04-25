@@ -928,125 +928,130 @@ export default function Solutions() {
   const selectedProduct =
     pdfProductData[(productId - 1) % pdfProductData.length];
 
-  return (
-    <main className="flex flex-col w-full gap-4 font-[Akshar] pt-12 overflow-clip">
-      {/* Product Header */}
-      <section className="flex flex-col md:flex-row items-center justify-between p-16 bg-white gap-4">
-  {/* Existing code for product header */}
-  <div className="md:w-1/2 space-y-6">
-    <h2 className="text-[64px] font-medium text-[#0C33F2] ">
-      {selectedProduct.title}
-    </h2>
-    <p className="font-gilroy text-justify">{selectedProduct.description}</p>
-
-    <button className="px-6 py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-      <a href="/contact">
-        ORDER NOW
-      </a>
-    </button>
-  </div>
-  
-  <div className="md:w-1/2 flex justify-center items-center mt-4 md:mt-0">
-  <div className="w-full max-w-md h-64 flex items-center justify-center p-2">
-  <img
-    src={selectedProduct.image}
-    alt="Product"
-    className={`${
-      selectedProduct.id === 6 || selectedProduct.id === 9 
-        ? "w-1/2 h-auto" 
-        : "w-full h-auto"
-    }`}
-  />
-</div>
-  </div>
-</section>
-
-      {/* Product Showcase with Icons */}
-      <section className="w-full h-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8">
-  {/* Existing code for product showcase */}
-  <div className="flex flex-row w-full justify-around gap-4 py-4 pr-4">
-    <div className="flex flex-col h-[400px] w-[600px] justify-start">
-      <img
-        src={selectedProduct.real}
-        alt="Product Showcase"
-        className="w-full h-auto rounded-xl"
-      />
-    </div>
-
-    <div className="grid grid-cols-3 gap-4 p-4 w-[584px]">
-      {selectedProduct.features.map((item, index) => (
-        <div
-          key={index}
-          className="relative w-[176px] h-[124px] overflow-hidden"
-          onMouseEnter={() => setHoverIndex(index)}
-          onMouseLeave={() => setHoverIndex(-1)}
-        >
-          {/* Default card (white) */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#FAFAFA] gap-2 transition-transform duration-300"
-            style={{
-              transform: hoverIndex === index ? 'translateY(-100%)' : 'translateY(0)'
-            }}
-          >
-            <div className="flex justify-center items-center w-[54px] h-[54px]">
-              <img 
-                src={item.icon} 
-                alt={item.title}
-                className="w-[54px] h-[54px] object-contain" 
-              />
-            </div>
-            <div className="w-full overflow-hidden">
-              <h2 className="text-[14px] font-gilroy font-bold text-center break-words px-2">
-                {item.title}
-              </h2>
-            </div>
-          </div>
-          
-          {/* Description card (blue) */}
-          <div className="absolute inset-0 flex justify-center font-gilroy items-center bg-[#0C33F2] text-white p-3 transition-transform duration-300"
-            style={{
-              transform: hoverIndex === index ? 'translateY(0)' : 'translateY(100%)'
-            }}
-          >
-            <p className="text-sm text-center">
-              {item.desc || ''}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-      {/* Technical Specifications - Pass productId as a prop */}
-      <TechnicalSpecs
-        specs={selectedProduct.specs}
-        data={selectedProduct.data}
-        title={selectedProduct.title}
-        productId={productId} // Pass productId to the component
-      />
-      
-      {/* Brochure Section */}
-      <section className="flex justify-center items-center w-full h-full p-4 relative overflow-hidden">
-        {/* Existing code for brochure section */}
-        <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white flex flex-row items-center justify-between md:px-24 w-[1200px] h-[323px]">
-          <div className="md:w-2/3 space-y-4 z-10">
-            <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
-              Explore if the {selectedProduct.title} is the ideal solution for
-              your needs.
+    return (
+      <main className="flex flex-col w-full gap-4 font-[Akshar] pt-12 overflow-hidden">
+        {/* Product Header */}
+        <section className="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 lg:p-16 bg-white gap-6">
+          <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-[#0C33F2]">
+              {selectedProduct.title}
             </h2>
-            <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-              DOWNLOAD BROCHURE
+            <p className="font-gilroy text-sm md:text-base text-justify">
+              {selectedProduct.description}
+            </p>
+            <button className="px-4 md:px-6 py-2 md:py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+              <a href="/contact">ORDER NOW</a>
             </button>
           </div>
-          <div className="md:w-1/3 flex justify-end">
-            <img
-              src={future}
-              alt="Brochure"
-              className="w-[250px] md:w-[280px] rounded-lg shadow-lg"
-            />
+          
+          <div className="w-full md:w-1/2 flex justify-center items-center mt-4 md:mt-0">
+            <div className="w-full max-w-md h-48 md:h-64 flex items-center justify-center p-2">
+              <img
+                src={selectedProduct.image}
+                alt="Product"
+                className={`${
+                  selectedProduct.id === 6 || selectedProduct.id === 9 
+                    ? "w-1/2 h-auto" 
+                    : "w-full h-auto"
+                } object-contain`}
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-  );
+        </section>
+    
+        {/* Product Showcase with Icons */}
+        <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-4 md:gap-8 px-4">
+          <div className="flex flex-col lg:flex-row w-full justify-around gap-4 py-4">
+            <div className="flex flex-col h-auto md:h-[300px] lg:h-[400px] w-full lg:w-[600px] justify-start">
+              <img
+                src={selectedProduct.real}
+                alt="Product Showcase"
+                className="w-full h-auto rounded-xl object-cover"
+              />
+            </div>
+    
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4 p-2 md:p-4 w-full lg:w-[584px]">
+              {selectedProduct.features.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative w-full max-w-[176px] h-[100px] md:h-[124px] overflow-hidden mx-auto"
+                  onMouseEnter={() => setHoverIndex(index)}
+                  onMouseLeave={() => setHoverIndex(-1)}
+                >
+                  {/* Default card (white) */}
+                  <div 
+                    className="absolute inset-0 flex flex-col justify-center items-center bg-[#FAFAFA] gap-2 transition-transform duration-300"
+                    style={{
+                      transform: hoverIndex === index ? 'translateY(-100%)' : 'translateY(0)'
+                    }}
+                  >
+                    <div className="flex justify-center items-center w-10 h-10 md:w-[54px] md:h-[54px]">
+                      <img 
+                        src={item.icon} 
+                        alt={item.title}
+                        className="w-8 h-8 md:w-[54px] md:h-[54px] object-contain" 
+                      />
+                    </div>
+                    <div className="w-full overflow-hidden">
+                      <h2 className="text-xs md:text-sm font-gilroy font-bold text-center break-words px-2">
+                        {item.title}
+                      </h2>
+                    </div>
+                  </div>
+                  
+                  {/* Description card (blue) */}
+                  <div 
+                    className="absolute inset-0 flex justify-center font-gilroy items-center bg-[#0C33F2] text-white p-2 md:p-3 transition-transform duration-300"
+                    style={{
+                      transform: hoverIndex === index ? 'translateY(0)' : 'translateY(100%)'
+                    }}
+                  >
+                    <p className="text-xs md:text-sm text-center">
+                      {item.desc || ''}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+    
+        {/* Technical Specifications */}
+        <TechnicalSpecs
+          specs={selectedProduct.specs}
+          data={selectedProduct.data}
+          title={selectedProduct.title}
+          productId={productId}
+        />
+        
+        {/* Brochure Section */}
+        <section className="flex justify-center items-center w-full p-4 relative overflow-hidden">
+          <div className="relative bg-[#0C33F2] rounded-lg p-4 md:p-8 text-white flex flex-col md:flex-row items-center justify-between md:px-12 lg:px-24 w-full max-w-[1200px] h-auto md:h-[323px] gap-6 md:gap-0">
+            <div className="w-full md:w-2/3 space-y-4 z-10 text-center md:text-left">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-snug">
+                Explore if the {selectedProduct.title} is the ideal solution for
+                your needs.
+              </h2>
+              <a
+              href="https://drive.google.com/file/d/15n9o4lLDUk-KtmwMyIQeSbhqbAulmTsX/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+                DOWNLOAD BROCHURE
+              </button>
+            </a>
+            </div>
+            <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+              <img
+                src={future}
+                alt="Brochure"
+                className="w-[200px] md:w-[250px] lg:w-[280px] rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    );
 }

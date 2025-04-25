@@ -617,144 +617,156 @@ export default function ProductsCatalog() {
 
   return (
     <main className="flex flex-col w-full gap-4 font-[Akshar]">
-      {/* Hero section */}
-      <section className="w-full bg-white py-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 md:pr-12 px-6 md:px-12">
-            <h2 className="text-[64px] font-medium text-[#0C33F2] mb-6">
-              <span className="border-b-2 border-transparent transition-all duration-200">
-                Product Catalog
-              </span>
-            </h2>
-            <p className="text- font-gilroy text-[16px] mb-6">
-              Voltra's Battery Energy Storage Systems (BESS) provide reliable,
-              scalable solutions designed to optimize energy management for both
-              commercial and residential applications. With advanced technology
-              and high-performance batteries, Voltra's BESS helps improve grid
-              stability, enhance energy efficiency, and support the integration of
-              renewable energy sources. Our products are engineered for durability
-              and long-term savings, making them an essential component in the
-              transition to a cleaner, more sustainable energy future.
-            </p>
-            <button className="px-6 py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-              DOWNLOAD BROCHURE
-            </button>
-          </div>
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 px-6 md:px-12">
-            <img src={product_main} alt="Product" className="w-full object-contain" />
-          </div>
-        </div>
-      </section>
-
-      {/* Category navigation */}
-      <section className="px-8 py-8">
-  <nav className="w-full flex justify-center py-4 border-b mb-8">
-    <ul className="flex space-x-6 text-gray-700 font-semibold">
-      {categories.map(({ key, label }) => (
-        <li key={key}>
-          <button
-            onClick={() => handleCategoryClick(key)}
-            className={`flex items-center space-x-2 focus:outline-none ${
-              activeCategory === key
-                ? "text-blue-600 border-b-2 border-blue-600 pb-1"
-                : "hover:text-blue-600"
-            }`}
-          >
-            <span>{label}</span>
+    {/* Hero section */}
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-1/2 md:pr-6 lg:pr-12 px-4 sm:px-6 md:px-8 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#0C33F2] mb-4 md:mb-6">
+            <span className="border-b-2 border-transparent transition-all duration-200">
+              Product Catalog
+            </span>
+          </h2>
+          <p className="font-gilroy text-sm md:text-base mb-6">
+            Voltra's Battery Energy Storage Systems (BESS) provide reliable,
+            scalable solutions designed to optimize energy management for both
+            commercial and residential applications. With advanced technology
+            and high-performance batteries, Voltra's BESS helps improve grid
+            stability, enhance energy efficiency, and support the integration of
+            renewable energy sources. Our products are engineered for durability
+            and long-term savings, making them an essential component in the
+            transition to a cleaner, more sustainable energy future.
+          </p>
+          <a
+              href="https://drive.google.com/file/d/15n9o4lLDUk-KtmwMyIQeSbhqbAulmTsX/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+          <button className="px-4 sm:px-6 py-2 sm:py-3 bg-[#0C33F2] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+            DOWNLOAD BROCHURE
           </button>
-        </li>
-      ))}
-    </ul>
-  </nav>
-
-  {/* Product grid with exactly matching dimensions */}
-  <div className="max-w-[1200px] mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-      {filteredProducts.map((product) => (
-        <div
-          key={product.id}
-          onClick={() => window.location.href = `/solutions?id=${product.id}`}
-          className="flex flex-col w-[584px] bg-white shadow-sm hover:shadow-md rounded-md overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
-        >
-          {/* Product Image - matched height and padding */}
-          <div className="h-[400px] bg-[#EDEDED] p-8 flex items-center justify-center">
-            <img
-              src={product.image}
-              alt={product.title}
-              className="max-h-full object-contain"
-            />
-          </div>
-
-          {/* Product Info - matched padding and background */}
-          <div className="flex flex-col p-6 bg-[#FAFAFA]">
-            <h1 className="text-[#0C33F2] text-3xl font-medium mb-2">
-              {product.title}
-            </h1>
-            <p className="text-black text-sm mb-6">
-              {product.description}
-            </p>
-
-            {/* Features - matched grid and spacing */}
-            <div className="grid grid-cols-4 gap-2 mb-6">
-              {product.features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <img 
-                    src={feature.icon} 
-                    alt={feature.title} 
-                    className="mb-2" 
-                    width={36} 
-                    height={36} 
-                  />
-                  <p className="text-black text-xs font-medium text-center">
-                    {feature.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Know More Link - visual indicator only since entire card is clickable */}
-            <div className="inline-flex items-center text-[#00C069] text-sm font-medium">
-              <span className=" font-bold border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-                Know more
-              </span>
-              <svg className="ml-1" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </div>
-          </div>
+          </a>
         </div>
-      ))}
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 px-4 sm:px-6 md:px-8 lg:px-12">
+          <img src={product_main} alt="Product" className="w-full object-contain" />
+        </div>
+      </div>
+    </section>
+  
+    {/* Category navigation */}
+    <section className="px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+      <nav className="w-full flex justify-center py-4 border-b mb-6 md:mb-8 overflow-x-auto">
+        <ul className="flex space-x-3 sm:space-x-6 text-gray-700 font-semibold whitespace-nowrap px-2">
+          {categories.map(({ key, label }) => (
+            <li key={key}>
+              <button
+                onClick={() => handleCategoryClick(key)}
+                className={`flex items-center space-x-2 focus:outline-none px-1 ${
+                  activeCategory === key
+                    ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                    : "hover:text-blue-600"
+                }`}
+              >
+                <span>{label}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+  
+      {/* Product grid with responsive dimensions */}
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-12">
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              onClick={() => window.location.href = `/solutions?id=${product.id}`}
+              className="flex flex-col w-full max-w-[584px] mx-auto bg-white shadow-sm hover:shadow-md rounded-md overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+            >
+              {/* Product Image - responsive height */}
+              <div className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] bg-[#EDEDED] p-4 sm:p-6 md:p-8 flex items-center justify-center">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+  
+              {/* Product Info */}
+              <div className="flex flex-col p-4 sm:p-6 bg-[#FAFAFA]">
+                <h1 className="text-[#0C33F2] text-xl sm:text-2xl md:text-3xl font-medium mb-2">
+                  {product.title}
+                </h1>
+                <p className="text-black text-xs sm:text-sm mb-4 sm:mb-6">
+                  {product.description}
+                </p>
+  
+                {/* Features - responsive grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 sm:mb-6">
+                  {product.features.map((feature, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                      <img 
+                        src={feature.icon} 
+                        alt={feature.title} 
+                        className="mb-1 sm:mb-2" 
+                        width={28} 
+                        height={28} 
+                      />
+                      <p className="text-black text-xs font-medium text-center">
+                        {feature.title}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+  
+                {/* Know More Link */}
+                <div className="inline-flex items-center text-[#00C069] text-xs sm:text-sm font-medium">
+                  <span className="font-bold border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+                    Know more
+                  </span>
+                  <svg className="ml-1" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  
+    {/* CTA section */}
+    <section className="flex flex-col justify-center items-center w-full px-4 py-8 relative overflow-hidden mb-12">
+  <div className="relative bg-[#0C33F2] rounded-lg p-6 sm:p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
+    {/* Text Content */}
+    <div className="w-full md:w-[65%] space-y-4 z-10 text-center md:text-left">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold whitespace-nowrap">
+        We offer tailored customization to meet your needs.
+      </h2>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+        Share your requirements with us.
+      </h2>
+      <a href="/contact">
+        <button className="mt-4 px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
+          GET IN TOUCH
+        </button>
+      </a>
+    </div>
+
+    {/* Graphic */}
+    <div className="w-full md:w-[35%] flex justify-center md:justify-end mt-6 md:mt-0 relative">
+      <img
+        src={waveGraphic}
+        alt="Wave Graphic"
+        className="w-36 sm:w-48 md:w-60 lg:w-72 absolute bottom-[-60px] md:bottom-[-80px] right-[-20px] md:right-[-40px]"
+      />
     </div>
   </div>
 </section>
 
-      {/* CTA section */}
-      <section className="flex flex-col justify-center items-center w-full h-full p-4 relative overflow-hidden mb-12">
-        <div className="relative bg-[#0C33F2] rounded-lg p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between md:px-24 w-3/4 h-full">
-          <div className="md:w-2/3 space-y-4 z-10">
-            <h2 className="text-2xl md:text-3xl font-semibold whitespace-nowrap">
-              We offer tailored customization to meet your needs.
-            </h2>
-            <h2 className="text-2xl md:text-3xl font-semibold">
-              Share your requirements with us.
-            </h2>
-            <br />
-            <a href="/contact">
-              <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-                GET IN TOUCH
-              </button>
-            </a>
-          </div>
-        </div>
-        <div className="md:flex relative w-3/4 h-full">
-          <img
-            src={waveGraphic}
-            alt="Wave Graphic"
-            className="absolute bottom-[-100px] right-[-40px] w-64"
-          />
-        </div>
-      </section>
-    </main>
+
+
+  </main>
   );
 }
