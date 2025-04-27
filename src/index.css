@@ -11,6 +11,19 @@
 
   html, body {
     overflow-x: hidden;
+    position: relative; /* This helps with scroll handling */
+    height: auto; /* Allow natural vertical scrolling */
+    width: 100%;
   }
   
+  /* Add a body class to handle the space that would be occupied by the fixed header */
+  body.has-fixed-header {
+    padding-top: 80px; /* Adjust this value to match your header height */
+  }
   
+  /* Only apply padding when header is fixed, not when it's absolute */
+  @media (max-width: 640px) {
+    body.has-fixed-header {
+      padding-top: 64px; /* Smaller padding for mobile */
+    }
+  }
