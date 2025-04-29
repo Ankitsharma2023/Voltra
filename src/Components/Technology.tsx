@@ -60,59 +60,77 @@ const Technology = () => {
   </section>
 
   {/* Gigafactory Section */}
-  <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-12 md:mt-40 px-4">
-    <div className="flex flex-col lg:flex-row w-full max-w-7xl justify-around items-center gap-8">
-      <div className="w-full lg:w-1/2">
-        <img src={factory} alt="Voltra Factory" className="w-full h-auto" />
+  <section className="w-full max-w-screen-2xl mx-auto py-0 lg:py-16 bg-white font-[Akshar]">
+  <div className="flex flex-col lg:flex-row w-full items-center">
+    {/* Image container - full width on mobile with no margins and increased height */}
+    <div className="w-full lg:w-3/5 h-full px-0">
+      <img 
+        className="w-full h-[300px] md:h-[350px] lg:h-auto object-cover object-center" 
+        src={factory} 
+        alt="Voltra GigaFactory" 
+      />
+    </div>
+    
+    {/* Content container */}
+    <div className="flex flex-col gap-4 w-full lg:w-2/5 px-6 lg:px-8 mt-6 lg:mt-0">
+      <div>
+        <h1 className="text-[#0C33F2] text-2xl md:text-3xl lg:text-[40px] font-medium">
+          The Voltra GigaFactory
+        </h1>
+        <div className="text-black text-sm lg:text-base mt-4 lg:mt-5 font-gilroy text-justify">
+          An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
+        </div>
+        <div className="text-black text-sm lg:text-base mt-4 lg:mt-5 font-gilroy text-justify">
+          Voltra's commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
+        </div>
       </div>
-
-      <div className="flex flex-col gap-4 w-full lg:w-1/2 px-4">
-        <div>
-          <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
-            The Voltra GigaFactory
-          </h1>
-          <div className="text-black text-base mt-5 font-gilroy">
-            An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
-          </div>
-          <div className="text-black text-base mt-5 font-gilroy">
-            Voltra's commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
-          </div>
+      
+      {/* Features grid - 2x2 on mobile, same on desktop */}
+      <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8">
+        <div className="flex flex-col items-center text-center">
+          <img src={robust} className="w-10 h-10 lg:w-12 lg:h-12" alt="Robust Testing Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
+            Robust Testing
+          </h2>
         </div>
-
-        {/* Row 1 */}
-        <div className="flex flex-col sm:flex-row justify-around w-full gap-4 mt-4">
-          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
-            <img src={robust} width={40} height={40} alt="Robust Testing" />
-            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
-              Robust Testing
-            </h1>
-          </div>
-          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
-            <img src={data} width={40} height={40} alt="Data Integration" />
-            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
-              Data Integration
-            </h1>
-          </div>
+        
+        <div className="flex flex-col items-center text-center">
+          <img src={data} className="w-10 h-10 lg:w-12 lg:h-12" alt="Data Integration Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
+            Data Integration
+          </h2>
         </div>
-
-        {/* Row 2 */}
-        <div className="flex flex-col sm:flex-row justify-around w-full gap-4 mt-2">
-          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
-            <img src={intl} width={40} height={40} alt="Intelligent Production" />
-            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
-              Intelligent Production
-            </h1>
-          </div>
-          <div className="flex flex-col w-full sm:w-[48%] justify-center items-center gap-4">
-            <img src={rd} width={40} height={40} alt="R&D Lab" />
-            <h1 className="text-black font-semibold text-lg font-gilroy text-center">
-              R&D Lab
-            </h1>
-          </div>
+        
+        <div className="flex flex-col items-center text-center">
+          <img src={intl} className="w-10 h-10 lg:w-12 lg:h-12" alt="Intelligent Production Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
+            Intelligent Production
+          </h2>
         </div>
+        
+        <div className="flex flex-col items-center text-center">
+          <img src={rd} className="w-10 h-10 lg:w-12 lg:h-12" alt="R&D Lab Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
+            R&D Lab
+          </h2>
+        </div>
+      </div>
+      
+      {/* Link - adjusted for mobile */}
+      <div className="mt-6 lg:mt-8">
+        <a
+          className="inline-flex items-center gap-2 text-[#00C069] font-bold text-base lg:text-lg"
+          href="/technology"
+        >
+          <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
+            Explore the GigaFactory
+          </span>
+          <ArrowUpRight className="w-5 h-5 lg:w-6 lg:h-6" />
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   {/* Testing & Analysis Section */}
   <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] gap-8 px-4 mt-12">

@@ -737,30 +737,36 @@ export default function ProductsCatalog() {
     </section>
   
     {/* CTA section */}
-    <section className="flex flex-col justify-center items-center w-full px-4 py-8 relative overflow-hidden mb-12">
-  <div className="relative bg-[#0C33F2] rounded-lg p-6 sm:p-8 text-white overflow-hidden flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
-    {/* Text Content */}
-    <div className="w-full md:w-[65%] space-y-4 z-10 text-center md:text-left">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold whitespace-nowrap">
-        We offer tailored customization to meet your needs.
-      </h2>
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
-        Share your requirements with us.
-      </h2>
-      <a href="/contact">
-        <button className="mt-4 px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition">
-          GET IN TOUCH
-        </button>
-      </a>
-    </div>
+    <section className="flex flex-col justify-center items-center w-full px-4 py-8 md:py-12 relative overflow-hidden mb-12">
+  <div className="relative bg-[#0C33F2] rounded-lg p-6 sm:p-8 text-white overflow-hidden w-full max-w-6xl">
+    <div className="flex flex-col md:flex-row items-center justify-between relative z-10">
+      {/* Text Content */}
+      <div className="w-full space-y-3 md:space-y-4 z-10 text-center md:text-left">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          We offer tailored customization to meet your needs.
+        </h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          Share your requirements with us.
+        </h2>
+        <div className="pt-2">
+          <a href="/contact">
+            <button className="mt-2 px-4 py-2 bg-white text-blue-600 font-semibold rounded shadow-md hover:bg-gray-100 transition duration-300">
+              GET IN TOUCH
+            </button>
+          </a>
+        </div>
+      </div>
 
-    {/* Graphic */}
-    <div className="w-full md:w-[35%] flex justify-center md:justify-end mt-6 md:mt-0 relative">
-      <img
-        src={waveGraphic}
-        alt="Wave Graphic"
-        className="w-36 sm:w-48 md:w-60 lg:w-72 absolute bottom-[-60px] md:bottom-[-80px] right-[-20px] md:right-[-40px]"
-      />
+      {/* Graphic - Hidden on mobile, visible on md and up */}
+      <div className="hidden md:flex w-full md:w-[40%] justify-end">
+        <div className="absolute bottom-[-100px] right-[-40px] w-64 hidden md:block">
+                  <img
+                    src={waveGraphic}
+                    alt="Wave Graphic"
+                    className="w-full h-auto"
+                  />
+                </div>
+      </div>
     </div>
   </div>
 </section>

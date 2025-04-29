@@ -39,6 +39,11 @@ import VOLT_LINK_EDIT from "../assets/VOLT_LINK_EDIT.png";
 import cloud from "../assets/cloud.png";
 import Temp from "../assets/Temp.png";
 import Hand from "../assets/Hand.png";
+import home_back from "../assets/Home_back.png";
+
+import hybrid from "../assets/hybrid.png";
+import microgrid from "../assets/microgrid.png";
+import islandModeImage from "../assets/island-mode.png";
 const Home = () => {
   const [openItem, setOpenItem] = useState(0);
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
@@ -101,94 +106,106 @@ const Home = () => {
   return (
     <main className="flex flex-col w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="w-full h-screen flex flex-col justify-center items-center bg-[url(/home_cover.png)] bg-cover">
-        <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 px-4">
-          <img width={216} height={96} src={logo} className="w-32 md:w-48" alt="Voltra Logo" />
-          <h1 className="text-white text-4xl md:text-6xl lg:text-[64px] font-[Akshar] font-medium text-center mt-4">
-            The Future of Energy
-          </h1>
-          <a href="/contact" className="mt-8">
-            <button className="bg-[#0C33F2] py-2 px-6 text-white font-[Akshar] font-normal rounded-md transform transition-transform duration-300 hover:scale-105">
-              BOOK A CALL
-            </button>
-          </a>
-        </div>
-      </section>
+      <section className="w-full h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-fixed md:bg-local bg-[url(/home_cover.png)] md:bg-[url(/home_cover.png)] sm:bg-[url(/home_back.png)]">
+  {/* Rest of your content remains exactly the same */}
+  <div className="w-full h-full flex flex-col justify-center items-center bg-black/60 px-4">
+    <img 
+      width={216} 
+      height={96} 
+      src={logo} 
+      className="w-32 md:w-48" 
+      alt="Voltra Logo" 
+    />
+    <h1 className="text-white text-4xl md:text-6xl lg:text-[64px] font-[Akshar] font-medium text-center mt-4">
+      The Future of Energy
+    </h1>
+    <a href="/contact" className="mt-8">
+      <button className="bg-[#0C33F2] py-2 px-6 text-white font-[Akshar] font-normal rounded-md transform transition-transform duration-300 hover:scale-105">
+        BOOK A CALL
+      </button>
+    </a>
+  </div>
+</section>
       
       {/* Stats Section */}
       <section className="w-full py-12 md:py-20 flex flex-col justify-start items-center bg-white font-[Akshar] px-4">
-        <div className="flex flex-col md:flex-row gap-6 w-full justify-center bg-gray-100 p-4 rounded-lg">
-          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
-            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4 text-sm md:text-base">
-              Reliability
-            </button>
-            <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">
-              20+ <span className="text-4xl md:text-5xl lg:text-[64px] font-normal">year</span>
-            </div>
-            <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-2">
-              Technology that last longer with higher reliability and less maintenance.
-            </div>
-          </div>
-          <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
-            <button className="border-[#00C069] border-2 rounded-md p-2 px-4 text-sm md:text-base">
-              REDUCED FOOTPRINT
-            </button>
-            <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">90%</div>
-            <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-2">
-              less CO₂ compared to cells made using coal power by 2030.
-            </div>
-          </div>
-          <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
-            <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4 text-sm md:text-base">
-              CAPACITY
-            </button>
-            <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">
-              10<span className="text-4xl md:text-5xl lg:text-[64px] font-normal">GWh</span>
-            </div>
-            <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-2">
-              Voltra's target for lithium-ion cell installed capacity by 2030.
-            </div>
-          </div>
-        </div>
-        
-        <div className="flex flex-col lg:flex-row w-full justify-around items-center mt-12 md:mt-20 gap-8 px-4">
-          <img 
-            src={power} 
-            alt="Power illustration" 
-            className="w-full lg:w-1/2 max-w-[590px] h-auto object-contain"
-          />
+  <div className="flex flex-col md:flex-row gap-6 w-full justify-center bg-gray-100 p-4 rounded-lg">
+    {/* Reliability Section */}
+    <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+      <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4 text-sm md:text-base mb-4 md:mb-6">
+        Reliability
+      </button>
+      <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">
+        20+ <span className="text-4xl md:text-5xl lg:text-[64px] font-normal">year</span>
+      </div>
+      <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-4 md:mt-6">
+        Technology that last longer with higher reliability and less maintenance.
+      </div>
+    </div>
+
+    {/* Reduced Footprint Section */}
+    <div className="flex flex-col w-full justify-center items-center text-[#00C069] p-4">
+      <button className="border-[#00C069] border-2 rounded-md p-2 px-4 text-sm md:text-base mb-4 md:mb-6">
+        REDUCED FOOTPRINT
+      </button>
+      <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">90%</div>
+      <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-4 md:mt-6">
+        less CO₂ compared to cells made using coal power by 2030.
+      </div>
+    </div>
+
+    {/* Capacity Section */}
+    <div className="flex flex-col w-full justify-center items-center text-[#0C33F2] p-4">
+      <button className="border-[#0C33F2] border-2 rounded-md p-2 px-4 text-sm md:text-base mb-4 md:mb-6">
+        CAPACITY
+      </button>
+      <div className="font-semibold text-6xl md:text-8xl lg:text-[108px]">
+        10<span className="text-4xl md:text-5xl lg:text-[64px] font-normal">GWh</span>
+      </div>
+      <div className="text-black w-full md:w-3/4 font-gilroy text-sm md:text-base text-center mt-4 md:mt-6">
+        Voltra's target for lithium-ion cell installed capacity by 2030.
+      </div>
+    </div>
+  </div>
   
-          <div className="w-full lg:w-1/2 max-w-[509px]">
-            <div className="w-full h-full flex flex-col">
-              <div className="w-full">
-                <h1 className="text-[#0C33F2] font-medium text-3xl md:text-4xl lg:text-[40px]">
-                  Revolutionizing the Battery Storage Landscape of India
-                </h1>
-                <br/>
-                <div className="font-gilroy text-base md:text-lg text-justify ">
-                  Voltra Energy is revolutionizing India's energy future with
-                  advanced Battery Energy Storage Systems (BESS) utilizing
-                  cutting-edge technology and world-class infrastructure.
-                  Focused on indigenizing BESS solutions for renewable energy
-                  integration, grid stabilization, and enhanced energy
-                  reliability, the company serves residential, commercial, and
-                  industrial sectors. 
-                </div>
-              </div>
-              <a
-                reloadDocument
-                className="flex flex-row items-center gap-2 text-base md:text-lg text-[#00C069] mt-4"
-                href="/products"
-              >
-                <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
-                  View our products
-                </span>
-                <ArrowUpRight width={24} height={24} />
-              </a>
-            </div>
+  <div className="flex flex-col lg:flex-row w-full justify-around items-center mt-12 md:mt-20 gap-8 px-4">
+    <img 
+      src={power} 
+      alt="Power illustration" 
+      className="w-full lg:w-1/2 max-w-[590px] h-auto object-contain"
+    />
+
+    <div className="w-full lg:w-1/2 max-w-[509px]">
+      <div className="w-full h-full flex flex-col">
+        <div className="w-full">
+          <h1 className="text-[#0C33F2] font-medium text-3xl md:text-4xl lg:text-[40px]">
+            Revolutionizing the Battery Storage Landscape of India
+          </h1>
+          <br/>
+          <div className="font-gilroy text-base md:text-lg text-justify">
+            Voltra Energy is revolutionizing India's energy future with
+            advanced Battery Energy Storage Systems (BESS) utilizing
+            cutting-edge technology and world-class infrastructure.
+            Focused on indigenizing BESS solutions for renewable energy
+            integration, grid stabilization, and enhanced energy
+            reliability, the company serves residential, commercial, and
+            industrial sectors. 
           </div>
         </div>
-      </section>
+        <a
+          reloadDocument
+          className="flex flex-row items-center gap-2 text-base md:text-lg text-[#00C069] mt-4"
+          href="/products"
+        >
+          <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
+            View our products
+          </span>
+          <ArrowUpRight width={24} height={24} />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
   
       {/* Products Section */}
       <section className="w-full min-h-[626px] flex flex-col justify-around items-center bg-gray-100 font-[Akshar] gap-4 md:gap-8 mt-10 py-8 px-4">
@@ -309,36 +326,95 @@ const Home = () => {
 </section>
       
       {/* Hover Sections */}
-      <section className="w-full h-auto md:h-screen flex flex-col md:flex-row font-[Akshar] bg-[url(/factory.png)] bg-cover">
-        {sections.map((section, index) => (
-          <div
-            key={section.id}
-            className={`w-full md:w-1/3 flex flex-col border-b md:border-b-0 md:border-r ${index < sections.length - 1 ? "border-white" : ""} h-64 md:h-full bg-black/20 hover:bg-black/50 justify-end items-end p-4 transition-all duration-300 ease-in-out`}
-            onMouseEnter={() => setHoveredSection(section.id)}
-            onMouseLeave={() => setHoveredSection(null)}
-          >
-            <div
-              className={`flex flex-col text-white w-full md:w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${hoveredSection === section.id ? "transform -translate-y-8" : ""}`}
-            >
-              <h1 className="text-2xl md:text-4xl">{section.title}</h1>
-              <p
-                className={`text-sm md:text-base font-gilroy transition-all duration-500 ease-in-out ${hoveredSection === section.id ? "top-1/2 opacity-100 translate-y-0" : "top-0 opacity-0 translate-y-4 hidden"}`}
-              >
+
+
+
+      <section className="w-full h-auto md:h-screen flex flex-col md:flex-row font-[Akshar] bg-white md:bg-[url(/factory.png)] md:bg-cover">
+  {sections.map((section, index) => {
+    let sectionImage;
+    switch(section.id.toUpperCase()) {
+      case "HYBRID":
+        sectionImage = hybrid;
+        break;
+      case "ISLAND":
+        sectionImage = islandModeImage;
+        break;
+      default:
+        sectionImage = microgrid;
+    }
+
+    return (
+      <div
+        key={section.id}
+        className={`w-[90%] mx-auto my-2 md:my-0 md:w-1/3 flex flex-col border-b md:border-b-0 md:border-r ${
+          index < sections.length - 1 ? "border-white" : ""
+        } h-96 md:h-full md:bg-black/20 md:hover:bg-black/50 justify-end items-end p-0 transition-all duration-300 ease-in-out md:rounded-none rounded-xl overflow-hidden cursor-pointer`}
+        onMouseEnter={() => setHoveredSection(section.id)}
+        onMouseLeave={() => setHoveredSection(null)}
+        onClick={() => window.location.href = section.link}
+      >
+        {/* Mobile layout with image overlay */}
+        <div className="md:hidden relative w-full h-full transition-all duration-500 ease-in-out hover:scale-105">
+          <img
+            src={sectionImage}
+            alt={section.title}
+            className="absolute inset-0 w-full h-full object-cover rounded-xl transition-all duration-300 ease-in-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex flex-col items-start justify-end p-4 transition-all duration-300 ease-in-out hover:bg-black/40">
+            <div className="flex flex-col w-full">
+              <h1 className="text-white text-3xl font-medium mb-2 font-[Akshar] uppercase">
+                {section.id}
+              </h1>
+              <p className="text-white text-sm mb-4 line-clamp-3 font-gilroy">
                 {section.description}
               </p>
               <a
-                className={`flex flex-row items-start gap-2 text-sm md:text-base text-[#00C069] transition-opacity duration-300 ${hoveredSection === section.id ? "opacity-100" : "opacity-70"}`}
+                className="flex flex-row items-center gap-2 text-[#00C069] font-semibold"
                 href={section.link}
+                onClick={(e) => e.stopPropagation()} // Prevent double triggering
               >
-                <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
-                  Know more
+                <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
+                  Know more?
                 </span>
-                <ArrowUpRight width={24} height={24} />
+                <ArrowUpRight width={20} height={20} className="text-[#00C069]" />
               </a>
             </div>
           </div>
-        ))}
-      </section>
+        </div>
+
+        {/* Desktop layout (unchanged) */}
+        <div
+          className={`hidden md:flex flex-col text-white w-full md:w-3/4 justify-center p-4 gap-2 transition-transform duration-500 ease-in-out ${
+            hoveredSection === section.id ? "transform -translate-y-8" : ""
+          }`}
+        >
+          <h1 className="text-2xl md:text-4xl">{section.title}</h1>
+          <p
+            className={`text-sm md:text-base font-gilroy transition-all duration-500 ease-in-out ${
+              hoveredSection === section.id
+                ? "top-1/2 opacity-100 translate-y-0"
+                : "top-0 opacity-0 translate-y-4 hidden"
+            }`}
+          >
+            {section.description}
+          </p>
+          <a
+            className={`flex flex-row items-start gap-2 text-sm md:text-base text-[#00C069] transition-opacity duration-300 ${
+              hoveredSection === section.id ? "opacity-100" : "opacity-70"
+            }`}
+            href={section.link}
+            onClick={(e) => e.stopPropagation()} // Prevent double triggering
+          >
+            <span className="border-b-2 border-transparent hover:border-[#00C069] hover:font-semibold transition-all duration-200">
+              Know more
+            </span>
+            <ArrowUpRight width={24} height={24} />
+          </a>
+        </div>
+      </div>
+    );
+  })}
+</section>
   
       {/* Advantage Section */}
       <section className="w-full py-12 md:py-20 flex flex-col justify-start items-center bg-white font-[Akshar] px-4">
@@ -453,72 +529,72 @@ const Home = () => {
 </section>
   
       {/* GigaFactory Section */}
-      <section className="w-full max-w-screen-2xl mx-auto py-16 bg-white font-[Akshar]">
+      <section className="w-full max-w-screen-2xl mx-auto py-0 lg:py-16 bg-white font-[Akshar]">
   <div className="flex flex-col lg:flex-row w-full items-center">
-    {/* Image container - made larger and removed left spacing */}
-    <div className="w-full lg:w-3/5 h-full">
+    {/* Image container - full width on mobile with no margins and increased height */}
+    <div className="w-full lg:w-3/5 h-full px-0">
       <img 
-        className="w-full h-auto object-cover" 
+        className="w-full h-[300px] md:h-[350px] lg:h-auto object-cover object-center" 
         src={factory} 
         alt="Voltra GigaFactory" 
       />
     </div>
     
     {/* Content container */}
-    <div className="flex flex-col gap-4 w-full lg:w-2/5 px-4 lg:px-8 mt-6 lg:mt-0">
+    <div className="flex flex-col gap-4 w-full lg:w-2/5 px-6 lg:px-8 mt-6 lg:mt-0">
       <div>
-        <h1 className="text-[#0C33F2] text-3xl md:text-[40px] font-medium">
+        <h1 className="text-[#0C33F2] text-2xl md:text-3xl lg:text-[40px] font-medium">
           The Voltra GigaFactory
         </h1>
-        <div className="text-black text-base mt-5 font-gilroy text-justify">
+        <div className="text-black text-sm lg:text-base mt-4 lg:mt-5 font-gilroy text-justify">
           An advanced manufacturing facility focused on producing cutting-edge electric vehicle (EV) batteries and energy storage solutions. Located in a strategic area to support sustainable energy and transportation innovations, the factory aims to significantly reduce the cost of battery production while increasing efficiency and performance.
         </div>
-        <div className="text-black text-base mt-5 font-gilroy text-justify">
+        <div className="text-black text-sm lg:text-base mt-4 lg:mt-5 font-gilroy text-justify">
           Voltra's commitment to green energy solutions makes it a key player in the shift toward a more sustainable, carbon-neutral future.
         </div>
       </div>
       
-      {/* Features grid */}
-      <div className="grid grid-cols-2 gap-6 mt-8">
+      {/* Features grid - 2x2 on mobile, same on desktop */}
+      <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8">
         <div className="flex flex-col items-center text-center">
-          <img src={robust} className="w-12 h-12" alt="Robust Testing Icon" />
-          <h2 className="text-black font-semibold text-lg mt-3">
+          <img src={robust} className="w-10 h-10 lg:w-12 lg:h-12" alt="Robust Testing Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
             Robust Testing
           </h2>
         </div>
         
         <div className="flex flex-col items-center text-center">
-          <img src={data} className="w-12 h-12" alt="Data Integration Icon" />
-          <h2 className="text-black font-semibold text-lg mt-3">
+          <img src={data} className="w-10 h-10 lg:w-12 lg:h-12" alt="Data Integration Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
             Data Integration
           </h2>
         </div>
         
         <div className="flex flex-col items-center text-center">
-          <img src={intl} className="w-12 h-12" alt="Intelligent Production Icon" />
-          <h2 className="text-black font-semibold text-lg mt-3">
+          <img src={intl} className="w-10 h-10 lg:w-12 lg:h-12" alt="Intelligent Production Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
             Intelligent Production
           </h2>
         </div>
         
         <div className="flex flex-col items-center text-center">
-          <img src={rd} className="w-12 h-12" alt="R&D Lab Icon" />
-          <h2 className="text-black font-semibold text-lg mt-3">
+          <img src={rd} className="w-10 h-10 lg:w-12 lg:h-12" alt="R&D Lab Icon" />
+          <h2 className="text-black font-semibold text-base lg:text-lg mt-2 lg:mt-3">
             R&D Lab
           </h2>
         </div>
       </div>
       
-      {/* Link */}
-      <div className="mt-8">
+      {/* Link - adjusted for mobile */}
+      <div className="mt-6 lg:mt-8">
         <a
-          className="inline-flex items-center gap-2 text-[#00C069] font-bold text-lg"
+          className="inline-flex items-center gap-2 text-[#00C069] font-bold text-base lg:text-lg"
           href="/technology"
         >
           <span className="border-b-2 border-transparent hover:border-[#00C069] transition-all duration-200">
             Explore the GigaFactory
           </span>
-          <ArrowUpRight className="w-6 h-6" />
+          <ArrowUpRight className="w-5 h-5 lg:w-6 lg:h-6" />
         </a>
       </div>
     </div>
