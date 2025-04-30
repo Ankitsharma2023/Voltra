@@ -120,12 +120,12 @@ const pdfProductData: ProductData[] = [
       {
         icon: Battery,
         title: "Ultra-Long Life",
-        desc: "IP55, thermal management, cell difference ≤6°C",
+        desc: "Cell Life Cycle > 12000"
       },
       {
         icon: spark,
         title: "High-Performance PCS", 
-        desc: "IP55, thermal management, cell difference ≤6°C",
+        desc: "Inbuilt high effiiciency AC-DC inside the cabinet ",
       },
     ],
     data: [
@@ -191,27 +191,35 @@ const pdfProductData: ProductData[] = [
     {
              icon: Battery,
              title: "Ultra-Long Life",      
+             desc:"Cell Life Cycle > 6000 cycles "
+
             
             },
            {
              icon: bar,
              title: "Economical and Efficient",
+             desc:"Conversion efficiency over 90%, DoD over 96%",
            },
            {
              icon: cloud,
              title: "Intelligent Management",
+             desc:"Diversified monitoring by app/web (remote)",
            },
            {
              icon: light,
              title: "Flexible Configuration",
+             desc:"Can scale from 10 kwh  to 100 kwh "
            },
            {
             icon: small_spark,
             title: "High Voltage",
+            desc:"Can achieve upto 1000V"
           },
           {
             icon: leaf,
             title: "Low-Carbon Use",
+            desc:"Minimising Carbon Footprint "
+
           },
     ],
     specs: [
@@ -280,8 +288,8 @@ const pdfProductData: ProductData[] = [
     features: [
       {
         icon: light,
-        title: "Energy Saving and Fast",
-        desc: "1P fast charge/discharge rate, energy storing & releasing",
+        title: "Fast Charging",
+        desc:"3P/4P  fast charge/discharge rate"
       },
       {
         icon: bar,
@@ -296,17 +304,17 @@ const pdfProductData: ProductData[] = [
       {
         icon: gaurd,
         title: "Safe and Reliable",
-        desc: "IP55, thermal management, cell difference ≤6°C",
+        desc: "10 yrs+ life ",
       },
       {
         icon: hand1,
         title: "Backup Power Supply",
-        desc: "IP55, thermal management, cell difference ≤6°C",
+        desc: "Uninterrupted backup power with UPS",
       },
       {
         icon: hand2,
         title: "Multiple-Use Cases",
-        desc: "IP55, thermal management, cell difference ≤6°C",
+        desc: "Data Centres, UPS, Servers, Critical Loads etc",
       },
     ],
     data: [
@@ -375,27 +383,34 @@ const pdfProductData: ProductData[] = [
        {
                 icon: Puzzle,
                 title: "Wide Compatibility",
+                desc:"Can be configured with 30+ inverters "
               },
               {
                 icon: Battery,
                 title: "Ultra-Long Life",
+                desc:"Cell Life Cycle > 6000 cycles "
       
               },
               {
                 icon: Cube,
                 title: "High Scalability",
+                desc:"Can easily scale from 5 Kwh to 100 Kwh"
               },
               {
                 icon: gaurd,
                 title: "High Security",
+                desc:"Smart BMS control, highly secure"
+
               },
               {
                 icon: home,
                 title: "Various HouseHold Uses",
+                desc:"Smart BMS control, highly secure"
               },
               {
                 icon: leaf1,
                 title: "light Weight",
+              desc :"Compact and light weight to move around "
               },
     ],
     data: [
@@ -464,31 +479,37 @@ const pdfProductData: ProductData[] = [
        {
                 icon: Puzzle,
                 title: "Flexible and Comaptible",
+                desc:"Can be configured with 30+ inverters "
                
               },
               {
                 icon: Hand,
                 title: "Easy Installation",
+                desc:"Wall mounted, 2 step installation "
                 
               },
               {
                 icon: Battery,
                 title: "Long LifeSpan",
+                desc:"Cell Life Cycle > 6000 cycles "
               
               },
               {
                 icon: Temp ,
                 title: "Environmental Adaptability",
+                desc:"No pollution reduces carbon footprint "
                
               },
               {
                 icon: bar ,
                 title: "Economical and Efficient",
+                desc:"Conversion efficiency over 90%, DoD over 96%",
                
               },
               {
                 icon: gaurd ,
                 title: "Safe and Reliable",
+              desc:"IP55 and 10 yr+ life "
                
               },
     ],
@@ -558,27 +579,34 @@ const pdfProductData: ProductData[] = [
        {
                 icon: Hand,
                 title: "High Integration",
-                desc: "1P fast charge/discharge rate, energy storing & releasing",
-              },
+                desc:"Can integrate with solar, wind, DG, etc. "    
+                      },
               {
                 icon: Temp,
-                title: "Efficient Cooling",
+                title: "Better Cooling",
+                desc:"Advanced Liquid Cooling Technology"
+
+              
               },
               {
                 icon: Cube,
                 title: "Compact and Modular",
+                desc:"Flexible & Scalable with parallel systems"
               },
               {
                 icon: gaurd,
                 title: "Safe and Reliable",
+                desc:"15 yrs+ life "
               },
               {
                 icon:light ,
                 title: "Fast Charging",
+              desc:"1P fast charge/discharge rate, energy storing & releasing"
               },
               {
                 icon: bar,
                 title: "Economical and Efficient ",
+                desc:"Conversion efficiency over 90%, DoD over 96%",
               },
     ],
     data: [
@@ -646,28 +674,35 @@ const pdfProductData: ProductData[] = [
     features: [
       {
                icon: Temp,
-               title: "Faster Cooling",
+               title: "Better Cooling",
+               desc: "Advanced Liquid Cooling Technology "
+
              },
              {
                icon: bar,
                title: "Economical and Efficient ",
+               desc:"Conversion efficiency over 90%, DoD over 96%"
              },
              {
                icon: Cube,
                title: "Higher Energy Density",
+               desc:"20 ft container can carry upto 5 MWH Energy",
                
              },
              {
                icon: gaurd,
                title: "High Protection",
+               desc:"IP55, thermal management, cell difference ≤4°C",
              },
              {
               icon: cloud,
               title: "Smart O&M",
+              desc:"Diversified monitoring by HMI (local), app/web (remote)",
             },
             {
               icon:light ,
               title: "Fast Charging",
+              desc:"1P fast charge/discharge rate, energy storing & releasing",
             },
     ],
     data: [
@@ -737,27 +772,31 @@ const pdfProductData: ProductData[] = [
       {
                icon: Temp,
                title: "Faster Cooling",
+               desc:"HVAC Built inside, smart air Cooling Technology "
              },
              {
                icon: bar,
                title: "Economical and Efficient ",
-             },
+               desc:"Conversion efficiency over 90%, DoD over 96%"             },
              {
                icon: Cube,
                title: "Higher Energy Density",
-               
+               desc:"20 ft container can carry upto 3 MWH Energy",
              },
              {
                icon: gaurd,
                title: "High Protection",
+               desc:"IP55, thermal management, cell difference ≤6°C",
              },
              {
               icon: cloud,
               title: "Smart O&M",
+              desc:"IP55, thermal management, cell difference ≤6°C",
             },
             {
               icon:light ,
               title: "Fast Charging",
+              desc:"1P fast charge/discharge rate, energy storing & releasing",
             },
     ],
     data: [
@@ -827,27 +866,32 @@ const pdfProductData: ProductData[] = [
       {
                icon: Hand,
                title: "High Integration",
-               desc: "1P fast charge/discharge rate, energy storing & releasing",
+               desc: "Can integrate with solar, wind, DG, etc. ",
              },
              {
                icon: Temp,
                title: "Efficient Cooling",
+               desc :"HVAC Built inside, smart air Cooling Technology "
              },
              {
                icon: Cube,
                title: "Compact and Modular",
+                desc:"Flexible & Scalable with parallel systems"
              },
              {
                icon: gaurd,
                title: "Safe and Reliable",
+                desc:"15 yrs+ life "
              },
              {
                icon:light ,
                title: "Fast Charging",
+                desc:"1P fast charge/discharge rate, energy storing & releasing",
              },
              {
                icon: bar,
                title: "Economical and Efficient ",
+                desc:"Conversion efficiency over 90%, DoD over 96%",
              },
    ],
     data: [
