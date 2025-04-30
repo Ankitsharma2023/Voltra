@@ -622,11 +622,11 @@ export default function ProductsCatalog() {
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 md:pr-6 lg:pr-12 px-4 sm:px-6 md:px-8 lg:px-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#0C33F2] mb-4 md:mb-6">
-            <span className="border-b-2 border-transparent transition-all duration-200">
+            <span className="border-b-2 border-transparent transition-all duration-200 text-[#0C33F2] font-medium font-[Akshar]">
               Product Catalog
             </span>
           </h2>
-          <p className="font-gilroy text-sm md:text-base mb-6">
+          <p className="font-gilroy text-sm md:text-base mb-6 text-justify ">
             Voltra's Battery Energy Storage Systems (BESS) provide reliable,
             scalable solutions designed to optimize energy management for both
             commercial and residential applications. With advanced technology
