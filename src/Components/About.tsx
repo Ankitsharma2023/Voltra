@@ -21,7 +21,7 @@ export default function About() {
   <section className="flex flex-col md:flex-row items-center justify-between p-6 md:p-12 lg:p-16 xl:px-24 bg-white gap-4 font-[Akshar]">
     <div className="w-full md:w-1/2 space-y-6">
       <h2 className="text-4xl md:text-5xl lg:text-[64px] font-medium font-[Akshar] text-[#0C33F2]">About VOLTRA</h2>
-      <p className="font-gilroy text-[16px]">
+      <p className="font-gilroy text-[16px] text-justify">
         Voltra BESS is a global leader in the design and production of Battery 
         Energy Storage Systems (BESS) that enable the transition to a clean,
         sustainable energy era. With a strong team of industry experts and a clear 

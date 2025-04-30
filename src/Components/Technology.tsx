@@ -34,7 +34,7 @@ const Technology = () => {
   <section className="flex flex-col md:flex-row items-center justify-between p-4 md:p-16 bg-white gap-4">
     <div className="w-full md:w-1/2 space-y-6">
       <h2 className="text-4xl md:text-5xl lg:text-[64px] font-medium text-[#0C33F2] font-[Akshar]">VOLTRA TECH</h2>
-      <p className="text-base md:text-lg font-gilroy">
+      <p className="text-base md:text-lg font-gilroy text-justify">
         At Voltra BESS, we are committed to advancing the future of energy
         storage with cutting-edge technology and innovative solutions. Our
         state-of-the-art manufacturing processes, commitment to
