@@ -259,114 +259,133 @@ const Technology = () => {
   </section>
 
   {/* The Voltra Advantage Section */}
-  <section className="w-full flex flex-col justify-start items-center bg-white font-[Akshar] mt-10 px-4">
-    <h2 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] my-8 text-center font-[Akshar]">
-      The Voltra Advantage
-    </h2>
-
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-      {/* Card 1: Modular BESS */}
-      <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
-        <div className="md:w-1/2 flex flex-col justify-center">
-          <div className="leading-tight mb-4">
-            <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
-              Modular
-            </h3>
-            <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] mt-2 p-0">
-              BESS
-            </h3>
-          </div>
-          <p className="text-base mb-3 font-gilroy">
-            Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
-          </p>
-          <p className="text-base font-gilroy">
-            These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src={Adva1}
-            alt="Modular BESS system"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Card 2: Thermal Management */}
-      <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
-        <div className="md:w-1/2 flex flex-col justify-center">
-          <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
-            Thermal
-          </h3>
-          <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
-            Management
-          </h3>
-          <br />
-          <p className="text-base mb-3 font-gilroy">
-            Our technology is designed for the Indian climate, both for air and liquid cooling systems.
-          </p>
-          <p className="text-base font-gilroy">
-            Our uniform heat dissipation technology ensures efficient performance and prolongs battery life.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src={Adva2}
-            alt="Thermal management system"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Card 3: Intelligent Communication */}
-      <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
-        <div className="md:w-1/2 flex flex-col justify-center">
-          <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] mb-4">
-            Intelligent Communication
-          </h3>
-          <p className="text-base mb-3 font-gilroy">
-            We have implemented intelligent communication between the DC and AC using AI technology.
-          </p>
-          <p className="text-base font-gilroy">
-            This helps in enhancing system robustness and reliability and enables fault detection.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src={Adva3}
-            alt="Intelligent communication system"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Card 4: Long Service Life */}
-      <div className="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 h-full">
-        <div className="md:w-1/2 flex flex-col justify-center">
-          <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
-            Long
-          </h3>
-          <h3 className="text-3xl md:text-[40px] font-medium text-[#0C33F2] font-[Akshar] m-0 p-0">
-            Service Life
-          </h3>
-          <br />
-          <p className="text-base mb-3 font-gilroy">
-            We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
-          </p>
-          <p className="text-base font-gilroy">
-            This helps us in achieving lower degradation rates and extended battery life.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src={Adva4}
-            alt="Long service life battery"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+     <section className="w-full py-12 md:py-20 flex flex-col justify-start items-center bg-white font-[Akshar] px-4">
+   <h2 className="text-3xl md:text-4xl font-medium text-[#0C33F2] mb-8 md:mb-12 text-center">
+     The Voltra Advantage
+   </h2>
+ 
+   <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
+   {/* Card 1: Modular BESS */}
+   <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+       <div className="md:w-1/2 flex flex-col justify-center">
+         <div className="leading-tight mb-4">
+           <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+             Modular
+           </h3>
+           <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+             BESS
+           </h3>
+           <h3 className="block md:hidden text-3xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+             Modular BESS
+           </h3>
+         </div>
+         <p className="text-base mb-3 font-gilroy">
+           Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
+         </p>
+         <p className="text-base font-gilroy">
+           These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.
+         </p>
+       </div>
+       <div className="md:w-1/2">
+         <img
+           src={Adva1}
+           alt="Modular BESS system"
+           className="w-full h-full object-cover rounded-lg"
+         />
+       </div>
+     </div>
+ 
+     {/* Card 2: Thermal Management */}
+     <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+       <div className="md:w-1/2 flex flex-col justify-center">
+         <div className="leading-tight mb-4">
+           <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
+             Thermal Management
+           </h3>
+           {/* <h3 className="text-2xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
+             Management
+           </h3> */}
+         </div>
+         <p className="text-base mb-3 font-gilroy">
+           Our technology is designed for the Indian climate, both for air and liquid cooling systems.
+         </p>
+         <p className="text-base font-gilroy">
+           Our uniform heat dissipation technology ensures efficient performance and prolongs battery life.
+         </p>
+       </div>
+       <div className="md:w-1/2">
+         <img
+           src={Adva2}
+           alt="Thermal management system"
+           className="w-full h-full object-cover rounded-lg"
+         />
+       </div>
+     </div>
+ 
+    {/* Card 3: Intelligent Communication */}
+ <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+   <div className="md:w-1/2 flex flex-col justify-center">
+     <div className="leading-tight mb-4">
+       <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+         Intelligent
+       </h3>
+       <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+         Communication
+       </h3>
+       <h3 className="block md:hidden text-2xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+         Intelligent Communication
+       </h3>
+     </div>
+     <p className="text-base mb-3 font-gilroy">
+       We have implemented intelligent communication between the DC and AC using AI technology.
+     </p>
+     <p className="text-base font-gilroy">
+       This helps in enhancing system robustness and reliability and enables fault detection.
+     </p>
+   </div>
+   <div className="md:w-1/2">
+     <img
+       src={Adva3}
+       alt="Intelligent communication system"
+       className="w-full h-full object-cover rounded-lg"
+     />
+   </div>
+ </div>
+ 
+ 
+     {/* Card 4: Long Service Life */}
+  {/* Card: Long Service Life */}
+ <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+   <div className="md:w-1/2 flex flex-col justify-center">
+     <div className="leading-tight mb-4">
+       <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+         Long
+       </h3>
+       <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+         Service Life
+       </h3>
+       <h3 className="block md:hidden text-3xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+         Long Service Life
+       </h3>
+     </div>
+     <p className="text-base mb-3 font-gilroy">
+       We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
+     </p>
+     <p className="text-base font-gilroy">
+       This helps us in achieving lower degradation rates and extended battery life.
+     </p>
+   </div>
+   <div className="md:w-1/2">
+     <img
+       src={Adva4}
+       alt="Long service life battery"
+       className="w-full h-full object-cover rounded-lg"
+     />
+   </div>
+ </div>
+ 
+   </div>
+ </section>
 
   {/* Contact Section */}
  <section className="flex flex-col justify-center items-center w-full p-4 md:p-8 relative overflow-hidden my-8">
