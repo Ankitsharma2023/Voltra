@@ -424,14 +424,17 @@ const Home = () => {
 
   <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
   {/* Card 1: Modular BESS */}
-    <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+  <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="leading-tight mb-4">
-          <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
+          <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
             Modular
           </h3>
-          <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
+          <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
             BESS
+          </h3>
+          <h3 className="block md:hidden text-3xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+            Modular BESS
           </h3>
         </div>
         <p className="text-base mb-3 font-gilroy">
@@ -455,11 +458,11 @@ const Home = () => {
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="leading-tight mb-4">
           <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
-            Thermal
+            Thermal Management
           </h3>
-          <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
+          {/* <h3 className="text-2xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
             Management
-          </h3>
+          </h3> */}
         </div>
         <p className="text-base mb-3 font-gilroy">
           Our technology is designed for the Indian climate, both for air and liquid cooling systems.
@@ -477,54 +480,68 @@ const Home = () => {
       </div>
     </div>
 
-    {/* Card 3: Intelligent Communication */}
-    <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
-      <div className="md:w-1/2 flex flex-col justify-center">
-        <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] mb-4">
-          Intelligent Communication
-        </h3>
-        <p className="text-base mb-3 font-gilroy">
-          We have implemented intelligent communication between the DC and AC using AI technology.
-        </p>
-        <p className="text-base font-gilroy">
-          This helps in enhancing system robustness and reliability and enables fault detection.
-        </p>
-      </div>
-      <div className="md:w-1/2">
-        <img
-          src={Adva3}
-          alt="Intelligent communication system"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+   {/* Card 3: Intelligent Communication */}
+<div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+  <div className="md:w-1/2 flex flex-col justify-center">
+    <div className="leading-tight mb-4">
+      <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+        Intelligent
+      </h3>
+      <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+        Communication
+      </h3>
+      <h3 className="block md:hidden text-2xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+        Intelligent Communication
+      </h3>
     </div>
+    <p className="text-base mb-3 font-gilroy">
+      We have implemented intelligent communication between the DC and AC using AI technology.
+    </p>
+    <p className="text-base font-gilroy">
+      This helps in enhancing system robustness and reliability and enables fault detection.
+    </p>
+  </div>
+  <div className="md:w-1/2">
+    <img
+      src={Adva3}
+      alt="Intelligent communication system"
+      className="w-full h-full object-cover rounded-lg"
+    />
+  </div>
+</div>
+
 
     {/* Card 4: Long Service Life */}
-    <div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
-      <div className="md:w-1/2 flex flex-col justify-center">
-        <div className="leading-tight mb-4">
-          <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
-            Long
-          </h3>
-          <h3 className="text-3xl md:text-4xl font-medium text-[#0C33F2] m-0 p-0">
-            Service Life
-          </h3>
-        </div>
-        <p className="text-base mb-3 font-gilroy">
-          We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
-        </p>
-        <p className="text-base font-gilroy">
-          This helps us in achieving lower degradation rates and extended battery life.
-        </p>
-      </div>
-      <div className="md:w-1/2">
-        <img
-          src={Adva4}
-          alt="Long service life battery"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+ {/* Card: Long Service Life */}
+<div className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg">
+  <div className="md:w-1/2 flex flex-col justify-center">
+    <div className="leading-tight mb-4">
+      <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+        Long
+      </h3>
+      <h3 className="hidden md:block text-4xl font-medium text-[#0C33F2] m-0 p-0">
+        Service Life
+      </h3>
+      <h3 className="block md:hidden text-3xl font-medium text-[#0C33F2] m-0 p-0 font-[Akshar]">
+        Long Service Life
+      </h3>
     </div>
+    <p className="text-base mb-3 font-gilroy">
+      We have benchmarked battery cells based on components like cathodes, anodes, and electrolytes.
+    </p>
+    <p className="text-base font-gilroy">
+      This helps us in achieving lower degradation rates and extended battery life.
+    </p>
+  </div>
+  <div className="md:w-1/2">
+    <img
+      src={Adva4}
+      alt="Long service life battery"
+      className="w-full h-full object-cover rounded-lg"
+    />
+  </div>
+</div>
+
   </div>
 </section>
   
