@@ -791,7 +791,7 @@ const pdfProductData: ProductData[] = [
              {
               icon: cloud,
               title: "Smart O&M",
-              desc:"IP55, thermal management, cell difference ≤6°C",
+              desc:"Diversified monitoring by HMI (local), app/web (remote)",
             },
             {
               icon:light ,
