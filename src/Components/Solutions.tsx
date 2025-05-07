@@ -35,7 +35,7 @@ import VOLT_HVC_REAL from "../assets/VOLT_HVC_REAL.png";
 import VOLT_HVD_REAL from "../assets/VOLT_HVD_REAL.png";
 import VOLT_LVS_REAL from "../assets/VOLT_LVS_REAL.png";
 import VOLT_LVW_REAL from "../assets/VOLT_LVW_REAL.png";
-import VOLT_LINK_REAL from "../assets/VOLT_LINK_REAL.png";
+import VOLT_LINK_REAL from "../assets/VOLT_LINK_REAL.png";2
 import VOLT_MAX_AIR_REAL from "../assets/VOLT_MAX_AIR_REAL.png";
 import VOLT_LINK_AIR_REAL from "../assets/VOLT_LINK_AIR_REAL.png";
 
