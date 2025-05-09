@@ -617,7 +617,7 @@ export default function ProductsCatalog() {
 
   return (
     <main className="flex flex-col w-full gap-4 font-[Akshar]">
-    {/* Hero section */}
+   
     <section className="w-full bg-white py-8 md:py-12 lg:py-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 md:pr-6 lg:pr-12 px-4 sm:px-6 md:px-8 lg:px-12">
@@ -653,7 +653,7 @@ export default function ProductsCatalog() {
       </div>
     </section>
   
-    {/* Category navigation */}
+   
     <section className="px-4 sm:px-6 lg:px-8 py-6 md:py-8">
       <nav className="w-full flex justify-center py-4 border-b mb-6 md:mb-8 overflow-x-auto">
         <ul className="flex space-x-3 sm:space-x-6 text-gray-700 font-semibold whitespace-nowrap px-2">
@@ -680,7 +680,7 @@ export default function ProductsCatalog() {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              onClick={() => window.location.href = `/solutions?id=${product.id}`}
+              onClick={() => window.location.href = `/product?name=${encodeURIComponent(product.title)}`}
               className="flex flex-col w-full max-w-[584px] mx-auto bg-white shadow-sm hover:shadow-md rounded-md overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
             >
               {/* Product Image - responsive height */}
@@ -736,7 +736,7 @@ export default function ProductsCatalog() {
       </div>
     </section>
   
-    {/* CTA section */}
+  
     <section className="flex flex-col justify-center items-center w-full px-4 py-8 md:py-12 relative overflow-hidden mb-12">
   <div className="relative bg-[#0C33F2] rounded-lg p-6 sm:p-8 text-white overflow-hidden w-full max-w-6xl">
     <div className="flex flex-col md:flex-row items-center justify-between relative z-10">

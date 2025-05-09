@@ -765,7 +765,7 @@ const pdfProductData: ProductData[] = [
     id: 8,
     image: VOLT_MAX_AIR,
     real: VOLT_MAX_AIR_REAL,
-    title: "VOLT-MAX AIR",
+    title: "VOLT-MAX-AIR",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
     features: [
@@ -859,7 +859,7 @@ const pdfProductData: ProductData[] = [
     id: 9,
     image: VOLT_LINK_AIR,
     real: VOLT_LINK_AIR_REAL,
-    title: "VOLT-LINK AIR",
+    title: "VOLT-LINK-AIR",
     description:
     "The ESS container product integrates PACK, EMS, BMS, HVAC, fire safety system into one container. It has the advantages of high energy density, easy transportation & installation, and high protection level. The DC output can combine with PCS-boost container to realize AC network connection at medium/high voltage . It can be applied to the generation and grid side.",
     features: [
@@ -958,19 +958,21 @@ const pdfProductData: ProductData[] = [
 export default function Solutions() {
   const [hoverIndex, setHoverIndex] = useState(-1);
   const [searchParams] = useSearchParams();
-  const [productId, setProductId] = useState(1);
+  const [productId, setProductId] = useState("");
 
   // Read id from URL search params and update state
   useEffect(() => {
-    const id = searchParams.get("id");
+    const id = searchParams.get("name");
+    
     if (id) {
-      setProductId(parseInt(id));
+      setProductId(id);
     }
   }, [searchParams]);
-
+   
   // Select product based on id (cycling through the pdf data)
   const selectedProduct =
-    pdfProductData[(productId - 1) % pdfProductData.length];
+    pdfProductData.filter((item) => item.title === decodeURIComponent(searchParams.get("name") || ""))[0] ;
+ console.log(searchParams.get("name"));
 
     return (
       <main className="flex flex-col w-full gap-4 font-[Akshar] pt-12 overflow-hidden">
