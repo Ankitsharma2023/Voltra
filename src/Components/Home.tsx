@@ -625,7 +625,7 @@ const Home = () => {
           {/* Left Text Section */}
           <div className="flex flex-col p-4 gap-4 w-full lg:w-2/5"> 
             <h1 className="text-[#0C33F2] text-3xl md:text-4xl font-medium"> 
-              KNOW ABOUT BEES 
+              KNOW ABOUT BESS
             </h1> 
             <p className="mb-4 text-gray-700 font-bold">Have any more queries?</p> 
             <a href="/contact" className="w-fit"> 
