@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
                 </svg>
                 <div>
                   <div className="font-semibold text-gray-300 text-xs mb-0.5">For Technical Assistance:-</div>
-                  <div>+91 8199-999301</div>
+                  <div>+91 7496964539</div>
                 </div>
               </div>
 
