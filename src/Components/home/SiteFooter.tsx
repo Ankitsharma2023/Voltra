@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { FOOTER } from "../../constants/site";
 import { assets } from "../../constants/assets";
@@ -17,19 +17,31 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
  * off the right edge (desktop only).
  */
 export default function SiteFooter() {
+  // The factory illustration band only belongs on the home page; every other
+  // route shows the dark footer without it.
+  const isHome = useLocation().pathname === "/";
+
   return (
     <footer className="w-full">
-      {/* Factory illustration band — looping muted video (poster = static PNG) */}
-      <video
-        className="block w-full select-none"
-        src={assets.gigafactory.illustrationVideo}
-        poster={assets.gigafactory.illustration}
-        autoPlay
-        loop
-        muted
-        playsInline
-        aria-label="Voltra gigafactory robotic assembly line"
-      />
+      {/* Factory illustration band — looping muted video (poster = static PNG).
+          The clip's baked-in background is a hair cooler than pure white, so the
+          band sits on white and a white→transparent gradient over the (empty) top
+          half dissolves the seam with the heading section above. */}
+      {isHome && (
+        <div className="relative w-full bg-white">
+          <video
+            className="block w-full select-none"
+            src={assets.gigafactory.illustrationVideo}
+            poster={assets.gigafactory.illustration}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label="Voltra gigafactory robotic assembly line"
+          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white to-transparent" />
+        </div>
+      )}
 
       {/* Dark footer */}
       <div className="relative w-full overflow-hidden bg-navy-deep">

@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../../constants/assets";
 import Eyebrow from "../home/ui/Eyebrow";
+import ScrollRevealText from "../home/ui/ScrollRevealText";
 
 /**
  * ProductPageHero — the shared hero used by every product-category page
@@ -29,11 +30,14 @@ export default function ProductPageHero({
   content,
   heroImage,
   imageAlt,
+  subtitleMaxOpacity = 1,
   backdropImage,
 }: {
   content: ProductHeroContent;
   heroImage: string;
   imageAlt: string;
+  /** Final darkness of the scroll-revealed intro line (lower = less bold). */
+  subtitleMaxOpacity?: number;
   /** Optional faint photo behind the intro/why area (e.g. Lithium solar grid). */
   backdropImage?: string;
 }) {
@@ -84,9 +88,11 @@ export default function ProductPageHero({
 
         {/* Intro line — separated from the dark banner, centered on the light page */}
         <div className="relative mx-auto max-w-page px-6 pt-14 md:px-12 lg:px-20">
-          <p className="mx-auto max-w-[680px] text-center text-lg leading-relaxed text-navy/60">
-            {hero.subtitle}
-          </p>
+          <ScrollRevealText
+            text={hero.subtitle}
+            maxOpacity={subtitleMaxOpacity}
+            className="mx-auto max-w-[680px] text-center text-lg leading-relaxed"
+          />
         </div>
 
         {/* Why … block (kept above the backdrop so the inverter sits IN the solar) */}

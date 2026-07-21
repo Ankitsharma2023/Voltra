@@ -10,7 +10,7 @@ import PillButton from "./ui/PillButton";
  */
 export default function Gigafactory() {
   return (
-    <section className="w-full overflow-hidden py-16 lg:py-20">
+    <section className="w-full overflow-hidden bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-page px-6 md:px-12 lg:px-20">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-4">

@@ -2,6 +2,7 @@ import React from "react";
 import { MISSION } from "../../constants/site";
 import { assets } from "../../constants/assets";
 import PillButton from "./ui/PillButton";
+import ScrollRevealText from "./ui/ScrollRevealText";
 
 /**
  * MissionStats — the "Our Story" band. Two large concentric dashed circles are
@@ -42,10 +43,11 @@ export default function MissionStats() {
 
         {/* Content */}
         <div className="relative mx-auto flex max-w-[892px] flex-col items-center gap-12 text-center lg:gap-16 lg:pt-[77px]">
-          <h2 className="text-2xl leading-[1.4] tracking-tight sm:text-[28px]">
-            <span className="text-navy/70">{MISSION.titleLead}</span>
-            <span className="text-navy/40">{MISSION.titleRest}</span>
-          </h2>
+          <ScrollRevealText
+            as="h2"
+            text={`${MISSION.titleLead}${MISSION.titleRest}`}
+            className="text-2xl leading-[1.4] tracking-tight sm:text-[28px]"
+          />
 
           <div className="grid w-full max-w-[760px] grid-cols-2 gap-8 md:grid-cols-4">
             {MISSION.stats.map((stat) => (
