@@ -23,6 +23,7 @@ export const ROUTES = {
   hybridInverters: "/hybrid-inverters",
   lithiumBatteries: "/lithium-batteries",
   gridBess: "/grid-scale-bess",
+  energyAdvisor: "/energy-advisor",
   blog: "/blog",
   islandMode: "/solutions/island-mode",
   hybridMode: "/solutions/hybrid-mode",
@@ -36,7 +37,7 @@ export const NAV = {
     { label: "Hybrid Inverters", to: ROUTES.hybridInverters, hasCaret: true },
     { label: "Lithium Batteries", to: ROUTES.lithiumBatteries },
     { label: "BESS", to: ROUTES.gridBess },
-    { label: "Energy Advisor", to: ROUTES.contact },
+    { label: "Energy Advisor", to: ROUTES.energyAdvisor },
     { label: "Blog", to: ROUTES.blog },
   ],
   // Same destination as the existing "BOOK A CALL" / "CONTACT US" buttons.
@@ -553,4 +554,250 @@ export const FOOTER = {
     },
   ],
   copyright: "© 2026 Voltra Technologies Pvt. Ltd. All rights reserved.",
+};
+
+/**
+ * Energy Advisor page (Figma frame "Energy Advisor", node 62:331).
+ *
+ * Three tools on one page: a guided system configurator, a live load
+ * calculator, and a product spec hub. Only copy + data live here; all the
+ * arithmetic is done in the components so the numbers stay honest.
+ */
+export const ENERGY_ADVISOR = {
+  hero: {
+    eyebrow: "Energy Advisor",
+    title: "Build Your Perfect Energy System",
+    subtitle:
+      "A smart configurator, live load calculator and full product hub — all in one place.",
+    cta: { label: "Run Simulation", to: "#configurator" },
+  },
+
+  /** Step-by-step configurator. Each step renders one or more choice groups. */
+  configurator: {
+    steps: [
+      {
+        title: "Tell us about the site",
+        groups: [
+          {
+            id: "use",
+            label: "Specify Use",
+            layout: "grid",
+            options: [
+              { value: "home", label: "Home/Apartment" },
+              { value: "shop", label: "Shop/Office" },
+              { value: "factory", label: "Factory / Industrial" },
+              { value: "epc", label: "Solar Developer / EPC" },
+            ],
+          },
+          {
+            id: "rooms",
+            label: "Number of Rooms",
+            layout: "pills",
+            options: [2, 3, 4, 5, 6, 7, 8].map((n) => ({
+              value: String(n),
+              label: String(n),
+            })),
+          },
+          {
+            id: "backup",
+            label: "Back Up Needed",
+            layout: "row",
+            options: [
+              { value: "1", label: "1 Hr" },
+              { value: "2", label: "2 Hr" },
+              { value: "3", label: "3 Hr" },
+              { value: "4", label: "4 Hr" },
+            ],
+          },
+          {
+            id: "bill",
+            label: "Monthly electricity bill",
+            layout: "row",
+            options: [
+              { value: "1000", label: "<1K" },
+              { value: "1500", label: "1K-2K" },
+              { value: "2500", label: "2K-3K" },
+              { value: "3500", label: "3K-4K" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "What do you already have?",
+        groups: [
+          {
+            id: "solar",
+            label: "Existing Solar",
+            layout: "row",
+            options: [
+              { value: "none", label: "None" },
+              { value: "1-3", label: "1-3 kW" },
+              { value: "3-5", label: "3-5 kW" },
+              { value: "5+", label: "5 kW+" },
+            ],
+          },
+          {
+            id: "grid",
+            label: "Grid Reliability",
+            layout: "row",
+            options: [
+              { value: "stable", label: "Stable" },
+              { value: "occasional", label: "Occasional cuts" },
+              { value: "frequent", label: "Frequent cuts" },
+              { value: "offgrid", label: "Off-grid" },
+            ],
+          },
+          {
+            id: "priority",
+            label: "What matters most?",
+            layout: "grid",
+            options: [
+              { value: "savings", label: "Lower my bill" },
+              { value: "backup", label: "Never lose power" },
+              { value: "green", label: "Go fully green" },
+              { value: "scale", label: "Room to expand" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Your recommended system",
+        groups: [],
+      },
+    ],
+  },
+
+  calculator: {
+    eyebrow: "DIY Tool",
+    title: "Live Load Calculator",
+    subtitle:
+      "Know exactly what size system you need. Add your appliances manually.",
+    columns: ["Appliance", "Watts", "Qty", "Hrs/day"],
+    /** Starting rows — mirrors the Figma mock. */
+    defaultRows: [
+      { name: "LED Bulb", watts: 70, qty: 4, hours: 8 },
+      { name: "Ceiling Fan", watts: 75, qty: 4, hours: 10 },
+      { name: "Refrigerator", watts: 200, qty: 1, hours: 24 },
+      { name: "Television", watts: 120, qty: 1, hours: 5 },
+    ],
+    /** Picker for the "add appliance" control. */
+    presets: [
+      { name: "LED Bulb", watts: 70, qty: 1, hours: 8 },
+      { name: "Ceiling Fan", watts: 75, qty: 1, hours: 10 },
+      { name: "Refrigerator", watts: 200, qty: 1, hours: 24 },
+      { name: "Television", watts: 120, qty: 1, hours: 5 },
+      { name: "Air Conditioner", watts: 1500, qty: 1, hours: 6 },
+      { name: "Washing Machine", watts: 500, qty: 1, hours: 1 },
+      { name: "Water Pump", watts: 750, qty: 1, hours: 2 },
+      { name: "Microwave", watts: 1200, qty: 1, hours: 1 },
+      { name: "Laptop", watts: 65, qty: 1, hours: 8 },
+      { name: "Router", watts: 12, qty: 1, hours: 24 },
+    ],
+    backupOptions: [4, 6, 8],
+    defaultTariff: 10,
+  },
+
+  productHub: {
+    eyebrow: "Product Hub",
+    title: "Understand Every Product",
+    subtitle:
+      "Deep-dive into Voltra's full range — expand a section to see specs, models and when to choose each system.",
+    tabs: [
+      {
+        id: "inverters",
+        label: "Inverters",
+        title: "Hybrid Inverters",
+        series: "VI Series | 3-50KW",
+        body: [
+          "A hybrid inverter is the brain of your solar-plus-storage system. It uses Maximum Power Point Tracking (MPPT) to extract peak energy from your solar panels — continuously adjusting voltage and current to match panel conditions hundreds of times per second.",
+          "Unlike a basic string inverter, it intelligently routes power between solar, battery and grid in milliseconds — charging the battery when solar is abundant, switching to battery during cuts, and exporting surplus when allowed.",
+        ],
+        cta: { label: "Explore Inverters", to: ROUTES.hybridInverters },
+        columns: ["Model", "Phase", "kW", "MPPT", "Eff.", "Best For"],
+        rows: [
+          ["VI-3K", "Single", "3 kW", "2", "97.6%", "Small home"],
+          ["VI-5K", "Single", "5 kW", "2", "97.8%", "Family home"],
+          ["VI-8K", "Single", "8 kW", "2", "98.0%", "Large home"],
+          ["VI-15K", "Three", "15 kW", "3", "98.2%", "Shop / office"],
+          ["VI-50K", "Three", "50 kW", "4", "98.4%", "Industrial"],
+        ],
+      },
+      {
+        id: "battery",
+        label: "Battery",
+        title: "Lithium Batteries",
+        series: "LVW Series | 5-30KWH",
+        body: [
+          "Voltra packs use LiFePO₄ (lithium iron phosphate) cells — the safest lithium chemistry available. They tolerate high temperatures without thermal runaway, and hold over 80% of their original capacity after 6,000 full cycles.",
+          "Every pack ships with a smart BMS that balances cells, tracks state-of-charge to within 2%, and reports live health over Bluetooth — so you know exactly what your storage is doing.",
+        ],
+        cta: { label: "Explore Batteries", to: ROUTES.lithiumBatteries },
+        columns: ["Model", "Voltage", "kWh", "Cycles", "DoD", "Best For"],
+        rows: [
+          ["LVW-5S", "51.2 V", "5.1 kWh", "6000+", "95%", "Small home"],
+          ["LVW-10S", "51.2 V", "10.2 kWh", "6000+", "95%", "Family home"],
+          ["LVW-16S", "51.2 V", "16.4 kWh", "6000+", "95%", "Large home"],
+          ["LVW-20S", "102 V", "20.5 kWh", "6000+", "95%", "Shop / office"],
+          ["LVW-30S", "102 V", "30.7 kWh", "6000+", "95%", "Light industry"],
+        ],
+      },
+      {
+        id: "grids",
+        label: "Grids",
+        title: "Grid-Scale BESS",
+        series: "VG Series | 100KWH-2MWH",
+        body: [
+          "Grid-scale Battery Energy Storage Systems store surplus renewable generation and release it when demand peaks — smoothing the duck curve and cutting reliance on diesel peaker plants.",
+          "Voltra cabinets are liquid-cooled for even cell temperatures, ship pre-integrated with PCS and fire suppression, and scale in parallel from a single 100 kWh unit to multi-megawatt farms.",
+        ],
+        cta: { label: "Explore BESS", to: ROUTES.gridBess },
+        columns: ["Model", "Capacity", "PCS", "Cooling", "Cycles", "Best For"],
+        rows: [
+          ["VG-100", "100 kWh", "50 kW", "Liquid", "8000+", "C&I peak shaving"],
+          ["VG-250", "250 kWh", "125 kW", "Liquid", "8000+", "Factory backup"],
+          ["VG-500", "500 kWh", "250 kW", "Liquid", "8000+", "Microgrid"],
+          ["VG-1M", "1 MWh", "500 kW", "Liquid", "8000+", "Utility firming"],
+          ["VG-2M", "2 MWh", "1 MW", "Liquid", "8000+", "Solar farm"],
+        ],
+      },
+    ],
+  },
+};
+
+/**
+ * Contact page (Figma frame "Contact", node 62:161).
+ *
+ * NOTE: `endpoint` and `fieldMap` describe the EXISTING Google Apps Script
+ * integration that already backs this form. The script reads four parameters —
+ * name, contact, email, query — so the form maps its richer field set onto
+ * those before submitting. Renaming them will break the live sheet.
+ */
+export const CONTACT_PAGE = {
+  hero: {
+    eyebrow: "Contact Voltra",
+    title: "Let's power a better tomorrow, together.",
+    subtitle:
+      "Reach out for partnerships, project quotes or technical questions — our team responds within one business day.",
+    cta: { label: "Contact Us", to: "#contact-form" },
+  },
+  form: {
+    title: "Send us a message",
+    subtitle: "Tell us about your project or partnership interest.",
+    submitLabel: "Send Message",
+    sendingLabel: "Sending…",
+    successMessage: "Thanks — we've got your message and will reply within one business day.",
+    errorMessage: "Something went wrong. Please email info@voltra.in and we'll pick it up.",
+    interests: [
+      "Residential Battery",
+      "Residential BESS",
+      "Hybrid Inverter",
+      "Grid-Scale BESS",
+      "Utilities / C&I",
+      "Partnership / Distribution",
+      "Technical Support",
+      "Something else",
+    ],
+    endpoint:
+      "https://script.google.com/macros/s/AKfycbz6K1XoONkeCa7eMFUIb42hQ8xwx9zzbMORm1lVWCC78oMR0f-RggG3A0ERclzGCOL5/exec",
+  },
 };

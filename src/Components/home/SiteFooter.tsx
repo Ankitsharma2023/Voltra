@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { FOOTER } from "../../constants/site";
 import { assets } from "../../constants/assets";
+import BrandLockup from "./ui/BrandLockup";
 
 function FooterLink({ to, children }: { to: string; children: React.ReactNode }) {
   const cls = "text-sm text-white/60 transition-colors hover:text-white";
@@ -57,15 +58,8 @@ export default function SiteFooter() {
           {/* Row 1: brand lockup + contact */}
           <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
             <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2">
-                <img src={assets.logo.footerMark} alt="" width={41} height={46} className="h-[46px] w-[41px] shrink-0" />
-                <span className="flex flex-col items-center gap-[3px]">
-                  <img src={assets.logo.footerWordmark} alt="Voltra" width={86} height={18} className="h-[18px] w-[86px] shrink-0" />
-                  <span className="whitespace-nowrap font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] text-white/80">
-                    {FOOTER.tagline}
-                  </span>
-                </span>
-              </div>
+              {/* Footer is always navy, so the lockup is always the white one. */}
+              <BrandLockup onDark />
               <p className="text-sm text-white/60">{FOOTER.company}</p>
             </div>
 

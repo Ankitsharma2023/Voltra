@@ -22,16 +22,14 @@
 
 export const assets = {
   // ---- Brand ----
-  // TODO: the logo is a *vector* in Figma, so it never appears in the file's
-  // raster fills and could not be re-exported with the rest of the artwork.
-  // `/icon.svg` is the bolt mark and is used for both nav + footer (recolour
-  // with CSS `filter`/`currentColor` rather than shipping two bitmaps). The
-  // wordmark still needs a proper SVG export — see note at the bottom.
+  // Full lockup (bolt mark + VOLTRA wordmark) in two colourways. Consumers pick
+  // by background, NOT by page: white on navy/blue surfaces, blue on the light
+  // page wash — see BrandLockup. `icon.svg` is the bolt alone and is hard-coded
+  // to brand blue (fill="#0C33F2"), so it must never be used on a blue surface.
   logo: {
-    mark: "/icon.svg",
-    wordmark: "/icon.svg",
-    footerMark: "/icon.svg",
-    footerWordmark: "/icon.svg",
+    lockup: "/voltra/logo-blue.png", // 108x48
+    lockupOnDark: "/voltra/logo-white.png", // 217x96
+    mark: "/icon.svg", // bolt only, vector — favicon / light backgrounds
   },
 
   // ---- Hero ----
@@ -60,7 +58,7 @@ export const assets = {
     unitAngle: "/voltra/product-unit-angle.png", // 3/4 view on blue podium, 509x512
     // Same front render but on a solid white podium — use where the card sits
     // on a coloured panel and the cutout would look like it's floating.
-    unitFrontWhite: "/voltra/product-unit-front-white.png",
+    unitFrontWhite: "/voltra/product-unit-front-white.jpg",
   },
 
   // ---- "Storage that scales" carousel ----
@@ -72,23 +70,23 @@ export const assets = {
   // ---- Why Voltra feature cards ----
   why: {
     background: "/voltra/factory-line.jpg", // blue-lit battery production line
-    safety: "/voltra/why-safety.png", // exploded LFP pack, 1536x1024
-    efficiency: "/voltra/wind-solar-farm.png", // solar + wind at sunset, 1536x1024
-    cycles: "/voltra/why-cycles.png", // infinity loop + cell, 1536x1024
+    safety: "/voltra/why-safety.jpg", // exploded LFP pack, 1536x1024
+    efficiency: "/voltra/wind-solar-farm.jpg", // solar + wind at sunset, 1536x1024
+    cycles: "/voltra/why-cycles.jpg", // infinity loop + cell, 1536x1024
     // NOTE: gridReady + madeInIndia only exist at 384x256 in Figma.
     gridReady: "/voltra/why-grid-ready.png", // India network map
     madeInIndia: "/voltra/why-made-in-india.png", // lion hologram + factory
-    smartOandM: "/voltra/why-smart-om.png", // app dashboard + cloud, 1536x1024
+    smartOandM: "/voltra/why-smart-om.jpg", // app dashboard + cloud, 1536x1024
   },
 
   // ---- Mission / "Our Story" floating tiles ----
   mission: {
-    cityNight: "/voltra/mission-city-night.png", // waterfront at dusk, 2944x1648
+    cityNight: "/voltra/mission-city-night.jpg", // waterfront at dusk, 1600px wide
     // TODO: no "village" tile exists in the Figma file — reusing the rooftop
     // solar village photo already in the repo until the real art lands.
     village: "/blog/post-1.jpg",
     factory: "/voltra/factory-line.jpg",
-    skyline: "/voltra/mission-skyline.png", // turbines + skyline, 2944x1648
+    skyline: "/voltra/mission-skyline.jpg", // turbines + skyline, 1600px wide
   },
 
   // ---- Gigafactory ----
@@ -112,7 +110,7 @@ export const assets = {
     // Interior room with wall-mounted inverter + battery (mission section).
     missionUnits: "/voltra/about-mission-units.jpg", // 1920x1080
     // Wind + solar farm (featured "who we serve" vertical image).
-    serveImage: "/voltra/wind-solar-farm.png", // 1536x1024
+    serveImage: "/voltra/wind-solar-farm.jpg", // 1536x1024
   },
 
   // ---- Hybrid Inverters page ----
@@ -134,7 +132,7 @@ export const assets = {
     // 1:1444). Local copy so it doesn't expire like the Figma render links.
     heroBattery: "/lithium-battery.png",
     // Two angles of the battery render for the product-range cards.
-    cardFront: "/voltra/product-unit-front-white.png", // 1402x1122
+    cardFront: "/voltra/product-unit-front-white.jpg", // 1402x1122
     cardAngle: "/voltra/product-unit-angle.png", // 509x512
     // Faint solar-panel photo (Figma node 1:1443) — sits behind the intro/why
     // area as a backdrop. Shared local copy; regenerate if the art changes.

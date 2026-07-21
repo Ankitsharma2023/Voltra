@@ -10,6 +10,7 @@ import About from "./Components/About";
 import HybridInverters from "./Components/HybridInverters";
 import LithiumBatteries from "./Components/LithiumBatteries";
 import GridScaleBess from "./Components/GridScaleBess";
+import EnergyAdvisor from "./Components/EnergyAdvisor";
 import Blog from "./Components/Blog";
 import Solutions from "./Components/Solutions";
 import Contact from "./Components/Contact";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/hybrid-inverters" element={<HybridInverters />} />
           <Route path="/lithium-batteries" element={<LithiumBatteries />} />
           <Route path="/grid-scale-bess" element={<GridScaleBess />} />
+          <Route path="/energy-advisor" element={<EnergyAdvisor />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/product" element={<Solutions />} />
           <Route path="/contact" element={<Contact />} />

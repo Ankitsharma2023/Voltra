@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
-import { NAV, FOOTER } from "../../constants/site";
+import { NAV } from "../../constants/site";
 import { assets } from "../../constants/assets";
 import PillButton from "./ui/PillButton";
+import BrandLockup from "./ui/BrandLockup";
 
 /**
  * Routes whose hero starts with a dark band, so the nav renders its own dark
@@ -18,8 +19,10 @@ const DARK_HEADER_ROUTES = [
   "/lithium-batteries",
   "/grid-scale-bess",
   "/blog",
+  "/energy-advisor",
+  "/contact",
 ];
-const STANDALONE_DARK_ROUTES = ["/about", "/blog"];
+const STANDALONE_DARK_ROUTES = ["/about", "/blog", "/energy-advisor", "/contact"];
 
 /** Renders an internal (<Link>) or external (<a>) nav link consistently. */
 function NavLink({
@@ -39,37 +42,9 @@ function NavLink({
 }
 
 function Logo({ dark }: { dark: boolean }) {
-  // The Figma logo SVGs are exported with width/height="100%" and
-  // preserveAspectRatio="none", so they have NO intrinsic size — BOTH dimensions
-  // must be pinned or they blow up to their natural render size. Sizes below
-  // match the Figma lockup (mark 42×47.35, wordmark 87.73×18.36, tagline ~9.85px).
-  return (
-    <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="Voltra home">
-      <img
-        src={dark ? assets.logo.footerMark : assets.logo.mark}
-        alt=""
-        width={41}
-        height={46}
-        className="h-[46px] w-[41px] shrink-0"
-      />
-      <span className="flex flex-col items-center gap-[3px]">
-        <img
-          src={dark ? assets.logo.footerWordmark : assets.logo.wordmark}
-          alt="Voltra"
-          width={86}
-          height={18}
-          className="h-[18px] w-[86px] shrink-0"
-        />
-        <span
-          className={`whitespace-nowrap font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] ${
-            dark ? "text-white/80" : "text-brand"
-          }`}
-        >
-          {FOOTER.tagline}
-        </span>
-      </span>
-    </Link>
-  );
+  // `dark` means the nav is sitting on the blue hero band, so the lockup needs
+  // its white colourway — the blue one would vanish against it.
+  return <BrandLockup onDark={dark} />;
 }
 
 /** White "Our Products" pill (blue text) used on dark headers. */
