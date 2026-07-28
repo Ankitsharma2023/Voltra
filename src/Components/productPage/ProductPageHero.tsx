@@ -86,12 +86,14 @@ export default function ProductPageHero({
           />
         )}
 
-        {/* Intro line — separated from the dark banner, centered on the light page */}
-        <div className="relative mx-auto max-w-page px-6 pt-14 md:px-12 lg:px-20">
+        {/* Intro line — separated from the dark banner, centered on the light page.
+            Sized as a large statement so it fills the frame and the product image
+            below stays out of the same viewport. */}
+        <div className="relative mx-auto max-w-page px-6 pt-16 pb-6 md:px-12 lg:px-20 lg:pt-24 lg:pb-10">
           <ScrollRevealText
             text={hero.subtitle}
             maxOpacity={subtitleMaxOpacity}
-            className="mx-auto max-w-[680px] text-center text-lg leading-relaxed"
+            className="mx-auto max-w-[960px] text-center text-2xl leading-snug sm:text-3xl lg:text-[38px]/[1.35]"
           />
         </div>
 

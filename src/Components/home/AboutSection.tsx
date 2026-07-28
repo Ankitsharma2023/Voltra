@@ -10,8 +10,16 @@ import PillButton from "./ui/PillButton";
  * sits over the dissolved area. Stacks to a plain image on mobile.
  */
 
-// Photo fades out toward the right into the page background.
-const IMAGE_FADE = "linear-gradient(90deg, #000 0%, #000 45%, transparent 92%)";
+// Photo fades out toward the right AND the bottom into the page background.
+// Two gradients composited (intersection) so both edges dissolve — no hard cut.
+const IMAGE_FADE_RIGHT = "linear-gradient(90deg, #000 0%, #000 45%, transparent 92%)";
+const IMAGE_FADE_BOTTOM = "linear-gradient(180deg, #000 0%, #000 68%, transparent 100%)";
+const IMAGE_MASK = {
+  WebkitMaskImage: `${IMAGE_FADE_RIGHT}, ${IMAGE_FADE_BOTTOM}`,
+  maskImage: `${IMAGE_FADE_RIGHT}, ${IMAGE_FADE_BOTTOM}`,
+  WebkitMaskComposite: "source-in",
+  maskComposite: "intersect",
+} as const;
 
 export default function AboutSection() {
   return (
@@ -22,7 +30,7 @@ export default function AboutSection() {
           src={assets.about.windSolar}
           alt="Wind turbines and solar panels along a waterfront"
           className="h-full w-full object-cover"
-          style={{ WebkitMaskImage: IMAGE_FADE, maskImage: IMAGE_FADE }}
+          style={IMAGE_MASK}
         />
       </div>
 
