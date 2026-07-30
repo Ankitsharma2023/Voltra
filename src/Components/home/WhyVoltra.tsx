@@ -13,6 +13,10 @@ const featureImages: Record<string, string> = {
   smartOandM: assets.why.smartOandM,
 };
 
+// Dissolves the image into the card from its bottom-right anchor, so the
+// baked-in grey/white photo background has no visible rectangular edge.
+const IMAGE_MASK = "radial-gradient(125% 125% at 100% 100%, #000 48%, transparent 82%)";
+
 function FeatureCard({
   title,
   body,
@@ -23,16 +27,19 @@ function FeatureCard({
   image?: string;
 }) {
   return (
-    <div className="relative min-h-[232px] overflow-hidden rounded-[22px] bg-gradient-to-br from-white to-[#e7ecfb] p-8 shadow-[0_14px_36px_-16px_rgba(3,10,97,0.4)] backdrop-blur-sm">
-      <div className="relative z-10 max-w-[56%]">
+    <div className="relative min-h-[240px] overflow-hidden rounded-[22px] bg-gradient-to-br from-white to-[#eaeffb] p-8 shadow-[0_14px_36px_-16px_rgba(3,10,97,0.4)]">
+      <div className="relative z-10 max-w-[54%]">
         <h3 className="text-[26px] font-medium leading-tight text-navy">{title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-navy/55">{body}</p>
       </div>
       {image && (
+        // `mix-blend-multiply` drops the image's light background into the card;
+        // the radial mask feathers the remaining edges so nothing reads as a box.
         <img
           src={image}
           alt=""
-          className="pointer-events-none absolute bottom-0 right-0 h-[86%] w-[54%] object-contain object-right-bottom"
+          style={{ WebkitMaskImage: IMAGE_MASK, maskImage: IMAGE_MASK }}
+          className="pointer-events-none absolute bottom-0 right-0 h-[74%] w-[44%] object-contain object-right-bottom mix-blend-multiply"
         />
       )}
     </div>
