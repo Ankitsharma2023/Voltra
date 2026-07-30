@@ -64,8 +64,11 @@ function DarkPrimaryCta({ to, label }: { to: string; label: string }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-  const dark = DARK_HEADER_ROUTES.includes(pathname);
-  const standalone = STANDALONE_DARK_ROUTES.includes(pathname);
+  // Individual blog articles (/blog/:slug) share the blog index's standalone
+  // dark header treatment.
+  const isBlogArticle = pathname.startsWith("/blog/");
+  const dark = DARK_HEADER_ROUTES.includes(pathname) || isBlogArticle;
+  const standalone = STANDALONE_DARK_ROUTES.includes(pathname) || isBlogArticle;
 
   const linkCls = dark
     ? "flex items-center gap-1 text-sm text-white/80 transition-colors hover:text-white"

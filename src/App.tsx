@@ -12,6 +12,7 @@ import LithiumBatteries from "./Components/LithiumBatteries";
 import GridScaleBess from "./Components/GridScaleBess";
 import EnergyAdvisor from "./Components/EnergyAdvisor";
 import Blog from "./Components/Blog";
+import BlogArticle from "./Components/blog/BlogArticle";
 import Solutions from "./Components/Solutions";
 import Contact from "./Components/Contact";
 import Technology from "./Components/Technology";
@@ -36,6 +37,7 @@ function App() {
           <Route path="/grid-scale-bess" element={<GridScaleBess />} />
           <Route path="/energy-advisor" element={<EnergyAdvisor />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/product" element={<Solutions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/technology" element={<Technology />} />

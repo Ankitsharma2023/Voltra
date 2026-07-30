@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import { BLOG_PAGE } from "../../constants/site";
 import { assets } from "../../constants/assets";
 
@@ -12,12 +11,14 @@ const thumbs: Record<string, string> = {
 };
 
 function PostCard({
+  to,
   image,
   date,
   title,
   excerpt,
   tags,
 }: {
+  to: string;
   image: string;
   date: string;
   title: string;
@@ -25,7 +26,7 @@ function PostCard({
   tags: string[];
 }) {
   return (
-    <article className="group flex flex-col">
+    <Link to={to} className="group flex flex-col">
       <div className="overflow-hidden rounded-3xl">
         <img
           src={image}
@@ -35,7 +36,7 @@ function PostCard({
       </div>
       <div className="flex flex-1 flex-col gap-3 pt-5">
         <span className="text-xs text-navy/40">{date}</span>
-        <h3 className="text-xl font-medium leading-snug text-navy">{title}</h3>
+        <h3 className="text-xl font-medium leading-snug text-navy transition-colors group-hover:text-brand">{title}</h3>
         <p className="line-clamp-3 text-sm leading-relaxed text-navy/55">{excerpt}</p>
         <div className="mt-auto flex flex-wrap gap-2 pt-3">
           {tags.map((tag) => (
@@ -45,7 +46,7 @@ function PostCard({
           ))}
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
 
@@ -53,7 +54,7 @@ function PostCard({
  * BlogList — the "Explore Insights" grid of post cards with a View More link.
  */
 export default function BlogList() {
-  const { title, subtitle, cta, posts } = BLOG_PAGE.list;
+  const { title, subtitle, posts } = BLOG_PAGE.list;
   return (
     <section className="w-full py-20 lg:py-28">
       <div className="mx-auto max-w-content px-6 md:px-12 lg:px-8">
@@ -66,6 +67,7 @@ export default function BlogList() {
           {posts.map((post) => (
             <PostCard
               key={post.id}
+              to={`/blog/${post.slug}`}
               image={thumbs[post.imageKey]}
               date={post.date}
               title={post.title}
@@ -73,16 +75,6 @@ export default function BlogList() {
               tags={post.tags}
             />
           ))}
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            to={cta.to}
-            className="inline-flex items-center gap-1 text-sm font-medium text-brand transition-all hover:gap-2"
-          >
-            {cta.label}
-            <ChevronRight size={16} strokeWidth={2.2} />
-          </Link>
         </div>
       </div>
     </section>
