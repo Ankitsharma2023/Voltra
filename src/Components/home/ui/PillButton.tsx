@@ -22,13 +22,15 @@ type Size = "sm" | "md" | "lg";
 type IconKind = "arrow" | "download" | "none";
 
 interface PillButtonProps {
-  to: string;
+  to?: string;
   label: string;
   variant?: Variant;
   size?: Size;
   icon?: IconKind;
   iconPosition?: "left" | "right";
   className?: string;
+  /** When set, the button acts as an action (renders a <button>) instead of a link. */
+  onClick?: () => void;
 }
 
 interface SizeCfg {
@@ -81,6 +83,7 @@ export default function PillButton({
   size = "md",
   icon = "arrow",
   className = "",
+  onClick,
 }: PillButtonProps) {
   const s = cfg[size];
 
@@ -123,10 +126,19 @@ export default function PillButton({
     );
   }
 
-  const isInternal = to.startsWith("/");
+  // Action button (e.g. opens the brochure overlay) — no navigation.
+  if (onClick) {
+    return (
+      <button type="button" onClick={onClick} className={`inline-flex ${className}`}>
+        {inner}
+      </button>
+    );
+  }
+
+  const isInternal = (to ?? "").startsWith("/");
   if (isInternal) {
     return (
-      <Link to={to} className={`inline-flex ${className}`}>
+      <Link to={to!} className={`inline-flex ${className}`}>
         {inner}
       </Link>
     );

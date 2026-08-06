@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import PillButton from "./ui/PillButton";
+import BrochureModal from "./ui/BrochureModal";
 
 /** Shape mirrors the product objects in constants/site.js. */
 export interface Product {
@@ -30,6 +31,8 @@ export default function ProductCard({
   /** Inverter renders are portrait — a taller stage lets them fill the card. */
   tall?: boolean;
 }) {
+  const [brochureOpen, setBrochureOpen] = useState(false);
+
   return (
     <article className="flex flex-col overflow-hidden rounded-card bg-white shadow-card">
       {/* Product stage — square for batteries, taller for portrait inverters */}
@@ -75,14 +78,16 @@ export default function ProductCard({
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-1">
           <PillButton to={product.primaryCta.to} label={product.primaryCta.label} variant="solid" size="sm" />
           <PillButton
-            to={product.secondaryCta.to}
             label={product.secondaryCta.label}
             variant="outline"
             size="sm"
             icon="download"
+            onClick={() => setBrochureOpen(true)}
           />
         </div>
       </div>
+
+      <BrochureModal open={brochureOpen} onClose={() => setBrochureOpen(false)} />
     </article>
   );
 }
