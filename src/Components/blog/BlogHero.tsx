@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 import { BLOG_PAGE } from "../../constants/site";
 import { assets } from "../../constants/assets";
 import Eyebrow from "../home/ui/Eyebrow";
-import PillButton from "../home/ui/PillButton";
 
 /** Small "Read article →" style text link (internal or external). */
 function TextLink({ to, label }: { to: string; label: string }) {
@@ -45,7 +44,6 @@ export default function BlogHero() {
           {hero.title}
         </h1>
         <p className="max-w-[620px] text-base leading-relaxed text-navy/60">{hero.subtitle}</p>
-        <PillButton to={hero.cta.to} label={hero.cta.label} variant="solid" size="lg" iconPosition="left" />
       </div>
 
       {/* Featured article */}

@@ -17,13 +17,12 @@ export default function HybridInverters() {
         content={{ hero: HYBRID_PAGE.hero, why: HYBRID_PAGE.why }}
         heroImage={assets.hybridPage.heroInverter}
         imageAlt="Voltra hybrid inverter"
-        backdropImage={assets.hybridPage.solarBackdrop}
       />
       <ProductSolutions
         eyebrow={HYBRID_PAGE.range.eyebrow}
         title={HYBRID_PAGE.range.title}
         products={HYBRID_PAGE.range.products}
-        images={[assets.hybridPage.cardFront, assets.hybridPage.cardAngle]}
+        tall
       />
       <DarkFeatures
         title={HYBRID_PAGE.features.title}

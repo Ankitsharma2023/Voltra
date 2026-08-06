@@ -9,6 +9,8 @@ export interface Product {
   badge?: string;
   capacities: string;
   description?: string;
+  /** Per-product photo; overrides the cycled `images` array in ProductSolutions. */
+  image?: string;
   specs: { label: string; value: string }[];
   primaryCta: { label: string; to: string };
   secondaryCta: { label: string; to: string };
@@ -18,15 +20,24 @@ export interface Product {
  * ProductCard — used by both the Battery and Inverter solution rows. Product
  * render sits on a soft blue stage; specs + CTAs sit on white below.
  */
-export default function ProductCard({ product, image }: { product: Product; image: string }) {
+export default function ProductCard({
+  product,
+  image,
+  tall = false,
+}: {
+  product: Product;
+  image: string;
+  /** Inverter renders are portrait — a taller stage lets them fill the card. */
+  tall?: boolean;
+}) {
   return (
     <article className="flex flex-col overflow-hidden rounded-card bg-white shadow-card">
-      {/* Product stage */}
-      <div className="relative aspect-[4/3] w-full bg-gradient-to-b from-[#cddaf3] to-[#eef3fb]">
+      {/* Product stage — square for batteries, taller for portrait inverters */}
+      <div className={`relative w-full bg-gradient-to-b from-[#cddaf3] to-[#eef3fb] ${tall ? "aspect-[4/5]" : "aspect-square"}`}>
         <img
           src={image}
           alt={`${product.brand} ${product.name}`}
-          className="absolute inset-0 h-full w-full object-contain p-4"
+          className="absolute inset-0 h-full w-full object-contain"
         />
       </div>
 
@@ -39,7 +50,7 @@ export default function ProductCard({ product, image }: { product: Product; imag
               <span className="font-normal">{product.name}</span>
             </h3>
             {product.badge && (
-              <span className="rounded-full bg-brand/10 px-2.5 py-0.5 text-xs font-bold uppercase text-brand">
+              <span className="shrink-0 whitespace-nowrap rounded-full bg-brand px-2.5 py-0.5 text-xs font-bold uppercase text-white">
                 {product.badge}
               </span>
             )}

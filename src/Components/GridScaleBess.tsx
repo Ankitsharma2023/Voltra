@@ -16,7 +16,6 @@ export default function GridScaleBess() {
         content={{ hero: BESS_PAGE.hero, why: BESS_PAGE.why }}
         heroImage={assets.bessPage.heroCabinet}
         imageAlt="Voltra VOLT-LINK grid-scale BESS cabinet"
-        backdropImage={assets.bessPage.solarBackdrop}
       />
       <DarkFeatures
         title={BESS_PAGE.features.title}

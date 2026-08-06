@@ -15,11 +15,14 @@ export default function ProductSolutions({
   products,
   eyebrow,
   images = defaultImages,
+  tall = false,
 }: {
   title: string;
   products: Product[];
   eyebrow?: string;
   images?: string[];
+  /** Use a taller product stage (for portrait inverter renders). */
+  tall?: boolean;
 }) {
   return (
     <section className="w-full py-16 lg:py-20">
@@ -30,7 +33,7 @@ export default function ProductSolutions({
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product, i) => (
-            <ProductCard key={product.id} product={product} image={images[i % images.length]} />
+            <ProductCard key={product.id} product={product} image={product.image ?? images[i % images.length]} tall={tall} />
           ))}
         </div>
       </div>

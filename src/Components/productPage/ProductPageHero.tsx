@@ -98,13 +98,13 @@ export default function ProductPageHero({
         </div>
 
         {/* Why … block (kept above the backdrop so the inverter sits IN the solar) */}
-        <div className="relative z-10 mx-auto grid max-w-page items-center gap-10 px-6 pb-8 pt-12 md:px-12 lg:grid-cols-2 lg:px-20 lg:pt-16">
+        <div className="relative z-10 mx-auto grid max-w-page items-center gap-10 px-6 pb-8 pt-12 md:px-12 lg:grid-cols-[0.8fr_1.2fr] lg:px-20 lg:pt-16">
           <div className="flex justify-center lg:justify-start">
             <img src={heroImage} alt={imageAlt} className="h-[360px] w-auto object-contain lg:h-[460px]" />
           </div>
           <div className="flex flex-col items-start gap-6 lg:items-end lg:text-right">
             <Eyebrow bar="right">{why.eyebrow}</Eyebrow>
-            <h2 className="max-w-[560px] text-3xl font-medium leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-[54px]/[1.15]">
+            <h2 className="max-w-[720px] text-3xl font-medium leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-[46px]/[1.15]">
               {why.title}
             </h2>
             <p className="max-w-[500px] text-base leading-relaxed text-navy/60">{why.body}</p>

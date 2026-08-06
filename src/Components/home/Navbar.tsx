@@ -15,6 +15,7 @@ import BrandLockup from "./ui/BrandLockup";
  */
 const DARK_HEADER_ROUTES = [
   "/about",
+  "/products",
   "/hybrid-inverters",
   "/lithium-batteries",
   "/grid-scale-bess",

@@ -23,7 +23,7 @@ const Home = () => {
       <AboutSection />
       <ProductSolutions title={BATTERY_SOLUTIONS.title} products={BATTERY_SOLUTIONS.products} />
       <OfferingsCarousel />
-      <ProductSolutions title={INVERTER_SOLUTIONS.title} products={INVERTER_SOLUTIONS.products} />
+      <ProductSolutions title={INVERTER_SOLUTIONS.title} products={INVERTER_SOLUTIONS.products} tall />
       <WhyVoltra />
       <MissionStats />
       <FaqCta />

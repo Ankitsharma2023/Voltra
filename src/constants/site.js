@@ -34,7 +34,7 @@ export const ROUTES = {
 export const NAV = {
   links: [
     { label: "About", to: ROUTES.about },
-    { label: "Hybrid Inverters", to: ROUTES.hybridInverters, hasCaret: true },
+    { label: "Hybrid Inverters", to: ROUTES.hybridInverters },
     { label: "Lithium Batteries", to: ROUTES.lithiumBatteries },
     { label: "BESS", to: ROUTES.gridBess },
     { label: "Energy Advisor", to: ROUTES.energyAdvisor },
@@ -69,36 +69,169 @@ export const ABOUT = {
 };
 
 /**
- * Product card model. The three cards in each row share this shape; today they
- * carry identical placeholder specs (as in the Figma). Edit / add entries here.
+ * ============================================================================
+ *  PRODUCT CATALOG — mirrors the product cards in the Figma "Voltra Website"
+ *  file (Lithium Batteries + Hybrid Inverters frames). Names, specs and badges
+ *  are taken from Figma; each product uses its official render exported from
+ *  Figma into /public/voltra/products.
+ *  Card shape: { id, brand, name, badge?, capacities, image, specs[],
+ *  primaryCta, secondaryCta } (see ProductCard.tsx).
+ * ============================================================================
  */
-const sampleProductSpecs = [
-  { label: "Cell Type", value: "LFP" },
-  { label: "Available Energy", value: "51.2 kWh" },
-  { label: "Nominal Voltage", value: "51.2 V" },
-  { label: "Efficiency", value: "≥ 97%" },
-];
-
-const makeProduct = (id) => ({
-  id,
-  brand: "VOLT",
-  name: "LVW 16S",
-  badge: "PRO",
-  capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh",
-  specs: sampleProductSpecs,
-  // Same destinations as existing CTAs: order → contact, brochure → products.
+const CTA = {
   primaryCta: { label: "Order Now", to: ROUTES.contact },
   secondaryCta: { label: "View Brochure", to: ROUTES.products },
-});
+};
+const PHOTO = "/voltra/products/";
 
+// ---- Batteries (Figma "Lithium Batteries" product range) ----
+export const RESIDENTIAL_BATTERIES = [
+  {
+    id: "lvw-16s-ultra", brand: "VOLT", name: "LVW 16S", badge: "IP65", capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh",
+    image: "/voltra/product-unit-front.png",
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "5.12 kWh" },
+      { label: "Max. Output Power", value: "5 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-16s", brand: "VOLT", name: "LVW 16S", badge: "IP65", capacities: "5.12 kWh",
+    image: `${PHOTO}lvw-16s.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "5.12 kWh" },
+      { label: "Max. Output Power", value: "1.2 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S PRO", badge: "PRO", capacities: "2.56 kWh",
+    image: `${PHOTO}lvw-4s-pro.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "2.56 kWh" },
+      { label: "Max. Output Power", value: "2.7 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-8s", brand: "VOLT", name: "LVW 8S", capacities: "2.56 kWh",
+    image: `${PHOTO}lvw-8s.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "2.56 kWh" },
+      { label: "Max. Output Power", value: "2.4 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-8s-pro", brand: "VOLT", name: "LVW 8S PRO", badge: "PRO", capacities: "5.12 kWh",
+    image: `${PHOTO}lvw-8s-pro.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "5.12 kWh" },
+      { label: "Max. Output Power", value: "3.6 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lv200", brand: "VOLT", name: "LV200", capacities: "10.24 kWh",
+    image: `${PHOTO}lv200.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "10.24 kWh" },
+      { label: "Max. Output Power", value: "10 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lv314", brand: "VOLT", name: "LV314", capacities: "16.07 kWh",
+    image: `${PHOTO}lv314.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "16.07 kWh" },
+      { label: "Max. Output Power", value: "9.72 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
+    image: `${PHOTO}lvw-4s.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "2.56 kWh" },
+      { label: "Max. Output Power", value: "2.4 kW" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "fusion-1600", brand: "VOLT", name: "FUSION 1600", badge: "PORTABLE", capacities: "1280 Wh",
+    image: `${PHOTO}fusion-1600.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "1280 Wh" },
+      { label: "Apparent Power", value: "1250 VA" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+];
+
+// ---- Hybrid Inverters (Figma "Hybrid Inverters" product range) ----
+export const HYBRID_INVERTERS = [
+  {
+    id: "hi-single-3kw", brand: "VOLT", name: "Single Phase HI", badge: "IP66", capacities: "3 kW · Single Phase",
+    image: `${PHOTO}hi-single-3kw.jpg`,
+    specs: [
+      { label: "Rated AC Output Power", value: "3 kW" },
+      { label: "Maximum Efficiency", value: "97.6%" },
+      { label: "Maximum PV Input Power", value: "4.8 kW" },
+      { label: "Battery Voltage Range", value: "220 / 230 V" },
+    ], ...CTA,
+  },
+  {
+    id: "hi-single-k1p", brand: "VOLT", name: "Single Phase HI", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
+    image: `${PHOTO}hi-single-k1p.jpg`,
+    specs: [
+      { label: "Rated AC Output Power", value: "3 – 10 kW" },
+      { label: "Maximum Efficiency", value: "97.6%" },
+      { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
+      { label: "Battery Voltage Range", value: "40 – 60 V" },
+    ], ...CTA,
+  },
+  {
+    id: "hi-three-k3p", brand: "VOLT", name: "Three Phase HI", badge: "K3P", capacities: "0506 | 0608 | 0810 | 1012 | 1215 | 1520 | 2025",
+    image: `${PHOTO}hi-three-k3p.jpg`,
+    specs: [
+      { label: "Rated AC Output Power", value: "5 – 20 kW" },
+      { label: "Maximum Efficiency", value: "97.6%" },
+      { label: "Maximum PV Input Power", value: "7.5 – 32 kW" },
+      { label: "Battery Voltage Range", value: "40 – 60 V" },
+    ], ...CTA,
+  },
+  {
+    id: "hi-lvw16s", brand: "VOLT", name: "LVW 16S PRO", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
+    image: `${PHOTO}hi-lvw16s.jpg`,
+    specs: [
+      { label: "Rated AC Output Power", value: "3 – 10 kW" },
+      { label: "Maximum Efficiency", value: "97.6%" },
+      { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
+      { label: "Battery Voltage Range", value: "40 – 60 V" },
+    ], ...CTA,
+  },
+];
+
+// Home page rows — exactly the 3 cards shown in the Figma landing frame's
+// "Our Battery Solutions" and "Our Inverter Solutions" rows.
 export const BATTERY_SOLUTIONS = {
   title: "Our Battery Solutions for your home",
-  products: [makeProduct("bat-1"), makeProduct("bat-2"), makeProduct("bat-3")],
+  products: RESIDENTIAL_BATTERIES.slice(0, 3),
 };
 
 export const INVERTER_SOLUTIONS = {
   title: "Our Inverter Solutions for your home",
-  products: [makeProduct("inv-1"), makeProduct("inv-2"), makeProduct("inv-3")],
+  products: HYBRID_INVERTERS.slice(0, 3),
 };
 
 export const OFFERINGS = {
@@ -281,23 +414,6 @@ export const ABOUT_PAGE = {
  *  HYBRID INVERTERS PAGE (Figma frame "Hybrid Inverters", node 1:977)
  * ============================================================================
  */
-const makeHybridProduct = (id) => ({
-  id,
-  brand: "VOLT",
-  name: "HYB 3K",
-  badge: "3 kW",
-  capacities: "3 kW · Single Phase",
-  description: "Compact rooftop hybrid for Indian homes with 2 MPPTs and seamless backup.",
-  specs: [
-    { label: "MPPT", value: "2 × MPPT" },
-    { label: "Output", value: "230 V AC" },
-    { label: "Battery", value: "48 V battery" },
-    { label: "Monitoring", value: "Wi-Fi monitoring" },
-  ],
-  primaryCta: { label: "Order Now", to: ROUTES.contact },
-  secondaryCta: { label: "View Brochure", to: ROUTES.products },
-});
-
 export const HYBRID_PAGE = {
   hero: {
     eyebrow: "Hybrid Inverters",
@@ -312,9 +428,9 @@ export const HYBRID_PAGE = {
       "Wide input voltage, surge protection, dust-sealed enclosures and a smart BMS handshake make Voltra hybrid inverters the most reliable choice for Tier-1 to Tier-4 cities.",
     chips: [
       { label: "Battery-ready" },
-      { label: "1Φ & 3Φ" },
-      { label: "3 kW – 50 kW", active: true },
-      { label: "IP65 outdoor" },
+      { label: "Single-phase" },
+      { label: "3 – 6 kW", active: true },
+      { label: "IP66 outdoor" },
       { label: "App monitoring" },
       { label: "On-grid + Off-grid" },
     ],
@@ -322,14 +438,7 @@ export const HYBRID_PAGE = {
   range: {
     eyebrow: "Product range",
     title: "Sized for every load.",
-    products: [
-      makeHybridProduct("hyb-1"),
-      makeHybridProduct("hyb-2"),
-      makeHybridProduct("hyb-3"),
-      makeHybridProduct("hyb-4"),
-      makeHybridProduct("hyb-5"),
-      makeHybridProduct("hyb-6"),
-    ],
+    products: HYBRID_INVERTERS,
   },
   features: {
     title: "Engineered for the way India uses energy.",
@@ -352,29 +461,12 @@ export const HYBRID_PAGE = {
  *  LITHIUM BATTERIES PAGE (Figma frame "Lithium Batteries", node 1:1364)
  * ============================================================================
  */
-const makeBattery = (id, name, capacity, useCase) => ({
-  id,
-  brand: "VOLT",
-  name,
-  badge: capacity,
-  capacities: `${capacity} · LFP`,
-  description: useCase,
-  specs: [
-    { label: "Cell Type", value: "LFP" },
-    { label: "Usable Energy", value: capacity },
-    { label: "Nominal Voltage", value: "51.2 V" },
-    { label: "Efficiency", value: "≥ 97%" },
-  ],
-  primaryCta: { label: "Order Now", to: ROUTES.contact },
-  secondaryCta: { label: "View Brochure", to: ROUTES.products },
-});
-
 export const LITHIUM_PAGE = {
   hero: {
     eyebrow: "Li-ion Batteries",
     title: "Safe, long-life LFP storage for every Indian home and business.",
     subtitle:
-      "From 2.5 kWh wall-mount units to 40 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
+      "From 1.28 kWh portable units to 40 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
   },
   why: {
     eyebrow: "Why LFP",
@@ -383,8 +475,8 @@ export const LITHIUM_PAGE = {
       "Lithium Iron Phosphate (LFP) is the chemistry of choice for stationary energy storage worldwide. Thermally stable, non-flammable and far longer-lived than NMC — perfect for the Indian climate.",
     chips: [
       { label: "Non-flammable" },
-      { label: "1Φ & 3Φ" },
-      { label: "2.5 – 40 kWh", active: true },
+      { label: "12.8 – 51.2 V" },
+      { label: "1.28 – 40.96 kWh", active: true },
       { label: "IP65 outdoor" },
       { label: "App monitoring" },
       { label: "Stackable" },
@@ -392,15 +484,8 @@ export const LITHIUM_PAGE = {
   },
   range: {
     eyebrow: "Product range",
-    title: "Modular capacity from 2.5 kWh to 40 kWh.",
-    products: [
-      makeBattery("lfp-1", "WALL 2.5", "2.5 kWh", "Studio apartments, partial backup."),
-      makeBattery("lfp-2", "WALL 5", "5 kWh", "1–2 BHK homes with daily solar shifting."),
-      makeBattery("lfp-3", "STACK 10", "10 kWh", "Villas and full-home whole-day backup."),
-      makeBattery("lfp-4", "STACK 20", "20 kWh", "Large homes, shops and small offices."),
-      makeBattery("lfp-5", "TOWER 30", "30 kWh", "SMEs, clinics and light commercial loads."),
-      makeBattery("lfp-6", "TOWER 40", "40 kWh", "Commercial buildings and micro-grids."),
-    ],
+    title: "Modular capacity from 1.28 kWh to 40 kWh.",
+    products: RESIDENTIAL_BATTERIES,
   },
   features: {
     title: "Designed for safety. Built to last.",

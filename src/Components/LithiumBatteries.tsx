@@ -17,13 +17,11 @@ export default function LithiumBatteries() {
         content={{ hero: LITHIUM_PAGE.hero, why: LITHIUM_PAGE.why }}
         heroImage={assets.lithiumPage.heroBattery}
         imageAlt="Voltra LFP lithium battery"
-        backdropImage={assets.lithiumPage.solarBackdrop}
       />
       <ProductSolutions
         eyebrow={LITHIUM_PAGE.range.eyebrow}
         title={LITHIUM_PAGE.range.title}
         products={LITHIUM_PAGE.range.products}
-        images={[assets.lithiumPage.cardFront, assets.lithiumPage.cardAngle]}
       />
       <DarkFeatures
         title={LITHIUM_PAGE.features.title}
