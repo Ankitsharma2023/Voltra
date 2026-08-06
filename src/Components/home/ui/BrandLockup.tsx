@@ -33,7 +33,7 @@ export default function BrandLockup({
         alt="Voltra"
         width={130}
         height={46}
-        className="h-[42px] w-auto shrink-0 select-none"
+        className="h-[42px] w-auto shrink-0 select-none self-start"
       />
       <span
         className={`whitespace-nowrap pl-[34%] font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] ${
