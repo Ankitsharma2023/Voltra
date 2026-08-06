@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { NAV } from "../../constants/site";
@@ -65,6 +65,28 @@ function DarkPrimaryCta({ to, label }: { to: string; label: string }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
+
+  // Close the mobile menu on outside click / Escape while it's open.
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent | TouchEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("touchstart", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("touchstart", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  // Close the menu whenever the route changes (e.g. a CTA navigates away).
+  useEffect(() => setOpen(false), [pathname]);
+
   // Individual blog articles (/blog/:slug) share the blog index's standalone
   // dark header treatment.
   const isBlogArticle = pathname.startsWith("/blog/");
@@ -77,6 +99,7 @@ export default function Navbar() {
 
   return (
     <header
+      ref={headerRef}
       className={`relative z-40 w-full overflow-hidden ${
         dark
           ? `bg-gradient-to-r from-royal to-navy-deep ${standalone ? "rounded-b-[40px] pb-16" : ""}`

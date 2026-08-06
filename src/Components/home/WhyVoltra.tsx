@@ -27,9 +27,9 @@ function FeatureCard({
   image?: string;
 }) {
   return (
-    <div className="relative min-h-[240px] overflow-hidden rounded-[22px] bg-gradient-to-br from-white to-[#eaeffb] p-8 shadow-[0_14px_36px_-16px_rgba(3,10,97,0.4)]">
-      <div className="relative z-10 max-w-[54%]">
-        <h3 className="text-[26px] font-medium leading-tight text-navy">{title}</h3>
+    <div className="relative min-h-[210px] overflow-hidden rounded-[22px] bg-gradient-to-br from-white to-[#eaeffb] p-6 shadow-[0_14px_36px_-16px_rgba(3,10,97,0.4)] sm:min-h-[240px] sm:p-8">
+      <div className="relative z-10 max-w-[62%] sm:max-w-[56%]">
+        <h3 className="text-[22px] font-medium leading-tight text-navy sm:text-[26px]">{title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-navy/55">{body}</p>
       </div>
       {image && (
@@ -39,7 +39,7 @@ function FeatureCard({
           src={image}
           alt=""
           style={{ WebkitMaskImage: IMAGE_MASK, maskImage: IMAGE_MASK }}
-          className="pointer-events-none absolute bottom-0 right-0 h-[74%] w-[44%] object-contain object-right-bottom mix-blend-multiply"
+          className="pointer-events-none absolute bottom-0 right-0 h-[66%] w-[40%] object-contain object-right-bottom mix-blend-multiply sm:h-[74%] sm:w-[44%]"
         />
       )}
     </div>
