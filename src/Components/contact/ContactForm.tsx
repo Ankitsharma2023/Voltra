@@ -5,23 +5,14 @@ import { CONTACT_PAGE } from "../../constants/site";
 /**
  * ContactForm — "Send us a message" card (Figma frame "Contact", node 62:161).
  *
- * ── Submission contract ──────────────────────────────────────────────────────
- * This posts to the SAME Google Apps Script endpoint the previous contact form
- * used, via the SAME hidden-iframe technique. That is deliberate, not legacy
- * cruft: Apps Script `/exec` does not return CORS headers, so a `fetch()` from
- * the browser is blocked. A form POST targeting a hidden iframe sidesteps CORS
- * entirely — at the cost of not being able to read the response, which is why
- * success is assumed after a short delay.
- *
- * The script reads four parameters: name, contact, email, query. The richer
- * field set in the design is mapped onto those so existing sheet columns keep
- * filling, and the new fields are ALSO sent under their own names so the script
- * can start reading them later without a frontend change.
- *
- *   Full Name -> name       Phone -> contact       Email -> email
- *   Company + Interest + Message -> query (composed, so nothing is lost)
- * ─────────────────────────────────────────────────────────────────────────────
+ * Submissions POST to Web3Forms (https://web3forms.com). It supports CORS and
+ * returns JSON, so we can `fetch()` directly and confirm real success/failure
+ * (no hidden-iframe guessing). The access key is a public, publishable key.
+ * Delivery target (recipient email) is configured in the Web3Forms dashboard.
  */
+
+// Public Web3Forms access key — safe to ship in client code.
+const WEB3FORMS_ACCESS_KEY = "2b262290-5014-4456-b27c-2ab76df46beb";
 
 interface Fields {
   fullName: string;
@@ -41,17 +32,6 @@ const EMPTY: Fields = {
   message: "",
 };
 
-/** Flatten the extra fields into the single `query` column the script reads. */
-function composeQuery(f: Fields) {
-  return [
-    f.interest && `Interest: ${f.interest}`,
-    f.company && `Company: ${f.company}`,
-    f.message && `\n${f.message}`,
-  ]
-    .filter(Boolean)
-    .join("\n");
-}
-
 export default function ContactForm() {
   const cfg = CONTACT_PAGE.form;
   const [fields, setFields] = useState<Fields>(EMPTY);
@@ -61,61 +41,36 @@ export default function ContactForm() {
   const set = (key: keyof Fields, value: string) =>
     setFields((prev) => ({ ...prev, [key]: value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
     setStatus("idle");
 
+    // Capture the form now — React nullifies e.currentTarget after the await.
+    const form = e.currentTarget;
+
     try {
-      // Reuse one hidden iframe across submissions.
-      const frameId = "voltra-contact-sink";
-      let frame = document.getElementById(frameId) as HTMLIFrameElement | null;
-      if (!frame) {
-        frame = document.createElement("iframe");
-        frame.id = frameId;
-        frame.name = frameId;
-        frame.style.display = "none";
-        document.body.appendChild(frame);
-      }
+      const formData = new FormData(form);
+      formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      formData.append("subject", `New enquiry — ${fields.fullName || "Voltra website"}`);
+      formData.append("from_name", "Voltra Website");
 
-      const payload: Record<string, string> = {
-        // The four the Apps Script already reads — do not rename.
-        name: fields.fullName,
-        contact: fields.phone,
-        email: fields.email,
-        query: composeQuery(fields),
-        // Sent alongside so the script can adopt them without a frontend change.
-        company: fields.company,
-        phone: fields.phone,
-        interest: fields.interest,
-        message: fields.message,
-      };
-
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = cfg.endpoint;
-      form.target = frameId;
-      Object.entries(payload).forEach(([key, value]) => {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = key;
-        input.value = value;
-        form.appendChild(input);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
       });
+      const data = await response.json();
 
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
-
-      // The iframe response is opaque (cross-origin), so we cannot confirm
-      // receipt — assume success after the request has had time to land.
-      window.setTimeout(() => {
+      if (data.success) {
         setStatus("sent");
         setFields(EMPTY);
-        setSending(false);
-      }, 1500);
+        form.reset();
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
+    } finally {
       setSending(false);
     }
   };
@@ -143,9 +98,13 @@ export default function ContactForm() {
           )}
 
           <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-7">
+            {/* Web3Forms honeypot — bots fill this; humans never see it. */}
+            <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
+
             <div className="grid gap-7 sm:grid-cols-2">
               <Field
                 label="Full Name"
+                name="name"
                 required
                 value={fields.fullName}
                 onChange={(v) => set("fullName", v)}
@@ -153,12 +112,14 @@ export default function ContactForm() {
               />
               <Field
                 label="Company"
+                name="company"
                 value={fields.company}
                 onChange={(v) => set("company", v)}
                 autoComplete="organization"
               />
               <Field
                 label="Email"
+                name="email"
                 required
                 type="email"
                 value={fields.email}
@@ -167,6 +128,7 @@ export default function ContactForm() {
               />
               <Field
                 label="Phone"
+                name="phone"
                 type="tel"
                 value={fields.phone}
                 onChange={(v) => set("phone", v)}
@@ -179,6 +141,7 @@ export default function ContactForm() {
               <span className="text-sm text-navy/60">Interest</span>
               <span className="relative">
                 <select
+                  name="interest"
                   value={fields.interest}
                   onChange={(e) => set("interest", e.target.value)}
                   className="w-full appearance-none border-b border-navy/20 bg-transparent pb-2 pr-8 text-base text-navy outline-none transition-colors duration-200 focus:border-brand"
@@ -201,6 +164,7 @@ export default function ContactForm() {
             <label className="flex flex-col gap-2">
               <span className="text-sm text-navy/60">Message</span>
               <textarea
+                name="message"
                 rows={3}
                 value={fields.message}
                 onChange={(e) => set("message", e.target.value)}
@@ -225,6 +189,7 @@ export default function ContactForm() {
 /** Underline-style text field, matching the Figma form treatment. */
 function Field({
   label,
+  name,
   value,
   onChange,
   type = "text",
@@ -232,6 +197,7 @@ function Field({
   autoComplete,
 }: {
   label: string;
+  name: string;
   value: string;
   onChange: (v: string) => void;
   type?: string;
@@ -246,6 +212,7 @@ function Field({
       </span>
       <input
         type={type}
+        name={name}
         value={value}
         required={required}
         autoComplete={autoComplete}
