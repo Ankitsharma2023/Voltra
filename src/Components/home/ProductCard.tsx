@@ -8,11 +8,11 @@ export interface Product {
   brand: string;
   name: string;
   badge?: string;
-  capacities: string;
+  capacities?: string;
   description?: string;
   /** Per-product photo; overrides the cycled `images` array in ProductSolutions. */
   image?: string;
-  specs: { label: string; value: string }[];
+  specs?: { label: string; value: string }[];
   primaryCta: { label: string; to: string };
   secondaryCta: { label: string; to: string };
 }
@@ -58,22 +58,25 @@ export default function ProductCard({
               </span>
             )}
           </div>
-          <p className="text-sm text-navy/50">{product.capacities}</p>
+          {product.capacities && <p className="text-sm text-navy/50">{product.capacities}</p>}
           {product.description && (
             <p className="mt-1 text-sm leading-relaxed text-navy/60">{product.description}</p>
           )}
         </div>
 
-        <div className="h-px w-full bg-navy/10" />
-
-        <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2.5">
-          {product.specs.map((spec) => (
-            <React.Fragment key={spec.label}>
-              <dt className="text-sm text-navy/50">{spec.label}</dt>
-              <dd className="text-sm font-medium text-navy">{spec.value}</dd>
-            </React.Fragment>
-          ))}
-        </dl>
+        {product.specs?.length > 0 && (
+          <>
+            <div className="h-px w-full bg-navy/10" />
+            <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2.5">
+              {product.specs.map((spec) => (
+                <React.Fragment key={spec.label}>
+                  <dt className="text-sm text-navy/50">{spec.label}</dt>
+                  <dd className="text-sm font-medium text-navy">{spec.value}</dd>
+                </React.Fragment>
+              ))}
+            </dl>
+          </>
+        )}
 
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-1">
           <PillButton to={product.primaryCta.to} label={product.primaryCta.label} variant="solid" size="sm" />

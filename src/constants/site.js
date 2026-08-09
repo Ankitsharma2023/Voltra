@@ -57,8 +57,14 @@ export const HERO = {
   warrantyYears: "10",
 };
 
-/** Repeated once; the component tiles it to fill the ticker row. */
-export const MARQUEE_TEXT = "India's #1 Hybrid Company";
+/** Phrases cycled across the moving ticker ribbon under the hero. */
+export const MARQUEE_ITEMS = [
+  "#1 energy storage company",
+  "Hybrid inverters, engineered smarter",
+  "LiFePO4 batteries, built to outlast",
+  "10-year warranty. Zero fine print",
+  "Powering the future of energy",
+];
 
 export const ABOUT = {
   eyebrow: "About Voltra",
@@ -222,16 +228,90 @@ export const HYBRID_INVERTERS = [
   },
 ];
 
-// Home page rows — exactly the 3 cards shown in the Figma landing frame's
-// "Our Battery Solutions" and "Our Inverter Solutions" rows.
+// ---- Home page product rows ----
+// These mirror the Figma landing frame exactly: three rows with the designer's
+// finalised product placement (Battery Solutions, Inverter Solutions, High
+// Voltage Range).
 export const BATTERY_SOLUTIONS = {
   title: "Our Battery Solutions for your home",
-  products: RESIDENTIAL_BATTERIES.slice(0, 3),
+  products: [
+    {
+      id: "home-lvw-16s-ultra", brand: "VOLT", name: "LVW 16S Ultra", badge: "IP65",
+      capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh", image: "/voltra/product-unit-front.png",
+      specs: [
+        { label: "Cell Type", value: "LFP" },
+        { label: "Available Energy", value: "5.12 kWh" },
+        { label: "Max. Output Power", value: "5 kW" },
+        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      ], ...CTA,
+    },
+    {
+      id: "home-lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "5.12 kWh",
+      image: `${PHOTO}lvw-4s-pro.jpg`,
+      specs: [
+        { label: "Cell Type", value: "LFP" },
+        { label: "Available Energy", value: "5.12 kWh" },
+        { label: "Max. Output Power", value: "1.2 kW" },
+        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      ], ...CTA,
+    },
+    {
+      id: "home-lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
+      image: `${PHOTO}lvw-4s-2p56.jpg`,
+      specs: [
+        { label: "Cell Type", value: "LFP" },
+        { label: "Available Energy", value: "2.56 kWh" },
+        { label: "Max. Output Power", value: "2.7 kW" },
+        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      ], ...CTA,
+    },
+  ],
 };
 
 export const INVERTER_SOLUTIONS = {
   title: "Our Inverter Solutions for your home",
-  products: HYBRID_INVERTERS.slice(0, 3),
+  products: [
+    {
+      id: "home-hi-single", brand: "VOLT", name: "Single Phase HI", badge: "K1P",
+      capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012", image: `${PHOTO}hi-single-3kw.jpg`,
+      specs: [
+        { label: "Rated AC Output Power", value: "3 – 10 kW" },
+        { label: "Maximum Efficiency", value: "97.6%" },
+        { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
+        { label: "Battery Voltage Range", value: "40 – 60 V" },
+      ], ...CTA,
+    },
+    {
+      id: "home-fusion-1600", brand: "VOLT", name: "FUSION 1600", capacities: "1280 Wh",
+      image: `${PHOTO}fusion-1600.jpg`,
+      specs: [
+        { label: "Cell Type", value: "LFP" },
+        { label: "Available Energy", value: "1280 Wh" },
+        { label: "Apparent Power", value: "1250 VA" },
+        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      ], ...CTA,
+    },
+    {
+      id: "home-hi-three", brand: "VOLT", name: "Three Phase HI", badge: "K3P",
+      capacities: "0506 | 0608 | 0810 | 1012 | 1215 | 1520 | 2025", image: `${PHOTO}hi-three-k3p.jpg`,
+      specs: [
+        { label: "Rated AC Output Power", value: "5 – 20 kW" },
+        { label: "Maximum Efficiency", value: "97.6%" },
+        { label: "Maximum PV Input Power", value: "7.5 – 32 kW" },
+        { label: "Battery Voltage Range", value: "40 – 60 V" },
+      ], ...CTA,
+    },
+  ],
+};
+
+// High Voltage Range — name + render only (no spec table in the Figma cards).
+export const HIGH_VOLTAGE_PRODUCTS = {
+  title: "Our High Voltage Range Products",
+  products: [
+    { id: "home-hvc", brand: "VOLT", name: "HVC", image: `${PHOTO}hvc.jpg`, specs: [], ...CTA },
+    { id: "home-stackable-racks", brand: "VOLT", name: "Stackable Racks", image: `${PHOTO}stackable-racks.jpg`, specs: [], ...CTA },
+    { id: "home-link-air", brand: "VOLT", name: "Link Air", image: `${PHOTO}link-air.jpg`, specs: [], ...CTA },
+  ],
 };
 
 export const OFFERINGS = {
