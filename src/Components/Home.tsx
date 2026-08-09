@@ -3,7 +3,6 @@ import HeroSection from "./home/HeroSection";
 import Marquee from "./home/Marquee";
 import AboutSection from "./home/AboutSection";
 import ProductSolutions from "./home/ProductSolutions";
-import OfferingsCarousel from "./home/OfferingsCarousel";
 import WhyVoltra from "./home/WhyVoltra";
 import MissionStats from "./home/MissionStats";
 import FaqCta from "./home/FaqCta";
@@ -22,7 +21,6 @@ const Home = () => {
       <Marquee />
       <AboutSection />
       <ProductSolutions title={BATTERY_SOLUTIONS.title} products={BATTERY_SOLUTIONS.products} />
-      <OfferingsCarousel />
       <ProductSolutions title={INVERTER_SOLUTIONS.title} products={INVERTER_SOLUTIONS.products} tall />
       <ProductSolutions title={HIGH_VOLTAGE_PRODUCTS.title} products={HIGH_VOLTAGE_PRODUCTS.products} tall />
       <WhyVoltra />
