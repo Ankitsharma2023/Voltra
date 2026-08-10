@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import { CONTACT_PAGE } from "../../constants/site";
 
 /**
@@ -37,6 +37,11 @@ export default function ContactForm() {
   const [fields, setFields] = useState<Fields>(EMPTY);
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
+  // Visitor arrived via a "Download Brochure" CTA → show the brochure prompt.
+  const cameForBrochure =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("brochure") != null;
+  const [showBrochurePrompt, setShowBrochurePrompt] = useState(cameForBrochure);
 
   const set = (key: keyof Fields, value: string) =>
     setFields((prev) => ({ ...prev, [key]: value }));
@@ -65,6 +70,16 @@ export default function ContactForm() {
         setStatus("sent");
         setFields(EMPTY);
         form.reset();
+        // If the visitor came from a "Download Brochure" CTA (/contact?brochure=1),
+        // start the brochure download now that they've sent a message.
+        if (cameForBrochure) {
+          const a = document.createElement("a");
+          a.href = "/voltra-brochure.pdf";
+          a.download = "Voltra-Brochure.pdf";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
       } else {
         setStatus("error");
       }
@@ -77,6 +92,37 @@ export default function ContactForm() {
 
   return (
     <section id="contact-form" className="w-full scroll-mt-24 pb-16 lg:pb-24">
+      {/* Brochure prompt — shown once when the visitor clicked "Download Brochure". */}
+      {showBrochurePrompt && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-deep/70 p-6 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setShowBrochurePrompt(false)}
+        >
+          <div
+            className="w-full max-w-md rounded-[20px] bg-white p-7 text-center shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mx-auto mb-4 grid size-12 place-items-center rounded-full bg-brand/10 text-brand-strong">
+              <Download size={22} strokeWidth={2.2} />
+            </div>
+            <h3 className="text-xl font-medium text-navy">Get the Voltra brochure</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy/60">
+              Connect with us to download the brochure — just fill in the quick form below and your
+              download will start automatically.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowBrochurePrompt(false)}
+              className="mt-6 h-11 w-full rounded-pill bg-brand text-sm font-medium text-white transition-colors hover:bg-brand-bright"
+            >
+              Continue to form
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="mx-auto max-w-page px-6 md:px-12 lg:px-20">
         <div className="mx-auto max-w-[960px] rounded-[20px] bg-white p-6 shadow-card sm:p-8 lg:p-10">
           <h2 className="text-2xl font-medium tracking-tight text-navy lg:text-[28px]">
@@ -113,6 +159,7 @@ export default function ContactForm() {
               <Field
                 label="Company"
                 name="company"
+                required
                 value={fields.company}
                 onChange={(v) => set("company", v)}
                 autoComplete="organization"
@@ -129,6 +176,7 @@ export default function ContactForm() {
               <Field
                 label="Phone"
                 name="phone"
+                required
                 type="tel"
                 value={fields.phone}
                 onChange={(v) => set("phone", v)}

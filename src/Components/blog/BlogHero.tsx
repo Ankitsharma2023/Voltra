@@ -50,17 +50,21 @@ export default function BlogHero() {
       <div className="relative mx-auto mt-20 grid max-w-page items-center gap-10 px-6 md:px-12 lg:mt-24 lg:grid-cols-2 lg:px-20">
         <div className="flex flex-col items-start gap-5">
           <Eyebrow bar="left">{featured.eyebrow}</Eyebrow>
-          <h2 className="max-w-[440px] text-3xl font-medium leading-[1.15] tracking-tight text-navy lg:text-[40px]/[1.15]">
-            {featured.title}
-          </h2>
+          <Link to={featured.cta.to} className="max-w-[440px]">
+            <h2 className="text-3xl font-medium leading-[1.15] tracking-tight text-navy transition-colors hover:text-brand lg:text-[40px]/[1.15]">
+              {featured.title}
+            </h2>
+          </Link>
           <p className="max-w-[460px] text-base leading-relaxed text-navy/60">{featured.body}</p>
           <TextLink to={featured.cta.to} label={featured.cta.label} />
         </div>
-        <img
-          src={assets.blogPage.featured}
-          alt={featured.title}
-          className="h-56 w-full rounded-2xl object-cover sm:h-72 lg:h-[300px]"
-        />
+        <Link to={featured.cta.to} className="group block overflow-hidden rounded-2xl">
+          <img
+            src={assets.blogPage.featured}
+            alt={featured.title}
+            className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-72 lg:h-[300px]"
+          />
+        </Link>
       </div>
     </section>
   );

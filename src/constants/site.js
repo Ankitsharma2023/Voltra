@@ -86,7 +86,9 @@ export const ABOUT = {
  */
 const CTA = {
   primaryCta: { label: "Order Now", to: ROUTES.contact },
-  secondaryCta: { label: "View Brochure", to: ROUTES.products },
+  // Brochure is gated behind the contact form: this routes to /contact and the
+  // PDF downloads only after the message is sent (see ContactForm).
+  secondaryCta: { label: "Download Brochure", to: `${ROUTES.contact}?brochure=1` },
 };
 const PHOTO = "/voltra/products/";
 
@@ -590,12 +592,12 @@ export const BESS_PAGE = {
     body:
       "Liquid-cooled prismatic LFP cells, 200 kW rated power per cabinet and parallel scalability to multi-MWh farms. A 1.7 m² footprint makes deployment compact even at substation scale.",
     chips: [
-      { label: "Liquid-cooled" },
-      { label: "200 kW / cabinet" },
-      { label: "MWh-scalable", active: true },
-      { label: "IP55 outdoor" },
-      { label: "Cloud SCADA" },
-      { label: "Grid-code ready" },
+      { label: "LFP Chemistry" },
+      { label: "8K+ Cycles" },
+      { label: "IP55 Rated", active: true },
+      { label: "200kW PCS" },
+      { label: "Liquid Cooling" },
+      { label: "94% Efficient" },
     ],
   },
   features: {
