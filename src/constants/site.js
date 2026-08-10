@@ -187,7 +187,7 @@ export const RESIDENTIAL_BATTERIES = [
 // ---- Hybrid Inverters (Figma "Hybrid Inverters" product range) ----
 export const HYBRID_INVERTERS = [
   {
-    id: "hi-single-3kw", brand: "VOLT", name: "Single Phase HI", badge: "IP66", capacities: "3 kW · Single Phase",
+    id: "hi-3kw", brand: "VOLT", name: "3KW HI", badge: "IP66", capacities: "3 kW",
     image: `${PHOTO}hi-single-3kw.jpg`,
     specs: [
       { label: "Rated AC Output Power", value: "3 kW" },
@@ -217,13 +217,23 @@ export const HYBRID_INVERTERS = [
     ], ...CTA,
   },
   {
-    id: "hi-lvw16s", brand: "VOLT", name: "LVW 16S PRO", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
+    id: "hi-k1p", brand: "VOLT", name: "HI", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
     image: `${PHOTO}hi-lvw16s.jpg`,
     specs: [
       { label: "Rated AC Output Power", value: "3 – 10 kW" },
       { label: "Maximum Efficiency", value: "97.6%" },
       { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
       { label: "Battery Voltage Range", value: "40 – 60 V" },
+    ], ...CTA,
+  },
+  {
+    id: "hi-fusion-1600", brand: "VOLT", name: "FUSION 1600", capacities: "1280 Wh",
+    image: `${PHOTO}fusion-1600.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "1280 Wh" },
+      { label: "Apparent Power", value: "1250 VA" },
+      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
 ];
