@@ -48,7 +48,7 @@ export default function ProductCard({
       <div className="flex flex-1 flex-col gap-5 p-6">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
-            <h3 className="text-2xl text-navy lg:text-[28px]">
+            <h3 className="min-w-0 flex-1 truncate whitespace-nowrap text-lg leading-tight text-navy sm:text-xl lg:text-[22px]">
               <span className="font-bold">{product.brand}</span>{" "}
               <span className="font-normal">{product.name}</span>
             </h3>
