@@ -672,6 +672,26 @@ export const BLOG_PAGE = {
           "Hilly terrain, dispersed populations and seasonal grid stress make Himachal an ideal candidate for storage. A look at a 700kW / 1,254kWh Voltra deployment.",
         tags: ["BESS", "Grid", "Case Study"],
       },
+      {
+        id: "post-lithium-vs-lead",
+        slug: "lithium-vs-lead-acid-batteries",
+        imageKey: "thumb1",
+        date: "24 Jul 2026",
+        title: "Lithium (LiFePO₄) vs Lead-Acid Batteries — Which Should Power Your Inverter?",
+        excerpt:
+          "LiFePO₄ delivers 8–12× longer cycle life, nearly double the usable capacity, faster charging and zero maintenance vs lead-acid — where the difference matters for your money.",
+        tags: ["Batteries", "LFP", "How-to"],
+      },
+      {
+        id: "post-ongrid-offgrid-hybrid",
+        slug: "on-grid-vs-off-grid-vs-hybrid-inverter",
+        imageKey: "thumb2",
+        date: "18 Jul 2026",
+        title: "On-Grid vs Off-Grid vs Hybrid Inverter — Which One Do You Actually Need?",
+        excerpt:
+          "\"Solar inverter\" is really three different products. What separates on-grid, off-grid and hybrid — and why hybrid is the default for most Indian homes and businesses.",
+        tags: ["Inverters", "Hybrid", "How-to"],
+      },
     ],
   },
 };
