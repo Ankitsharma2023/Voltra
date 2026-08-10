@@ -90,10 +90,10 @@ const CTA = {
 };
 const PHOTO = "/voltra/products/";
 
-// ---- Batteries (Figma "Lithium Batteries" product range) ----
+// ---- Batteries (Figma "Lithium Batteries" product range — 7 cards) ----
 export const RESIDENTIAL_BATTERIES = [
   {
-    id: "lvw-16s-ultra", brand: "VOLT", name: "LVW 16S", badge: "IP65", capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh",
+    id: "lvw-16s-ultra", brand: "VOLT", name: "LVW 16S Ultra", badge: "IP65", capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh",
     image: "/voltra/product-unit-front.png",
     specs: [
       { label: "Cell Type", value: "LFP" },
@@ -103,8 +103,8 @@ export const RESIDENTIAL_BATTERIES = [
     ], ...CTA,
   },
   {
-    id: "lvw-16s", brand: "VOLT", name: "LVW 16S", badge: "IP65", capacities: "5.12 kWh",
-    image: `${PHOTO}lvw-16s.jpg`,
+    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "5.12 kWh",
+    image: `${PHOTO}lvw-4s-pro.jpg`,
     specs: [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "5.12 kWh" },
@@ -113,8 +113,8 @@ export const RESIDENTIAL_BATTERIES = [
     ], ...CTA,
   },
   {
-    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S PRO", badge: "PRO", capacities: "2.56 kWh",
-    image: `${PHOTO}lvw-4s-pro.jpg`,
+    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
+    image: `${PHOTO}lvw-4s-2p56.jpg`,
     specs: [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "2.56 kWh" },
@@ -133,7 +133,7 @@ export const RESIDENTIAL_BATTERIES = [
     ], ...CTA,
   },
   {
-    id: "lvw-8s-pro", brand: "VOLT", name: "LVW 8S PRO", badge: "PRO", capacities: "5.12 kWh",
+    id: "lvw-8s-pro", brand: "VOLT", name: "LVW 8S", badge: "PRO", capacities: "5.12 kWh",
     image: `${PHOTO}lvw-8s-pro.jpg`,
     specs: [
       { label: "Cell Type", value: "LFP" },
@@ -159,26 +159,6 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "16.07 kWh" },
       { label: "Max. Output Power", value: "9.72 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
-    image: `${PHOTO}lvw-4s.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "2.56 kWh" },
-      { label: "Max. Output Power", value: "2.4 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "fusion-1600", brand: "VOLT", name: "FUSION 1600", badge: "PORTABLE", capacities: "1280 Wh",
-    image: `${PHOTO}fusion-1600.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "1280 Wh" },
-      { label: "Apparent Power", value: "1250 VA" },
       { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
@@ -556,7 +536,7 @@ export const LITHIUM_PAGE = {
     eyebrow: "Li-ion Batteries",
     title: "Safe, long-life LFP storage for every Indian home and business.",
     subtitle:
-      "From 1.28 kWh portable units to 40 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
+      "From 2.5 kWh wall-mount units to 40 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
   },
   why: {
     eyebrow: "Why LFP",
@@ -566,7 +546,7 @@ export const LITHIUM_PAGE = {
     chips: [
       { label: "Non-flammable" },
       { label: "12.8 – 51.2 V" },
-      { label: "1.28 – 40.96 kWh", active: true },
+      { label: "2.5 – 40 kWh", active: true },
       { label: "IP65 outdoor" },
       { label: "App monitoring" },
       { label: "Stackable" },
@@ -574,7 +554,7 @@ export const LITHIUM_PAGE = {
   },
   range: {
     eyebrow: "Product range",
-    title: "Modular capacity from 1.28 kWh to 40 kWh.",
+    title: "Modular capacity from 2.5 kWh to 40 kWh.",
     products: RESIDENTIAL_BATTERIES,
   },
   features: {
