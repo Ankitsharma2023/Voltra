@@ -1,7 +1,7 @@
 import React from "react";
 import ProductSolutions from "./home/ProductSolutions";
 import Eyebrow from "./home/ui/Eyebrow";
-import { RESIDENTIAL_BATTERIES, HYBRID_INVERTERS } from "../constants/site";
+import { RESIDENTIAL_BATTERIES, HYBRID_INVERTERS, HIGH_VOLTAGE_PRODUCTS } from "../constants/site";
 
 /**
  * Products — the "Our Products" catalogue page. Lists the full Voltra line-up
@@ -24,8 +24,8 @@ export default function Products() {
                 Every Voltra product, in one place.
               </h1>
               <p className="max-w-[620px] text-base leading-relaxed text-white/70">
-                Browse the full Voltra line-up — from residential LFP batteries to single- and
-                three-phase hybrid inverters. Category and use-case filters are on the way.
+                Browse the full Voltra line-up — from residential LFP batteries and hybrid
+                inverters to the high-voltage BESS range. Category and use-case filters are on the way.
               </p>
             </div>
           </div>
@@ -44,6 +44,14 @@ export default function Products() {
         eyebrow="Hybrid Inverters"
         title="Inverters"
         products={HYBRID_INVERTERS}
+        tall
+      />
+
+      {/* High voltage range (HVC, Stackable Racks, Link Air) */}
+      <ProductSolutions
+        eyebrow="High-Capacity & BESS"
+        title="High Voltage Range"
+        products={HIGH_VOLTAGE_PRODUCTS.products}
         tall
       />
     </div>
