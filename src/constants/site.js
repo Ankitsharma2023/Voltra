@@ -708,29 +708,20 @@ export const FOOTER = {
       links: [
         { label: "About Voltra", to: ROUTES.about },
         { label: "Our Products", to: ROUTES.products },
-        { label: "The Voltra Edge", to: ROUTES.technology },
         { label: "Common Queries", to: ROUTES.contact },
       ],
     },
     {
       title: "PRODUCTS",
       links: [
-        { label: "Residential ESS", to: `${ROUTES.products}?category=residential` },
-        { label: "Utilities", to: `${ROUTES.products}?category=utility` },
-        { label: "C&I", to: `${ROUTES.products}?category=ci` },
-      ],
-    },
-    {
-      title: "SOLUTIONS",
-      links: [
-        { label: "Island", to: ROUTES.islandMode },
-        { label: "Hybrid", to: ROUTES.hybridMode },
-        { label: "Microgrid", to: ROUTES.microgridMode },
+        { label: "Inverters", to: ROUTES.hybridInverters },
+        { label: "Batteries", to: ROUTES.lithiumBatteries },
+        { label: "BESS", to: ROUTES.gridBess },
       ],
     },
     {
       title: "TECHNOLOGY",
-      links: [{ label: "The Voltra Edge", to: ROUTES.technology }],
+      links: [{ label: "Blog", to: ROUTES.blog }],
     },
   ],
   copyright: "© 2026 Voltra Technologies Pvt. Ltd. All rights reserved.",

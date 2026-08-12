@@ -55,36 +55,15 @@ export default function SiteFooter() {
         />
 
         <div className="relative z-10 mx-auto max-w-page px-6 py-16 md:px-12 lg:min-h-[500px] lg:px-20">
-          {/* Row 1: brand lockup + contact */}
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
-            <div className="flex flex-col gap-3">
-              {/* Footer is always navy, so the lockup is always the white one. */}
-              <BrandLockup onDark />
-              <p className="text-sm text-white/60">{FOOTER.company}</p>
-            </div>
-
-            <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 lg:pt-1">
-              <div className="flex items-start gap-2 text-sm text-white/70">
-                <MapPin size={18} className="mt-0.5 shrink-0 text-white/60" />
-                <address className="not-italic leading-relaxed">
-                  {FOOTER.address.map((line) => (
-                    <span key={line} className="block">{line}</span>
-                  ))}
-                </address>
-              </div>
-              <a href={`tel:${FOOTER.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <Phone size={18} className="shrink-0 text-white/60" />
-                {FOOTER.phone}
-              </a>
-              <a href={`mailto:${FOOTER.email}`} className="flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <Mail size={18} className="shrink-0 text-white/60" />
-                {FOOTER.email}
-              </a>
-            </div>
+          {/* Row 1: brand lockup + company */}
+          <div className="flex flex-col gap-3">
+            {/* Footer is always navy, so the lockup is always the white one. */}
+            <BrandLockup onDark />
+            <p className="text-sm text-white/60">{FOOTER.company}</p>
           </div>
 
-          {/* Row 2: link columns */}
-          <div className="mt-14 grid max-w-[820px] grid-cols-2 gap-8 sm:grid-cols-4">
+          {/* Row 2: three nav columns + a contact column */}
+          <div className="mt-14 grid max-w-[900px] grid-cols-2 gap-8 sm:grid-cols-4">
             {FOOTER.columns.map((col) => (
               <div key={col.title} className="flex flex-col gap-3">
                 <h4 className="text-base font-medium text-white">{col.title}</h4>
@@ -93,10 +72,37 @@ export default function SiteFooter() {
                 ))}
               </div>
             ))}
+
+            {/* Contact column (replaces the old Solutions slot). */}
+            <div className="flex flex-col gap-3">
+              <h4 className="text-base font-medium text-white">CONTACT</h4>
+              <div className="flex items-start gap-2 text-sm text-white/60">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-white/50" />
+                <address className="not-italic leading-relaxed">
+                  {FOOTER.address.map((line) => (
+                    <span key={line} className="block">{line}</span>
+                  ))}
+                </address>
+              </div>
+              <a
+                href={`tel:${FOOTER.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
+              >
+                <Phone size={16} className="shrink-0 text-white/50" />
+                {FOOTER.phone}
+              </a>
+              <a
+                href={`mailto:${FOOTER.email}`}
+                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
+              >
+                <Mail size={16} className="shrink-0 text-white/50" />
+                {FOOTER.email}
+              </a>
+            </div>
           </div>
 
           {/* Divider + copyright */}
-          <div className="mt-12 max-w-[820px] border-t border-white/15 pt-6">
+          <div className="mt-12 max-w-[900px] border-t border-white/15 pt-6">
             <p className="text-sm text-white/50">{FOOTER.copyright}</p>
           </div>
         </div>
