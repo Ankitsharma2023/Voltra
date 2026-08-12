@@ -26,17 +26,17 @@ export default function BrandLockup({
     <Link
       to="/"
       aria-label="Voltra home"
-      className={`flex shrink-0 flex-col gap-[3px] ${className}`}
+      className={`flex w-fit shrink-0 flex-col items-start gap-[3px] ${className}`}
     >
       <img
         src={onDark ? assets.logo.lockupOnDark : assets.logo.lockup}
         alt="Voltra"
         width={130}
         height={46}
-        className="h-[42px] w-auto shrink-0 select-none self-start"
+        className="h-[42px] w-auto shrink-0 select-none"
       />
       <span
-        className={`whitespace-nowrap pl-[34%] font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] ${
+        className={`whitespace-nowrap pl-9 font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] ${
           onDark ? "text-white/80" : "text-brand"
         }`}
       >

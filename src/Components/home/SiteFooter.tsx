@@ -76,14 +76,19 @@ export default function SiteFooter() {
             {/* Contact column (replaces the old Solutions slot). */}
             <div className="flex flex-col gap-3">
               <h4 className="text-base font-medium text-white">CONTACT</h4>
-              <div className="flex items-start gap-2 text-sm text-white/60">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(FOOTER.address.join(", "))}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-sm text-white/60 transition-colors hover:text-white"
+              >
                 <MapPin size={16} className="mt-0.5 shrink-0 text-white/50" />
                 <address className="not-italic leading-relaxed">
                   {FOOTER.address.map((line) => (
                     <span key={line} className="block">{line}</span>
                   ))}
                 </address>
-              </div>
+              </a>
               <a
                 href={`tel:${FOOTER.phone.replace(/\s/g, "")}`}
                 className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
