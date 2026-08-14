@@ -23,7 +23,7 @@ type IconKind = "arrow" | "download" | "none";
 
 interface PillButtonProps {
   to?: string;
-  label: string;
+  label: React.ReactNode;
   variant?: Variant;
   size?: Size;
   icon?: IconKind;

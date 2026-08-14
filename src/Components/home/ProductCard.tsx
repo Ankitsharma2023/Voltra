@@ -84,7 +84,12 @@ export default function ProductCard({
           />
           <PillButton
             to={product.secondaryCta.to}
-            label={product.secondaryCta.label}
+            label={
+              <>
+                <span className="sm:hidden">Brochure</span>
+                <span className="hidden sm:inline">{product.secondaryCta.label}</span>
+              </>
+            }
             variant="outline"
             size="sm"
             icon="download"
