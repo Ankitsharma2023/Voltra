@@ -92,36 +92,26 @@ const CTA = {
 };
 const PHOTO = "/voltra/products/";
 
-// ---- Batteries (Figma "Lithium Batteries" product range — 7 cards) ----
+// ---- Batteries (final product spec sheet — 8 cards) ----
 export const RESIDENTIAL_BATTERIES = [
   {
-    id: "lvw-16s-ultra", brand: "VOLT", name: "LVW 16S Ultra", badge: "IP65", capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh",
-    image: "/voltra/product-unit-front.png",
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "5.12 kWh" },
-      { label: "Max. Output Power", value: "5 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "5.12 kWh",
-    image: `${PHOTO}lvw-4s-pro.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "5.12 kWh" },
-      { label: "Max. Output Power", value: "1.2 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
+    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "1.25 kWh",
     image: `${PHOTO}lvw-4s-2p56.jpg`,
     specs: [
       { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "1.25 kWh" },
+      { label: "Max. Output Power", value: "1.2 kW" },
+      { label: "Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "2.56 kWh",
+    image: `${PHOTO}lvw-4s-pro.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "2.56 kWh" },
-      { label: "Max. Output Power", value: "2.7 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      { label: "Max. Output Power", value: "2.4 kW" },
+      { label: "Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
   {
@@ -131,7 +121,7 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "2.56 kWh" },
       { label: "Max. Output Power", value: "2.4 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      { label: "Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
   {
@@ -141,7 +131,27 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "5.12 kWh" },
       { label: "Max. Output Power", value: "3.6 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      { label: "Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvw-16s", brand: "VOLT", name: "LVW 16S", capacities: "5.12 kWh",
+    image: `${PHOTO}lvw-16s.jpg`,
+    specs: [
+      { label: "Cell Type", value: "LFP" },
+      { label: "Available Energy", value: "5.12 kWh" },
+      { label: "Max. Output Power", value: "5 kW" },
+      { label: "Efficiency", value: "≥ 97%" },
+    ], ...CTA,
+  },
+  {
+    id: "lvs", brand: "VOLT", name: "LVS", badge: "STACKABLE", capacities: "4.86 / 9.72 / 14.6 / 19.45 kWh",
+    image: `${PHOTO}stackable-racks.jpg`,
+    specs: [
+      { label: "Cell Type", value: "100Ah LFP Prismatic" },
+      { label: "Available Energy", value: "4.86 – 19.45 kWh" },
+      { label: "Max. Output Power", value: "5 / 10 / 15 / 20 kW" },
+      { label: "Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
   {
@@ -151,7 +161,7 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "10.24 kWh" },
       { label: "Max. Output Power", value: "10 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      { label: "Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
   {
@@ -161,7 +171,7 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Cell Type", value: "LFP" },
       { label: "Available Energy", value: "16.07 kWh" },
       { label: "Max. Output Power", value: "9.72 kW" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
+      { label: "Efficiency", value: "Not specified" },
     ], ...CTA,
   },
 ];
@@ -238,22 +248,22 @@ export const BATTERY_SOLUTIONS = {
       ], ...CTA,
     },
     {
-      id: "home-lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "5.12 kWh",
+      id: "home-lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "2.56 kWh",
       image: `${PHOTO}lvw-4s-pro.jpg`,
       specs: [
         { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "5.12 kWh" },
-        { label: "Max. Output Power", value: "1.2 kW" },
+        { label: "Available Energy", value: "2.56 kWh" },
+        { label: "Max. Output Power", value: "2.4 kW" },
         { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
       ], ...CTA,
     },
     {
-      id: "home-lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "2.56 kWh",
+      id: "home-lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "1.25 kWh",
       image: `${PHOTO}lvw-4s-2p56.jpg`,
       specs: [
         { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "2.56 kWh" },
-        { label: "Max. Output Power", value: "2.7 kW" },
+        { label: "Available Energy", value: "1.25 kWh" },
+        { label: "Max. Output Power", value: "1.2 kW" },
         { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
       ], ...CTA,
     },
@@ -538,7 +548,7 @@ export const LITHIUM_PAGE = {
     eyebrow: "Li-ion Batteries",
     title: "Safe, long-life LFP storage for every Indian home and business.",
     subtitle:
-      "From 2.5 kWh wall-mount units to 40 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
+      "From 1.25 kWh wall-mount units to 20 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
   },
   why: {
     eyebrow: "Why LFP",
@@ -548,7 +558,7 @@ export const LITHIUM_PAGE = {
     chips: [
       { label: "Non-flammable" },
       { label: "12.8 – 51.2 V" },
-      { label: "2.5 – 40 kWh", active: true },
+      { label: "1.25 – 20 kWh", active: true },
       { label: "IP65 outdoor" },
       { label: "App monitoring" },
       { label: "Stackable" },
@@ -556,7 +566,7 @@ export const LITHIUM_PAGE = {
   },
   range: {
     eyebrow: "Product range",
-    title: "Modular capacity from 2.5 kWh to 40 kWh.",
+    title: "Modular capacity from 1.25 kWh to 20 kWh.",
     products: RESIDENTIAL_BATTERIES,
   },
   features: {

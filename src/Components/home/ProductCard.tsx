@@ -39,43 +39,41 @@ export default function ProductCard({
           alt={`${product.brand} ${product.name}`}
           className="absolute inset-0 h-full w-full object-contain"
         />
+        {product.badge && (
+          <span className="absolute left-3 top-3 z-10 whitespace-nowrap rounded-full bg-brand px-2.5 py-0.5 text-[10px] font-bold uppercase text-white sm:text-xs">
+            {product.badge}
+          </span>
+        )}
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col gap-5 p-6">
+      <div className="flex flex-1 flex-col gap-3.5 p-4 sm:gap-5 sm:p-6">
         <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2">
-            <h3 className="min-w-0 flex-1 truncate whitespace-nowrap text-lg leading-tight text-navy sm:text-xl lg:text-[22px]">
-              <span className="font-bold">{product.brand}</span>{" "}
-              <span className="font-normal">{product.name}</span>
-            </h3>
-            {product.badge && (
-              <span className="shrink-0 whitespace-nowrap rounded-full bg-brand px-2.5 py-0.5 text-xs font-bold uppercase text-white">
-                {product.badge}
-              </span>
-            )}
-          </div>
-          {product.capacities && <p className="text-sm text-navy/50">{product.capacities}</p>}
+          <h3 className="truncate whitespace-nowrap text-base leading-tight text-navy sm:text-xl lg:text-[22px]">
+            <span className="font-bold">{product.brand}</span>{" "}
+            <span className="font-normal">{product.name}</span>
+          </h3>
+          {product.capacities && <p className="text-xs text-navy/50 sm:text-sm">{product.capacities}</p>}
           {product.description && (
-            <p className="mt-1 text-sm leading-relaxed text-navy/60">{product.description}</p>
+            <p className="mt-1 text-xs leading-relaxed text-navy/60 sm:text-sm">{product.description}</p>
           )}
         </div>
 
         {product.specs?.length > 0 && (
           <>
             <div className="h-px w-full bg-navy/10" />
-            <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2.5">
+            <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-2.5">
               {product.specs.map((spec) => (
                 <React.Fragment key={spec.label}>
-                  <dt className="text-sm text-navy/50">{spec.label}</dt>
-                  <dd className="text-sm font-medium text-navy">{spec.value}</dd>
+                  <dt className="text-xs text-navy/50 sm:text-sm">{spec.label}</dt>
+                  <dd className="text-right text-xs font-medium text-navy sm:text-left sm:text-sm">{spec.value}</dd>
                 </React.Fragment>
               ))}
             </dl>
           </>
         )}
 
-        <div className="mt-auto flex items-center gap-2 pt-1">
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-1">
           <PillButton to={product.primaryCta.to} label={product.primaryCta.label} variant="solid" size="sm" />
           <PillButton
             to={product.secondaryCta.to}

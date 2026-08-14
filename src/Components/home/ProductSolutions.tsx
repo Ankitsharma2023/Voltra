@@ -31,7 +31,7 @@ export default function ProductSolutions({
         <h2 className="mb-10 max-w-[800px] text-3xl font-medium leading-[1.15] tracking-tight text-navy/80 sm:text-4xl lg:text-[54px]/[1.15]">
           {title}
         </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-8">
           {products.map((product, i) => (
             <ProductCard key={product.id} product={product} image={product.image ?? images[i % images.length]} tall={tall} />
           ))}

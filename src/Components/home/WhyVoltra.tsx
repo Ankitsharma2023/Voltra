@@ -61,7 +61,7 @@ export default function WhyVoltra() {
           {WHY_VOLTRA.title}
         </h2>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6">
           {WHY_VOLTRA.features.map((f) => (
             <FeatureCard key={f.id} title={f.title} body={f.body} image={featureImages[f.id]} />
           ))}

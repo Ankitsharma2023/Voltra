@@ -116,7 +116,18 @@ export default function Navbar() {
       )}
 
       <nav className="relative mx-auto flex max-w-page items-center justify-between px-6 py-5 md:px-12 lg:px-20 lg:py-6">
-        <Logo dark={dark} />
+        {/* Left: mobile hamburger (left of the logo) + logo */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            className={`grid size-10 place-items-center rounded-full lg:hidden ${dark ? "text-white" : "text-navy"}`}
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          <Logo dark={dark} />
+        </div>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-8 lg:flex">
@@ -149,16 +160,6 @@ export default function Navbar() {
             </>
           )}
         </div>
-
-        {/* Mobile toggle */}
-        <button
-          className={`grid size-10 place-items-center rounded-full lg:hidden ${dark ? "text-white" : "text-navy"}`}
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </nav>
 
       {/* Mobile menu */}
