@@ -27,7 +27,7 @@ export const assets = {
   // page wash — see BrandLockup. `icon.svg` is the bolt alone and is hard-coded
   // to brand blue (fill="#0C33F2"), so it must never be used on a blue surface.
   logo: {
-    lockup: "/voltra/logo-blue.png", // 108x48
+    lockup: "/voltra/logo-blue.png", // 217x96 (recoloured from the white lockup for a crisp mark)
     lockupOnDark: "/voltra/logo-white.png", // 217x96
     mark: "/icon.svg", // bolt only, vector — favicon / light backgrounds
   },

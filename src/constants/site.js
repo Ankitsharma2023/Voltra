@@ -238,7 +238,7 @@ export const BATTERY_SOLUTIONS = {
   title: "Our Battery Solutions for your home",
   products: [
     {
-      id: "home-lvw-16s-ultra", brand: "VOLT", name: "LVW 16S Ultra", badge: "IP65",
+      id: "home-lvw-16s-ultra", brand: "VOLT", name: "LVW 16S", badge: "IP65",
       capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh", image: "/voltra/product-unit-front.png",
       specs: [
         { label: "Cell Type", value: "LFP" },

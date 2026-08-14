@@ -49,9 +49,9 @@ export default function ProductCard({
       {/* Body */}
       <div className="flex flex-1 flex-col gap-3.5 p-4 sm:gap-5 sm:p-6">
         <div className="flex flex-col gap-1">
-          <h3 className="truncate whitespace-nowrap text-base leading-tight text-navy sm:text-xl lg:text-[22px]">
-            <span className="font-bold">{product.brand}</span>{" "}
-            <span className="font-normal">{product.name}</span>
+          <h3 className="line-clamp-2 text-base leading-tight text-navy sm:text-xl lg:text-[22px]">
+            <span className="font-bold">{product.brand}</span>
+            <span className="font-normal">-{product.name}</span>
           </h3>
           {product.capacities && <p className="text-xs text-navy/50 sm:text-sm">{product.capacities}</p>}
           {product.description && (
@@ -66,7 +66,7 @@ export default function ProductCard({
               {product.specs.map((spec) => (
                 <React.Fragment key={spec.label}>
                   <dt className="text-xs text-navy/50 sm:text-sm">{spec.label}</dt>
-                  <dd className="text-right text-xs font-medium text-navy sm:text-left sm:text-sm">{spec.value}</dd>
+                  <dd className="whitespace-nowrap text-xs font-medium text-navy sm:text-sm">{spec.value}</dd>
                 </React.Fragment>
               ))}
             </dl>
