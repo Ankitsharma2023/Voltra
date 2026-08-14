@@ -29,6 +29,10 @@ interface PillButtonProps {
   icon?: IconKind;
   iconPosition?: "left" | "right";
   className?: string;
+  /** Stretch the button to fill its container and centre the label. */
+  block?: boolean;
+  /** Override the size preset's text class (e.g. to shrink the label on tight cards). */
+  textClass?: string;
   /** When set, the button acts as an action (renders a <button>) instead of a link. */
   onClick?: () => void;
 }
@@ -83,15 +87,19 @@ export default function PillButton({
   size = "md",
   icon = "arrow",
   className = "",
+  block = false,
+  textClass,
   onClick,
 }: PillButtonProps) {
   const s = cfg[size];
+  const text = textClass ?? s.text;
+  const width = block ? "flex w-full justify-center" : "inline-flex";
 
   let inner: React.ReactNode;
   if (variant === "solid") {
     inner = (
       <span
-        className={`group relative inline-flex ${s.h} items-center overflow-hidden rounded-pill border border-brand ${s.text} font-medium text-brand transition-colors duration-300 hover:text-white`}
+        className={`group relative ${width} ${s.h} items-center overflow-hidden rounded-pill border border-brand ${text} font-medium text-brand transition-colors duration-300 hover:text-white`}
       >
         <SwipeFill />
         {/* Arrow badge: starts left, slides to the right on hover */}
@@ -115,7 +123,7 @@ export default function PillButton({
       ) : null;
     inner = (
       <span
-        className={`group relative inline-flex ${s.h} items-center overflow-hidden rounded-pill border border-brand ${s.outlinePad} ${s.text} font-medium text-brand transition-colors duration-300 hover:text-white`}
+        className={`group relative ${width} ${s.h} items-center overflow-hidden rounded-pill border border-brand ${s.outlinePad} ${text} font-medium text-brand transition-colors duration-300 hover:text-white`}
       >
         <SwipeFill />
         <span className="relative z-10 inline-flex items-center whitespace-nowrap">
@@ -126,10 +134,12 @@ export default function PillButton({
     );
   }
 
+  const wrap = `${block ? "flex w-full" : "inline-flex"} ${className}`;
+
   // Action button (e.g. opens the brochure overlay) — no navigation.
   if (onClick) {
     return (
-      <button type="button" onClick={onClick} className={`inline-flex ${className}`}>
+      <button type="button" onClick={onClick} className={wrap}>
         {inner}
       </button>
     );
@@ -138,13 +148,13 @@ export default function PillButton({
   const isInternal = (to ?? "").startsWith("/");
   if (isInternal) {
     return (
-      <Link to={to!} className={`inline-flex ${className}`}>
+      <Link to={to!} className={wrap}>
         {inner}
       </Link>
     );
   }
   return (
-    <a href={to} className={`inline-flex ${className}`}>
+    <a href={to} className={wrap}>
       {inner}
     </a>
   );

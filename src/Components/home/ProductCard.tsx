@@ -73,14 +73,23 @@ export default function ProductCard({
           </>
         )}
 
-        <div className="mt-auto flex flex-wrap items-center gap-2 pt-1">
-          <PillButton to={product.primaryCta.to} label={product.primaryCta.label} variant="solid" size="sm" />
+        <div className="mt-auto flex flex-col gap-2 pt-1">
+          <PillButton
+            to={product.primaryCta.to}
+            label={product.primaryCta.label}
+            variant="solid"
+            size="sm"
+            block
+            textClass="text-xs sm:text-sm"
+          />
           <PillButton
             to={product.secondaryCta.to}
             label={product.secondaryCta.label}
             variant="outline"
             size="sm"
             icon="download"
+            block
+            textClass="text-xs sm:text-sm"
           />
         </div>
       </div>
