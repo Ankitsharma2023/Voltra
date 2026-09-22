@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import PillButton from "./ui/PillButton";
 
 /** Shape mirrors the product objects in constants/site.js. */
@@ -11,14 +12,18 @@ export interface Product {
   description?: string;
   /** Per-product photo; overrides the cycled `images` array in ProductSolutions. */
   image?: string;
+  /** Benefit bullets: bold title + supporting detail. */
+  features?: { title: string; detail: string }[];
+  /** Detailed datasheet rows, revealed under "Full Specification". */
   specs?: { label: string; value: string }[];
   primaryCta: { label: string; to: string };
   secondaryCta: { label: string; to: string };
 }
 
 /**
- * ProductCard — used by both the Battery and Inverter solution rows. Product
- * render sits on a soft blue stage; specs + CTAs sit on white below.
+ * ProductCard — product render on a soft blue stage, then name + capacity,
+ * a short description, three benefit features, and an expandable
+ * "Full Specification" table that reveals the full datasheet rows.
  */
 export default function ProductCard({
   product,
@@ -30,8 +35,12 @@ export default function ProductCard({
   /** Inverter renders are portrait — a taller stage lets them fill the card. */
   tall?: boolean;
 }) {
+  const [open, setOpen] = useState(false);
+  const specs = product.specs ?? [];
+  const hasSpecs = specs.length > 0;
+
   return (
-    <article className="flex flex-col overflow-hidden rounded-card bg-white shadow-card">
+    <article className="flex h-full flex-col overflow-hidden rounded-card bg-white shadow-card">
       {/* Product stage — square for batteries, taller for portrait inverters */}
       <div className={`relative w-full bg-gradient-to-b from-[#cddaf3] to-[#eef3fb] ${tall ? "aspect-[4/5]" : "aspect-square"}`}>
         <img
@@ -39,63 +48,94 @@ export default function ProductCard({
           alt={`${product.brand} ${product.name}`}
           className="absolute inset-0 h-full w-full object-contain"
         />
-        {product.badge && (
-          <span className="absolute left-3 top-3 z-10 whitespace-nowrap rounded-full bg-brand px-2.5 py-0.5 text-[10px] font-bold uppercase text-white sm:text-xs">
-            {product.badge}
-          </span>
-        )}
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col gap-3.5 p-4 sm:gap-5 sm:p-6">
-        <div className="flex flex-col gap-1">
-          <h3 className="line-clamp-2 text-base leading-tight text-navy sm:text-xl lg:text-[22px]">
+      <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
+        {/* Name + inline badge */}
+        <div>
+          <h3 className="text-lg leading-tight text-navy sm:text-xl lg:text-[22px]">
             <span className="font-bold">{product.brand}</span>
             <span className="font-normal">-{product.name}</span>
+            {product.badge && (
+              <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide text-brand">
+                {product.badge}
+              </span>
+            )}
           </h3>
-          {product.capacities && <p className="text-xs text-navy/50 sm:text-sm">{product.capacities}</p>}
-          {product.description && (
-            <p className="mt-1 text-xs leading-relaxed text-navy/60 sm:text-sm">{product.description}</p>
+          {product.capacities && (
+            <p className="mt-1.5 text-xs text-navy/50 sm:text-sm">{product.capacities}</p>
           )}
         </div>
 
-        {product.specs?.length > 0 && (
+        {/* Description */}
+        {product.description && (
           <>
             <div className="h-px w-full bg-navy/10" />
-            <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-2.5">
-              {product.specs.map((spec) => (
-                <React.Fragment key={spec.label}>
-                  <dt className="text-xs text-navy/50 sm:text-sm">{spec.label}</dt>
-                  <dd className="whitespace-nowrap text-xs font-medium text-navy sm:text-sm">{spec.value}</dd>
-                </React.Fragment>
-              ))}
-            </dl>
+            <p className="text-xs leading-relaxed text-navy/60 sm:text-[13px]">{product.description}</p>
           </>
         )}
 
-        <div className="mt-auto flex flex-col gap-2 pt-1">
-          <PillButton
-            to={product.primaryCta.to}
-            label={product.primaryCta.label}
-            variant="solid"
-            size="sm"
-            block
-            textClass="text-xs sm:text-sm"
-          />
-          <PillButton
-            to={product.secondaryCta.to}
-            label={
-              <>
-                <span className="sm:hidden">Brochure</span>
-                <span className="hidden sm:inline">{product.secondaryCta.label}</span>
-              </>
-            }
-            variant="outline"
-            size="sm"
-            icon="download"
-            block
-            textClass="text-xs sm:text-sm"
-          />
+        {/* Benefit features */}
+        {product.features && product.features.length > 0 && (
+          <ul className="flex flex-col gap-3">
+            {product.features.map((f) => (
+              <li key={f.title}>
+                <p className="text-xs font-semibold text-navy sm:text-sm">{f.title}</p>
+                <p className="text-xs leading-snug text-navy/55 sm:text-[13px]">{f.detail}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Full Specification — expandable table, or a link when we have no rows */}
+        <div className="mt-auto pt-1">
+          <div className="h-px w-full bg-navy/10" />
+          {hasSpecs ? (
+            <>
+              <button
+                type="button"
+                onClick={() => setOpen((v) => !v)}
+                aria-expanded={open}
+                className="mt-3 flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-pill border border-brand px-3 py-2.5 text-xs font-semibold text-brand transition-colors hover:bg-brand hover:text-white sm:px-4 sm:text-sm"
+              >
+                <span>
+                  <span className="sm:hidden">Specs</span>
+                  <span className="hidden sm:inline">Full Specification</span>
+                </span>
+                <ChevronDown size={16} className={`shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+              </button>
+              {open && (
+                <dl className="mt-3">
+                  {specs.map((s) => (
+                    <div
+                      key={s.label}
+                      className="flex items-start justify-between gap-3 border-b border-navy/10 py-2 last:border-0"
+                    >
+                      <dt className="text-xs text-navy/55 sm:text-[13px]">{s.label}</dt>
+                      <dd className="text-right text-xs font-medium text-navy sm:text-[13px]">{s.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+            </>
+          ) : (
+            <PillButton
+              to={product.secondaryCta.to}
+              label={
+                <>
+                  <span className="sm:hidden">Specs</span>
+                  <span className="hidden sm:inline">Full Specification</span>
+                </>
+              }
+              variant="outline"
+              size="sm"
+              icon="download"
+              block
+              textClass="text-xs sm:text-sm"
+              className="mt-3"
+            />
+          )}
         </div>
       </div>
     </article>

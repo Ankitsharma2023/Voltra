@@ -92,6 +92,71 @@ const CTA = {
 };
 const PHOTO = "/voltra/products/";
 
+/* ----------------------------------------------------------------------------
+ * Card content builders
+ * Each product card shows a short description + three benefit "features"
+ * (bold title — detail) above an expandable "Full Specification" table. Rather
+ * than hand-write these per product, we derive them from the real spec values
+ * so every card reads differently but stays truthful to the datasheet.
+ * -------------------------------------------------------------------------- */
+const specVal = (p, label) => (p.specs?.find((s) => s.label === label) || {}).value;
+
+const BATTERY_DESC =
+  "Wall-mounted lithium (LFP) storage for homes and small commercial sites — compact enough to install indoors or out, and built for safe, everyday cycling.";
+const addBatteryCard = (p) => {
+  const eff = specVal(p, "Efficiency") || specVal(p, "Charge–Discharge Efficiency");
+  return {
+    ...p,
+    description: BATTERY_DESC,
+    features: [
+      { title: "Flexible", detail: `${p.capacities} modular design, scalable in parallel` },
+      {
+        title: "Weatherproof",
+        detail: /^IP/.test(p.badge || "")
+          ? `${p.badge}-rated, suited to outdoor mounting`
+          : "IP-rated enclosure for indoor or outdoor mounting",
+      },
+      {
+        title: "Long Life",
+        detail: `${specVal(p, "Cell Type") || "LFP"} cells, >6,000 cycles${
+          eff && eff !== "Not specified" ? `, ${eff} efficiency` : ""
+        }`,
+      },
+    ],
+  };
+};
+
+const INVERTER_DESC =
+  "Solar hybrid inverter that manages PV, battery and grid together — high conversion efficiency with fast, seamless backup switchover.";
+const addInverterCard = (p) => {
+  const rated = specVal(p, "Rated AC Output Power") || specVal(p, "Apparent Power") || p.capacities;
+  const eff = specVal(p, "Maximum Efficiency") || specVal(p, "Charge–Discharge Efficiency") || "97.6%";
+  const pv = specVal(p, "Maximum PV Input Power");
+  return {
+    ...p,
+    description: INVERTER_DESC,
+    features: [
+      { title: "Sized to fit", detail: `${rated} rated output` },
+      { title: "High yield", detail: `Up to ${eff} conversion efficiency` },
+      pv
+        ? { title: "Solar ready", detail: `Up to ${pv} PV input` }
+        : { title: "Backup ready", detail: "Fast automatic switchover keeps critical loads powered" },
+    ],
+  };
+};
+
+const HV_DESC =
+  "High-voltage, grid-scale energy storage for commercial and utility projects — factory-integrated, liquid-cooled and built to scale into the megawatt range.";
+const addHvCard = (p) => ({
+  ...p,
+  description: HV_DESC,
+  features: [
+    { title: "Grid scale", detail: "Modular racks scale from tens of kWh into the MWh range" },
+    { title: "Liquid cooled", detail: "Active thermal management for stable, high-throughput cycling" },
+    { title: "Built safe", detail: "LFP chemistry with multi-level BMS protection" },
+  ],
+});
+
 // ---- Batteries (final product spec sheet — 8 cards) ----
 export const RESIDENTIAL_BATTERIES = [
   {
@@ -174,7 +239,7 @@ export const RESIDENTIAL_BATTERIES = [
       { label: "Efficiency", value: "Not specified" },
     ], ...CTA,
   },
-];
+].map(addBatteryCard);
 
 // ---- Hybrid Inverters (Figma "Hybrid Inverters" product range) ----
 export const HYBRID_INVERTERS = [
@@ -228,7 +293,7 @@ export const HYBRID_INVERTERS = [
       { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
     ], ...CTA,
   },
-];
+].map(addInverterCard);
 
 // ---- Home page product rows ----
 // These mirror the Figma landing frame exactly: three rows with the designer's
@@ -267,7 +332,7 @@ export const BATTERY_SOLUTIONS = {
         { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
       ], ...CTA,
     },
-  ],
+  ].map(addBatteryCard),
 };
 
 export const INVERTER_SOLUTIONS = {
@@ -303,7 +368,7 @@ export const INVERTER_SOLUTIONS = {
         { label: "Battery Voltage Range", value: "40 – 60 V" },
       ], ...CTA,
     },
-  ],
+  ].map(addInverterCard),
 };
 
 // High Voltage Range — name + render only (no spec table in the Figma cards).
@@ -313,7 +378,7 @@ export const HIGH_VOLTAGE_PRODUCTS = {
     { id: "home-hvc", brand: "VOLT", name: "HVC", image: `${PHOTO}hvc.jpg`, specs: [], ...CTA },
     { id: "home-stackable-racks", brand: "VOLT", name: "Stackable Racks", image: `${PHOTO}stackable-racks.jpg`, specs: [], ...CTA },
     { id: "home-link-air", brand: "VOLT", name: "Link Air", image: `${PHOTO}link-air.jpg`, specs: [], ...CTA },
-  ],
+  ].map(addHvCard),
 };
 
 export const OFFERINGS = {
