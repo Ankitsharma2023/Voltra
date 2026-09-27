@@ -1,0 +1,1759 @@
+{
+  "count": 26,
+  "products": [
+    {
+      "section": "Containerized & Cabinet BESS",
+      "name": "VOLT-LINK",
+      "badge": "",
+      "capacity": "418 – 1,672 kWh",
+      "desc": "The liquid-cooled battery cabinet adopts advanced cabinet-level liquid cooling and temperature balancing. Its modular design makes the parallel solution more flexible, and combines with centralised PCS to form an ESS with higher energy density.",
+      "features": [
+        {
+          "title": "Safe and Reliable",
+          "detail": "In-PACK fire warning and protection with NOVEC1230/aerosol"
+        },
+        {
+          "title": "Compact and Modular",
+          "detail": "1.7 m² footprint only, easy transport & fast installation"
+        },
+        {
+          "title": "Efficient Cooling",
+          "detail": "Optimal in-PACK duct design, low energy consumption"
+        },
+        {
+          "title": "High Integration",
+          "detail": "Multiple units parallel to MV/HV with PCS-boost containers"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Cell Type",
+          "value": "LFP 314Ah Prismatic"
+        },
+        {
+          "label": "Pack",
+          "value": "52.24 kWh / 1P52S"
+        },
+        {
+          "label": "Battery System",
+          "value": "418 kWh"
+        },
+        {
+          "label": "Voltage Range",
+          "value": "1165 ~ 1498 Vdc"
+        },
+        {
+          "label": "Rated Power / Max Power",
+          "value": "200 kW / 220 kVA"
+        },
+        {
+          "label": "Nominal AC Voltage",
+          "value": "690 Vac"
+        },
+        {
+          "label": "Efficiency",
+          "value": "94%"
+        },
+        {
+          "label": "DoD / Cycle Life",
+          "value": "95% (25±2°C) / ≥8,000 cycles"
+        },
+        {
+          "label": "Cooling",
+          "value": "Liquid cooling"
+        },
+        {
+          "label": "Ingress Rating",
+          "value": "IP55"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-25°C ~ 55°C"
+        },
+        {
+          "label": "Fire Safety",
+          "value": "NOVEC1230 / Aerosol"
+        },
+        {
+          "label": "Dimensions (W×D×H)",
+          "value": "1,300 × 1,300 × 2,400 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "~4,000 kg"
+        }
+      ]
+    },
+    {
+      "section": "Containerized & Cabinet BESS",
+      "name": "VOLT-LINK AIR",
+      "badge": "",
+      "capacity": "112 – 964 kWh",
+      "desc": "An all-in-one air-cooled ESS cabinet integrating a long-life battery, balancing BMS, high-performance PCS, active safety system, smart distribution, and HVAC into one enclosure. AC-side parallel connection achieves flexible capacity expansion up to MWh.",
+      "features": [
+        {
+          "title": "Economical and Efficient",
+          "detail": "Conversion efficiency over 90%, DoD over 96%"
+        },
+        {
+          "title": "Safe and Reliable",
+          "detail": "IP55 protection, cell temp. difference ≤6°C"
+        },
+        {
+          "title": "Compact and Modular",
+          "detail": "1.6 m² footprint, simplified parallel expansion"
+        },
+        {
+          "title": "Smart O&M",
+          "detail": "Diversified access, both on app and cloud"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Cell Type",
+          "value": "LFP 314Ah"
+        },
+        {
+          "label": "Pack",
+          "value": "16.07 kWh / 1P16S"
+        },
+        {
+          "label": "Battery System",
+          "value": "241 kWh / 1P240S"
+        },
+        {
+          "label": "Voltage Range",
+          "value": "672 ~ 876 Vdc"
+        },
+        {
+          "label": "Rated Power / Max Power",
+          "value": "125 kW / 135 kW"
+        },
+        {
+          "label": "Nominal AC Voltage",
+          "value": "400 Vac, 3P+N+PE"
+        },
+        {
+          "label": "Efficiency",
+          "value": "≥90%"
+        },
+        {
+          "label": "DoD / Cycle Life",
+          "value": "95% (25±2°C) / ≥8,000 cycles"
+        },
+        {
+          "label": "Cooling",
+          "value": "Forced air cooling"
+        },
+        {
+          "label": "Ingress Rating",
+          "value": "IP55"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-25°C ~ 55°C"
+        },
+        {
+          "label": "Fire Safety",
+          "value": "Aerosol"
+        },
+        {
+          "label": "Dimensions (W×D×H)",
+          "value": "1,430 × 1,270 × 2,300 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "~2,600 kg"
+        }
+      ]
+    },
+    {
+      "section": "High-Voltage Modular Rack",
+      "name": "VOLT-HVC",
+      "badge": "",
+      "capacity": "30.72 – 61.44 kWh",
+      "desc": "Voltra's high-voltage series uses a 5 kWh standard modular design, with multi-module in series and support for multi-cluster in parallel — suited to villas, farms, and small C&I power supplies.",
+      "features": [
+        {
+          "title": "Ultra-Long Life",
+          "detail": "15-year design life, up to 6,000 cycles"
+        },
+        {
+          "title": "Intelligent Management",
+          "detail": "Three-level architecture auto-identifies module number and address"
+        },
+        {
+          "title": "Safe and Reliable",
+          "detail": "Multi-layer protection with BMS and thermal monitoring"
+        },
+        {
+          "title": "Flexible Configuration",
+          "detail": "Multi-module series to meet site requirements"
+        }
+      ],
+      "specs": [
+        {
+          "label": "",
+          "value": "Model 1"
+        },
+        {
+          "label": "Modules",
+          "value": "6"
+        },
+        {
+          "label": "System Nominal Energy",
+          "value": "30.72 kWh"
+        },
+        {
+          "label": "Available Energy",
+          "value": "29.184 kWh"
+        },
+        {
+          "label": "Nominal Voltage",
+          "value": "256.0 V"
+        },
+        {
+          "label": "Max Output Power",
+          "value": "30.72 kW"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A / 100A"
+        },
+        {
+          "label": "Weight",
+          "value": "472 kg"
+        }
+      ]
+    },
+    {
+      "section": "Floor-Standing & Stackable Systems",
+      "name": "VOLT-LV314",
+      "badge": "",
+      "capacity": "16.07 – 64.28 kWh",
+      "desc": "Floor- and rack-mounted storage for residential or small commercial use. Supports up to 16 batteries in parallel, expanding to 256 kWh.",
+      "features": [
+        {
+          "title": "Flexible",
+          "detail": "16 kWh modular design, 1–16 in parallel"
+        },
+        {
+          "title": "Easy Installation",
+          "detail": "Floor mounted, saves time & cost"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">15 years, >8,000 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "51.2 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "16.07 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "9.72 kW / 11.26 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "200A / 200A"
+        },
+        {
+          "label": "Communication",
+          "value": "CAN / RS485"
+        },
+        {
+          "label": "Scalability",
+          "value": "1–16 in parallel"
+        },
+        {
+          "label": "Dimensions",
+          "value": "700 × 250 × 520 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "145 kg (packed)"
+        }
+      ]
+    },
+    {
+      "section": "Floor-Standing & Stackable Systems",
+      "name": "VOLT-LV200",
+      "badge": "",
+      "capacity": "10.2 – 81.6 kWh",
+      "desc": "A floor-mounted, space-saving system for residential or small commercial applications, installed inside or outside a building. Expandable to 164 kWh.",
+      "features": [
+        {
+          "title": "Flexible",
+          "detail": "10.24 kWh modular design, 1–16 in parallel"
+        },
+        {
+          "title": "Easy Installation",
+          "detail": "Wall or floor mounted"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">15 years, >6,000 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "51.2 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "10.24 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "10 kW / 10.8 kW (20s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "100A / 200A"
+        },
+        {
+          "label": "Charge-Discharge Efficiency",
+          "value": "≥97%"
+        },
+        {
+          "label": "Communication",
+          "value": "CAN / RS485"
+        },
+        {
+          "label": "Scalability",
+          "value": "1–16 in parallel"
+        },
+        {
+          "label": "Dimensions",
+          "value": "510 × 175 × 1,025 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "115 kg (packed)"
+        }
+      ]
+    },
+    {
+      "section": "Floor-Standing & Stackable Systems",
+      "name": "VOLT-LVS",
+      "badge": "",
+      "capacity": "5.1 – 20.4 kWh",
+      "desc": "Industrial-aesthetic, N+1 stackable design in 100Ah modules, up to 16 parallel groups, expandable to 82 kWh. Matched with 20+ mainstream inverter brands.",
+      "features": [
+        {
+          "title": "Wide Compatibility",
+          "detail": "Matches 20+ inverter brands"
+        },
+        {
+          "title": "High Security",
+          "detail": "Self-produced 100Ah LFP prismatic cell"
+        },
+        {
+          "title": "Ultra-Long Life",
+          "detail": "10-year design, up to 3,500 cycles"
+        },
+        {
+          "title": "Scalable",
+          "detail": "Optional anti-theft, fire-protection add-ons"
+        }
+      ],
+      "specs": [
+        {
+          "label": "",
+          "value": "Model 1"
+        },
+        {
+          "label": "Modules",
+          "value": "1"
+        },
+        {
+          "label": "System Nominal Energy",
+          "value": "5.12 kWh"
+        },
+        {
+          "label": "Max Output Power",
+          "value": "5 kW"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A/100A"
+        },
+        {
+          "label": "Weight",
+          "value": "60 kg"
+        }
+      ]
+    },
+    {
+      "section": "Wall-Mounted Home Systems",
+      "name": "VOLT-LVW 16S",
+      "badge": "IP65",
+      "capacity": "5.12 – 40.96 kWh",
+      "desc": "Wall-mounted, space-saving storage for residential or small commercial use, installed inside or outside a building. Expandable to 82 kWh.",
+      "features": [
+        {
+          "title": "Flexible",
+          "detail": "5.12 kWh modular design, 1–16 in parallel"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65, suited to outdoor mounting"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">10 years, >6,000 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "51.2 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "5.12 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "5 kW / 5.4 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A / 100A"
+        },
+        {
+          "label": "Dimensions",
+          "value": "559 × 500 × 173 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "60 kg"
+        },
+        {
+          "label": "Scalability",
+          "value": "1–16 in parallel"
+        }
+      ]
+    },
+    {
+      "section": "Wall-Mounted Home Systems",
+      "name": "VOLT-LVW 8S",
+      "badge": "PRO",
+      "capacity": "5.12 kWh",
+      "desc": "Wall-mounted system optimising energy usage and integrating with solar panels — the higher-capacity 2P variant of the LVW 8S.",
+      "features": [
+        {
+          "title": "Easy Installation",
+          "detail": "Wall or floor mounted"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">10 years, >3,500 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "25.6 V"
+        },
+        {
+          "label": "Nominal Capacity",
+          "value": "200 Ah"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "3.6 kW / 4 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "100A / 150A"
+        },
+        {
+          "label": "Dimensions",
+          "value": "550 × 500 × 170 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "55 kg"
+        }
+      ]
+    },
+    {
+      "section": "Wall-Mounted Home Systems",
+      "name": "VOLT-LVW 8S",
+      "badge": "",
+      "capacity": "2.56 kWh",
+      "desc": "Wall-mounted, space-saving storage for residential or small commercial applications, optimising energy usage with solar integration.",
+      "features": [
+        {
+          "title": "Easy Installation",
+          "detail": "Wall or floor mounted"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">10 years, >3,500 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "25.6 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "2.56 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "2.4 kW / 2.7 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A / 100A"
+        },
+        {
+          "label": "Dimensions",
+          "value": "490 × 281.7 × 170 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "28 kg"
+        }
+      ]
+    },
+    {
+      "section": "Wall-Mounted Home Systems",
+      "name": "VOLT-LVW 4S",
+      "badge": "PRO",
+      "capacity": "2.56 kWh",
+      "desc": "Compact wall-mounted system for smaller backup loads — the higher-capacity 2P variant of the LVW 4S.",
+      "features": [
+        {
+          "title": "Easy Installation",
+          "detail": "Wall or floor mounted"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">10 years, >3,500 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "12.8 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "2.56 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "2.4 kW / 2.7 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A / 100A"
+        },
+        {
+          "label": "Dimensions",
+          "value": "490 × 281.7 × 170 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "28 kg"
+        }
+      ]
+    },
+    {
+      "section": "Wall-Mounted Home Systems",
+      "name": "VOLT-LVW 4S",
+      "badge": "",
+      "capacity": "1.25 kWh",
+      "desc": "Voltra's smallest wall-mounted unit — a compact, entry-level backup solution for solar-integrated homes.",
+      "features": [
+        {
+          "title": "Easy Installation",
+          "detail": "Wall or floor mounted"
+        },
+        {
+          "title": "Wide Range",
+          "detail": "Operates -20°C ~ 55°C"
+        },
+        {
+          "title": "Long Life",
+          "detail": ">10 years, >3,500 cycles (0.5C, 25°C)"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Nominal Voltage",
+          "value": "12.8 V"
+        },
+        {
+          "label": "Available Energy",
+          "value": "1.25 kWh"
+        },
+        {
+          "label": "Max / Peak Output",
+          "value": "1.2 kW / 1.35 kW (10s)"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50A / 100A"
+        },
+        {
+          "label": "Dimensions",
+          "value": "282 × 282 × 175 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "15 kg"
+        }
+      ]
+    },
+    {
+      "section": "All-in-One Backup",
+      "name": "VOLT FUSION 1600",
+      "badge": "",
+      "capacity": "1250 VA · 1280 Wh",
+      "desc": "A compact all-in-one power backup solution with an in-built lithium battery, designed for homes, offices, and small commercial applications. Delivers stable UPS performance, efficient charging, and dependable backup in a sleek, space-saving design.",
+      "features": [
+        {
+          "title": "In-Built Lithium Battery",
+          "detail": "Integrated 12.8V lithium battery, 1,280 Wh"
+        },
+        {
+          "title": "Fast Transfer",
+          "detail": "UPS transfer time <18 ms"
+        },
+        {
+          "title": "Compact Design",
+          "detail": "300 × 182 × 480 mm"
+        },
+        {
+          "title": "Easy Charging",
+          "detail": "4–5 hours typical, on mains"
+        },
+        {
+          "title": "Key Components",
+          "detail": "DC MCB, AC fuse, and UPS switch"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Apparent / Active Power",
+          "value": "1,250 VA / 1,000 W"
+        },
+        {
+          "label": "Rated Input Voltage",
+          "value": "230V AC"
+        },
+        {
+          "label": "Output Voltage (UPS mode)",
+          "value": "230V AC ± 10%"
+        },
+        {
+          "label": "Frequency (UPS mode)",
+          "value": "50 ± 0.5 Hz"
+        },
+        {
+          "label": "Transfer Time",
+          "value": "<18 ms (typical)"
+        },
+        {
+          "label": "Battery",
+          "value": "12.8V DC, 1,280 Wh (1× Li-ion unit)"
+        },
+        {
+          "label": "Charging Time",
+          "value": "4–5 hours typical (on mains)"
+        },
+        {
+          "label": "Dimensions",
+          "value": "300 × 182 × 480 mm"
+        },
+        {
+          "label": "Net Weight",
+          "value": "23 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "0°C to 50°C"
+        }
+      ]
+    },
+    {
+      "section": "Single-Phase Hybrid Inverters",
+      "name": "VOLT-3KW1",
+      "badge": "",
+      "capacity": "3 kW",
+      "desc": "Entry-point single-phase hybrid inverter for small homes, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
+      "features": [
+        {
+          "title": "Fast Transfer",
+          "detail": "Grid to standalone in <10ms"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP66 rated"
+        },
+        {
+          "title": "Smart Monitoring",
+          "detail": "LED, LCD, app, CAN BMS"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated Output Power",
+          "value": "3,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "4,800 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "125–425 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Type",
+          "value": "Li-ion / Lead-acid"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "70 A"
+        },
+        {
+          "label": "Max. Output Peak Power",
+          "value": "6,000 W (<10s)"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97%"
+        },
+        {
+          "label": "Dimensions (W×H×D)",
+          "value": "228×470×340 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "19 kg"
+        },
+        {
+          "label": "Ingress Protection",
+          "value": "IP66"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-20 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 yrs (10)*"
+        }
+      ]
+    },
+    {
+      "section": "Single-Phase Hybrid Inverters",
+      "name": "VOLT-5KW1",
+      "badge": "",
+      "capacity": "5 kW",
+      "desc": "Mid-size single-phase hybrid inverter for average residential loads, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
+      "features": [
+        {
+          "title": "Fast Transfer",
+          "detail": "Grid to standalone in <10ms"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP66 rated"
+        },
+        {
+          "title": "Smart Monitoring",
+          "detail": "LED, LCD, app, CAN BMS"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated Output Power",
+          "value": "5,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "8,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "125–425 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Type",
+          "value": "Li-ion / Lead-acid"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "120 A"
+        },
+        {
+          "label": "Max. Output Peak Power",
+          "value": "10,000 W (<10s)"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.3%"
+        },
+        {
+          "label": "Dimensions (W×H×D)",
+          "value": "228×470×340 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "19 kg"
+        },
+        {
+          "label": "Ingress Protection",
+          "value": "IP66"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-20 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 yrs (10)*"
+        }
+      ]
+    },
+    {
+      "section": "Single-Phase Hybrid Inverters",
+      "name": "VOLT-6KW1",
+      "badge": "",
+      "capacity": "6 kW",
+      "desc": "Higher-output single-phase hybrid inverter for heavier residential loads, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
+      "features": [
+        {
+          "title": "Fast Transfer",
+          "detail": "Grid to standalone in <10ms"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP66 rated"
+        },
+        {
+          "title": "Smart Monitoring",
+          "detail": "LED, LCD, app, CAN BMS"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated Output Power",
+          "value": "6,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "9,600 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "125–425 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Type",
+          "value": "Li-ion / Lead-acid"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "135 A"
+        },
+        {
+          "label": "Max. Output Peak Power",
+          "value": "10,000 W (<10s)"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.3%"
+        },
+        {
+          "label": "Dimensions (W×H×D)",
+          "value": "228×470×340 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "19 kg"
+        },
+        {
+          "label": "Ingress Protection",
+          "value": "IP66"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-20 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 yrs (10)*"
+        }
+      ]
+    },
+    {
+      "section": "Single-Phase Hybrid Inverters",
+      "name": "VOLT-8KW1",
+      "badge": "",
+      "capacity": "8 kW",
+      "desc": "Top-of-range single-phase hybrid inverter for large homes, with quad-string MPPTs and lead-acid / lithium-ion battery support.",
+      "features": [
+        {
+          "title": "Fast Transfer",
+          "detail": "Grid to standalone in <10ms"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65 rated"
+        },
+        {
+          "title": "Smart Monitoring",
+          "detail": "LED, LCD, app, CAN BMS"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated Output Power",
+          "value": "8,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "12,800 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–425 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 2+2"
+        },
+        {
+          "label": "Battery Type",
+          "value": "Lead-acid / Li-ion"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "190 A"
+        },
+        {
+          "label": "Max. Output Peak Power",
+          "value": "16,000 W (<10s)"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.6%"
+        },
+        {
+          "label": "Dimensions (W×H×D)",
+          "value": "330×580×232 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "24.9 kg"
+        },
+        {
+          "label": "Ingress Protection",
+          "value": "IP65"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-20 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 yrs (10)*"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase Hybrid Inverters",
+      "name": "VOLT-8KW3",
+      "badge": "",
+      "capacity": "8 kW",
+      "desc": "Entry three-phase hybrid inverter with wide PV input and self-adapting lithium BMS charging for smaller commercial sites.",
+      "features": [
+        {
+          "title": "Wide PV Input",
+          "detail": "Up to 800V, MPPT 200–650V"
+        },
+        {
+          "title": "Remote Monitoring",
+          "detail": "RS485/RS232/CAN + GPRS/WiFi"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "8,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "12,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "200–650 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "190 A"
+        },
+        {
+          "label": "Rated AC Voltage",
+          "value": "220/380V, 230/400V"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "420×670×233 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "35.6 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-45 to 60°C"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase Hybrid Inverters",
+      "name": "VOLT-10KW3",
+      "badge": "",
+      "capacity": "10 kW",
+      "desc": "Step-up three-phase hybrid inverter sharing the compact 8kW/10kW cabinet, sized for growing commercial loads.",
+      "features": [
+        {
+          "title": "Wide PV Input",
+          "detail": "Up to 800V, MPPT 200–650V"
+        },
+        {
+          "title": "Remote Monitoring",
+          "detail": "RS485/RS232/CAN + GPRS/WiFi"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "10,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "15,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "200–650 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "210 A"
+        },
+        {
+          "label": "Rated AC Voltage",
+          "value": "220/380V, 230/400V"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "420×670×233 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "35.6 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-45 to 60°C"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase Hybrid Inverters",
+      "name": "VOLT-12KW3",
+      "badge": "",
+      "capacity": "12 kW",
+      "desc": "Mid-range three-phase hybrid inverter in a dedicated cabinet, built for medium-scale commercial installations.",
+      "features": [
+        {
+          "title": "Wide PV Input",
+          "detail": "Up to 800V, MPPT 200–650V"
+        },
+        {
+          "title": "Remote Monitoring",
+          "detail": "RS485/RS232/CAN + GPRS/WiFi"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "12,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "18,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "200–650 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 1+1"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "240 A"
+        },
+        {
+          "label": "Rated AC Voltage",
+          "value": "220/380V, 230/400V"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "386×660×250 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "35.2 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-45 to 60°C"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase Hybrid Inverters",
+      "name": "VOLT-15KW3",
+      "badge": "",
+      "capacity": "15 kW",
+      "desc": "Higher-capacity three-phase hybrid inverter with quad-string MPPTs, for larger commercial rooftops.",
+      "features": [
+        {
+          "title": "Wide PV Input",
+          "detail": "Up to 800V, MPPT 200–650V"
+        },
+        {
+          "title": "Remote Monitoring",
+          "detail": "RS485/RS232/CAN + GPRS/WiFi"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "15,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "24,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "200–650 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 2+2"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "280 A"
+        },
+        {
+          "label": "Rated AC Voltage",
+          "value": "220/380V, 230/400V"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "456×750×268.5 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "51.9 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-45 to 60°C"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase Hybrid Inverters",
+      "name": "VOLT-20KW3",
+      "badge": "",
+      "capacity": "20 kW",
+      "desc": "Top-of-range three-phase hybrid inverter in this series, for the largest commercial and light-industrial loads.",
+      "features": [
+        {
+          "title": "Wide PV Input",
+          "detail": "Up to 800V, MPPT 200–650V"
+        },
+        {
+          "title": "Remote Monitoring",
+          "detail": "RS485/RS232/CAN + GPRS/WiFi"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "20,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "32,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "200–650 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "2 / 2+2"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "40–60 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "350 A"
+        },
+        {
+          "label": "Rated AC Voltage",
+          "value": "220/380V, 230/400V"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "456×750×268.5 mm"
+        },
+        {
+          "label": "Weight",
+          "value": "51.9 kg"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-45 to 60°C"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase High-Voltage Hybrid Inverters",
+      "name": "VOLT-30KW3",
+      "badge": "",
+      "capacity": "30 kW",
+      "desc": "Entry high-voltage three-phase hybrid inverter with a 3-MPPT design, for industrial rooftops stepping up from commercial scale.",
+      "features": [
+        {
+          "title": "HV Battery Input",
+          "detail": "160–800V lithium-ion"
+        },
+        {
+          "title": "Multi-Mode Monitoring",
+          "detail": "GPRS/WiFi/Bluetooth/4G/LAN"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "30,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "48,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–850 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "3 / 2+2+2"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "160–800 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50 A"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "527×894×294 mm"
+        },
+        {
+          "label": "Cooling",
+          "value": "Intelligent air cooling"
+        },
+        {
+          "label": "Noise",
+          "value": "≤65 dB"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-40 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 years"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase High-Voltage Hybrid Inverters",
+      "name": "VOLT-40KW3",
+      "badge": "",
+      "capacity": "40 kW",
+      "desc": "Four-MPPT high-voltage three-phase hybrid inverter for medium industrial and large C&I installations.",
+      "features": [
+        {
+          "title": "HV Battery Input",
+          "detail": "160–800V lithium-ion"
+        },
+        {
+          "title": "Multi-Mode Monitoring",
+          "detail": "GPRS/WiFi/Bluetooth/4G/LAN"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "40,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "64,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–850 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "4 / 2×4"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "160–800 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50 A"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "527×894×294 mm"
+        },
+        {
+          "label": "Cooling",
+          "value": "Intelligent air cooling"
+        },
+        {
+          "label": "Noise",
+          "value": "≤65 dB"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-40 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 years"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase High-Voltage Hybrid Inverters",
+      "name": "VOLT-50KW3",
+      "badge": "",
+      "capacity": "50 kW",
+      "desc": "Highest-rated model sharing the compact HV cabinet, for larger industrial sites needing more continuous throughput.",
+      "features": [
+        {
+          "title": "HV Battery Input",
+          "detail": "160–800V lithium-ion"
+        },
+        {
+          "title": "Multi-Mode Monitoring",
+          "detail": "GPRS/WiFi/Bluetooth/4G/LAN"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "50,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "80,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–850 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "4 / 2×4"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "160–800 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "50 A"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "527×894×294 mm"
+        },
+        {
+          "label": "Cooling",
+          "value": "Intelligent air cooling"
+        },
+        {
+          "label": "Noise",
+          "value": "≤65 dB"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-40 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 years"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase High-Voltage Hybrid Inverters",
+      "name": "VOLT-60KW3",
+      "badge": "",
+      "capacity": "60 kW",
+      "desc": "Six-MPPT high-voltage three-phase hybrid inverter with an extended 1000V battery range, for heavy industrial loads.",
+      "features": [
+        {
+          "title": "HV Battery Input",
+          "detail": "160–1000V lithium-ion"
+        },
+        {
+          "title": "Multi-Mode Monitoring",
+          "detail": "GPRS/WiFi/Bluetooth/4G/LAN"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "60,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "96,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–850 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "6 / 2×6"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "160–1000 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "80 A"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "606×927×314 mm"
+        },
+        {
+          "label": "Cooling",
+          "value": "Smart Cooling"
+        },
+        {
+          "label": "Noise",
+          "value": "≤65 dB"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-40 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 years"
+        }
+      ]
+    },
+    {
+      "section": "Three-Phase High-Voltage Hybrid Inverters",
+      "name": "VOLT-80KW3",
+      "badge": "",
+      "capacity": "80 kW",
+      "desc": "Flagship model in the range — six-MPPT, highest PV and AC throughput, for the largest industrial and grid-tied installations.",
+      "features": [
+        {
+          "title": "HV Battery Input",
+          "detail": "160–1000V lithium-ion"
+        },
+        {
+          "title": "Multi-Mode Monitoring",
+          "detail": "GPRS/WiFi/Bluetooth/4G/LAN"
+        },
+        {
+          "title": "Weatherproof",
+          "detail": "IP65"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Rated AC Power",
+          "value": "80,000 W"
+        },
+        {
+          "label": "Max. PV Input Power",
+          "value": "128,000 W"
+        },
+        {
+          "label": "MPPT Voltage Range",
+          "value": "150–850 V"
+        },
+        {
+          "label": "No. of MPPTs / Strings",
+          "value": "6 / 2×6"
+        },
+        {
+          "label": "Battery Voltage Range",
+          "value": "160–1000 V"
+        },
+        {
+          "label": "Max Charge / Discharge",
+          "value": "80 A"
+        },
+        {
+          "label": "Grid Connection",
+          "value": "3L+N+PE"
+        },
+        {
+          "label": "Max. Efficiency",
+          "value": "97.60%"
+        },
+        {
+          "label": "Cabinet Size (W×H×D)",
+          "value": "606×927×314 mm"
+        },
+        {
+          "label": "Cooling",
+          "value": "Smart Cooling"
+        },
+        {
+          "label": "Noise",
+          "value": "≤65 dB"
+        },
+        {
+          "label": "Operating Temperature",
+          "value": "-40 to 60°C"
+        },
+        {
+          "label": "Warranty",
+          "value": "5 years"
+        }
+      ]
+    }
+  ]
+}

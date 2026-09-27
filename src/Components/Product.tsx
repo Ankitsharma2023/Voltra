@@ -1,15 +1,19 @@
 import React from "react";
 import ProductSolutions from "./home/ProductSolutions";
 import Eyebrow from "./home/ui/Eyebrow";
-import { RESIDENTIAL_BATTERIES, HYBRID_INVERTERS, HIGH_VOLTAGE_PRODUCTS } from "../constants/site";
+import { CATALOG } from "../constants/catalog";
+
+/** Inverter renders are portrait, so those sections use the taller stage. */
+const TALL_CATS = new Set(["single-phase", "three-phase", "three-phase-hv"]);
+/** Group label shown above each section's title. */
+const GROUP = (key: string) =>
+  key.includes("phase") || key === "all-in-one" ? "Inverters & Backup" : "Energy Storage";
 
 /**
- * Products — the "Our Products" catalogue page. Lists the full Voltra line-up
- * (residential batteries + hybrid inverters) using the shared product cards.
- *
- * NOTE: category/use-case filtering is not designed yet (pending the designer),
- * so for now every product is listed under its category section. The Navbar and
- * SiteFooter render globally in App.tsx.
+ * Products — the "Our Products" catalogue page. Renders the full Voltra line-up
+ * from the generated catalog (constants/catalog.js): eight category sections,
+ * each with the shared product cards. The Navbar and SiteFooter render globally
+ * in App.tsx.
  */
 export default function Products() {
   return (
@@ -32,28 +36,17 @@ export default function Products() {
         </div>
       </section>
 
-      {/* All batteries */}
-      <ProductSolutions
-        eyebrow="Residential Energy Storage"
-        title="Batteries"
-        products={RESIDENTIAL_BATTERIES}
-      />
-
-      {/* All hybrid inverters */}
-      <ProductSolutions
-        eyebrow="Hybrid Inverters"
-        title="Inverters"
-        products={HYBRID_INVERTERS}
-        tall
-      />
-
-      {/* High voltage range (HVC, Stackable Racks, Link Air) */}
-      <ProductSolutions
-        eyebrow="High-Capacity & BESS"
-        title="High Voltage Range"
-        products={HIGH_VOLTAGE_PRODUCTS.products}
-        tall
-      />
+      {/* Every category from the catalog, in order */}
+      {CATALOG.map((cat) => (
+        <ProductSolutions
+          key={cat.key}
+          eyebrow={GROUP(cat.key)}
+          title={cat.title}
+          subtitle={cat.subtitle}
+          products={cat.products}
+          tall={TALL_CATS.has(cat.key)}
+        />
+      ))}
     </div>
   );
 }

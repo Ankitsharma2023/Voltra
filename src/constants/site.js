@@ -14,6 +14,8 @@
  */
 
 /** Existing app routes — the only place URLs are hard-coded. */
+import { productsByKey } from "./catalog";
+
 export const ROUTES = {
   home: "/",
   products: "/products",
@@ -84,301 +86,43 @@ export const ABOUT = {
  *  primaryCta, secondaryCta } (see ProductCard.tsx).
  * ============================================================================
  */
-const CTA = {
-  primaryCta: { label: "Order Now", to: ROUTES.contact },
-  // Brochure is gated behind the contact form: this routes to /contact and the
-  // PDF downloads only after the message is sent (see ContactForm).
-  secondaryCta: { label: "Download Brochure", to: `${ROUTES.contact}?brochure=1` },
-};
-const PHOTO = "/voltra/products/";
-
-/* ----------------------------------------------------------------------------
- * Card content builders
- * Each product card shows a short description + three benefit "features"
- * (bold title — detail) above an expandable "Full Specification" table. Rather
- * than hand-write these per product, we derive them from the real spec values
- * so every card reads differently but stays truthful to the datasheet.
- * -------------------------------------------------------------------------- */
-const specVal = (p, label) => (p.specs?.find((s) => s.label === label) || {}).value;
-
-const BATTERY_DESC =
-  "Wall-mounted lithium (LFP) storage for homes and small commercial sites — compact enough to install indoors or out, and built for safe, everyday cycling.";
-const addBatteryCard = (p) => {
-  const eff = specVal(p, "Efficiency") || specVal(p, "Charge–Discharge Efficiency");
-  return {
-    ...p,
-    description: BATTERY_DESC,
-    features: [
-      { title: "Flexible", detail: `${p.capacities} modular design, scalable in parallel` },
-      {
-        title: "Weatherproof",
-        detail: /^IP/.test(p.badge || "")
-          ? `${p.badge}-rated, suited to outdoor mounting`
-          : "IP-rated enclosure for indoor or outdoor mounting",
-      },
-      {
-        title: "Long Life",
-        detail: `${specVal(p, "Cell Type") || "LFP"} cells, >6,000 cycles${
-          eff && eff !== "Not specified" ? `, ${eff} efficiency` : ""
-        }`,
-      },
-    ],
-  };
-};
-
-const INVERTER_DESC =
-  "Solar hybrid inverter that manages PV, battery and grid together — high conversion efficiency with fast, seamless backup switchover.";
-const addInverterCard = (p) => {
-  const rated = specVal(p, "Rated AC Output Power") || specVal(p, "Apparent Power") || p.capacities;
-  const eff = specVal(p, "Maximum Efficiency") || specVal(p, "Charge–Discharge Efficiency") || "97.6%";
-  const pv = specVal(p, "Maximum PV Input Power");
-  return {
-    ...p,
-    description: INVERTER_DESC,
-    features: [
-      { title: "Sized to fit", detail: `${rated} rated output` },
-      { title: "High yield", detail: `Up to ${eff} conversion efficiency` },
-      pv
-        ? { title: "Solar ready", detail: `Up to ${pv} PV input` }
-        : { title: "Backup ready", detail: "Fast automatic switchover keeps critical loads powered" },
-    ],
-  };
-};
-
-const HV_DESC =
-  "High-voltage, grid-scale energy storage for commercial and utility projects — factory-integrated, liquid-cooled and built to scale into the megawatt range.";
-const addHvCard = (p) => ({
-  ...p,
-  description: HV_DESC,
-  features: [
-    { title: "Grid scale", detail: "Modular racks scale from tens of kWh into the MWh range" },
-    { title: "Liquid cooled", detail: "Active thermal management for stable, high-throughput cycling" },
-    { title: "Built safe", detail: "LFP chemistry with multi-level BMS protection" },
-  ],
-});
-
-// ---- Batteries (final product spec sheet — 8 cards) ----
+/* ============================================================================
+ *  PRODUCTS — sourced from the generated catalog (constants/catalog.js), which
+ *  carries the real product names, capacities, descriptions, benefit features
+ *  and full specification tables scraped from the reference catalog. These
+ *  exports simply group the catalog for the home page and the individual
+ *  product pages; the /products catalogue renders the full CATALOG directly.
+ * ============================================================================
+ */
 export const RESIDENTIAL_BATTERIES = [
-  {
-    id: "lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "1.25 kWh",
-    image: `${PHOTO}lvw-4s-2p56.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "1.25 kWh" },
-      { label: "Max. Output Power", value: "1.2 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "2.56 kWh",
-    image: `${PHOTO}lvw-4s-pro.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "2.56 kWh" },
-      { label: "Max. Output Power", value: "2.4 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-8s", brand: "VOLT", name: "LVW 8S", capacities: "2.56 kWh",
-    image: `${PHOTO}lvw-8s.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "2.56 kWh" },
-      { label: "Max. Output Power", value: "2.4 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-8s-pro", brand: "VOLT", name: "LVW 8S", badge: "PRO", capacities: "5.12 kWh",
-    image: `${PHOTO}lvw-8s-pro.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "5.12 kWh" },
-      { label: "Max. Output Power", value: "3.6 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvw-16s", brand: "VOLT", name: "LVW 16S", capacities: "5.12 kWh",
-    image: `${PHOTO}lvw-16s.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "5.12 kWh" },
-      { label: "Max. Output Power", value: "5 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lvs", brand: "VOLT", name: "LVS", badge: "STACKABLE", capacities: "4.86 / 9.72 / 14.6 / 19.45 kWh",
-    image: `${PHOTO}stackable-racks.jpg`,
-    specs: [
-      { label: "Cell Type", value: "100Ah LFP Prismatic" },
-      { label: "Available Energy", value: "4.86 – 19.45 kWh" },
-      { label: "Max. Output Power", value: "5 / 10 / 15 / 20 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lv200", brand: "VOLT", name: "LV200", capacities: "10.24 kWh",
-    image: `${PHOTO}lv200.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "10.24 kWh" },
-      { label: "Max. Output Power", value: "10 kW" },
-      { label: "Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-  {
-    id: "lv314", brand: "VOLT", name: "LV314", capacities: "16.07 kWh",
-    image: `${PHOTO}lv314.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "16.07 kWh" },
-      { label: "Max. Output Power", value: "9.72 kW" },
-      { label: "Efficiency", value: "Not specified" },
-    ], ...CTA,
-  },
-].map(addBatteryCard);
+  ...productsByKey("wall"),
+  ...productsByKey("floor-stack"),
+  ...productsByKey("all-in-one"),
+];
 
-// ---- Hybrid Inverters (Figma "Hybrid Inverters" product range) ----
 export const HYBRID_INVERTERS = [
-  {
-    id: "hi-3kw", brand: "VOLT", name: "3KW HI", badge: "IP66", capacities: "3 kW",
-    image: `${PHOTO}hi-single-3kw.jpg`,
-    specs: [
-      { label: "Rated AC Output Power", value: "3 kW" },
-      { label: "Maximum Efficiency", value: "97.6%" },
-      { label: "Maximum PV Input Power", value: "4.8 kW" },
-      { label: "Battery Voltage Range", value: "220 / 230 V" },
-    ], ...CTA,
-  },
-  {
-    id: "hi-single-k1p", brand: "VOLT", name: "Single Phase HI", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
-    image: `${PHOTO}hi-single-k1p.jpg`,
-    specs: [
-      { label: "Rated AC Output Power", value: "3 – 10 kW" },
-      { label: "Maximum Efficiency", value: "97.6%" },
-      { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
-      { label: "Battery Voltage Range", value: "40 – 60 V" },
-    ], ...CTA,
-  },
-  {
-    id: "hi-three-k3p", brand: "VOLT", name: "Three Phase HI", badge: "K3P", capacities: "0506 | 0608 | 0810 | 1012 | 1215 | 1520 | 2025",
-    image: `${PHOTO}hi-three-k3p.jpg`,
-    specs: [
-      { label: "Rated AC Output Power", value: "5 – 20 kW" },
-      { label: "Maximum Efficiency", value: "97.6%" },
-      { label: "Maximum PV Input Power", value: "7.5 – 32 kW" },
-      { label: "Battery Voltage Range", value: "40 – 60 V" },
-    ], ...CTA,
-  },
-  {
-    id: "hi-k1p", brand: "VOLT", name: "HI", badge: "K1P", capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012",
-    image: `${PHOTO}hi-lvw16s.jpg`,
-    specs: [
-      { label: "Rated AC Output Power", value: "3 – 10 kW" },
-      { label: "Maximum Efficiency", value: "97.6%" },
-      { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
-      { label: "Battery Voltage Range", value: "40 – 60 V" },
-    ], ...CTA,
-  },
-  {
-    id: "hi-fusion-1600", brand: "VOLT", name: "FUSION 1600", capacities: "1280 Wh",
-    image: `${PHOTO}fusion-1600.jpg`,
-    specs: [
-      { label: "Cell Type", value: "LFP" },
-      { label: "Available Energy", value: "1280 Wh" },
-      { label: "Apparent Power", value: "1250 VA" },
-      { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-    ], ...CTA,
-  },
-].map(addInverterCard);
+  ...productsByKey("single-phase"),
+  ...productsByKey("three-phase"),
+  ...productsByKey("three-phase-hv"),
+];
 
-// ---- Home page product rows ----
-// These mirror the Figma landing frame exactly: three rows with the designer's
-// finalised product placement (Battery Solutions, Inverter Solutions, High
-// Voltage Range).
+export const HIGH_VOLTAGE_PRODUCTS = {
+  title: "Our High Voltage Range Products",
+  products: [...productsByKey("containerized"), ...productsByKey("hv-rack")],
+};
+
 export const BATTERY_SOLUTIONS = {
   title: "Our Battery Solutions for your home",
-  products: [
-    {
-      id: "home-lvw-16s-ultra", brand: "VOLT", name: "LVW 16S", badge: "IP65",
-      capacities: "5.12 | 10.24 | 20.48 | 40.96 kWh", image: "/voltra/product-unit-front.png",
-      specs: [
-        { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "5.12 kWh" },
-        { label: "Max. Output Power", value: "5 kW" },
-        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-      ], ...CTA,
-    },
-    {
-      id: "home-lvw-4s-pro", brand: "VOLT", name: "LVW 4S", badge: "PRO", capacities: "2.56 kWh",
-      image: `${PHOTO}lvw-4s-pro.jpg`,
-      specs: [
-        { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "2.56 kWh" },
-        { label: "Max. Output Power", value: "2.4 kW" },
-        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-      ], ...CTA,
-    },
-    {
-      id: "home-lvw-4s", brand: "VOLT", name: "LVW 4S", capacities: "1.25 kWh",
-      image: `${PHOTO}lvw-4s-2p56.jpg`,
-      specs: [
-        { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "1.25 kWh" },
-        { label: "Max. Output Power", value: "1.2 kW" },
-        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-      ], ...CTA,
-    },
-  ].map(addBatteryCard),
+  products: productsByKey("wall").slice(0, 3),
 };
 
 export const INVERTER_SOLUTIONS = {
   title: "Our Inverter Solutions for your home",
   products: [
-    {
-      id: "home-hi-single", brand: "VOLT", name: "Single Phase HI", badge: "K1P",
-      capacities: "0304 | 3.605 | 0506 | 0608 | 0810 | 1012", image: `${PHOTO}hi-single-3kw.jpg`,
-      specs: [
-        { label: "Rated AC Output Power", value: "3 – 10 kW" },
-        { label: "Maximum Efficiency", value: "97.6%" },
-        { label: "Maximum PV Input Power", value: "4.8 – 16 kW" },
-        { label: "Battery Voltage Range", value: "40 – 60 V" },
-      ], ...CTA,
-    },
-    {
-      id: "home-fusion-1600", brand: "VOLT", name: "FUSION 1600", capacities: "1280 Wh",
-      image: `${PHOTO}fusion-1600.jpg`,
-      specs: [
-        { label: "Cell Type", value: "LFP" },
-        { label: "Available Energy", value: "1280 Wh" },
-        { label: "Apparent Power", value: "1250 VA" },
-        { label: "Charge–Discharge Efficiency", value: "≥ 97%" },
-      ], ...CTA,
-    },
-    {
-      id: "home-hi-three", brand: "VOLT", name: "Three Phase HI", badge: "K3P",
-      capacities: "0506 | 0608 | 0810 | 1012 | 1215 | 1520 | 2025", image: `${PHOTO}hi-three-k3p.jpg`,
-      specs: [
-        { label: "Rated AC Output Power", value: "5 – 20 kW" },
-        { label: "Maximum Efficiency", value: "97.6%" },
-        { label: "Maximum PV Input Power", value: "7.5 – 32 kW" },
-        { label: "Battery Voltage Range", value: "40 – 60 V" },
-      ], ...CTA,
-    },
-  ].map(addInverterCard),
-};
-
-// High Voltage Range — name + render only (no spec table in the Figma cards).
-export const HIGH_VOLTAGE_PRODUCTS = {
-  title: "Our High Voltage Range Products",
-  products: [
-    { id: "home-hvc", brand: "VOLT", name: "HVC", image: `${PHOTO}hvc.jpg`, specs: [], ...CTA },
-    { id: "home-stackable-racks", brand: "VOLT", name: "Stackable Racks", image: `${PHOTO}stackable-racks.jpg`, specs: [], ...CTA },
-    { id: "home-link-air", brand: "VOLT", name: "Link Air", image: `${PHOTO}link-air.jpg`, specs: [], ...CTA },
-  ].map(addHvCard),
+    productsByKey("single-phase")[0],
+    productsByKey("three-phase")[0],
+    productsByKey("three-phase-hv")[0],
+  ].filter(Boolean),
 };
 
 export const OFFERINGS = {
