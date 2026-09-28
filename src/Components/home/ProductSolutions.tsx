@@ -37,7 +37,7 @@ export default function ProductSolutions({
           <p className="mt-4 max-w-[720px] text-base leading-relaxed text-navy/55">{subtitle}</p>
         )}
         <div className="mb-10" />
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {products.map((product, i) => (
             <ProductCard key={product.id} product={product} image={product.image ?? images[i % images.length]} tall={tall} />
           ))}
