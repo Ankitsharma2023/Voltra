@@ -7,6 +7,8 @@ export interface Product {
   brand: string;
   name: string;
   badge?: string;
+  /** Optional model number / sub-title shown under the name. */
+  model?: string;
   capacities?: string;
   description?: string;
   /** Per-product photo; overrides the cycled `images` array in ProductSolutions. */
@@ -64,6 +66,9 @@ export default function ProductCard({
               </span>
             )}
           </h3>
+          {product.model && (
+            <p className="mt-1 text-[11px] uppercase tracking-wide text-navy/40 sm:text-xs">{product.model}</p>
+          )}
           {product.capacities && (
             <span className="mt-2 inline-block rounded bg-brand px-2.5 py-1 text-[11.5px] font-bold tracking-wide text-white">
               {product.capacities}

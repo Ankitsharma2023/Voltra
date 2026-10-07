@@ -90,6 +90,33 @@ def emit_product(p):
     lines.append("    },")
     return "\n".join(lines)
 
+# ---- Extra products supplied directly (Sachin's voltra-product-cards.html) ----
+EXTRAS = json.load(open('tools/new-products.json'))
+# placement by "<brand> <name>" -> category key
+PLACE = { 'NEXA 4KW': 'single-phase', 'LV 50': 'wall' }
+
+def emit_extra(e):
+    name = e['name']
+    cap = e['badges'][0] if e['badges'] else ''
+    badge = e['badges'][1] if len(e['badges']) > 1 else ''
+    lines = ["    {"]
+    lines.append(f'      id: "{slug(e["brand"]+" "+name, "")}", brand: "{esc(e["brand"])}", name: "{esc(name)}",')
+    if badge: lines.append(f'      badge: "{esc(badge)}",')
+    if e.get('model'): lines.append(f'      model: "{esc(e["model"])}",')
+    lines.append(f'      capacities: "{esc(cap)}", image: "{e["image"]}",')
+    lines.append(f'      description: "{esc(e["desc"])}",')
+    lines.append("      features: [")
+    for ft in e['features']:
+        lines.append(f'        {{ title: "{esc(ft["title"])}", detail: "{esc(ft["detail"])}" }},')
+    lines.append("      ],")
+    lines.append("      specs: [")
+    for s in e['specs']:
+        lines.append(f'        {{ label: "{esc(s["label"])}", value: "{esc(s["value"])}" }},')
+    lines.append("      ],")
+    lines.append("      ...CTA,")
+    lines.append("    },")
+    return "\n".join(lines)
+
 out = []
 out.append("// AUTO-GENERATED product catalog.")
 out.append("// Source: the reference Voltra catalog (smooth-site-builder-69.lovable.app).")
@@ -112,6 +139,9 @@ for (sec, key, title, sub) in CATS:
     out.append(f'    title: "{esc(title)}",')
     out.append(f'    subtitle: "{esc(sub)}",')
     out.append("    products: [")
+    for e in EXTRAS:
+        if PLACE.get(e["brand"] + " " + e["name"]) == key:
+            out.append(emit_extra(e))
     for p in prods:
         out.append(emit_product(p))
     out.append("    ],")

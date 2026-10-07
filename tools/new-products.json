@@ -1,0 +1,172 @@
+[
+  {
+    "brand": "NEXA",
+    "name": "4KW",
+    "model": "Model No. VOLT0404K1P",
+    "badges": [
+      "4 kW",
+      "IP54"
+    ],
+    "desc": "Single-phase hybrid inverter for homes, shops and small offices, with MPPT solar charging, Wi-Fi monitoring and CT anti-backflow support.",
+    "features": [
+      {
+        "title": "Fast Transfer",
+        "detail": "Switching in 10ms for computers"
+      },
+      {
+        "title": "Dust & Splash Proof",
+        "detail": "IP54 rated"
+      },
+      {
+        "title": "Smart Monitoring",
+        "detail": "LCD, Wi-Fi, BMS card"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Rated Output Power",
+        "value": "4,000 W"
+      },
+      {
+        "label": "Max. PV Input Power",
+        "value": "6,500 W"
+      },
+      {
+        "label": "MPPT Voltage Range",
+        "value": "60\u2013500 V"
+      },
+      {
+        "label": "Max. PV Input Current",
+        "value": "27 A"
+      },
+      {
+        "label": "Battery Voltage",
+        "value": "24 V"
+      },
+      {
+        "label": "Max Charging Current",
+        "value": "120 A"
+      },
+      {
+        "label": "Max. Output Peak Power",
+        "value": "8,000 VA"
+      },
+      {
+        "label": "Max. Efficiency",
+        "value": "98%"
+      },
+      {
+        "label": "Output Waveform",
+        "value": "Pure sine wave"
+      },
+      {
+        "label": "Dimensions (W\u00d7H\u00d7D)",
+        "value": "508\u00d7660\u00d7234 mm"
+      },
+      {
+        "label": "Weight",
+        "value": "19.17 kg"
+      },
+      {
+        "label": "Ingress Protection",
+        "value": "IP54"
+      },
+      {
+        "label": "Operating Temperature",
+        "value": "-10 to 50\u00b0C"
+      },
+      {
+        "label": "Warranty",
+        "value": "5 yrs"
+      }
+    ],
+    "image": "/voltra/products/nexa-4kw.jpg"
+  },
+  {
+    "brand": "LV",
+    "name": "50",
+    "model": "51.2V 50Ah LiFePO4 Battery Pack",
+    "badges": [
+      "2.56 kWh",
+      "LiFePO4"
+    ],
+    "desc": "Plug-and-play lithium battery for home backup, with a built-in Bluetooth BMS and 3,500-cycle life. Pairs with Voltra hybrid inverters.",
+    "features": [
+      {
+        "title": "Long Life",
+        "detail": "3,500 cycles @ 80% DoD"
+      },
+      {
+        "title": "Safe Chemistry",
+        "detail": "Cobalt-free LiFePO4"
+      },
+      {
+        "title": "Smart BMS",
+        "detail": "16S 60A with Bluetooth"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Nominal Voltage",
+        "value": "51.2 V"
+      },
+      {
+        "label": "Capacity",
+        "value": "50 Ah"
+      },
+      {
+        "label": "Energy",
+        "value": "2.56 kWh"
+      },
+      {
+        "label": "Configuration",
+        "value": "16S 1P"
+      },
+      {
+        "label": "Operating Voltage",
+        "value": "42\u201358.4 V"
+      },
+      {
+        "label": "Depth of Discharge",
+        "value": "90%"
+      },
+      {
+        "label": "Max. Charge Rate",
+        "value": "0.5C"
+      },
+      {
+        "label": "Max. Discharge Rate",
+        "value": "1C"
+      },
+      {
+        "label": "Cycle Life",
+        "value": "3,500 @ 80% DoD"
+      },
+      {
+        "label": "BMS",
+        "value": "16S 60A, Bluetooth"
+      },
+      {
+        "label": "Cell Balancing",
+        "value": "Passive"
+      },
+      {
+        "label": "Dimensions (L\u00d7W\u00d7H)",
+        "value": "400\u00d7174.5\u00d7406 mm"
+      },
+      {
+        "label": "Weight",
+        "value": "~25 kg"
+      },
+      {
+        "label": "Charge / Discharge Temp.",
+        "value": "15\u201345 / 0\u201350\u00b0C"
+      },
+      {
+        "label": "Battery Life",
+        "value": "10 yrs*"
+      }
+    ],
+    "image": "/voltra/products/lv-50.jpg"
+  }
+]
