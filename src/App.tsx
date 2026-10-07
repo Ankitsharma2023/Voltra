@@ -3,6 +3,7 @@ import Home from "./Components/Home";
 import "./App.css";
 import React from "react";
 import Navbar from "./Components/home/Navbar";
+import AnnouncementBar from "./Components/home/AnnouncementBar";
 import SiteFooter from "./Components/home/SiteFooter";
 import ScrollToTop from "./Components/ScrollToTop";
 import Products from "./Components/Product";
@@ -26,6 +27,7 @@ function App() {
     // sections; the font-sans default resolves to the Helvetica Neue stack.
     <div className="flex min-h-screen flex-col bg-page-wash font-sans text-navy">
       <ScrollToTop />
+      <AnnouncementBar />
       <Navbar />
       <main className="flex-1">
         <Routes>

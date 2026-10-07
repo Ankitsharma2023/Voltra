@@ -16,6 +16,15 @@
 /** Existing app routes — the only place URLs are hard-coded. */
 import { productsByKey } from "./catalog";
 
+// Top-of-site announcement strip. `prefix` only shows on wider screens so the
+// line stays short on phones.
+export const ANNOUNCEMENT = {
+  prefix: "Meet us at ",
+  event: "REI Expo",
+  venue: "Hall 7, Stall 7.72",
+  dates: "22–24 Oct 2026",
+};
+
 export const ROUTES = {
   home: "/",
   products: "/products",
