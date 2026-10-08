@@ -22,7 +22,6 @@ export default function GridScaleBess() {
         eyebrow="Product range"
         title="High Voltage Range Products"
         products={HIGH_VOLTAGE_PRODUCTS.products}
-        tall
       />
       <DarkFeatures
         title={BESS_PAGE.features.title}
