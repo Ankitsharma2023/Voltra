@@ -109,12 +109,22 @@ export const ABOUT = {
 const byId = (key, id) => productsByKey(key).find((p) => p.id === id);
 const withImg = (p, image) => (p ? { ...p, image } : p);
 const invFig = (key, id) => withImg(byId(key, id), `/voltra/figma/inv-${id === "nexa-4kw" ? "nexa" : id}.png`);
+const batFig = (key, id) => withImg(byId(key, id), `/voltra/figma/bat-${id}.png`);
 
+// Lithium Batteries page range — 10 products in the Figma order, each with its
+// own Figma render. Data (specs/features) still comes from the catalog.
 export const RESIDENTIAL_BATTERIES = [
-  ...productsByKey("wall"),
-  ...productsByKey("floor-stack"),
-  ...productsByKey("all-in-one"),
-];
+  batFig("wall", "volt-lvw-16s-ip65"),
+  batFig("wall", "volt-lvw-4s"),
+  batFig("wall", "volt-lvw-4s-pro"),
+  batFig("wall", "volt-lvw-8s"),
+  batFig("wall", "volt-lvw-8s-pro"),
+  batFig("wall", "lv-50"),
+  batFig("floor-stack", "volt-lv200"),
+  batFig("floor-stack", "volt-lv314"),
+  batFig("floor-stack", "volt-lvs"),
+  batFig("all-in-one", "volt-fusion-1600"),
+].filter(Boolean);
 
 // Hybrid Inverters page range — 15 products in the Figma order (single-phase
 // 3→8 kW, then NEXA, then three-phase 8→20 kW, then high-voltage 30→80 kW),
