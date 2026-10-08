@@ -47,6 +47,23 @@ def image_for(name, badge):
     if re.match(r"VOLT-[0-9]+KW3", n): return P+"hi-three-k3p.jpg"
     return P+"lvw-16s.jpg"  # safe fallback
 
+
+import os as _os
+BAT_CATS={'wall','floor-stack','all-in-one'}
+INV_CATS={'single-phase','three-phase','three-phase-hv'}
+HV_MAP={'volt-link':'home-hv-1','volt-link-air':'home-hv-3','volt-hvc':'home-hv-2'}
+def figma_image(key, pid):
+    """Prefer the clean Figma render for this product; fall back to None."""
+    if key in BAT_CATS and _os.path.exists(f'public/voltra/figma/bat-{pid}.png'):
+        return f'/voltra/figma/bat-{pid}.png'
+    if key in INV_CATS:
+        base='nexa' if pid=='nexa-4kw' else pid
+        if _os.path.exists(f'public/voltra/figma/inv-{base}.png'):
+            return f'/voltra/figma/inv-{base}.png'
+    if pid in HV_MAP:
+        return f'/voltra/figma/{HV_MAP[pid]}.png'
+    return None
+
 def slug(name, badge):
     s = re.sub(r'[^a-z0-9]+', '-', (name+' '+badge).lower()).strip('-')
     return s
@@ -66,14 +83,16 @@ for p in data:
     if not key: continue
     groups.setdefault(key, []).append(p)
 
-def emit_product(p):
+def emit_product(p, key):
     name = model(p['name'])
     badge = p['badge']
+    pid = slug(p["name"], badge)
+    img = figma_image(key, pid) or image_for(p["name"], badge)
     lines = []
     lines.append("    {")
     lines.append(f'      id: "{slug(p["name"], badge)}", brand: "VOLT", name: "{esc(name)}",')
     if badge: lines.append(f'      badge: "{esc(badge)}",')
-    lines.append(f'      capacities: "{esc(p["capacity"])}", image: "{image_for(p["name"], badge)}",')
+    lines.append(f'      capacities: "{esc(p["capacity"])}", image: "{img}",')
     lines.append(f'      description: "{esc(p["desc"])}",')
     # features
     lines.append("      features: [")
@@ -95,15 +114,17 @@ EXTRAS = json.load(open('tools/new-products.json'))
 # placement by "<brand> <name>" -> category key
 PLACE = { 'NEXA 4KW': 'single-phase', 'LV 50': 'wall' }
 
-def emit_extra(e):
+def emit_extra(e, key):
     name = e['name']
     cap = e['badges'][0] if e['badges'] else ''
     badge = e['badges'][1] if len(e['badges']) > 1 else ''
+    pid = slug(e["brand"] + " " + name, "")
+    img = figma_image(key, pid) or e["image"]
     lines = ["    {"]
     lines.append(f'      id: "{slug(e["brand"]+" "+name, "")}", brand: "{esc(e["brand"])}", name: "{esc(name)}",')
     if badge: lines.append(f'      badge: "{esc(badge)}",')
     if e.get('model'): lines.append(f'      model: "{esc(e["model"])}",')
-    lines.append(f'      capacities: "{esc(cap)}", image: "{e["image"]}",')
+    lines.append(f'      capacities: "{esc(cap)}", image: "{img}",')
     lines.append(f'      description: "{esc(e["desc"])}",')
     lines.append("      features: [")
     for ft in e['features']:
@@ -141,9 +162,9 @@ for (sec, key, title, sub) in CATS:
     out.append("    products: [")
     for e in EXTRAS:
         if PLACE.get(e["brand"] + " " + e["name"]) == key:
-            out.append(emit_extra(e))
+            out.append(emit_extra(e, key))
     for p in prods:
-        out.append(emit_product(p))
+        out.append(emit_product(p, key))
     out.append("    ],")
     out.append("  },")
 out.append("];")
