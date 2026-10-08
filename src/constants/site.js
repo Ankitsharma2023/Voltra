@@ -115,22 +115,36 @@ export const HYBRID_INVERTERS = [
   ...productsByKey("three-phase-hv"),
 ];
 
+// Home showcase sections — curated products rendered with the clean Figma
+// product shots (public/voltra/figma). Data comes from the catalog by id; only
+// the image is overridden so specs/features stay in sync with /products.
+const byId = (key, id) => productsByKey(key).find((p) => p.id === id);
+const withImg = (p, image) => (p ? { ...p, image } : p);
+
 export const HIGH_VOLTAGE_PRODUCTS = {
   title: "Our High Voltage Range Products",
-  products: [...productsByKey("containerized"), ...productsByKey("hv-rack")],
+  products: [
+    withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.png"), // VOLT-LINK cabinet
+    withImg(productsByKey("hv-rack")[0], "/voltra/figma/home-hv-2.png"), // VOLT-HVC rack
+    withImg(productsByKey("containerized")[1], "/voltra/figma/home-hv-3.png"), // VOLT-LINK AIR
+  ].filter(Boolean),
 };
 
 export const BATTERY_SOLUTIONS = {
   title: "Our Battery Solutions for your home",
-  products: productsByKey("wall").slice(0, 3),
+  products: [
+    withImg(byId("wall", "volt-lvw-16s-ip65"), "/voltra/figma/home-bat-16s.png"),
+    withImg(byId("wall", "volt-lvw-4s-pro"), "/voltra/figma/home-bat-4s-pro.png"),
+    withImg(byId("wall", "volt-lvw-4s"), "/voltra/figma/home-bat-4s.png"),
+  ].filter(Boolean),
 };
 
 export const INVERTER_SOLUTIONS = {
   title: "Our Inverter Solutions for your home",
   products: [
-    productsByKey("single-phase")[0],
-    productsByKey("three-phase")[0],
-    productsByKey("three-phase-hv")[0],
+    withImg(byId("single-phase", "volt-3kw1"), "/voltra/figma/home-inv-1.png"),
+    withImg(productsByKey("three-phase")[0], "/voltra/figma/home-inv-2.png"),
+    withImg(productsByKey("three-phase-hv")[0], "/voltra/figma/home-inv-3.png"),
   ].filter(Boolean),
 };
 
