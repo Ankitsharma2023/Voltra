@@ -103,23 +103,39 @@ export const ABOUT = {
  *  product pages; the /products catalogue renders the full CATALOG directly.
  * ============================================================================
  */
+// Look up a catalog product by category + id, and clone it with a different
+// image (used to drop in the clean Figma product renders from /voltra/figma
+// without touching the specs/features sourced from the catalog).
+const byId = (key, id) => productsByKey(key).find((p) => p.id === id);
+const withImg = (p, image) => (p ? { ...p, image } : p);
+const invFig = (key, id) => withImg(byId(key, id), `/voltra/figma/inv-${id === "nexa-4kw" ? "nexa" : id}.png`);
+
 export const RESIDENTIAL_BATTERIES = [
   ...productsByKey("wall"),
   ...productsByKey("floor-stack"),
   ...productsByKey("all-in-one"),
 ];
 
+// Hybrid Inverters page range — 15 products in the Figma order (single-phase
+// 3→8 kW, then NEXA, then three-phase 8→20 kW, then high-voltage 30→80 kW),
+// each with its own Figma render.
 export const HYBRID_INVERTERS = [
-  ...productsByKey("single-phase"),
-  ...productsByKey("three-phase"),
-  ...productsByKey("three-phase-hv"),
-];
-
-// Home showcase sections — curated products rendered with the clean Figma
-// product shots (public/voltra/figma). Data comes from the catalog by id; only
-// the image is overridden so specs/features stay in sync with /products.
-const byId = (key, id) => productsByKey(key).find((p) => p.id === id);
-const withImg = (p, image) => (p ? { ...p, image } : p);
+  invFig("single-phase", "volt-3kw1"),
+  invFig("single-phase", "volt-5kw1"),
+  invFig("single-phase", "volt-6kw1"),
+  invFig("single-phase", "volt-8kw1"),
+  invFig("single-phase", "nexa-4kw"),
+  invFig("three-phase", "volt-8kw3"),
+  invFig("three-phase", "volt-10kw3"),
+  invFig("three-phase", "volt-12kw3"),
+  invFig("three-phase", "volt-15kw3"),
+  invFig("three-phase", "volt-20kw3"),
+  invFig("three-phase-hv", "volt-30kw3"),
+  invFig("three-phase-hv", "volt-40kw3"),
+  invFig("three-phase-hv", "volt-50kw3"),
+  invFig("three-phase-hv", "volt-60kw3"),
+  invFig("three-phase-hv", "volt-80kw3"),
+].filter(Boolean);
 
 export const HIGH_VOLTAGE_PRODUCTS = {
   title: "Our High Voltage Range Products",
