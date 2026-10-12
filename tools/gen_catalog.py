@@ -64,6 +64,100 @@ def figma_image(key, pid):
         return f'/voltra/figma/{HV_MAP[pid]}.png'
     return None
 
+# ---- Authoritative spec sheet (Voltra_Product_Specs.html) -------------------
+# Product-card spec tables are sourced from this master sheet (shared by Sachin)
+# instead of the reference scrape. Each catalog product maps to one series +
+# column in the sheet's `D` data object.
+SPEC_HTML = "Voltra_Product_Specs.html"
+# Display-name overrides (by catalog id) where the marketing name differs from
+# the scraped name. BADGE_OVERRIDE "" clears a badge (e.g. when the variant is
+# spelled out in the name instead of shown as a corner chip).
+NAME_OVERRIDE = {
+    "volt-lvw-16s-ip65": "LVW 16S Ultra",
+    "volt-lvw-4s-pro": "LVW 4S Pro",
+    "volt-lvw-8s-pro": "LVW 8S Pro",
+}
+BADGE_OVERRIDE = {
+    "volt-lvw-4s-pro": "",
+    "volt-lvw-8s-pro": "",
+}
+SPEC_MAP = {
+    "volt-link": ("link", 0), "volt-link-air": ("linkair", 0), "volt-hvc": ("hvc", 0),
+    "volt-lv314": ("lv314", 0), "volt-lv200": ("lv200", 0), "volt-lvs": ("lvs", 0),
+    "lv-50": ("lv50", 0), "volt-fusion-1600": ("fusion", 0),
+    "volt-lvw-16s-ip65": ("lvw16", 0), "volt-lvw-8s-pro": ("lvw8p", 0),
+    "volt-lvw-8s": ("lvw8", 0), "volt-lvw-4s-pro": ("lvw4p", 0), "volt-lvw-4s": ("lvw4", 0),
+    "nexa-4kw": ("nexa", 0),
+    "volt-3kw1": ("t1", 0), "volt-5kw1": ("t1", 1), "volt-6kw1": ("t1", 2), "volt-8kw1": ("t1", 3),
+    "volt-8kw3": ("t3", 0), "volt-10kw3": ("t3", 1), "volt-12kw3": ("t3", 2),
+    "volt-15kw3": ("t3", 3), "volt-20kw3": ("t3", 4),
+    "volt-30kw3": ("thv", 0), "volt-40kw3": ("thv", 1), "volt-50kw3": ("thv", 2),
+    "volt-60kw3": ("thv", 3), "volt-80kw3": ("thv", 4),
+}
+
+def _extract_D(text):
+    """Pull the `var D={...}` object out of the spec sheet and parse it as JSON."""
+    i = text.find("var D=")
+    if i < 0:
+        return None
+    j = text.find("{", i)
+    depth = 0; in_str = False; esc_ = False
+    for k in range(j, len(text)):
+        ch = text[k]
+        if in_str:
+            if esc_: esc_ = False
+            elif ch == "\\": esc_ = True
+            elif ch == '"': in_str = False
+        elif ch == '"': in_str = True
+        elif ch == "{": depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                return json.loads(text[j:k + 1])
+    return None
+
+def _flatten(series, col):
+    """Flatten one series+column into [{label, value}]; array values index by
+    column, scalars apply to all. Labels that repeat across groups are prefixed
+    with the group name so each row stays unique and readable."""
+    counts = {}
+    for group in series.get("groups", []):
+        for row in group[1]:
+            counts[row[0]] = counts.get(row[0], 0) + 1
+    out = []
+    for group in series.get("groups", []):
+        gname = group[0]
+        for row in group[1]:
+            label, val = row[0], row[1]
+            v = (val[col] if col < len(val) else val[-1]) if isinstance(val, list) else val
+            lab = f"{gname} — {label}" if counts.get(label, 0) > 1 else label
+            out.append({"label": lab, "value": str(v)})
+    return out
+
+# Products that represent a whole multi-module family — their spec modal gets a
+# toggle (one tab per column) instead of a single table.
+VARIANT_IDS = {"volt-hvc", "volt-lvs"}
+
+HTML_SPECS = {}
+HTML_VARIANTS = {}
+if _os.path.exists(SPEC_HTML):
+    _D = _extract_D(open(SPEC_HTML, encoding="utf-8").read())
+    if _D:
+        for _cid, (_key, _col) in SPEC_MAP.items():
+            if _key not in _D:
+                continue
+            _series = _D[_key]
+            if _cid in VARIANT_IDS and _series.get("cols"):
+                HTML_VARIANTS[_cid] = [
+                    {"label": _lbl, "specs": _flatten(_series, _i)}
+                    for _i, _lbl in enumerate(_series["cols"])
+                ]
+                HTML_SPECS[_cid] = HTML_VARIANTS[_cid][0]["specs"]
+            else:
+                HTML_SPECS[_cid] = _flatten(_series, _col)
+print("spec-sheet products mapped:", len(HTML_SPECS), "| variant products:", len(HTML_VARIANTS))
+
+
 def slug(name, badge):
     s = re.sub(r'[^a-z0-9]+', '-', (name+' '+badge).lower()).strip('-')
     return s
@@ -87,10 +181,12 @@ def emit_product(p, key):
     name = model(p['name'])
     badge = p['badge']
     pid = slug(p["name"], badge)
+    name = NAME_OVERRIDE.get(pid, name)
+    badge = BADGE_OVERRIDE.get(pid, badge)
     img = figma_image(key, pid) or image_for(p["name"], badge)
     lines = []
     lines.append("    {")
-    lines.append(f'      id: "{slug(p["name"], badge)}", brand: "VOLT", name: "{esc(name)}",')
+    lines.append(f'      id: "{pid}", brand: "VOLT", name: "{esc(name)}",')
     if badge: lines.append(f'      badge: "{esc(badge)}",')
     lines.append(f'      capacities: "{esc(p["capacity"])}", image: "{img}",')
     lines.append(f'      description: "{esc(p["desc"])}",')
@@ -100,11 +196,24 @@ def emit_product(p, key):
         if not f['title'] and not f['detail']: continue
         lines.append(f'        {{ title: "{esc(f["title"])}", detail: "{esc(f["detail"])}" }},')
     lines.append("      ],")
-    # specs
+    # specs — prefer the authoritative spec sheet, else the scraped specs
     lines.append("      specs: [")
-    for s in p['specs']:
-        lines.append(f'        {{ label: "{esc(s["label"])}", value: "{esc(s["value"])}" }},')
+    for s in (HTML_SPECS.get(pid) or p['specs']):
+        lines.append(f'        {{ label: "{esc(s["label"])}", value: "{esc(str(s["value"]))}" }},')
     lines.append("      ],")
+    # spec variants — module toggle for multi-module families
+    variants = HTML_VARIANTS.get(pid)
+    if variants:
+        lines.append("      specVariants: [")
+        for v in variants:
+            lines.append("        {")
+            lines.append(f'          label: "{esc(v["label"])}",')
+            lines.append("          specs: [")
+            for s in v["specs"]:
+                lines.append(f'            {{ label: "{esc(s["label"])}", value: "{esc(str(s["value"]))}" }},')
+            lines.append("          ],")
+            lines.append("        },")
+        lines.append("      ],")
     lines.append("      ...CTA,")
     lines.append("    },")
     return "\n".join(lines)
@@ -131,8 +240,8 @@ def emit_extra(e, key):
         lines.append(f'        {{ title: "{esc(ft["title"])}", detail: "{esc(ft["detail"])}" }},')
     lines.append("      ],")
     lines.append("      specs: [")
-    for s in e['specs']:
-        lines.append(f'        {{ label: "{esc(s["label"])}", value: "{esc(s["value"])}" }},')
+    for s in (HTML_SPECS.get(pid) or e['specs']):
+        lines.append(f'        {{ label: "{esc(s["label"])}", value: "{esc(str(s["value"]))}" }},')
     lines.append("      ],")
     lines.append("      ...CTA,")
     lines.append("    },")

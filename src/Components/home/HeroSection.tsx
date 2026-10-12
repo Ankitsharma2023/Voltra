@@ -53,7 +53,7 @@ export default function HeroSection() {
 
           <div className="flex flex-wrap items-center gap-4">
             <PillButton to={HERO.primaryCta.to} label={HERO.primaryCta.label} variant="solid" size="lg" />
-            <PillButton to={HERO.secondaryCta.to} label={HERO.secondaryCta.label} variant="outline" size="lg" icon="none" />
+            <PillButton to={HERO.secondaryCta.to} label={HERO.secondaryCta.label} variant="solid" size="lg" />
           </div>
 
           <WarrantyBadge />

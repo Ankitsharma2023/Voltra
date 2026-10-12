@@ -45,7 +45,7 @@ function NavLink({
 function Logo({ dark }: { dark: boolean }) {
   // `dark` means the nav is sitting on the blue hero band, so the lockup needs
   // its white colourway — the blue one would vanish against it.
-  return <BrandLockup onDark={dark} />;
+  return <BrandLockup onDark={dark} size="lg" />;
 }
 
 /** White "Our Products" pill (blue text) used on dark headers. */

@@ -61,27 +61,29 @@ export const HERO = {
   titleLines: ["Hybrid Inverters", "Lithium Batteries"],
   titleAccent: "Built for Bharat",
   subtitle:
-    "Voltra makes India's most advanced solar hybrid systems — from rooftop homes to grid-scale BESS. Engineered locally. Trusted nationally.",
-  primaryCta: { label: "Hybrid Inverters", to: ROUTES.hybridInverters },
-  secondaryCta: { label: "Lithium Batteries", to: ROUTES.lithiumBatteries },
-  warranty: ["10 YEARS OF POWER", "10 YEARS OF PEACE", "WARRANTY YOU CAN TRUST"],
+    "Hybrid inverters from 3 kW to 125 kW, LiFePO4 batteries from 1.28 kWh to 256 kWh, and BESS up to 5 MWh. Made in India, built to last 25 years.",
+  primaryCta: { label: "Explore Products", to: ROUTES.products },
+  secondaryCta: { label: "Talk to an Expert", to: ROUTES.contact },
+  warranty: ["10-Year Warranty", "25-Year Design Life"],
   warrantyYears: "10",
 };
 
 /** Phrases cycled across the moving ticker ribbon under the hero. */
 export const MARQUEE_ITEMS = [
-  "#1 energy storage company",
-  "Hybrid inverters, engineered smarter",
-  "LiFePO4 batteries, built to outlast",
-  "10-year warranty. Zero fine print",
-  "Powering the future of energy",
+  "Hybrid inverters · 3 kW to 125 kW",
+  "LiFePO4 batteries · 1.28 kWh to 256 kWh",
+  "Energy storage systems · 25 kWh to 5 MWh",
+  "25-year design life",
+  "10-year warranty",
+  "8,000+ cycle life",
+  "Proudly Made in India",
 ];
 
 export const ABOUT = {
   eyebrow: "About Voltra",
   title: "Shaping India's energy future with indigenized hybrid technology.",
   body:
-    "Headquartered in Gurugram with a gigafactory in Bahadurgarh, Voltra Energy delivers hybrid solar inverters and Lithium Iron Phosphate (LFP) battery systems for homes, businesses and grid-scale renewable integration.",
+    "Voltra designs and manufactures hybrid inverters, LiFePO4 batteries and energy storage systems in India. From a 1.28 kWh home battery to a 5 MWh grid-scale BESS, every product is built for Indian grids, Indian heat and 25 years of reliable power.",
   cta: { label: "Learn More", to: ROUTES.about },
 };
 
@@ -113,12 +115,43 @@ const batFig = (key, id) => withImg(byId(key, id), `/voltra/figma/bat-${id}.png`
 
 // Lithium Batteries page range — 10 products in the Figma order, each with its
 // own Figma render. Data (specs/features) still comes from the catalog.
+// Standard (non-expandable) LVW 16S — 51.2 V / 100 Ah single module. Sits just
+// before the expandable "16S Ultra" in ascending order. Reuses the LVW 16S
+// Figma render (same physical unit).
+const LVW_16S = {
+  id: "volt-lvw-16s",
+  brand: "VOLT",
+  name: "LVW 16S",
+  capacities: "5.12 kWh",
+  image: "/voltra/products/lvw-16s.png",
+  description:
+    "Wall-mounted 51.2 V LiFePO4 battery with 100 Ah / 5.12 kWh of usable storage for home and small-commercial backup.",
+  features: [
+    { title: "51.2 V · 100 Ah", detail: "5,120 Wh nominal energy" },
+    { title: "Fast Charge / Discharge", detail: "100 A discharge, 50 A charge" },
+    { title: "Wide DC Range", detail: "41.6 – 57.6 V operating window" },
+  ],
+  specs: [
+    { label: "Nominal voltage", value: "51.2 V" },
+    { label: "Nominal capacity", value: "100 Ah" },
+    { label: "Nominal energy", value: "5,120 Wh" },
+    { label: "DC voltage range", value: "41.6 – 57.6 V" },
+    { label: "Max. discharging current", value: "100 A" },
+    { label: "Max. charging current", value: "50 A" },
+    { label: "Max. charging voltage", value: "58.4 V" },
+    { label: "Operating temperature", value: "0 – 50°C" },
+  ],
+  primaryCta: { label: "Order Now", to: ROUTES.contact },
+  secondaryCta: { label: "Full Specification", to: ROUTES.contact },
+};
+
 export const RESIDENTIAL_BATTERIES = [
-  batFig("wall", "volt-lvw-16s-ip65"),
   batFig("wall", "volt-lvw-4s"),
   batFig("wall", "volt-lvw-4s-pro"),
   batFig("wall", "volt-lvw-8s"),
   batFig("wall", "volt-lvw-8s-pro"),
+  LVW_16S,
+  batFig("wall", "volt-lvw-16s-ip65"),
   batFig("wall", "lv-50"),
   batFig("floor-stack", "volt-lv200"),
   batFig("floor-stack", "volt-lv314"),
@@ -147,26 +180,124 @@ export const HYBRID_INVERTERS = [
   invFig("three-phase-hv", "volt-80kw3"),
 ].filter(Boolean);
 
+// ---- Hybrid Inverters page: Titan + Nexa series --------------------------
+// Cards reuse the catalog specs + Figma render but are rebranded "VOLT TITAN …"
+// / "VOLT NEXA …" with the IP rating (or HV) shown as the corner badge.
+const titan = (key, id, name, badge) => {
+  const p = invFig(key, id);
+  return p ? { ...p, brand: "VOLT TITAN", name, badge } : null;
+};
+
+export const TITAN_SERIES = {
+  eyebrow: "Titan Series",
+  title: "VOLT TITAN Series — hybrid inverters from 3 kW to 80 kW.",
+  groups: [
+    {
+      label: "Single Phase · 3–8 kW",
+      products: [
+        titan("single-phase", "volt-3kw1", "3K1P", "IP66"),
+        titan("single-phase", "volt-5kw1", "5K1P", "IP66"),
+        titan("single-phase", "volt-6kw1", "6K1P", "IP66"),
+        titan("single-phase", "volt-8kw1", "8K1P", "IP65"),
+      ].filter(Boolean),
+    },
+    {
+      label: "Three Phase · 8–20 kW",
+      products: [
+        titan("three-phase", "volt-8kw3", "8K3P", "IP65"),
+        titan("three-phase", "volt-10kw3", "10K3P", "IP65"),
+        titan("three-phase", "volt-12kw3", "12K3P", "IP65"),
+        titan("three-phase", "volt-15kw3", "15K3P", "IP65"),
+        titan("three-phase", "volt-20kw3", "20K3P", "IP65"),
+      ].filter(Boolean),
+    },
+    {
+      label: "High Voltage · 30–80 kW",
+      products: [
+        titan("three-phase-hv", "volt-30kw3", "30K3P", "HV"),
+        titan("three-phase-hv", "volt-40kw3", "40K3P", "HV"),
+        titan("three-phase-hv", "volt-50kw3", "50K3P", "HV"),
+        titan("three-phase-hv", "volt-60kw3", "60K3P", "HV"),
+        titan("three-phase-hv", "volt-80kw3", "80K3P", "HV"),
+      ].filter(Boolean),
+    },
+  ],
+};
+
+const NEXA_IMG = "/voltra/figma/inv-nexa.png";
+const nexaComingSoon = (id, name, kw) => ({
+  id,
+  brand: "VOLT NEXA",
+  name,
+  badge: "IP54",
+  capacities: `${kw} kW`,
+  image: NEXA_IMG,
+  description:
+    "New IP54 hybrid inverter in the Nexa series for larger homes and shops.",
+  features: [
+    { title: "Dust & Splash Proof", detail: "IP54 rated" },
+    { title: "Hybrid", detail: "Solar, battery and grid in one unit" },
+  ],
+  specs: [],
+  comingSoon: true,
+  primaryCta: { label: "Order Now", to: ROUTES.contact },
+  secondaryCta: { label: "Full Specification", to: ROUTES.contact },
+});
+
+const nexa4 = (() => {
+  const p = invFig("single-phase", "nexa-4kw");
+  return p ? { ...p, brand: "VOLT NEXA", name: "4K1P", badge: "IP54", model: "Model no. VOLT0404K1P" } : null;
+})();
+
+export const NEXA_SERIES = {
+  title: "VOLT NEXA Series — IP54 hybrid inverters for Indian homes.",
+  products: [nexa4, nexaComingSoon("nexa-6k", "6K", 6), nexaComingSoon("nexa-10k", "10K", 10)].filter(Boolean),
+};
+
+// Flat list of every hybrid inverter (Titan + Nexa) in ascending kW order — for
+// the "Our Products" catalogue, which groups only by family (no sub-sections).
+export const ALL_INVERTERS = [
+  titan("single-phase", "volt-3kw1", "3K1P", "IP66"),   // 3 kW
+  nexa4,                                                 // 4 kW
+  titan("single-phase", "volt-5kw1", "5K1P", "IP66"),   // 5 kW
+  titan("single-phase", "volt-6kw1", "6K1P", "IP66"),   // 6 kW
+  nexaComingSoon("nexa-6k", "6K", 6),                    // 6 kW
+  titan("single-phase", "volt-8kw1", "8K1P", "IP65"),   // 8 kW
+  titan("three-phase", "volt-8kw3", "8K3P", "IP65"),    // 8 kW
+  nexaComingSoon("nexa-10k", "10K", 10),                 // 10 kW
+  titan("three-phase", "volt-10kw3", "10K3P", "IP65"),  // 10 kW
+  titan("three-phase", "volt-12kw3", "12K3P", "IP65"),  // 12 kW
+  titan("three-phase", "volt-15kw3", "15K3P", "IP65"),  // 15 kW
+  titan("three-phase", "volt-20kw3", "20K3P", "IP65"),  // 20 kW
+  titan("three-phase-hv", "volt-30kw3", "30K3P", "HV"), // 30 kW
+  titan("three-phase-hv", "volt-40kw3", "40K3P", "HV"), // 40 kW
+  titan("three-phase-hv", "volt-50kw3", "50K3P", "HV"), // 50 kW
+  titan("three-phase-hv", "volt-60kw3", "60K3P", "HV"), // 60 kW
+  titan("three-phase-hv", "volt-80kw3", "80K3P", "HV"), // 80 kW
+].filter(Boolean);
+
 export const HIGH_VOLTAGE_PRODUCTS = {
-  title: "Our High Voltage Range Products",
+  title: "Energy Storage Systems · 25 kWh to 5 MWh",
+  subtitle: "Modular storage for C&I and utility projects.",
   products: [
-    withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.png"), // VOLT-LINK cabinet
     withImg(productsByKey("hv-rack")[0], "/voltra/figma/home-hv-2.png"), // VOLT-HVC rack
+    withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.png"), // VOLT-LINK cabinet
     withImg(productsByKey("containerized")[1], "/voltra/figma/home-hv-3.png"), // VOLT-LINK AIR
   ].filter(Boolean),
 };
 
 export const BATTERY_SOLUTIONS = {
-  title: "Our Battery Solutions for your home",
+  title: "LiFePO4 Lithium Batteries for Home & Business",
   products: [
-    withImg(byId("wall", "volt-lvw-16s-ip65"), "/voltra/figma/home-bat-16s.png"),
-    withImg(byId("wall", "volt-lvw-4s-pro"), "/voltra/figma/home-bat-4s-pro.png"),
-    withImg(byId("wall", "volt-lvw-4s"), "/voltra/figma/home-bat-4s.png"),
+    batFig("floor-stack", "volt-lv314"),
+    batFig("floor-stack", "volt-lv200"),
+    batFig("wall", "volt-lvw-16s-ip65"),
   ].filter(Boolean),
 };
 
 export const INVERTER_SOLUTIONS = {
-  title: "Our Inverter Solutions for your home",
+  title: "Hybrid Inverters · 3 kW to 125 kW",
+  subtitle: "Single-phase to three-phase, homes to factories.",
   products: [
     withImg(byId("single-phase", "volt-3kw1"), "/voltra/figma/home-inv-1.png"),
     withImg(productsByKey("three-phase")[0], "/voltra/figma/home-inv-2.png"),
@@ -306,14 +437,14 @@ export const ABOUT_PAGE = {
     eyebrow: "About Voltra",
     title: "Energy reliability, made in India",
     body:
-      "Voltra Energy is building the BESS infrastructure that India's renewable transition depends on — from residential rooftops to gigawatt-scale grids.",
+      "From homes and shops to factories and solar farms, Voltra delivers complete energy storage: 3–125 kW inverters, 1.28–256 kWh batteries and 25 kWh–5 MWh BESS, all backed by a 10-year warranty.",
     cta: { label: "Learn More", to: ROUTES.products },
   },
   stats: [
     { value: "15+", label: "States across India" },
     { value: "8,000+", label: "Cycle life @ 25°C" },
-    { value: "1,672 kWh", label: "Max single-cabinet capacity" },
-    { value: "15 yrs", label: "Design lifespan" },
+    { value: "5 MWh", label: "Max BESS capacity" },
+    { value: "25 yrs", label: "Design life" },
   ],
   mission: {
     eyebrow: "Our mission",
@@ -365,14 +496,16 @@ export const HYBRID_PAGE = {
     eyebrow: "Why Voltra Hybrid",
     title: "Built for Indian grids and Indian climates.",
     body:
-      "Wide input voltage, surge protection, dust-sealed enclosures and a smart BMS handshake make Voltra hybrid inverters the most reliable choice for Tier-1 to Tier-4 cities.",
+      "Voltra hybrid inverters run solar, battery and grid together, from 3 kW homes to 125 kW commercial sites. Sealed up to IP66, they handle heat, dust and voltage swings, and switch to backup in under 10 ms.",
     chips: [
-      { label: "Battery-ready" },
-      { label: "Single-phase" },
-      { label: "3 – 6 kW", active: true },
-      { label: "IP66 outdoor" },
-      { label: "App monitoring" },
+      { label: "3 kW – 125 kW", active: true },
+      { label: "Single & three-phase" },
+      { label: "IP54 – IP66" },
+      { label: "Up to 98% efficiency" },
+      { label: "<10 ms switchover" },
       { label: "On-grid + Off-grid" },
+      { label: "App monitoring" },
+      { label: "25-year design life" },
     ],
   },
   range: {
@@ -406,25 +539,27 @@ export const LITHIUM_PAGE = {
     eyebrow: "Li-ion Batteries",
     title: "Safe, long-life LFP storage for every Indian home and business.",
     subtitle:
-      "From 1.25 kWh wall-mount units to 20 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
+      "From 1.28 kWh wall-mount units to 256 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
   },
   why: {
     eyebrow: "Why LFP",
     title: "The safest Li-ion chemistry, engineered for India.",
     body:
-      "Lithium Iron Phosphate (LFP) is the chemistry of choice for stationary energy storage worldwide. Thermally stable, non-flammable and far longer-lived than NMC — perfect for the Indian climate.",
+      "Voltra LiFePO4 batteries are non-flammable, heat-stable and rated for 8,000+ cycles. Scale from a 1.28 kWh home unit to 256 kWh by connecting up to 16 batteries in parallel.",
     chips: [
       { label: "Non-flammable" },
       { label: "12.8 – 51.2 V" },
-      { label: "1.25 – 20 kWh", active: true },
-      { label: "IP65 outdoor" },
-      { label: "App monitoring" },
+      { label: "1.28 – 256 kWh", active: true },
+      { label: "8,000+ cycles" },
+      { label: "97%+ efficiency" },
+      { label: "IP65" },
       { label: "Stackable" },
+      { label: "App monitoring" },
     ],
   },
   range: {
     eyebrow: "Product range",
-    title: "Modular capacity from 1.25 kWh to 20 kWh.",
+    title: "Modular capacity from 1.28 kWh to 256 kWh.",
     products: RESIDENTIAL_BATTERIES,
   },
   features: {
@@ -456,16 +591,18 @@ export const BESS_PAGE = {
   },
   why: {
     eyebrow: "VOLT-LINK platform",
-    title: "418 · 836 · 1,254 · 1,672 kWh — one modular platform.",
+    title: "25 kWh to 5 MWh: one modular platform.",
     body:
-      "Liquid-cooled prismatic LFP cells, 200 kW rated power per cabinet and parallel scalability to multi-MWh farms. A 1.7 m² footprint makes deployment compact even at substation scale.",
+      "Volt-Link brings LFP batteries, PCS, BMS, EMS, cooling and fire safety into one cabinet. Start small, add cabinets as you grow, and run C&I or utility projects up to 5 MWh.",
     chips: [
-      { label: "LFP Chemistry" },
-      { label: "8K+ Cycles" },
-      { label: "IP55 Rated", active: true },
-      { label: "200kW PCS" },
-      { label: "Liquid Cooling" },
-      { label: "94% Efficient" },
+      { label: "25 kWh – 5 MWh", active: true },
+      { label: "LFP 314 Ah cells" },
+      { label: "8,000+ cycles" },
+      { label: "Air & liquid cooling" },
+      { label: "IP55" },
+      { label: "Built-in fire safety" },
+      { label: "94% efficiency" },
+      { label: "Smart EMS" },
     ],
   },
   features: {
@@ -746,7 +883,7 @@ export const ENERGY_ADVISOR = {
         id: "inverters",
         label: "Inverters",
         title: "Hybrid Inverters",
-        series: "VI Series | 3-50KW",
+        series: "TITAN & NEXA · 3 – 80 kW",
         body: [
           "A hybrid inverter is the brain of your solar-plus-storage system. It uses Maximum Power Point Tracking (MPPT) to extract peak energy from your solar panels — continuously adjusting voltage and current to match panel conditions hundreds of times per second.",
           "Unlike a basic string inverter, it intelligently routes power between solar, battery and grid in milliseconds — charging the battery when solar is abundant, switching to battery during cuts, and exporting surplus when allowed.",
@@ -754,49 +891,49 @@ export const ENERGY_ADVISOR = {
         cta: { label: "Explore Inverters", to: ROUTES.hybridInverters },
         columns: ["Model", "Phase", "kW", "MPPT", "Eff.", "Best For"],
         rows: [
-          ["VI-3K", "Single", "3 kW", "2", "97.6%", "Small home"],
-          ["VI-5K", "Single", "5 kW", "2", "97.8%", "Family home"],
-          ["VI-8K", "Single", "8 kW", "2", "98.0%", "Large home"],
-          ["VI-15K", "Three", "15 kW", "3", "98.2%", "Shop / office"],
-          ["VI-50K", "Three", "50 kW", "4", "98.4%", "Industrial"],
+          ["TITAN-3K1P", "Single", "3 kW", "2", "97%", "Small home"],
+          ["TITAN-8K1P", "Single", "8 kW", "2", "97.6%", "Large home"],
+          ["NEXA-4K1P", "Single", "4 kW", "1", "98%", "Home · IP54"],
+          ["TITAN-20K3P", "Three", "20 kW", "2", "97.6%", "Shop / office"],
+          ["TITAN-50K3P", "Three", "50 kW", "4", "97.6%", "Industrial"],
+          ["TITAN-80K3P", "Three", "80 kW", "6", "97.6%", "Utility / C&I"],
         ],
       },
       {
         id: "battery",
         label: "Battery",
         title: "Lithium Batteries",
-        series: "LVW Series | 5-30KWH",
+        series: "LVW · LV · LVS · up to 256 kWh",
         body: [
-          "Voltra packs use LiFePO₄ (lithium iron phosphate) cells — the safest lithium chemistry available. They tolerate high temperatures without thermal runaway, and hold over 80% of their original capacity after 6,000 full cycles.",
+          "Voltra packs use LiFePO₄ (lithium iron phosphate) cells — the safest lithium chemistry available. They tolerate high temperatures without thermal runaway, and hold over 80% of their original capacity after thousands of full cycles.",
           "Every pack ships with a smart BMS that balances cells, tracks state-of-charge to within 2%, and reports live health over Bluetooth — so you know exactly what your storage is doing.",
         ],
         cta: { label: "Explore Batteries", to: ROUTES.lithiumBatteries },
-        columns: ["Model", "Voltage", "kWh", "Cycles", "DoD", "Best For"],
+        columns: ["Model", "Voltage", "kWh", "Cycles", "Best For"],
         rows: [
-          ["LVW-5S", "51.2 V", "5.1 kWh", "6000+", "95%", "Small home"],
-          ["LVW-10S", "51.2 V", "10.2 kWh", "6000+", "95%", "Family home"],
-          ["LVW-16S", "51.2 V", "16.4 kWh", "6000+", "95%", "Large home"],
-          ["LVW-20S", "102 V", "20.5 kWh", "6000+", "95%", "Shop / office"],
-          ["LVW-30S", "102 V", "30.7 kWh", "6000+", "95%", "Light industry"],
+          ["LVW 4S", "12.8 V", "1.25 kWh", "3,500+", "Small backup"],
+          ["LVW 8S", "25.6 V", "2.56 kWh", "3,500+", "Home"],
+          ["LVW 16S", "51.2 V", "5.12 kWh", "6,000+", "Home / shop"],
+          ["LV200", "51.2 V", "10.24 kWh", "6,000+", "Large home"],
+          ["LV314", "51.2 V", "16.07 kWh", "8,000+", "Small commercial"],
+          ["LVS", "51.2 V", "5.1 – 20.5 kWh", "6,000+", "Stackable tower"],
         ],
       },
       {
         id: "grids",
         label: "Grids",
         title: "Grid-Scale BESS",
-        series: "VG Series | 100KWH-2MWH",
+        series: "VOLT-HVC · VOLT-LINK · 25 kWh – 5 MWh",
         body: [
           "Grid-scale Battery Energy Storage Systems store surplus renewable generation and release it when demand peaks — smoothing the duck curve and cutting reliance on diesel peaker plants.",
-          "Voltra cabinets are liquid-cooled for even cell temperatures, ship pre-integrated with PCS and fire suppression, and scale in parallel from a single 100 kWh unit to multi-megawatt farms.",
+          "Voltra cabinets ship pre-integrated with PCS, EMS and fire suppression, and scale in parallel from a modular HVC rack to multi-megawatt liquid-cooled farms.",
         ],
         cta: { label: "Explore BESS", to: ROUTES.gridBess },
         columns: ["Model", "Capacity", "PCS", "Cooling", "Cycles", "Best For"],
         rows: [
-          ["VG-100", "100 kWh", "50 kW", "Liquid", "8000+", "C&I peak shaving"],
-          ["VG-250", "250 kWh", "125 kW", "Liquid", "8000+", "Factory backup"],
-          ["VG-500", "500 kWh", "250 kW", "Liquid", "8000+", "Microgrid"],
-          ["VG-1M", "1 MWh", "500 kW", "Liquid", "8000+", "Utility firming"],
-          ["VG-2M", "2 MWh", "1 MW", "Liquid", "8000+", "Solar farm"],
+          ["VOLT-HVC", "30.7 – 51.2 kWh", "—", "Natural", "6,000+", "C&I rack"],
+          ["VOLT-LINK AIR", "112 – 964 kWh", "125 kW", "Air", "8,000+", "Commercial"],
+          ["VOLT-LINK", "418 – 1,672 kWh", "200 kW", "Liquid", "8,000+", "Utility / grid"],
         ],
       },
     ],

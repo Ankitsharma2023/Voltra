@@ -2,6 +2,7 @@ import React from "react";
 import ProductCard, { Product } from "./ProductCard";
 import { assets } from "../../constants/assets";
 import Eyebrow from "./ui/Eyebrow";
+import PillButton from "./ui/PillButton";
 
 /**
  * ProductSolutions — the "Our Battery/Inverter Solutions" rows and the Hybrid
@@ -17,6 +18,8 @@ export default function ProductSolutions({
   eyebrow,
   images = defaultImages,
   tall = false,
+  cta,
+  id,
 }: {
   title: string;
   subtitle?: string;
@@ -25,12 +28,16 @@ export default function ProductSolutions({
   images?: string[];
   /** Use a taller product stage (for portrait inverter renders). */
   tall?: boolean;
+  /** Optional centred "View More …" link shown under the grid. */
+  cta?: { label: string; to: string };
+  /** Anchor id for in-page jump navigation. */
+  id?: string;
 }) {
   return (
-    <section className="w-full py-16 lg:py-20">
+    <section id={id} className="w-full scroll-mt-28 py-16 lg:py-20">
       <div className="mx-auto max-w-content px-6 md:px-12 lg:px-8">
         {eyebrow && <Eyebrow bar="left" className="mb-4">{eyebrow}</Eyebrow>}
-        <h2 className="max-w-[800px] text-3xl font-medium leading-[1.15] tracking-tight text-navy/80 sm:text-4xl lg:text-[54px]/[1.15]">
+        <h2 className="text-3xl font-medium leading-[1.15] tracking-tight text-navy/80 sm:text-4xl lg:whitespace-nowrap lg:text-[40px]/[1.15]">
           {title}
         </h2>
         {subtitle && (
@@ -42,6 +49,11 @@ export default function ProductSolutions({
             <ProductCard key={product.id} product={product} image={product.image ?? images[i % images.length]} tall={tall} />
           ))}
         </div>
+        {cta && (
+          <div className="mt-12 flex justify-center">
+            <PillButton to={cta.to} label={cta.label} variant="outline" size="md" icon="arrow" />
+          </div>
+        )}
       </div>
     </section>
   );

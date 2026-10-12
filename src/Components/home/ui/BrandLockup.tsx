@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../../../constants/assets";
-import { FOOTER } from "../../../constants/site";
 
 /**
  * BrandLockup — the Voltra mark + wordmark + tagline, used by both the navbar
@@ -15,33 +14,34 @@ import { FOOTER } from "../../../constants/site";
  * The artwork is a combined bolt+wordmark lockup, so the tagline is indented to
  * line up under the wordmark rather than the bolt.
  */
+/**
+ * `size` scales the mark. "md" is the original footer size; "lg" is the larger
+ * navbar treatment.
+ */
+const SIZES = {
+  md: { img: "h-[42px]" },
+  lg: { img: "h-[56px]" },
+} as const;
+
 export default function BrandLockup({
   onDark,
+  size = "md",
   className = "",
 }: {
   onDark: boolean;
+  size?: keyof typeof SIZES;
   className?: string;
 }) {
+  const s = SIZES[size];
   return (
-    <Link
-      to="/"
-      aria-label="Voltra home"
-      className={`flex w-fit shrink-0 flex-col items-start gap-[3px] ${className}`}
-    >
+    <Link to="/" aria-label="Voltra home" className={`flex w-fit shrink-0 items-center ${className}`}>
       <img
         src={onDark ? assets.logo.lockupOnDark : assets.logo.lockup}
         alt="Voltra"
         width={130}
         height={46}
-        className="h-[42px] w-auto shrink-0 select-none"
+        className={`${s.img} w-auto shrink-0 select-none`}
       />
-      <span
-        className={`whitespace-nowrap pl-9 font-akshar text-[8.5px] font-medium uppercase leading-none tracking-[0.08em] ${
-          onDark ? "text-white/80" : "text-brand"
-        }`}
-      >
-        {FOOTER.tagline}
-      </span>
     </Link>
   );
 }

@@ -1,19 +1,40 @@
 import React from "react";
 import ProductSolutions from "./home/ProductSolutions";
 import Eyebrow from "./home/ui/Eyebrow";
-import { CATALOG } from "../constants/catalog";
+import { ALL_INVERTERS, RESIDENTIAL_BATTERIES, HIGH_VOLTAGE_PRODUCTS } from "../constants/site";
 
-/** Inverter renders are portrait, so those sections use the taller stage. */
-const TALL_CATS = new Set(["single-phase", "three-phase", "three-phase-hv"]);
-/** Group label shown above each section's title. */
-const GROUP = (key: string) =>
-  key.includes("phase") || key === "all-in-one" ? "Inverters & Backup" : "Energy Storage";
+const JUMP = [
+  { label: "Inverters", id: "inverters" },
+  { label: "Batteries", id: "batteries" },
+  { label: "BESS", id: "bess" },
+];
+
+/** Three buttons that jump straight to each product section. */
+function JumpNav() {
+  const go = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  return (
+    <div className="flex flex-wrap gap-3">
+      {JUMP.map((j) => (
+        <button
+          key={j.id}
+          type="button"
+          onClick={() => go(j.id)}
+          className="inline-flex h-11 items-center rounded-pill bg-white px-6 text-sm font-medium text-brand-strong shadow-soft transition-transform hover:-translate-y-0.5"
+        >
+          {j.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 /**
- * Products — the "Our Products" catalogue page. Renders the full Voltra line-up
- * from the generated catalog (constants/catalog.js): eight category sections,
- * each with the shared product cards. The Navbar and SiteFooter render globally
- * in App.tsx.
+ * Products — the "Our Products" catalogue page. Three flat sections, no internal
+ * sub-grouping: every hybrid inverter, every lithium battery (ascending), and
+ * the BESS range. A "Browse products" dropdown jumps to each section. Navbar and
+ * SiteFooter render globally in App.tsx.
  */
 export default function Products() {
   return (
@@ -29,24 +50,38 @@ export default function Products() {
               </h1>
               <p className="max-w-[620px] text-base leading-relaxed text-white/70">
                 Browse the full Voltra line-up — from residential LFP batteries and hybrid
-                inverters to the high-voltage BESS range. Category and use-case filters are on the way.
+                inverters to the high-voltage BESS range.
               </p>
+              <JumpNav />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Every category from the catalog, in order */}
-      {CATALOG.map((cat) => (
-        <ProductSolutions
-          key={cat.key}
-          eyebrow={GROUP(cat.key)}
-          title={cat.title}
-          subtitle={cat.subtitle}
-          products={cat.products}
-          tall={TALL_CATS.has(cat.key)}
-        />
-      ))}
+      {/* Inverters */}
+      <ProductSolutions
+        id="inverters"
+        eyebrow="Inverters"
+        title="Hybrid Inverters · 3 kW to 80 kW"
+        products={ALL_INVERTERS}
+        tall
+      />
+
+      {/* Batteries */}
+      <ProductSolutions
+        id="batteries"
+        eyebrow="Batteries"
+        title="LiFePO4 Lithium Batteries · 1.28 kWh to 256 kWh"
+        products={RESIDENTIAL_BATTERIES}
+      />
+
+      {/* BESS */}
+      <ProductSolutions
+        id="bess"
+        eyebrow="Energy Storage"
+        title={HIGH_VOLTAGE_PRODUCTS.title}
+        products={HIGH_VOLTAGE_PRODUCTS.products}
+      />
     </div>
   );
 }
