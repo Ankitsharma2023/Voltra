@@ -8,7 +8,7 @@ import { ENERGY_ADVISOR, ROUTES } from "../../constants/site";
  * Energy Advisor page (Figma frame "Energy Advisor", node 62:331).
  *
  * The left column carries the section intro and a sticky LIVE panel (battery-
- * bank diagram + kWh + stats). The right column is the build flow: pick system
+ * bank diagram + KWH + stats). The right column is the build flow: pick system
  * voltage, module and bank size; choose mounting, BMS and warranty; check
  * inverter compatibility; then read the generated bill of materials and send
  * the exact configuration to a distributor.
@@ -163,7 +163,7 @@ function summary(S: Config, c: ReturnType<typeof calc>) {
   return (
     `Voltra BYOB configuration\n` +
     `${S.sv} V system · ${c.m.id} × ${c.total} (${S.n} parallel string${S.n > 1 ? "s" : ""} × ${c.ser} series)\n` +
-    `Total: ${f(c.Ah, 0)} Ah · ${f(c.kwh)} kWh\n` +
+    `Total: ${f(c.Ah, 0)} Ah · ${f(c.kwh)} KWH\n` +
     `Mounting: ${S.mount}${c.racks ? ` (${c.racks} unit${c.racks > 1 ? "s" : ""})` : ""}\n` +
     `BMS: ${S.bms}\n` +
     `Warranty: ${S.war} years\n` +
@@ -334,7 +334,7 @@ export default function ConfiguratorWizard() {
     const text =
       summary(cfg, c) +
       `\n\nContact: ${form.name}, ${form.company}, ${form.loc}, ${form.mobile}` +
-      `\nRequired: ${capValue} kWh · ${form.type} project`;
+      `\nRequired: ${capValue} KWH · ${form.type} project`;
     setSent({ name: form.name, loc: form.loc, text });
     requestAnimationFrame(() => doneRef.current?.scrollIntoView({ block: "center", behavior: "smooth" }));
   };
@@ -361,7 +361,7 @@ export default function ConfiguratorWizard() {
               <BankDiagram ser={c.ser} n={cfg.n} />
               <div className="flex items-end gap-2">
                 <span className="text-5xl font-bold leading-none">{f(c.kwh)}</span>
-                <span className="pb-1 text-lg font-semibold text-white/60">kWh</span>
+                <span className="pb-1 text-lg font-semibold text-white/60">KWH</span>
               </div>
               <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3">
                 <Stat label="Voltage" value={`${cfg.sv} V`} />
@@ -374,7 +374,7 @@ export default function ConfiguratorWizard() {
                 <Stat label="Warranty" value={`${cfg.war} years`} />
               </dl>
               <p className="mt-4 text-xs leading-relaxed text-white/50">
-                {f(cfg.sv)} V × {f(c.Ah, 0)} Ah = {f(c.kwh)} kWh. Current and inverter limits use {c.b.c}C
+                {f(cfg.sv)} V × {f(c.Ah, 0)} Ah = {f(c.kwh)} KWH. Current and inverter limits use {c.b.c}C
                 for {c.b.id}.
               </p>
             </div>
@@ -402,7 +402,7 @@ export default function ConfiguratorWizard() {
                     selected={cfg.mod === x.id}
                     onClick={() => update({ mod: x.id })}
                     label={x.id}
-                    sub={`${x.v} V · ${x.ah} Ah · ${f((x.v * x.ah) / 1000)} kWh`}
+                    sub={`${x.v} V · ${x.ah} Ah · ${f((x.v * x.ah) / 1000)} KWH`}
                   />
                 ))}
               </div>
@@ -574,7 +574,7 @@ export default function ConfiguratorWizard() {
                     onChange={(e) => setForm({ ...form, mobile: e.target.value })}
                   />
                 </Field>
-                <Field label="Required capacity (kWh)">
+                <Field label="Required capacity (KWH)">
                   <input
                     className={inputCls}
                     value={capValue}

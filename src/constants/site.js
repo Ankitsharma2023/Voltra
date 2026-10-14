@@ -61,7 +61,7 @@ export const HERO = {
   titleLines: ["Hybrid Inverters", "Lithium Batteries"],
   titleAccent: "Built for Bharat",
   subtitle:
-    "Hybrid inverters from 3 kW to 125 kW, LiFePO4 batteries from 1.28 kWh to 256 kWh, and BESS up to 5 MWh. Made in India, built to last 25 years.",
+    "Hybrid inverters from 3 kW to 125 kW, LiFePO4 batteries from 1.28 KWH to 256 KWH, and BESS up to 5 MWh. Made in India, built to last 25 years.",
   primaryCta: { label: "Explore Products", to: ROUTES.products },
   secondaryCta: { label: "Talk to an Expert", to: ROUTES.contact },
   warranty: ["10-Year Warranty", "25-Year Design Life"],
@@ -71,8 +71,8 @@ export const HERO = {
 /** Phrases cycled across the moving ticker ribbon under the hero. */
 export const MARQUEE_ITEMS = [
   "Hybrid inverters · 3 kW to 125 kW",
-  "LiFePO4 batteries · 1.28 kWh to 256 kWh",
-  "Energy storage systems · 25 kWh to 5 MWh",
+  "LiFePO4 batteries · 1.28 KWH to 256 KWH",
+  "Energy storage systems · 25 KWH to 5 MWh",
   "25-year design life",
   "10-year warranty",
   "8,000+ cycle life",
@@ -83,7 +83,7 @@ export const ABOUT = {
   eyebrow: "About Voltra",
   title: "Shaping India's energy future with indigenized hybrid technology.",
   body:
-    "Voltra designs and manufactures hybrid inverters, LiFePO4 batteries and energy storage systems in India. From a 1.28 kWh home battery to a 5 MWh grid-scale BESS, every product is built for Indian grids, Indian heat and 25 years of reliable power.",
+    "Voltra designs and manufactures hybrid inverters, LiFePO4 batteries and energy storage systems in India. From a 1.28 KWH home battery to a 5 MWh grid-scale BESS, every product is built for Indian grids, Indian heat and 25 years of reliable power.",
   cta: { label: "Learn More", to: ROUTES.about },
 };
 
@@ -122,10 +122,10 @@ const LVW_16S = {
   id: "volt-lvw-16s",
   brand: "VOLT",
   name: "LVW 16S",
-  capacities: "5.12 kWh",
+  capacities: "5.12 KWH",
   image: "/voltra/products/lvw-16s.png",
   description:
-    "Wall-mounted 51.2 V LiFePO4 battery with 100 Ah / 5.12 kWh of usable storage for home and small-commercial backup.",
+    "Wall-mounted 51.2 V LiFePO4 battery with 100 Ah / 5.12 KWH of usable storage for home and small-commercial backup.",
   features: [
     { title: "51.2 V · 100 Ah", detail: "5,120 Wh nominal energy" },
     { title: "Fast Charge / Discharge", detail: "100 A discharge, 50 A charge" },
@@ -276,13 +276,62 @@ export const ALL_INVERTERS = [
   titan("three-phase-hv", "volt-80kw3", "80K3P", "HV"), // 80 kW
 ].filter(Boolean);
 
+// VOLT-MAX — 20-ft liquid-cooled utility-scale ESS container (MAX Leaflet).
+const VOLT_MAX = {
+  id: "volt-max",
+  brand: "VOLT",
+  name: "MAX",
+  badge: "IP55",
+  capacities: "5 – 20 MWh",
+  image: "/voltra/products/volt-max.png",
+  description:
+    "20-ft liquid-cooled ESS container integrating PACK, EMS, BMS, HVAC and fire safety in one unit. Liquid cooling keeps the cell temperature difference under 3°C for longer battery life and higher efficiency.",
+  features: [
+    { title: "Better Temperature Control", detail: "Liquid cooling holds cell temp difference < 3°C" },
+    { title: "Higher Protection", detail: "IP55 container (IP65 PACK)" },
+    { title: "Higher Energy Density", detail: "Liquid-cooled container saves space and cost" },
+    { title: "Lower Power Consumption", detail: "Variable-frequency compressor" },
+  ],
+  specs: [
+    { label: "Cell type", value: "LFP 314 Ah prismatic" },
+    { label: "PACK", value: "52.24 KWH / 1P52S" },
+    { label: "Battery system", value: "5,015 KWH" },
+    { label: "Voltage range", value: "1,165 – 1,498 Vdc" },
+    { label: "Rated voltage", value: "1,331.2 Vdc" },
+    { label: "Rated power", value: "2.5 MW" },
+    { label: "Max. power", value: "2.5 MVA" },
+    { label: "THDi", value: "≤ 3%" },
+    { label: "Nominal voltage (AC)", value: "690 Vac" },
+    { label: "Power factor", value: "-1 lagging ~ 1 leading" },
+    { label: "Nominal frequency", value: "50 / 60 Hz" },
+    { label: "Efficiency", value: "≥ 94%" },
+    { label: "Charge / discharge rate", value: "0.5 P" },
+    { label: "DoD", value: "95% (25±2°C)" },
+    { label: "Cycle life", value: "≥ 8,000 cycles" },
+    { label: "Switching time", value: "100 ms" },
+    { label: "Connectivity", value: "Ethernet / RS485" },
+    { label: "Ingress rating", value: "IP55" },
+    { label: "Cooling", value: "Chiller + liquid cooling" },
+    { label: "Operating temperature", value: "-25°C ~ 55°C" },
+    { label: "Humidity", value: "0 – 95% RH, non-condensing" },
+    { label: "Noise", value: "80 dB" },
+    { label: "Altitude", value: "≤ 2,000 m (derating above)" },
+    { label: "Fire safety", value: "NOVEC1230 / aerosol + water" },
+    { label: "Dimensions (W×D×H)", value: "6,058 × 2,550 × 2,896 mm" },
+    { label: "Weight", value: "~40,000 kg" },
+  ],
+  primaryCta: { label: "Order Now", to: ROUTES.contact },
+  secondaryCta: { label: "Full Specification", to: ROUTES.contact },
+};
+
 export const HIGH_VOLTAGE_PRODUCTS = {
-  title: "Energy Storage Systems · 25 kWh to 5 MWh",
+  title: "Energy Storage Systems · 25 KWH to 20 MWh",
   subtitle: "Modular storage for C&I and utility projects.",
   products: [
     withImg(productsByKey("hv-rack")[0], "/voltra/figma/home-hv-2.png"), // VOLT-HVC rack
     withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.png"), // VOLT-LINK cabinet
     withImg(productsByKey("containerized")[1], "/voltra/figma/home-hv-3.png"), // VOLT-LINK AIR
+    VOLT_MAX,
   ].filter(Boolean),
 };
 
@@ -323,7 +372,7 @@ export const OFFERINGS = {
       label: "Batteries",
       title: "Lithium-ion Batteries",
       body:
-        "Safe LFP wall-mount and stackable batteries from 1.25 kWh — 8,000+ cycles, 15-year design life, smart BMS.",
+        "Safe LFP wall-mount and stackable batteries from 1.25 KWH — 8,000+ cycles, 15-year design life, smart BMS.",
     },
     {
       id: "grids",
@@ -437,7 +486,7 @@ export const ABOUT_PAGE = {
     eyebrow: "About Voltra",
     title: "Energy reliability, made in India",
     body:
-      "From homes and shops to factories and solar farms, Voltra delivers complete energy storage: 3–125 kW inverters, 1.28–256 kWh batteries and 25 kWh–5 MWh BESS, all backed by a 10-year warranty.",
+      "From homes and shops to factories and solar farms, Voltra delivers complete energy storage: 3–125 kW inverters, 1.28–256 KWH batteries and 25 KWH–5 MWh BESS, all backed by a 10-year warranty.",
     cta: { label: "Learn More", to: ROUTES.products },
   },
   stats: [
@@ -539,17 +588,17 @@ export const LITHIUM_PAGE = {
     eyebrow: "Li-ion Batteries",
     title: "Safe, long-life LFP storage for every Indian home and business.",
     subtitle:
-      "From 1.28 kWh wall-mount units to 256 kWh stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
+      "From 1.28 KWH wall-mount units to 256 KWH stackable towers — Voltra Li-ion batteries store solar by day and power your loads by night.",
   },
   why: {
     eyebrow: "Why LFP",
     title: "The safest Li-ion chemistry, engineered for India.",
     body:
-      "Voltra LiFePO4 batteries are non-flammable, heat-stable and rated for 8,000+ cycles. Scale from a 1.28 kWh home unit to 256 kWh by connecting up to 16 batteries in parallel.",
+      "Voltra LiFePO4 batteries are non-flammable, heat-stable and rated for 8,000+ cycles. Scale from a 1.28 KWH home unit to 256 KWH by connecting up to 16 batteries in parallel.",
     chips: [
       { label: "Non-flammable" },
       { label: "12.8 – 51.2 V" },
-      { label: "1.28 – 256 kWh", active: true },
+      { label: "1.28 – 256 KWH", active: true },
       { label: "8,000+ cycles" },
       { label: "97%+ efficiency" },
       { label: "IP65" },
@@ -559,7 +608,7 @@ export const LITHIUM_PAGE = {
   },
   range: {
     eyebrow: "Product range",
-    title: "Modular capacity from 1.28 kWh to 256 kWh.",
+    title: "Modular capacity from 1.28 KWH to 256 KWH.",
     products: RESIDENTIAL_BATTERIES,
   },
   features: {
@@ -570,7 +619,7 @@ export const LITHIUM_PAGE = {
       { icon: "flame", title: "Non-flammable LFP", body: "Lithium Iron Phosphate stays thermally stable — no thermal runaway, even in Indian heat." },
       { icon: "battery-charging", title: "8,000+ Cycles", body: "A 15-year design life with 8,000+ deep cycles at 25°C." },
       { icon: "cpu", title: "Smart BMS", body: "Multi-layer BMS balances every cell and guards against over/under-voltage." },
-      { icon: "layers", title: "Stackable", body: "Modular towers scale from 2.5 kWh to 40 kWh as your needs grow." },
+      { icon: "layers", title: "Stackable", body: "Modular towers scale from 2.5 KWH to 40 KWH as your needs grow." },
       { icon: "cloud", title: "Cloud + App", body: "Live monitoring, alerts and remote firmware updates from the Voltra app." },
       { icon: "badge-check", title: "Certified Safe", body: "IEC 62619 / UL 1973 tested with IP65 outdoor-rated enclosures." },
     ],
@@ -591,11 +640,11 @@ export const BESS_PAGE = {
   },
   why: {
     eyebrow: "VOLT-LINK platform",
-    title: "25 kWh to 5 MWh: one modular platform.",
+    title: "25 KWH to 5 MWh: one modular platform.",
     body:
       "Volt-Link brings LFP batteries, PCS, BMS, EMS, cooling and fire safety into one cabinet. Start small, add cabinets as you grow, and run C&I or utility projects up to 5 MWh.",
     chips: [
-      { label: "25 kWh – 5 MWh", active: true },
+      { label: "25 KWH – 5 MWh", active: true },
       { label: "LFP 314 Ah cells" },
       { label: "8,000+ cycles" },
       { label: "Air & liquid cooling" },
@@ -652,7 +701,7 @@ export const BLOG_PAGE = {
         slug: "inverter-battery-sizing-guide",
         imageKey: "thumb1",
         date: "02 Jun 2026",
-        title: "Inverter and Battery Sizing Guide — Choosing the Right kW and kWh",
+        title: "Inverter and Battery Sizing Guide — Choosing the Right kW and KWH",
         excerpt:
           "The most common mistake in backup power planning isn't the brand — it's the size. Here's the actual math to size a hybrid inverter and battery with confidence.",
         tags: ["Sizing", "Residential", "How-to"],
@@ -674,7 +723,7 @@ export const BLOG_PAGE = {
         date: "06 May 2026",
         title: "BESS Powering Himachal's Grids — A Case Study in Hilly-Terrain Resilience",
         excerpt:
-          "Hilly terrain, dispersed populations and seasonal grid stress make Himachal an ideal candidate for storage. A look at a 700kW / 1,254kWh Voltra deployment.",
+          "Hilly terrain, dispersed populations and seasonal grid stress make Himachal an ideal candidate for storage. A look at a 700kW / 1,254KWH Voltra deployment.",
         tags: ["BESS", "Grid", "Case Study"],
       },
       {
@@ -903,27 +952,27 @@ export const ENERGY_ADVISOR = {
         id: "battery",
         label: "Battery",
         title: "Lithium Batteries",
-        series: "LVW · LV · LVS · up to 256 kWh",
+        series: "LVW · LV · LVS · up to 256 KWH",
         body: [
           "Voltra packs use LiFePO₄ (lithium iron phosphate) cells — the safest lithium chemistry available. They tolerate high temperatures without thermal runaway, and hold over 80% of their original capacity after thousands of full cycles.",
           "Every pack ships with a smart BMS that balances cells, tracks state-of-charge to within 2%, and reports live health over Bluetooth — so you know exactly what your storage is doing.",
         ],
         cta: { label: "Explore Batteries", to: ROUTES.lithiumBatteries },
-        columns: ["Model", "Voltage", "kWh", "Cycles", "Best For"],
+        columns: ["Model", "Voltage", "KWH", "Cycles", "Best For"],
         rows: [
-          ["LVW 4S", "12.8 V", "1.25 kWh", "3,500+", "Small backup"],
-          ["LVW 8S", "25.6 V", "2.56 kWh", "3,500+", "Home"],
-          ["LVW 16S", "51.2 V", "5.12 kWh", "6,000+", "Home / shop"],
-          ["LV200", "51.2 V", "10.24 kWh", "6,000+", "Large home"],
-          ["LV314", "51.2 V", "16.07 kWh", "8,000+", "Small commercial"],
-          ["LVS", "51.2 V", "5.1 – 20.5 kWh", "6,000+", "Stackable tower"],
+          ["LVW 4S", "12.8 V", "1.25 KWH", "3,500+", "Small backup"],
+          ["LVW 8S", "25.6 V", "2.56 KWH", "3,500+", "Home"],
+          ["LVW 16S", "51.2 V", "5.12 KWH", "6,000+", "Home / shop"],
+          ["LV200", "51.2 V", "10.24 KWH", "6,000+", "Large home"],
+          ["LV314", "51.2 V", "16.07 KWH", "8,000+", "Small commercial"],
+          ["LVS", "51.2 V", "5.1 – 20.5 KWH", "6,000+", "Stackable tower"],
         ],
       },
       {
         id: "grids",
         label: "Grids",
         title: "Grid-Scale BESS",
-        series: "VOLT-HVC · VOLT-LINK · 25 kWh – 5 MWh",
+        series: "VOLT-HVC · VOLT-LINK · 25 KWH – 5 MWh",
         body: [
           "Grid-scale Battery Energy Storage Systems store surplus renewable generation and release it when demand peaks — smoothing the duck curve and cutting reliance on diesel peaker plants.",
           "Voltra cabinets ship pre-integrated with PCS, EMS and fire suppression, and scale in parallel from a modular HVC rack to multi-megawatt liquid-cooled farms.",
@@ -931,9 +980,9 @@ export const ENERGY_ADVISOR = {
         cta: { label: "Explore BESS", to: ROUTES.gridBess },
         columns: ["Model", "Capacity", "PCS", "Cooling", "Cycles", "Best For"],
         rows: [
-          ["VOLT-HVC", "30.7 – 51.2 kWh", "—", "Natural", "6,000+", "C&I rack"],
-          ["VOLT-LINK AIR", "112 – 964 kWh", "125 kW", "Air", "8,000+", "Commercial"],
-          ["VOLT-LINK", "418 – 1,672 kWh", "200 kW", "Liquid", "8,000+", "Utility / grid"],
+          ["VOLT-HVC", "30.7 – 51.2 KWH", "—", "Natural", "6,000+", "C&I rack"],
+          ["VOLT-LINK AIR", "112 – 964 KWH", "125 kW", "Air", "8,000+", "Commercial"],
+          ["VOLT-LINK", "418 – 1,672 KWH", "200 kW", "Liquid", "8,000+", "Utility / grid"],
         ],
       },
     ],

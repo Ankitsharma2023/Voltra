@@ -280,7 +280,7 @@ const Technology = () => {
            </h3>
          </div>
          <p className="text-base mb-3 font-gilroy">
-           Voltra's Modular Cabinet configurations enable seamless scaling from kWh to MWh systems.
+           Voltra's Modular Cabinet configurations enable seamless scaling from KWH to MWh systems.
          </p>
          <p className="text-base font-gilroy">
            These solutions offer superior efficiency and reliability, easy maintenance, and longer battery life.

@@ -284,7 +284,8 @@ out.append("export const catByKey = (key) => CATALOG.find((c) => c.key === key) 
 out.append("export const productsByKey = (key) => catByKey(key).products;")
 out.append("")
 
-open('src/constants/catalog.js', 'w').write("\n".join(out))
+# Energy units are shown upper-case site-wide (kWh -> KWH).
+open('src/constants/catalog.js', 'w').write("\n".join(out).replace("kWh", "KWH"))
 print("wrote src/constants/catalog.js")
 print("categories:", [k for (_,k,_,_) in CATS if groups.get(k)])
 print("total products:", sum(len(groups.get(k,[])) for (_,k,_,_) in CATS))

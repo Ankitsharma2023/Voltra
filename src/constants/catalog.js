@@ -18,7 +18,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-link", brand: "VOLT", name: "LINK",
-      capacities: "418 – 1,672 kWh", image: "/voltra/figma/home-hv-1.png",
+      capacities: "418 – 1,672 KWH", image: "/voltra/figma/home-hv-1.png",
       description: "The liquid-cooled battery cabinet adopts advanced cabinet-level liquid cooling and temperature balancing. Its modular design makes the parallel solution more flexible, and combines with centralised PCS to form an ESS with higher energy density.",
       features: [
         { title: "Safe and Reliable", detail: "In-PACK fire warning and protection with NOVEC1230/aerosol" },
@@ -28,8 +28,8 @@ export const CATALOG = [
       ],
       specs: [
         { label: "Cell type", value: "LFP 314 Ah prismatic" },
-        { label: "Pack", value: "52.24 kWh / 1P52S" },
-        { label: "Battery system", value: "418 kWh" },
+        { label: "Pack", value: "52.24 KWH / 1P52S" },
+        { label: "Battery system", value: "418 KWH" },
         { label: "Voltage range", value: "1,165–1,498 Vdc" },
         { label: "Rated voltage", value: "1,331.2 Vdc" },
         { label: "Rated power", value: "200 kW" },
@@ -58,7 +58,7 @@ export const CATALOG = [
     },
     {
       id: "volt-link-air", brand: "VOLT", name: "LINK AIR",
-      capacities: "112 – 964 kWh", image: "/voltra/figma/home-hv-3.png",
+      capacities: "112 – 964 KWH", image: "/voltra/figma/home-hv-3.png",
       description: "An all-in-one air-cooled ESS cabinet integrating a long-life battery, balancing BMS, high-performance PCS, active safety system, smart distribution, and HVAC into one enclosure. AC-side parallel connection achieves flexible capacity expansion up to MWh.",
       features: [
         { title: "Economical and Efficient", detail: "Conversion efficiency over 90%, DoD over 96%" },
@@ -68,8 +68,8 @@ export const CATALOG = [
       ],
       specs: [
         { label: "Cell type", value: "LFP 314 Ah" },
-        { label: "Pack", value: "16.07 kWh / 1P16S" },
-        { label: "Battery system", value: "241 kWh / 1P240S" },
+        { label: "Pack", value: "16.07 KWH / 1P16S" },
+        { label: "Battery system", value: "241 KWH / 1P240S" },
         { label: "Voltage range", value: "672–876 Vdc" },
         { label: "Rated voltage", value: "768 Vdc" },
         { label: "Rated power", value: "125 kW" },
@@ -105,8 +105,8 @@ export const CATALOG = [
     products: [
     {
       id: "volt-hvc", brand: "VOLT", name: "HVC",
-      capacities: "30.72 – 61.44 kWh", image: "/voltra/figma/home-hv-2.png",
-      description: "Voltra's high-voltage series uses a 5 kWh standard modular design, with multi-module in series and support for multi-cluster in parallel — suited to villas, farms, and small C&I power supplies.",
+      capacities: "30.72 – 61.44 KWH", image: "/voltra/figma/home-hv-2.png",
+      description: "Voltra's high-voltage series uses a 5 KWH standard modular design, with multi-module in series and support for multi-cluster in parallel — suited to villas, farms, and small C&I power supplies.",
       features: [
         { title: "Ultra-Long Life", detail: "15-year design life, up to 6,000 cycles" },
         { title: "Intelligent Management", detail: "Three-level architecture auto-identifies module number and address" },
@@ -114,10 +114,10 @@ export const CATALOG = [
         { title: "Flexible Configuration", detail: "Multi-module series to meet site requirements" },
       ],
       specs: [
-        { label: "Battery module", value: "HVC05 (5.12 kWh)" },
+        { label: "Battery module", value: "HVC05 (5.12 KWH)" },
         { label: "Cell type", value: "100 Ah LFP prismatic" },
-        { label: "System nominal energy", value: "30.72 kWh" },
-        { label: "Available energy", value: "29.184 kWh" },
+        { label: "System nominal energy", value: "30.72 KWH" },
+        { label: "Available energy", value: "29.184 KWH" },
         { label: "Nominal voltage", value: "256 V" },
         { label: "Max. output power", value: "30.72 kW" },
         { label: "Operating voltage range", value: "268.8–345.6 V" },
@@ -137,10 +137,10 @@ export const CATALOG = [
         {
           label: "6 modules",
           specs: [
-            { label: "Battery module", value: "HVC05 (5.12 kWh)" },
+            { label: "Battery module", value: "HVC05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
-            { label: "System nominal energy", value: "30.72 kWh" },
-            { label: "Available energy", value: "29.184 kWh" },
+            { label: "System nominal energy", value: "30.72 KWH" },
+            { label: "Available energy", value: "29.184 KWH" },
             { label: "Nominal voltage", value: "256 V" },
             { label: "Max. output power", value: "30.72 kW" },
             { label: "Operating voltage range", value: "268.8–345.6 V" },
@@ -160,10 +160,10 @@ export const CATALOG = [
         {
           label: "8 modules",
           specs: [
-            { label: "Battery module", value: "HVC05 (5.12 kWh)" },
+            { label: "Battery module", value: "HVC05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
-            { label: "System nominal energy", value: "40.96 kWh" },
-            { label: "Available energy", value: "38.912 kWh" },
+            { label: "System nominal energy", value: "40.96 KWH" },
+            { label: "Available energy", value: "38.912 KWH" },
             { label: "Nominal voltage", value: "409.6 V" },
             { label: "Max. output power", value: "40.96 kW" },
             { label: "Operating voltage range", value: "358.4–460.8 V" },
@@ -183,10 +183,10 @@ export const CATALOG = [
         {
           label: "10 modules",
           specs: [
-            { label: "Battery module", value: "HVC05 (5.12 kWh)" },
+            { label: "Battery module", value: "HVC05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
-            { label: "System nominal energy", value: "51.2 kWh" },
-            { label: "Available energy", value: "48.64 kWh" },
+            { label: "System nominal energy", value: "51.2 KWH" },
+            { label: "Available energy", value: "48.64 KWH" },
             { label: "Nominal voltage", value: "512 V" },
             { label: "Max. output power", value: "51.2 kW" },
             { label: "Operating voltage range", value: "448–576 V" },
@@ -215,10 +215,10 @@ export const CATALOG = [
     products: [
     {
       id: "volt-lv314", brand: "VOLT", name: "LV314",
-      capacities: "16.07 – 64.28 kWh", image: "/voltra/figma/bat-volt-lv314.png",
-      description: "Floor- and rack-mounted storage for residential or small commercial use. Supports up to 16 batteries in parallel, expanding to 256 kWh.",
+      capacities: "16.07 – 64.28 KWH", image: "/voltra/figma/bat-volt-lv314.png",
+      description: "Floor- and rack-mounted storage for residential or small commercial use. Supports up to 16 batteries in parallel, expanding to 256 KWH.",
       features: [
-        { title: "Flexible", detail: "16 kWh modular design, 1–16 in parallel" },
+        { title: "Flexible", detail: "16 KWH modular design, 1–16 in parallel" },
         { title: "Easy Installation", detail: "Floor mounted, saves time & cost" },
         { title: "Wide Range", detail: "Operates -20°C ~ 55°C" },
         { title: "Long Life", detail: ">15 years, >8,000 cycles (0.5C, 25°C)" },
@@ -227,7 +227,7 @@ export const CATALOG = [
         { label: "Cell type", value: "LFP" },
         { label: "Nominal voltage", value: "51.2 V" },
         { label: "Operating voltage range", value: "44.8–57.6 V" },
-        { label: "Available energy", value: "16.07 kWh" },
+        { label: "Available energy", value: "16.07 KWH" },
         { label: "Max. output power", value: "9.72 kW" },
         { label: "Peak output power", value: "11.26 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "200 A / 200 A" },
@@ -239,17 +239,17 @@ export const CATALOG = [
         { label: "Installation", value: "Floor mounted" },
         { label: "Operating temperature", value: "Charge -5~50°C · Discharge -20~50°C · Recommended 15~35°C" },
         { label: "Altitude", value: "≤4,000 m" },
-        { label: "Scalability", value: "1–16 in parallel (up to 256 kWh)" },
+        { label: "Scalability", value: "1–16 in parallel (up to 256 KWH)" },
         { label: "Display / terminal", value: "LED / M8" },
       ],
       ...CTA,
     },
     {
       id: "volt-lv200", brand: "VOLT", name: "LV200",
-      capacities: "10.2 – 81.6 kWh", image: "/voltra/figma/bat-volt-lv200.png",
-      description: "A floor-mounted, space-saving system for residential or small commercial applications, installed inside or outside a building. Expandable to 164 kWh.",
+      capacities: "10.2 – 81.6 KWH", image: "/voltra/figma/bat-volt-lv200.png",
+      description: "A floor-mounted, space-saving system for residential or small commercial applications, installed inside or outside a building. Expandable to 164 KWH.",
       features: [
-        { title: "Flexible", detail: "10.24 kWh modular design, 1–16 in parallel" },
+        { title: "Flexible", detail: "10.24 KWH modular design, 1–16 in parallel" },
         { title: "Easy Installation", detail: "Wall or floor mounted" },
         { title: "Wide Range", detail: "Operates -20°C ~ 55°C" },
         { title: "Long Life", detail: ">15 years, >6,000 cycles (0.5C, 25°C)" },
@@ -258,7 +258,7 @@ export const CATALOG = [
         { label: "Cell type", value: "LFP" },
         { label: "Nominal voltage", value: "51.2 V" },
         { label: "Operating voltage range", value: "44.8–57.6 V" },
-        { label: "Available energy", value: "10.24 kWh" },
+        { label: "Available energy", value: "10.24 KWH" },
         { label: "Max. output power", value: "10 kW" },
         { label: "Peak output power", value: "10.8 kW (20 s)" },
         { label: "Max. charge / discharge current", value: "100 A / 200 A" },
@@ -276,8 +276,8 @@ export const CATALOG = [
     },
     {
       id: "volt-lvs", brand: "VOLT", name: "LVS",
-      capacities: "5.1 – 20.4 kWh", image: "/voltra/figma/bat-volt-lvs.png",
-      description: "Industrial-aesthetic, N+1 stackable design in 100Ah modules, up to 16 parallel groups, expandable to 82 kWh. Matched with 20+ mainstream inverter brands.",
+      capacities: "5.1 – 20.4 KWH", image: "/voltra/figma/bat-volt-lvs.png",
+      description: "Industrial-aesthetic, N+1 stackable design in 100Ah modules, up to 16 parallel groups, expandable to 82 KWH. Matched with 20+ mainstream inverter brands.",
       features: [
         { title: "Wide Compatibility", detail: "Matches 20+ inverter brands" },
         { title: "High Security", detail: "Self-produced 100Ah LFP prismatic cell" },
@@ -285,12 +285,12 @@ export const CATALOG = [
         { title: "Scalable", detail: "Optional anti-theft, fire-protection add-ons" },
       ],
       specs: [
-        { label: "Battery module", value: "LVS 05 (5.12 kWh)" },
+        { label: "Battery module", value: "LVS 05 (5.12 KWH)" },
         { label: "Cell type", value: "100 Ah LFP prismatic" },
         { label: "Nominal voltage", value: "51.2 V" },
         { label: "Operating voltage range", value: "44.8–57.6 V" },
-        { label: "System nominal energy", value: "5.12 kWh" },
-        { label: "Available energy", value: "4.86 kWh" },
+        { label: "System nominal energy", value: "5.12 KWH" },
+        { label: "Available energy", value: "4.86 KWH" },
         { label: "Max. output power", value: "5 kW" },
         { label: "Peak output power", value: "5.4 kW (10 s)" },
         { label: "Max. charge current", value: "50 A" },
@@ -311,12 +311,12 @@ export const CATALOG = [
         {
           label: "1 module",
           specs: [
-            { label: "Battery module", value: "LVS 05 (5.12 kWh)" },
+            { label: "Battery module", value: "LVS 05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
             { label: "Nominal voltage", value: "51.2 V" },
             { label: "Operating voltage range", value: "44.8–57.6 V" },
-            { label: "System nominal energy", value: "5.12 kWh" },
-            { label: "Available energy", value: "4.86 kWh" },
+            { label: "System nominal energy", value: "5.12 KWH" },
+            { label: "Available energy", value: "4.86 KWH" },
             { label: "Max. output power", value: "5 kW" },
             { label: "Peak output power", value: "5.4 kW (10 s)" },
             { label: "Max. charge current", value: "50 A" },
@@ -337,12 +337,12 @@ export const CATALOG = [
         {
           label: "2 modules",
           specs: [
-            { label: "Battery module", value: "LVS 05 (5.12 kWh)" },
+            { label: "Battery module", value: "LVS 05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
             { label: "Nominal voltage", value: "51.2 V" },
             { label: "Operating voltage range", value: "44.8–57.6 V" },
-            { label: "System nominal energy", value: "10.24 kWh" },
-            { label: "Available energy", value: "9.72 kWh" },
+            { label: "System nominal energy", value: "10.24 KWH" },
+            { label: "Available energy", value: "9.72 KWH" },
             { label: "Max. output power", value: "10 kW" },
             { label: "Peak output power", value: "10.5 kW (10 s)" },
             { label: "Max. charge current", value: "100 A" },
@@ -363,12 +363,12 @@ export const CATALOG = [
         {
           label: "4 modules",
           specs: [
-            { label: "Battery module", value: "LVS 05 (5.12 kWh)" },
+            { label: "Battery module", value: "LVS 05 (5.12 KWH)" },
             { label: "Cell type", value: "100 Ah LFP prismatic" },
             { label: "Nominal voltage", value: "51.2 V" },
             { label: "Operating voltage range", value: "44.8–57.6 V" },
-            { label: "System nominal energy", value: "20.48 kWh" },
-            { label: "Available energy", value: "19.45 kWh" },
+            { label: "System nominal energy", value: "20.48 KWH" },
+            { label: "Available energy", value: "19.45 KWH" },
             { label: "Max. output power", value: "20 kW" },
             { label: "Peak output power", value: "21.0 kW (10 s)" },
             { label: "Max. charge current", value: "200 A" },
@@ -400,7 +400,7 @@ export const CATALOG = [
       id: "lv-50", brand: "LV", name: "50",
       badge: "LiFePO4",
       model: "51.2V 50Ah LiFePO4 Battery Pack",
-      capacities: "2.56 kWh", image: "/voltra/figma/bat-lv-50.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-lv-50.png",
       description: "Plug-and-play lithium battery for home backup, with a built-in Bluetooth BMS and 3,500-cycle life. Pairs with Voltra hybrid inverters.",
       features: [
         { title: "Long Life", detail: "3,500 cycles @ 80% DoD" },
@@ -410,7 +410,7 @@ export const CATALOG = [
       specs: [
         { label: "Nominal voltage", value: "51.2 V" },
         { label: "Capacity", value: "50 Ah" },
-        { label: "Energy", value: "2.56 kWh" },
+        { label: "Energy", value: "2.56 KWH" },
         { label: "Configuration", value: "16S 1P" },
         { label: "Operating voltage", value: "42–58.4 V" },
         { label: "Depth of discharge", value: "90%" },
@@ -428,10 +428,10 @@ export const CATALOG = [
     {
       id: "volt-lvw-16s-ip65", brand: "VOLT", name: "LVW 16S Ultra",
       badge: "IP65",
-      capacities: "5.12 – 40.96 kWh", image: "/voltra/figma/bat-volt-lvw-16s-ip65.png",
-      description: "Wall-mounted, space-saving storage for residential or small commercial use, installed inside or outside a building. Expandable to 82 kWh.",
+      capacities: "5.12 – 40.96 KWH", image: "/voltra/figma/bat-volt-lvw-16s-ip65.png",
+      description: "Wall-mounted, space-saving storage for residential or small commercial use, installed inside or outside a building. Expandable to 82 KWH.",
       features: [
-        { title: "Flexible", detail: "5.12 kWh modular design, 1–16 in parallel" },
+        { title: "Flexible", detail: "5.12 KWH modular design, 1–16 in parallel" },
         { title: "Weatherproof", detail: "IP65, suited to outdoor mounting" },
         { title: "Long Life", detail: ">10 years, >6,000 cycles (0.5C, 25°C)" },
       ],
@@ -439,7 +439,7 @@ export const CATALOG = [
         { label: "Cell type", value: "LFP" },
         { label: "Nominal voltage", value: "51.2 V" },
         { label: "Operating voltage range", value: "44.8–57.6 V" },
-        { label: "Available energy", value: "5.12 kWh" },
+        { label: "Available energy", value: "5.12 KWH" },
         { label: "Max. output power", value: "5 kW" },
         { label: "Peak output power", value: "5.4 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "50 A / 100 A" },
@@ -457,7 +457,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-8s-pro", brand: "VOLT", name: "LVW 8S Pro",
-      capacities: "5.12 kWh", image: "/voltra/figma/bat-volt-lvw-8s-pro.png",
+      capacities: "5.12 KWH", image: "/voltra/figma/bat-volt-lvw-8s-pro.png",
       description: "Wall-mounted system optimising energy usage and integrating with solar panels — the higher-capacity 2P variant of the LVW 8S.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -469,7 +469,7 @@ export const CATALOG = [
         { label: "Nominal voltage", value: "25.6 V" },
         { label: "Nominal capacity", value: "200 Ah" },
         { label: "Operating voltage range", value: "19.2–28.8 V" },
-        { label: "Available energy", value: "5.12 kWh" },
+        { label: "Available energy", value: "5.12 KWH" },
         { label: "Max. output power", value: "3.6 kW" },
         { label: "Peak output power", value: "4 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "100 A / 150 A" },
@@ -484,7 +484,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-8s", brand: "VOLT", name: "LVW 8S",
-      capacities: "2.56 kWh", image: "/voltra/figma/bat-volt-lvw-8s.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-8s.png",
       description: "Wall-mounted, space-saving storage for residential or small commercial applications, optimising energy usage with solar integration.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -495,7 +495,7 @@ export const CATALOG = [
         { label: "Cell type", value: "LFP" },
         { label: "Nominal voltage", value: "25.6 V" },
         { label: "Operating voltage range", value: "19.2–28.8 V" },
-        { label: "Available energy", value: "2.56 kWh" },
+        { label: "Available energy", value: "2.56 KWH" },
         { label: "Max. output power", value: "2.4 kW" },
         { label: "Peak output power", value: "2.7 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "50 A / 100 A" },
@@ -510,7 +510,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-4s-pro", brand: "VOLT", name: "LVW 4S Pro",
-      capacities: "2.56 kWh", image: "/voltra/figma/bat-volt-lvw-4s-pro.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-4s-pro.png",
       description: "Compact wall-mounted system for smaller backup loads — the higher-capacity 2P variant of the LVW 4S.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -519,7 +519,7 @@ export const CATALOG = [
       ],
       specs: [
         { label: "Nominal voltage", value: "12.8 V" },
-        { label: "Available energy", value: "2.56 kWh" },
+        { label: "Available energy", value: "2.56 KWH" },
         { label: "Max. / peak output", value: "2.4 kW / 2.7 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "50 A / 100 A" },
         { label: "Cycle life", value: ">3,500 (0.5C, 25°C)" },
@@ -532,7 +532,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-4s", brand: "VOLT", name: "LVW 4S",
-      capacities: "1.25 kWh", image: "/voltra/figma/bat-volt-lvw-4s.png",
+      capacities: "1.25 KWH", image: "/voltra/figma/bat-volt-lvw-4s.png",
       description: "Voltra's smallest wall-mounted unit — a compact, entry-level backup solution for solar-integrated homes.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -543,7 +543,7 @@ export const CATALOG = [
         { label: "Cell type", value: "LFP" },
         { label: "Nominal voltage", value: "12.8 V" },
         { label: "Operating voltage range", value: "9.6–14.4 V" },
-        { label: "Available energy", value: "1.25 kWh" },
+        { label: "Available energy", value: "1.25 KWH" },
         { label: "Max. output power", value: "1.2 kW" },
         { label: "Peak output power", value: "1.35 kW (10 s)" },
         { label: "Max. charge / discharge current", value: "50 A / 100 A" },

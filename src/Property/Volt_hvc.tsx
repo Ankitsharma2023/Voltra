@@ -16,7 +16,7 @@ export default function VoltHvcTable() {
   const specifications = [
     { 
       label: "Battery Module", 
-      values: ["", "HVC05 [5.12 kWh]", "HVC05 [5.12 kWh]", "HVC05 [5.12 kWh]", "HVC05 [5.12 kWh]"] 
+      values: ["", "HVC05 [5.12 KWH]", "HVC05 [5.12 KWH]", "HVC05 [5.12 KWH]", "HVC05 [5.12 KWH]"] 
     },
     { 
       label: "Cell Type", 
@@ -28,11 +28,11 @@ export default function VoltHvcTable() {
     },
     { 
       label: "System Nominal Energy", 
-      values: ["", "25.60kWh", "35.84kWh", "46.08kWh", "56.32kWh"] 
+      values: ["", "25.60KWH", "35.84KWH", "46.08KWH", "56.32KWH"] 
     },
     { 
       label: "Available System Nominal Energy", 
-      values: ["", "23.0kWh", "32.2kWh", "41.4kWh", "50.6kWh"] 
+      values: ["", "23.0KWH", "32.2KWH", "41.4KWH", "50.6KWH"] 
     },
     { 
       label: "Nominal Voltage", 

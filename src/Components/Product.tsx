@@ -71,7 +71,7 @@ export default function Products() {
       <ProductSolutions
         id="batteries"
         eyebrow="Batteries"
-        title="LiFePO4 Lithium Batteries · 1.28 kWh to 256 kWh"
+        title="LiFePO4 Lithium Batteries · 1.28 KWH to 256 KWH"
         products={RESIDENTIAL_BATTERIES}
       />
 

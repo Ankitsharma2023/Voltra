@@ -134,7 +134,7 @@ const pdfProductData: ProductData[] = [
         items: [
           { label: "Cell Type", value: "LFP 280Ah" },
           { label: "Battery System", value: "1P112S" },
-          { label: "Rated Energy", value: "100.3 kWh" },
+          { label: "Rated Energy", value: "100.3 KWH" },
           { label: "Voltage Range", value: "313.6V - 408.8V" },
           { label: "Rated Voltage", value: "358.4V" },
         ],
@@ -237,8 +237,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "5015 KWH" },
           { label: "Voltage Range", value: "1165 – 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -322,8 +322,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "5015 KWH" },
           { label: "Voltage Range", value: "1165 – 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -363,7 +363,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "1000Ah LFP Prismatic", icon: cellType },
-      { title: "Rated Energy", value: "51.2 kWh", icon: batterySystem },
+      { title: "Rated Energy", value: "51.2 KWH", icon: batterySystem },
       { title: "Rated Voltage", value: "512 Vdc", icon: ratedVoltage },
       { title: "Charging Current", value: "0.5 C", icon: ratedPower },
       { title: "Parallel Number", value: "16 cabinets", icon: effieciency },
@@ -378,7 +378,7 @@ const pdfProductData: ProductData[] = [
     real:VOLT_LVS_REAL,
     title: "VOLT-LVS",
     description:
-    "It adopts an industrial aesthetic and N+1 stackable design. The system is composed of 100Ah modules, supports a maximum of 20 parallel groups, and the capacity can be expanded to 102kWh. Matched with mainstream brands of inverters, the system can be applied to gridconnected, off-grid, photovoltaic, and all kinds of green and low-carbon applications of household ESS.",
+    "It adopts an industrial aesthetic and N+1 stackable design. The system is composed of 100Ah modules, supports a maximum of 20 parallel groups, and the capacity can be expanded to 102KWH. Matched with mainstream brands of inverters, the system can be applied to gridconnected, off-grid, photovoltaic, and all kinds of green and low-carbon applications of household ESS.",
     features: [
        {
                 icon: Puzzle,
@@ -418,8 +418,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "5015 KWH" },
           { label: "Voltage Range", value: "1165 – 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -459,7 +459,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "100Ah LFP  Prismatic", icon: cellType },
-      { title: "Nominal Energy", value: "10.24 kWh", icon: batterySystem },
+      { title: "Nominal Energy", value: "10.24 KWH", icon: batterySystem },
       { title: "Nominal Voltage", value: "51.2 V", icon: ratedVoltage },
       { title: "Efficiency", value: "≥ 97%", icon: effieciency },
       { title: "Installation", value: "Stack/Wall/Stand", icon: effieciency },
@@ -474,7 +474,7 @@ const pdfProductData: ProductData[] = [
     real:VOLT_LVW_REAL,
     title: "VOLT-LVW",
     description:
-    "This wall-mounted system is a compact, efficient, and space-saving solution for storing electrical energy, typically used in residential or small commercial applications. These systems are installed on a wall, either inside or outside a building, and are designed to optimize energy usage, improve power reliability, and allow integration with renewable energy sources such as solar panels. Can support a maximum of up to 8 batteries in parallel and the capacity can be expanded to 41 kWh.",
+    "This wall-mounted system is a compact, efficient, and space-saving solution for storing electrical energy, typically used in residential or small commercial applications. These systems are installed on a wall, either inside or outside a building, and are designed to optimize energy usage, improve power reliability, and allow integration with renewable energy sources such as solar panels. Can support a maximum of up to 8 batteries in parallel and the capacity can be expanded to 41 KWH.",
     features: [
        {
                 icon: Puzzle,
@@ -518,8 +518,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "5015 KWH" },
           { label: "Voltage Range", value: "1165 – 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -559,7 +559,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: " LFP  ", icon: cellType },
-      { title: "Available Energy", value: "51.2 kWh", icon: batterySystem },
+      { title: "Available Energy", value: "51.2 KWH", icon: batterySystem },
       { title: "Nominal Voltage", value: "51.2 V", icon: ratedVoltage },
       { title: "Efficiency", value: "≥ 97%", icon: effieciency },
       { title: "Installation", value: "Floor/Wall/Hanging", icon: effieciency },
@@ -614,8 +614,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "418 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "418 KWH" },
           { label: "Voltage Range", value: "1165 - 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -655,7 +655,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "LFP 314Ah Prismatic", icon: cellType },
-      { title: "Battery System", value: "418 kWh", icon: batterySystem },
+      { title: "Battery System", value: "418 KWH", icon: batterySystem },
       { title: "Rated Voltage", value: "1331.2 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "200 KW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 94%", icon: effieciency },
@@ -710,8 +710,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah Prismatic" },
-          { label: "PACK", value: "52.24 kWh/1P52S" },
-          { label: "Battery System", value: "5015 kWh" },
+          { label: "PACK", value: "52.24 KWH/1P52S" },
+          { label: "Battery System", value: "5015 KWH" },
           { label: "Voltage Range", value: "1165 - 1498 Vdc" },
           { label: "Rated Voltage", value: "1331.2 Vdc" },
         ],
@@ -751,7 +751,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "LFP 314Ah Prismatic", icon: cellType },
-      { title: "Battery System", value: "5015 kWh", icon: batterySystem },
+      { title: "Battery System", value: "5015 KWH", icon: batterySystem },
       { title: "Rated Voltage", value: "1331.2 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "2.5 MW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 94%", icon: effieciency },
@@ -804,8 +804,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 314Ah" },
-          { label: "PACK", value: "16.32 kWh/1P16S" },
-          { label: "Battery System", value: "964 kWh/4P240S" },
+          { label: "PACK", value: "16.32 KWH/1P16S" },
+          { label: "Battery System", value: "964 KWH/4P240S" },
           { label: "Voltage Range", value: "672 - 876 Vdc" },
           { label: "Rated Voltage", value: "768 Vdc" },
         ],
@@ -845,7 +845,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "LFP 314Ah ", icon: cellType },
-      { title: "Battery System", value: "964 kWh/4P24OS", icon: batterySystem },
+      { title: "Battery System", value: "964 KWH/4P24OS", icon: batterySystem },
       { title: "Rated Voltage", value: "768 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "400 KW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 90%", icon: effieciency },
@@ -899,8 +899,8 @@ const pdfProductData: ProductData[] = [
         title: "DC Side",
         items: [
           { label: "Cell Type", value: "LFP 280Ah" },
-          { label: "PACK", value: "14.33 kWh/1P16S" },
-          { label: "Battery System", value: "215 kWh/1P240S" },
+          { label: "PACK", value: "14.33 KWH/1P16S" },
+          { label: "Battery System", value: "215 KWH/1P240S" },
           { label: "Voltage Range", value: "672 - 876 Vdc" },
           { label: "Rated Voltage", value: "768 Vdc" },
         ],
@@ -940,7 +940,7 @@ const pdfProductData: ProductData[] = [
     ],
     specs: [
       { title: "Cell Type", value: "LFP 280Ah ", icon: cellType },
-      { title: "Battery System", value: "215 kWh/1P24OS", icon: batterySystem },
+      { title: "Battery System", value: "215 KWH/1P24OS", icon: batterySystem },
       { title: "Rated Voltage", value: "768 Vdc", icon: ratedVoltage },
       { title: "Rated Power", value: "100 KW", icon: ratedPower },
       { title: "Efficiency", value: "≥ 90%", icon: effieciency },

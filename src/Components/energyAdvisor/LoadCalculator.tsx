@@ -171,13 +171,13 @@ export default function LoadCalculator() {
           <div className="rounded-[20px] bg-white p-5 shadow-card lg:p-6">
             <div className="grid grid-cols-3 gap-3">
               <Tile label="Total Load" value={`${totals.totalLoadKw.toFixed(2)} kW`} />
-              <Tile label="Daily Consumption" value={`${totals.dailyKwh.toFixed(1)} kWh`} />
-              <Tile label="Monthly Consumption" value={`${Math.round(totals.monthlyKwh)} kWh`} />
+              <Tile label="Daily Consumption" value={`${totals.dailyKwh.toFixed(1)} KWH`} />
+              <Tile label="Monthly Consumption" value={`${Math.round(totals.monthlyKwh)} KWH`} />
             </div>
 
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
               <Tile label="Recommended Inverter" value={`${totals.inverterKw} kW`} />
-              <Tile label="Battery for backup" value={`${totals.batteryKwh.toFixed(1)} kWh`}>
+              <Tile label="Battery for backup" value={`${totals.batteryKwh.toFixed(1)} KWH`}>
                 <div className="mt-2 flex gap-1">
                   {cfg.backupOptions.map((h) => (
                     <button
