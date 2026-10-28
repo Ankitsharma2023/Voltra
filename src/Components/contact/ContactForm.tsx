@@ -19,6 +19,8 @@ interface Fields {
   company: string;
   email: string;
   phone: string;
+  city: string;
+  state: string;
   interest: string;
   message: string;
 }
@@ -28,6 +30,8 @@ const EMPTY: Fields = {
   company: "",
   email: "",
   phone: "",
+  city: "",
+  state: "",
   interest: CONTACT_PAGE.form.interests[0],
   message: "",
 };
@@ -181,6 +185,22 @@ export default function ContactForm() {
                 value={fields.phone}
                 onChange={(v) => set("phone", v)}
                 autoComplete="tel"
+              />
+              <Field
+                label="City"
+                name="city"
+                required
+                value={fields.city}
+                onChange={(v) => set("city", v)}
+                autoComplete="address-level2"
+              />
+              <Field
+                label="State"
+                name="state"
+                required
+                value={fields.state}
+                onChange={(v) => set("state", v)}
+                autoComplete="address-level1"
               />
             </div>
 
