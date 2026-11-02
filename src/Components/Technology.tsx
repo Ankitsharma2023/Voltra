@@ -1,11 +1,11 @@
 import React from "react";
-import Tech from "../assets/Tech.png";
-import factory from "../assets/Factory.png";
+import Tech from "../assets/Tech.webp";
+import factory from "../assets/Factory.webp";
 import rd from "../assets/rd.svg";
 import intl from "../assets/intelligent.svg";
 import robust from "../assets/robust.svg";
 import data from "../assets/data.svg";
-import waveGraphic from "../assets/wave.png";
+import waveGraphic from "../assets/wave.webp";
 import { Link, Outlet } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Adv1 from "../assets/adv1.png";
@@ -14,18 +14,18 @@ import Adv3 from "../assets/adv3.png";
 import Adv4 from "../assets/adv4.png";
 import Adv5 from "../assets/adv5.png";
 import Adv6 from "../assets/adv6.png";
-import Tech2 from "../assets/Tech2.png";
-import Test_1 from "../assets/Test_1.png";
-import Test_2 from "../assets/Test_2.png";
-import Test_3 from "../assets/Test_3.png";
-import Test_4 from "../assets/Test_4.png";
-import Test_5 from "../assets/Test_5.png";
-import Test_6 from "../assets/Test_6.png";
-import Test_7 from "../assets/Test_7.png";
-import Adva1 from "../assets/Adva1.png";
-import Adva2 from "../assets/Adva2.png";
-import Adva3 from "../assets/Adva3.png";
-import Adva4 from "../assets/Adva4.png";
+import Tech2 from "../assets/Tech2.webp";
+import Test_1 from "../assets/Test_1.webp";
+import Test_2 from "../assets/Test_2.webp";
+import Test_3 from "../assets/Test_3.webp";
+import Test_4 from "../assets/Test_4.webp";
+import Test_5 from "../assets/Test_5.webp";
+import Test_6 from "../assets/Test_6.webp";
+import Test_7 from "../assets/Test_7.webp";
+import Adva1 from "../assets/Adva1.webp";
+import Adva2 from "../assets/Adva2.webp";
+import Adva3 from "../assets/Adva3.webp";
+import Adva4 from "../assets/Adva4.webp";
 const Technology = () => {
   return (
     <>

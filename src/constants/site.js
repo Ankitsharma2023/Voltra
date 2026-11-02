@@ -110,8 +110,8 @@ export const ABOUT = {
 // without touching the specs/features sourced from the catalog).
 const byId = (key, id) => productsByKey(key).find((p) => p.id === id);
 const withImg = (p, image) => (p ? { ...p, image } : p);
-const invFig = (key, id) => withImg(byId(key, id), `/voltra/figma/inv-${id === "nexa-4kw" ? "nexa" : id}.png`);
-const batFig = (key, id) => withImg(byId(key, id), `/voltra/figma/bat-${id}.png`);
+const invFig = (key, id) => withImg(byId(key, id), `/voltra/figma/inv-${id === "nexa-4kw" ? "nexa" : id}.webp`);
+const batFig = (key, id) => withImg(byId(key, id), `/voltra/figma/bat-${id}.webp`);
 
 // Lithium Batteries page range — 10 products in the Figma order, each with its
 // own Figma render. Data (specs/features) still comes from the catalog.
@@ -123,7 +123,7 @@ const LVW_16S = {
   brand: "VOLT",
   name: "LVW 16S",
   capacities: "5.12 KWH",
-  image: "/voltra/products/lvw-16s.png",
+  image: "/voltra/products/lvw-16s.webp",
   description:
     "Wall-mounted 51.2 V LiFePO4 battery with 100 Ah / 5.12 KWH of usable storage for home and small-commercial backup.",
   features: [
@@ -224,7 +224,7 @@ export const TITAN_SERIES = {
   ],
 };
 
-const NEXA_IMG = "/voltra/figma/inv-nexa.png";
+const NEXA_IMG = "/voltra/figma/inv-nexa.webp";
 const nexaComingSoon = (id, name, kw) => ({
   id,
   brand: "VOLT NEXA",
@@ -283,7 +283,7 @@ const VOLT_MAX = {
   name: "MAX",
   badge: "IP55",
   capacities: "5 – 20 MWh",
-  image: "/voltra/products/volt-max.png",
+  image: "/voltra/products/volt-max.webp",
   description:
     "20-ft liquid-cooled ESS container integrating PACK, EMS, BMS, HVAC and fire safety in one unit. Liquid cooling keeps the cell temperature difference under 3°C for longer battery life and higher efficiency.",
   features: [
@@ -328,9 +328,9 @@ export const HIGH_VOLTAGE_PRODUCTS = {
   title: "Energy Storage Systems · 25 KWH to 20 MWh",
   subtitle: "Modular storage for C&I and utility projects.",
   products: [
-    withImg(productsByKey("hv-rack")[0], "/voltra/figma/home-hv-2.png"), // VOLT-HVC rack
-    withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.png"), // VOLT-LINK cabinet
-    withImg(productsByKey("containerized")[1], "/voltra/figma/home-hv-3.png"), // VOLT-LINK AIR
+    withImg(productsByKey("hv-rack")[0], "/voltra/figma/home-hv-2.webp"), // VOLT-HVC rack
+    withImg(productsByKey("containerized")[0], "/voltra/figma/home-hv-1.webp"), // VOLT-LINK cabinet
+    withImg(productsByKey("containerized")[1], "/voltra/figma/home-hv-3.webp"), // VOLT-LINK AIR
     VOLT_MAX,
   ].filter(Boolean),
 };
@@ -348,9 +348,9 @@ export const INVERTER_SOLUTIONS = {
   title: "Hybrid Inverters · 3 kW to 125 kW",
   subtitle: "Single-phase to three-phase, homes to factories.",
   products: [
-    withImg(byId("single-phase", "volt-3kw1"), "/voltra/figma/home-inv-1.png"),
-    withImg(productsByKey("three-phase")[0], "/voltra/figma/home-inv-2.png"),
-    withImg(productsByKey("three-phase-hv")[0], "/voltra/figma/home-inv-3.png"),
+    withImg(byId("single-phase", "volt-3kw1"), "/voltra/figma/home-inv-1.webp"),
+    withImg(productsByKey("three-phase")[0], "/voltra/figma/home-inv-2.webp"),
+    withImg(productsByKey("three-phase-hv")[0], "/voltra/figma/home-inv-3.webp"),
   ].filter(Boolean),
 };
 

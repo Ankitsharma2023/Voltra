@@ -1,14 +1,14 @@
 import React from "react";
-import islandModeImage from "../assets/island-mode.png";
+import islandModeImage from "../assets/island-mode.webp";
 import energyIcon from "../assets/energy.svg";
 import windmillIcon from "../assets/windmill.svg";
 import handIcon from "../assets/hand.svg";
-import solutionImage from "../assets/solutions.png";
+import solutionImage from "../assets/solutions.webp";
 import microgridVideo from "../assets/microgrid.mp4";
-import hybridImage from "../assets/hybrid.png";
-import microgridImage from "../assets/microgrid.png";
-import waveGraphic from "../assets/wave.png";
-import Solutions1 from "../assets/Solutions1.jpg";
+import hybridImage from "../assets/hybrid.webp";
+import microgridImage from "../assets/microgrid.webp";
+import waveGraphic from "../assets/wave.webp";
+import Solutions1 from "../assets/Solutions1.webp";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 // MicrogridModeSection  MicrogridMode

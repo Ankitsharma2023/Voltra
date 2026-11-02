@@ -18,7 +18,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-link", brand: "VOLT", name: "LINK",
-      capacities: "418 – 1,672 KWH", image: "/voltra/figma/home-hv-1.png",
+      capacities: "418 – 1,672 KWH", image: "/voltra/figma/home-hv-1.webp",
       description: "The liquid-cooled battery cabinet adopts advanced cabinet-level liquid cooling and temperature balancing. Its modular design makes the parallel solution more flexible, and combines with centralised PCS to form an ESS with higher energy density.",
       features: [
         { title: "Safe and Reliable", detail: "In-PACK fire warning and protection with NOVEC1230/aerosol" },
@@ -58,7 +58,7 @@ export const CATALOG = [
     },
     {
       id: "volt-link-air", brand: "VOLT", name: "LINK AIR",
-      capacities: "112 – 964 KWH", image: "/voltra/figma/home-hv-3.png",
+      capacities: "112 – 964 KWH", image: "/voltra/figma/home-hv-3.webp",
       description: "An all-in-one air-cooled ESS cabinet integrating a long-life battery, balancing BMS, high-performance PCS, active safety system, smart distribution, and HVAC into one enclosure. AC-side parallel connection achieves flexible capacity expansion up to MWh.",
       features: [
         { title: "Economical and Efficient", detail: "Conversion efficiency over 90%, DoD over 96%" },
@@ -105,7 +105,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-hvc", brand: "VOLT", name: "HVC",
-      capacities: "30.72 – 61.44 KWH", image: "/voltra/figma/home-hv-2.png",
+      capacities: "30.72 – 61.44 KWH", image: "/voltra/figma/home-hv-2.webp",
       description: "Voltra's high-voltage series uses a 5 KWH standard modular design, with multi-module in series and support for multi-cluster in parallel — suited to villas, farms, and small C&I power supplies.",
       features: [
         { title: "Ultra-Long Life", detail: "15-year design life, up to 6,000 cycles" },
@@ -215,7 +215,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-lv314", brand: "VOLT", name: "LV314",
-      capacities: "16.07 – 64.28 KWH", image: "/voltra/figma/bat-volt-lv314.png",
+      capacities: "16.07 – 64.28 KWH", image: "/voltra/figma/bat-volt-lv314.webp",
       description: "Floor- and rack-mounted storage for residential or small commercial use. Supports up to 16 batteries in parallel, expanding to 256 KWH.",
       features: [
         { title: "Flexible", detail: "16 KWH modular design, 1–16 in parallel" },
@@ -246,7 +246,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lv200", brand: "VOLT", name: "LV200",
-      capacities: "10.2 – 81.6 KWH", image: "/voltra/figma/bat-volt-lv200.png",
+      capacities: "10.2 – 81.6 KWH", image: "/voltra/figma/bat-volt-lv200.webp",
       description: "A floor-mounted, space-saving system for residential or small commercial applications, installed inside or outside a building. Expandable to 164 KWH.",
       features: [
         { title: "Flexible", detail: "10.24 KWH modular design, 1–16 in parallel" },
@@ -276,7 +276,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvs", brand: "VOLT", name: "LVS",
-      capacities: "5.1 – 20.4 KWH", image: "/voltra/figma/bat-volt-lvs.png",
+      capacities: "5.1 – 20.4 KWH", image: "/voltra/figma/bat-volt-lvs.webp",
       description: "Industrial-aesthetic, N+1 stackable design in 100Ah modules, up to 16 parallel groups, expandable to 82 KWH. Matched with 20+ mainstream inverter brands.",
       features: [
         { title: "Wide Compatibility", detail: "Matches 20+ inverter brands" },
@@ -400,7 +400,7 @@ export const CATALOG = [
       id: "lv-50", brand: "LV", name: "50",
       badge: "LiFePO4",
       model: "51.2V 50Ah LiFePO4 Battery Pack",
-      capacities: "2.56 KWH", image: "/voltra/figma/bat-lv-50.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-lv-50.webp",
       description: "Plug-and-play lithium battery for home backup, with a built-in Bluetooth BMS and 3,500-cycle life. Pairs with Voltra hybrid inverters.",
       features: [
         { title: "Long Life", detail: "3,500 cycles @ 80% DoD" },
@@ -428,7 +428,7 @@ export const CATALOG = [
     {
       id: "volt-lvw-16s-ip65", brand: "VOLT", name: "LVW 16S Ultra",
       badge: "IP65",
-      capacities: "5.12 – 40.96 KWH", image: "/voltra/figma/bat-volt-lvw-16s-ip65.png",
+      capacities: "5.12 – 40.96 KWH", image: "/voltra/figma/bat-volt-lvw-16s-ip65.webp",
       description: "Wall-mounted, space-saving storage for residential or small commercial use, installed inside or outside a building. Expandable to 82 KWH.",
       features: [
         { title: "Flexible", detail: "5.12 KWH modular design, 1–16 in parallel" },
@@ -457,7 +457,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-8s-pro", brand: "VOLT", name: "LVW 8S Pro",
-      capacities: "5.12 KWH", image: "/voltra/figma/bat-volt-lvw-8s-pro.png",
+      capacities: "5.12 KWH", image: "/voltra/figma/bat-volt-lvw-8s-pro.webp",
       description: "Wall-mounted system optimising energy usage and integrating with solar panels — the higher-capacity 2P variant of the LVW 8S.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -484,7 +484,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-8s", brand: "VOLT", name: "LVW 8S",
-      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-8s.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-8s.webp",
       description: "Wall-mounted, space-saving storage for residential or small commercial applications, optimising energy usage with solar integration.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -510,7 +510,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-4s-pro", brand: "VOLT", name: "LVW 4S Pro",
-      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-4s-pro.png",
+      capacities: "2.56 KWH", image: "/voltra/figma/bat-volt-lvw-4s-pro.webp",
       description: "Compact wall-mounted system for smaller backup loads — the higher-capacity 2P variant of the LVW 4S.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -532,7 +532,7 @@ export const CATALOG = [
     },
     {
       id: "volt-lvw-4s", brand: "VOLT", name: "LVW 4S",
-      capacities: "1.25 KWH", image: "/voltra/figma/bat-volt-lvw-4s.png",
+      capacities: "1.25 KWH", image: "/voltra/figma/bat-volt-lvw-4s.webp",
       description: "Voltra's smallest wall-mounted unit — a compact, entry-level backup solution for solar-integrated homes.",
       features: [
         { title: "Easy Installation", detail: "Wall or floor mounted" },
@@ -566,7 +566,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-fusion-1600", brand: "VOLT", name: "FUSION 1600",
-      capacities: "1250 VA · 1280 Wh", image: "/voltra/figma/bat-volt-fusion-1600.png",
+      capacities: "1250 VA · 1280 Wh", image: "/voltra/figma/bat-volt-fusion-1600.webp",
       description: "A compact all-in-one power backup solution with an in-built lithium battery, designed for homes, offices, and small commercial applications. Delivers stable UPS performance, efficient charging, and dependable backup in a sleek, space-saving design.",
       features: [
         { title: "In-Built Lithium Battery", detail: "Integrated 12.8V lithium battery, 1,280 Wh" },
@@ -604,7 +604,7 @@ export const CATALOG = [
       id: "nexa-4kw", brand: "NEXA", name: "4KW",
       badge: "IP54",
       model: "Model No. VOLT0404K1P",
-      capacities: "4 kW", image: "/voltra/figma/inv-nexa.png",
+      capacities: "4 kW", image: "/voltra/figma/inv-nexa.webp",
       description: "Single-phase hybrid inverter for homes, shops and small offices, with MPPT solar charging, Wi-Fi monitoring and CT anti-backflow support.",
       features: [
         { title: "Fast Transfer", detail: "Switching in 10ms for computers" },
@@ -663,7 +663,7 @@ export const CATALOG = [
     },
     {
       id: "volt-3kw1", brand: "VOLT", name: "3KW1",
-      capacities: "3 kW", image: "/voltra/figma/inv-volt-3kw1.png",
+      capacities: "3 kW", image: "/voltra/figma/inv-volt-3kw1.webp",
       description: "Entry-point single-phase hybrid inverter for small homes, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
       features: [
         { title: "Fast Transfer", detail: "Grid to standalone in <10ms" },
@@ -718,7 +718,7 @@ export const CATALOG = [
     },
     {
       id: "volt-5kw1", brand: "VOLT", name: "5KW1",
-      capacities: "5 kW", image: "/voltra/figma/inv-volt-5kw1.png",
+      capacities: "5 kW", image: "/voltra/figma/inv-volt-5kw1.webp",
       description: "Mid-size single-phase hybrid inverter for average residential loads, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
       features: [
         { title: "Fast Transfer", detail: "Grid to standalone in <10ms" },
@@ -773,7 +773,7 @@ export const CATALOG = [
     },
     {
       id: "volt-6kw1", brand: "VOLT", name: "6KW1",
-      capacities: "6 kW", image: "/voltra/figma/inv-volt-6kw1.png",
+      capacities: "6 kW", image: "/voltra/figma/inv-volt-6kw1.webp",
       description: "Higher-output single-phase hybrid inverter for heavier residential loads, with dual MPPTs and lithium-ion / lead-acid battery compatibility.",
       features: [
         { title: "Fast Transfer", detail: "Grid to standalone in <10ms" },
@@ -828,7 +828,7 @@ export const CATALOG = [
     },
     {
       id: "volt-8kw1", brand: "VOLT", name: "8KW1",
-      capacities: "8 kW", image: "/voltra/figma/inv-volt-8kw1.png",
+      capacities: "8 kW", image: "/voltra/figma/inv-volt-8kw1.webp",
       description: "Top-of-range single-phase hybrid inverter for large homes, with quad-string MPPTs and lead-acid / lithium-ion battery support.",
       features: [
         { title: "Fast Transfer", detail: "Grid to standalone in <10ms" },
@@ -890,7 +890,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-8kw3", brand: "VOLT", name: "8KW3",
-      capacities: "8 kW", image: "/voltra/figma/inv-volt-8kw3.png",
+      capacities: "8 kW", image: "/voltra/figma/inv-volt-8kw3.webp",
       description: "Entry three-phase hybrid inverter with wide PV input and self-adapting lithium BMS charging for smaller commercial sites.",
       features: [
         { title: "Wide PV Input", detail: "Up to 800V, MPPT 200–650V" },
@@ -940,7 +940,7 @@ export const CATALOG = [
     },
     {
       id: "volt-10kw3", brand: "VOLT", name: "10KW3",
-      capacities: "10 kW", image: "/voltra/figma/inv-volt-10kw3.png",
+      capacities: "10 kW", image: "/voltra/figma/inv-volt-10kw3.webp",
       description: "Step-up three-phase hybrid inverter sharing the compact 8kW/10kW cabinet, sized for growing commercial loads.",
       features: [
         { title: "Wide PV Input", detail: "Up to 800V, MPPT 200–650V" },
@@ -990,7 +990,7 @@ export const CATALOG = [
     },
     {
       id: "volt-12kw3", brand: "VOLT", name: "12KW3",
-      capacities: "12 kW", image: "/voltra/figma/inv-volt-12kw3.png",
+      capacities: "12 kW", image: "/voltra/figma/inv-volt-12kw3.webp",
       description: "Mid-range three-phase hybrid inverter in a dedicated cabinet, built for medium-scale commercial installations.",
       features: [
         { title: "Wide PV Input", detail: "Up to 800V, MPPT 200–650V" },
@@ -1040,7 +1040,7 @@ export const CATALOG = [
     },
     {
       id: "volt-15kw3", brand: "VOLT", name: "15KW3",
-      capacities: "15 kW", image: "/voltra/figma/inv-volt-15kw3.png",
+      capacities: "15 kW", image: "/voltra/figma/inv-volt-15kw3.webp",
       description: "Higher-capacity three-phase hybrid inverter with quad-string MPPTs, for larger commercial rooftops.",
       features: [
         { title: "Wide PV Input", detail: "Up to 800V, MPPT 200–650V" },
@@ -1090,7 +1090,7 @@ export const CATALOG = [
     },
     {
       id: "volt-20kw3", brand: "VOLT", name: "20KW3",
-      capacities: "20 kW", image: "/voltra/figma/inv-volt-20kw3.png",
+      capacities: "20 kW", image: "/voltra/figma/inv-volt-20kw3.webp",
       description: "Top-of-range three-phase hybrid inverter in this series, for the largest commercial and light-industrial loads.",
       features: [
         { title: "Wide PV Input", detail: "Up to 800V, MPPT 200–650V" },
@@ -1147,7 +1147,7 @@ export const CATALOG = [
     products: [
     {
       id: "volt-30kw3", brand: "VOLT", name: "30KW3",
-      capacities: "30 kW", image: "/voltra/figma/inv-volt-30kw3.png",
+      capacities: "30 kW", image: "/voltra/figma/inv-volt-30kw3.webp",
       description: "Entry high-voltage three-phase hybrid inverter with a 3-MPPT design, for industrial rooftops stepping up from commercial scale.",
       features: [
         { title: "HV Battery Input", detail: "160–800V lithium-ion" },
@@ -1200,7 +1200,7 @@ export const CATALOG = [
     },
     {
       id: "volt-40kw3", brand: "VOLT", name: "40KW3",
-      capacities: "40 kW", image: "/voltra/figma/inv-volt-40kw3.png",
+      capacities: "40 kW", image: "/voltra/figma/inv-volt-40kw3.webp",
       description: "Four-MPPT high-voltage three-phase hybrid inverter for medium industrial and large C&I installations.",
       features: [
         { title: "HV Battery Input", detail: "160–800V lithium-ion" },
@@ -1253,7 +1253,7 @@ export const CATALOG = [
     },
     {
       id: "volt-50kw3", brand: "VOLT", name: "50KW3",
-      capacities: "50 kW", image: "/voltra/figma/inv-volt-50kw3.png",
+      capacities: "50 kW", image: "/voltra/figma/inv-volt-50kw3.webp",
       description: "Highest-rated model sharing the compact HV cabinet, for larger industrial sites needing more continuous throughput.",
       features: [
         { title: "HV Battery Input", detail: "160–800V lithium-ion" },
@@ -1306,7 +1306,7 @@ export const CATALOG = [
     },
     {
       id: "volt-60kw3", brand: "VOLT", name: "60KW3",
-      capacities: "60 kW", image: "/voltra/figma/inv-volt-60kw3.png",
+      capacities: "60 kW", image: "/voltra/figma/inv-volt-60kw3.webp",
       description: "Six-MPPT high-voltage three-phase hybrid inverter with an extended 1000V battery range, for heavy industrial loads.",
       features: [
         { title: "HV Battery Input", detail: "160–1000V lithium-ion" },
@@ -1359,7 +1359,7 @@ export const CATALOG = [
     },
     {
       id: "volt-80kw3", brand: "VOLT", name: "80KW3",
-      capacities: "80 kW", image: "/voltra/figma/inv-volt-80kw3.png",
+      capacities: "80 kW", image: "/voltra/figma/inv-volt-80kw3.webp",
       description: "Flagship model in the range — six-MPPT, highest PV and AC throughput, for the largest industrial and grid-tied installations.",
       features: [
         { title: "HV Battery Input", detail: "160–1000V lithium-ion" },

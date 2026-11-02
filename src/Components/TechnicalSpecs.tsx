@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import SpecModal from "./Technical";
-import VOLT_HVC_Props from "../assets/VOLT_HVC_Props.png";
-import VOLT_HVD_Props from "../assets/VOLT_HVD_Props.png";
-import VOLT_LVS_Props from "../assets/VOLT_LVS_Props.png";
-import VOLT_LVW_Props from "../assets/VOLT_LVW_Props.png";
+import VOLT_HVC_Props from "../assets/VOLT_HVC_Props.webp";
+import VOLT_HVD_Props from "../assets/VOLT_HVD_Props.webp";
+import VOLT_LVS_Props from "../assets/VOLT_LVS_Props.webp";
+import VOLT_LVW_Props from "../assets/VOLT_LVW_Props.webp";
 
 type SpecItem = {
   title: string;

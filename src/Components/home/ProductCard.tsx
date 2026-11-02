@@ -214,6 +214,8 @@ export default function ProductCard({
         <img
           src={image}
           alt={`${product.brand} ${product.name}`}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-contain"
         />
         {product.badge && (

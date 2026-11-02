@@ -1,14 +1,14 @@
 import React from "react";
-import islandModeImage from "../assets/island-mode.png";
+import islandModeImage from "../assets/island-mode.webp";
 import batteryIcon from "../assets/battery.svg";
 import savingsIcon from "../assets/savings.svg";
 import settingsIcon from "../assets/settings.svg";
-import solutionImage from "../assets/solutions.png";
+import solutionImage from "../assets/solutions.webp";
 import hybridVideo from "../assets/hybrid.mp4";
-import hybridImage from "../assets/hybrid.png";
-import microgridImage from "../assets/microgrid.png";
-import waveGraphic from "../assets/wave.png";
-import Solutions1 from "../assets/Solutions1.jpg";
+import hybridImage from "../assets/hybrid.webp";
+import microgridImage from "../assets/microgrid.webp";
+import waveGraphic from "../assets/wave.webp";
+import Solutions1 from "../assets/Solutions1.webp";
 
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";

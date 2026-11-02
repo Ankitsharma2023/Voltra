@@ -1,14 +1,14 @@
 import React from "react";
 
 // Import your product images
-import VOLT_HVC from "../assets/VOLT_HVC.png";
-import VOLT_HVD from "../assets/VOLT_HVD.png";
-import VOLT_LVS from "../assets/VOLT_LVS.png";
-import VOLT_LVW from "../assets/VOLT_LVW.png";
-import VOLT_HVC_Props from "../assets/VOLT_HVC_Props.png";
-import VOLT_HVD_Props from "../assets/VOLT_HVD_Props.png";
-import VOLT_LVS_Props from "../assets/VOLT_LVS_Props.png";
-import VOLT_LVW_Props from "../assets/VOLT_LVW_Props.png";
+import VOLT_HVC from "../assets/VOLT_HVC.webp";
+import VOLT_HVD from "../assets/VOLT_HVD.webp";
+import VOLT_LVS from "../assets/VOLT_LVS.webp";
+import VOLT_LVW from "../assets/VOLT_LVW.webp";
+import VOLT_HVC_Props from "../assets/VOLT_HVC_Props.webp";
+import VOLT_HVD_Props from "../assets/VOLT_HVD_Props.webp";
+import VOLT_LVS_Props from "../assets/VOLT_LVS_Props.webp";
+import VOLT_LVW_Props from "../assets/VOLT_LVW_Props.webp";
 type ImageModalProps = {
   isOpen: boolean;
   onClose: () => void;

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import logo from "../assets/logo.png";
-import logo_blue from "../assets/logo_blue.png";
+import logo from "../assets/logo.webp";
+import logo_blue from "../assets/logo_blue.webp";
 import { useLocation } from "react-router-dom";
 
 export function Header() {

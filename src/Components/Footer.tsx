@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 interface ContactFormData {
   name: string;

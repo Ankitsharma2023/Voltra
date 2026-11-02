@@ -28,7 +28,7 @@ P = "/voltra/products/"
 def image_for(name, badge):
     n = name.upper()
     m = {
-      "VOLT-LINK": "/voltra/bess-hero-cabinet.png",
+      "VOLT-LINK": "/voltra/bess-hero-cabinet.webp",
       "VOLT-LINK AIR": P+"link-air.jpg",
       "VOLT-HVC": P+"hvc.jpg",
       "VOLT-LV314": P+"lv314.jpg",
@@ -54,14 +54,14 @@ INV_CATS={'single-phase','three-phase','three-phase-hv'}
 HV_MAP={'volt-link':'home-hv-1','volt-link-air':'home-hv-3','volt-hvc':'home-hv-2'}
 def figma_image(key, pid):
     """Prefer the clean Figma render for this product; fall back to None."""
-    if key in BAT_CATS and _os.path.exists(f'public/voltra/figma/bat-{pid}.png'):
-        return f'/voltra/figma/bat-{pid}.png'
+    if key in BAT_CATS and _os.path.exists(f'public/voltra/figma/bat-{pid}.webp'):
+        return f'/voltra/figma/bat-{pid}.webp'
     if key in INV_CATS:
         base='nexa' if pid=='nexa-4kw' else pid
-        if _os.path.exists(f'public/voltra/figma/inv-{base}.png'):
-            return f'/voltra/figma/inv-{base}.png'
+        if _os.path.exists(f'public/voltra/figma/inv-{base}.webp'):
+            return f'/voltra/figma/inv-{base}.webp'
     if pid in HV_MAP:
-        return f'/voltra/figma/{HV_MAP[pid]}.png'
+        return f'/voltra/figma/{HV_MAP[pid]}.webp'
     return None
 
 # ---- Authoritative spec sheet (Voltra_Product_Specs.html) -------------------

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { FOOTER } from "../../constants/site";
@@ -22,6 +22,26 @@ export default function SiteFooter() {
   // route shows the dark footer without it.
   const isHome = useLocation().pathname === "/";
 
+  // Only download/play the factory clip once the footer nears the viewport, so
+  // visitors who never scroll that far don't pull the ~1.3 MB video.
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          if (!v.src) v.src = assets.gigafactory.illustrationVideo;
+          v.play().catch(() => {});
+          io.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, [isHome]);
+
   return (
     <footer className="w-full">
       {/* Factory illustration band — looping muted video (poster = static PNG).
@@ -31,10 +51,10 @@ export default function SiteFooter() {
       {isHome && (
         <div className="relative w-full bg-white">
           <video
+            ref={videoRef}
             className="block w-full select-none"
-            src={assets.gigafactory.illustrationVideo}
             poster={assets.gigafactory.illustration}
-            autoPlay
+            preload="none"
             loop
             muted
             playsInline
