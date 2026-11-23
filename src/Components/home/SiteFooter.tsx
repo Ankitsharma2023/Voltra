@@ -109,13 +109,19 @@ export default function SiteFooter() {
                   ))}
                 </address>
               </a>
-              <a
-                href={`tel:${FOOTER.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-              >
-                <Phone size={16} className="shrink-0 text-white/50" />
-                {FOOTER.phone}
-              </a>
+              {FOOTER.phones.map((p) => (
+                <a
+                  key={p.number}
+                  href={`tel:${p.number.replace(/\s/g, "")}`}
+                  className="flex items-start gap-2 text-sm text-white/60 transition-colors hover:text-white"
+                >
+                  <Phone size={16} className="mt-0.5 shrink-0 text-white/50" />
+                  <span className="leading-relaxed">
+                    <span className="block text-xs text-white/40">{p.label}</span>
+                    {p.number}
+                  </span>
+                </a>
+              ))}
               <a
                 href={`mailto:${FOOTER.email}`}
                 className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"

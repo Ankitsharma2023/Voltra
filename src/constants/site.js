@@ -754,7 +754,10 @@ export const FOOTER = {
   company: "Voltra Technologies Pvt. Ltd.",
   tagline: "The Future of Energy",
   address: ["3rd Floor, Orchid Center", "Golf Course Road", "Sector-53", "Gurugram, India"],
-  phone: "+91 99929 29203",
+  phones: [
+    { label: "Service Support", number: "+91 74969 64539" },
+    { label: "Sales Support", number: "+91 74969 62203" },
+  ],
   email: "info@voltra.in",
   columns: [
     {
